@@ -1,0 +1,6 @@
+streamlit>=1.38.0
+plotly==5.24.1
+sqlalchemy==2.0.35
+statsmodels==0.14.2
+pandas
+numpy
