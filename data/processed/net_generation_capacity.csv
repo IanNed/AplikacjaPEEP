@@ -1,0 +1,4357 @@
+category,country,year,capacity_mw,group,is_renewable
+Fossil Oil,AL,2017,97.0,fossil,False
+Hydro_Pure_storage,AL,2017,1534.0,other,False
+Hydro_RunOfRiver_and_poundage,AL,2017,301.0,other,False
+Fossil Oil,AL,2018,97.0,fossil,False
+Hydro_Pure_storage,AL,2018,1534.0,other,False
+Hydro_RunOfRiver_and_poundage,AL,2018,301.0,other,False
+Biomass,AL,2019,0.0,renewable,True
+Hydro Run-of-river and poundage,AL,2019,0.0,renewable,True
+Hydro Water Reservoir,AL,2019,1492.0,renewable,True
+Biomass,AL,2020,0.0,renewable,True
+Hydro Run-of-river and poundage,AL,2020,0.0,renewable,True
+Hydro Water Reservoir,AL,2020,1492.0,renewable,True
+Fossil Brown coal/Lignite,AL,2021,0.0,fossil,False
+Fossil Coal-derived gas,AL,2021,0.0,fossil,False
+Fossil Gas,AL,2021,0.0,fossil,False
+Fossil Hard coal,AL,2021,0.0,fossil,False
+Fossil Oil,AL,2021,97.0,fossil,False
+Fossil Oil shale,AL,2021,0.0,fossil,False
+Fossil Peat,AL,2021,0.0,fossil,False
+Nuclear,AL,2021,0.0,nuclear,False
+Other,AL,2021,0.0,other,False
+Waste,AL,2021,0.0,other,False
+Biomass,AL,2021,0.0,renewable,True
+Geothermal,AL,2021,0.0,renewable,True
+Hydro Pumped Storage,AL,2021,0.0,renewable,True
+Hydro Run-of-river and poundage,AL,2021,527.0,renewable,True
+Hydro Water Reservoir,AL,2021,1676.0,renewable,True
+Marine,AL,2021,0.0,renewable,True
+Other renewable,AL,2021,0.0,renewable,True
+Solar,AL,2021,0.0,renewable,True
+Wind Offshore,AL,2021,0.0,renewable,True
+Wind Onshore,AL,2021,0.0,renewable,True
+Fossil Brown coal/Lignite,AL,2022,0.0,fossil,False
+Fossil Coal-derived gas,AL,2022,0.0,fossil,False
+Fossil Gas,AL,2022,0.0,fossil,False
+Fossil Hard coal,AL,2022,0.0,fossil,False
+Fossil Oil,AL,2022,97.0,fossil,False
+Fossil Oil shale,AL,2022,0.0,fossil,False
+Fossil Peat,AL,2022,0.0,fossil,False
+Nuclear,AL,2022,0.0,nuclear,False
+Other,AL,2022,0.0,other,False
+Waste,AL,2022,0.0,other,False
+Biomass,AL,2022,0.0,renewable,True
+Geothermal,AL,2022,0.0,renewable,True
+Hydro Pumped Storage,AL,2022,0.0,renewable,True
+Hydro Run-of-river and poundage,AL,2022,527.0,renewable,True
+Hydro Water Reservoir,AL,2022,1676.0,renewable,True
+Marine,AL,2022,0.0,renewable,True
+Other renewable,AL,2022,0.0,renewable,True
+Solar,AL,2022,0.0,renewable,True
+Wind Offshore,AL,2022,0.0,renewable,True
+Wind Onshore,AL,2022,0.0,renewable,True
+Fossil Hard coal,AL,2023,0.0,fossil,False
+Fossil Oil,AL,2023,97.0,fossil,False
+Fossil Peat,AL,2023,0.0,fossil,False
+Nuclear,AL,2023,0.0,nuclear,False
+Biomass,AL,2023,0.0,renewable,True
+Hydro Run-of-river and poundage,AL,2023,527.0,renewable,True
+Hydro Water Reservoir,AL,2023,1676.0,renewable,True
+Solar,AL,2023,5.0,renewable,True
+Fossil Brown coal/Lignite,AL,2024,0.0,fossil,False
+Fossil Coal-derived gas,AL,2024,0.0,fossil,False
+Fossil Gas,AL,2024,0.0,fossil,False
+Fossil Hard coal,AL,2024,0.0,fossil,False
+Fossil Oil,AL,2024,97.0,fossil,False
+Fossil Oil shale,AL,2024,0.0,fossil,False
+Fossil Peat,AL,2024,0.0,fossil,False
+Nuclear,AL,2024,0.0,nuclear,False
+Other,AL,2024,0.0,other,False
+Waste,AL,2024,0.0,other,False
+Biomass,AL,2024,0.0,renewable,True
+Geothermal,AL,2024,0.0,renewable,True
+Hydro Pumped Storage,AL,2024,0.0,renewable,True
+Hydro Run-of-river and poundage,AL,2024,527.0,renewable,True
+Hydro Water Reservoir,AL,2024,1676.0,renewable,True
+Marine,AL,2024,0.0,renewable,True
+Other renewable,AL,2024,0.0,renewable,True
+Solar,AL,2024,195.0,renewable,True
+Wind Offshore,AL,2024,0.0,renewable,True
+Wind Onshore,AL,2024,0.0,renewable,True
+Fossil Gas,AT,2014,4888.0,fossil,False
+Fossil Oil,AT,2014,334.0,fossil,False
+Biogas,AT,2014,82.0,other,False
+Fossil_Hard_coal,AT,2014,1171.0,other,False
+Fossil_Mixed_fuels,AT,2014,436.0,other,False
+Fossil_Other,AT,2014,414.0,other,False
+Hydro_Mixed_pumped_storage_renewable,AT,2014,7969.0,other,False
+Hydro_RunOfRiver_and_poundage,AT,2014,5599.0,other,False
+Other_non_renewable,AT,2014,87.0,other,False
+Solar_PV,AT,2014,586.12,other,False
+Waste_renewable,AT,2014,21.96,other,False
+Wind_onshore,AT,2014,2110.0,other,False
+Biomass,AT,2014,523.37,renewable,True
+Geothermal,AT,2014,1.0,renewable,True
+Fossil Gas,AT,2015,4820.0,fossil,False
+Fossil Oil,AT,2015,174.0,fossil,False
+Biogas,AT,2015,82.0,other,False
+Fossil_Hard_coal,AT,2015,1171.0,other,False
+Fossil_Mixed_fuels,AT,2015,480.0,other,False
+Fossil_Other,AT,2015,414.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,AT,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,AT,2015,7994.0,other,False
+Hydro_Pure_storage,AT,2015,0.0,other,False
+Hydro_RunOfRiver_and_poundage,AT,2015,5662.0,other,False
+Non_identified_net_gen,AT,2015,0.0,other,False
+Other_non_renewable,AT,2015,90.0,other,False
+Other_renewable,AT,2015,0.0,other,False
+Solar_PV,AT,2015,732.0,other,False
+Waste_renewable,AT,2015,23.0,other,False
+Wind_onshore,AT,2015,2489.0,other,False
+Biomass,AT,2015,514.0,renewable,True
+Geothermal,AT,2015,1.0,renewable,True
+Fossil Gas,AT,2016,4841.0,fossil,False
+Fossil Oil,AT,2016,166.0,fossil,False
+Biogas,AT,2016,90.0,other,False
+Fossil_Hard_coal,AT,2016,598.0,other,False
+Fossil_Mixed_fuels,AT,2016,436.0,other,False
+Fossil_Other,AT,2016,414.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,AT,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,AT,2016,8424.0,other,False
+Hydro_Pure_storage,AT,2016,0.0,other,False
+Hydro_RunOfRiver_and_poundage,AT,2016,5692.0,other,False
+Non_identified_net_gen,AT,2016,0.0,other,False
+Other_non_renewable,AT,2016,105.0,other,False
+Other_renewable,AT,2016,0.0,other,False
+Solar_PV,AT,2016,1031.0,other,False
+Waste_renewable,AT,2016,22.0,other,False
+Wind_onshore,AT,2016,2730.0,other,False
+Biomass,AT,2016,482.0,renewable,True
+Geothermal,AT,2016,1.0,renewable,True
+Fossil Gas,AT,2017,4841.0,fossil,False
+Fossil Oil,AT,2017,166.0,fossil,False
+Biogas,AT,2017,90.0,other,False
+Fossil_Hard_coal,AT,2017,598.0,other,False
+Fossil_Mixed_fuels,AT,2017,436.0,other,False
+Fossil_Other,AT,2017,414.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,AT,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,AT,2017,8424.0,other,False
+Hydro_Pure_storage,AT,2017,0.0,other,False
+Hydro_RunOfRiver_and_poundage,AT,2017,5692.0,other,False
+Non_identified_net_gen,AT,2017,0.0,other,False
+Other_non_renewable,AT,2017,105.0,other,False
+Other_renewable,AT,2017,0.0,other,False
+Solar_PV,AT,2017,1031.0,other,False
+Waste_renewable,AT,2017,22.0,other,False
+Wind_onshore,AT,2017,2730.0,other,False
+Biomass,AT,2017,482.0,renewable,True
+Geothermal,AT,2017,1.0,renewable,True
+Fossil Gas,AT,2018,4853.0,fossil,False
+Fossil Oil,AT,2018,168.0,fossil,False
+Biogas,AT,2018,85.0,other,False
+Fossil_Hard_coal,AT,2018,598.0,other,False
+Fossil_Mixed_fuels,AT,2018,436.0,other,False
+Fossil_Other,AT,2018,414.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,AT,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,AT,2018,8436.0,other,False
+Hydro_Pure_storage,AT,2018,0.0,other,False
+Hydro_RunOfRiver_and_poundage,AT,2018,5714.0,other,False
+Non_identified_net_gen,AT,2018,0.0,other,False
+Other_non_renewable,AT,2018,105.0,other,False
+Other_renewable,AT,2018,0.0,other,False
+Solar_PV,AT,2018,1193.0,other,False
+Waste_renewable,AT,2018,22.0,other,False
+Wind_onshore,AT,2018,2887.0,other,False
+Biomass,AT,2018,501.0,renewable,True
+Geothermal,AT,2018,1.0,renewable,True
+Fossil Brown coal/Lignite,AT,2019,0.0,fossil,False
+Fossil Coal-derived gas,AT,2019,0.0,fossil,False
+Fossil Gas,AT,2019,4463.2,fossil,False
+Fossil Hard coal,AT,2019,598.0,fossil,False
+Fossil Oil,AT,2019,177.9,fossil,False
+Fossil Oil shale,AT,2019,0.0,fossil,False
+Fossil Peat,AT,2019,0.0,fossil,False
+Nuclear,AT,2019,0.0,nuclear,False
+Other,AT,2019,22.8,other,False
+Waste,AT,2019,150.0,other,False
+Biomass,AT,2019,499.8,renewable,True
+Geothermal,AT,2019,0.9,renewable,True
+Hydro Pumped Storage,AT,2019,3120.1,renewable,True
+Hydro Run-of-river and poundage,AT,2019,5557.8,renewable,True
+Hydro Water Reservoir,AT,2019,2439.6,renewable,True
+Marine,AT,2019,0.0,renewable,True
+Other renewable,AT,2019,42.3,renewable,True
+Solar,AT,2019,1192.7,renewable,True
+Wind Offshore,AT,2019,0.0,renewable,True
+Wind Onshore,AT,2019,3034.6,renewable,True
+Fossil Brown coal/Lignite,AT,2020,0.0,fossil,False
+Fossil Coal-derived gas,AT,2020,0.0,fossil,False
+Fossil Gas,AT,2020,4015.3,fossil,False
+Fossil Hard coal,AT,2020,246.0,fossil,False
+Fossil Oil,AT,2020,177.9,fossil,False
+Fossil Oil shale,AT,2020,0.0,fossil,False
+Fossil Peat,AT,2020,0.0,fossil,False
+Nuclear,AT,2020,0.0,nuclear,False
+Other,AT,2020,22.8,other,False
+Waste,AT,2020,150.0,other,False
+Biomass,AT,2020,497.0,renewable,True
+Geothermal,AT,2020,0.0,renewable,True
+Hydro Pumped Storage,AT,2020,3120.1,renewable,True
+Hydro Run-of-river and poundage,AT,2020,5724.0,renewable,True
+Hydro Water Reservoir,AT,2020,2435.7,renewable,True
+Marine,AT,2020,0.0,renewable,True
+Other renewable,AT,2020,100.0,renewable,True
+Solar,AT,2020,1333.0,renewable,True
+Wind Offshore,AT,2020,0.0,renewable,True
+Wind Onshore,AT,2020,3133.0,renewable,True
+Fossil Brown coal/Lignite,AT,2021,0.0,fossil,False
+Fossil Coal-derived gas,AT,2021,0.0,fossil,False
+Fossil Gas,AT,2021,4449.0,fossil,False
+Fossil Hard coal,AT,2021,0.0,fossil,False
+Fossil Oil,AT,2021,164.0,fossil,False
+Fossil Oil shale,AT,2021,0.0,fossil,False
+Fossil Peat,AT,2021,0.0,fossil,False
+Nuclear,AT,2021,0.0,nuclear,False
+Other,AT,2021,957.0,other,False
+Waste,AT,2021,103.0,other,False
+Biomass,AT,2021,497.0,renewable,True
+Geothermal,AT,2021,1.0,renewable,True
+Hydro Pumped Storage,AT,2021,3459.0,renewable,True
+Hydro Run-of-river and poundage,AT,2021,5941.0,renewable,True
+Hydro Water Reservoir,AT,2021,2430.0,renewable,True
+Marine,AT,2021,0.0,renewable,True
+Other renewable,AT,2021,0.0,renewable,True
+Solar,AT,2021,1851.0,renewable,True
+Wind Offshore,AT,2021,0.0,renewable,True
+Wind Onshore,AT,2021,3198.0,renewable,True
+Fossil Brown coal/Lignite,AT,2022,0.0,fossil,False
+Fossil Coal-derived gas,AT,2022,0.0,fossil,False
+Fossil Gas,AT,2022,4349.5,fossil,False
+Fossil Hard coal,AT,2022,0.0,fossil,False
+Fossil Oil,AT,2022,163.61,fossil,False
+Fossil Oil shale,AT,2022,0.0,fossil,False
+Fossil Peat,AT,2022,0.0,fossil,False
+Nuclear,AT,2022,0.0,nuclear,False
+Other,AT,2022,954.0,other,False
+Waste,AT,2022,103.0,other,False
+Biomass,AT,2022,482.0,renewable,True
+Geothermal,AT,2022,0.0,renewable,True
+Hydro Pumped Storage,AT,2022,3503.28,renewable,True
+Hydro Run-of-river and poundage,AT,2022,5836.87,renewable,True
+Hydro Water Reservoir,AT,2022,2474.95,renewable,True
+Marine,AT,2022,0.0,renewable,True
+Other renewable,AT,2022,0.0,renewable,True
+Solar,AT,2022,2500.0,renewable,True
+Wind Offshore,AT,2022,0.0,renewable,True
+Wind Onshore,AT,2022,3500.0,renewable,True
+Fossil Brown coal/Lignite,AT,2023,0.0,fossil,False
+Fossil Coal-derived gas,AT,2023,0.0,fossil,False
+Fossil Gas,AT,2023,4206.12,fossil,False
+Fossil Hard coal,AT,2023,0.0,fossil,False
+Fossil Oil,AT,2023,120.0,fossil,False
+Fossil Oil shale,AT,2023,0.0,fossil,False
+Fossil Peat,AT,2023,0.0,fossil,False
+Nuclear,AT,2023,0.0,nuclear,False
+Other,AT,2023,845.24,other,False
+Waste,AT,2023,103.0,other,False
+Biomass,AT,2023,482.0,renewable,True
+Geothermal,AT,2023,0.0,renewable,True
+Hydro Pumped Storage,AT,2023,3362.5,renewable,True
+Hydro Run-of-river and poundage,AT,2023,5902.03,renewable,True
+Hydro Water Reservoir,AT,2023,2770.53,renewable,True
+Marine,AT,2023,0.0,renewable,True
+Other renewable,AT,2023,0.0,renewable,True
+Solar,AT,2023,3265.3,renewable,True
+Wind Offshore,AT,2023,0.0,renewable,True
+Wind Onshore,AT,2023,3568.82,renewable,True
+Fossil Brown coal/Lignite,AT,2024,0.0,fossil,False
+Fossil Coal-derived gas,AT,2024,0.0,fossil,False
+Fossil Gas,AT,2024,4225.0,fossil,False
+Fossil Hard coal,AT,2024,0.0,fossil,False
+Fossil Oil,AT,2024,125.0,fossil,False
+Fossil Oil shale,AT,2024,0.0,fossil,False
+Fossil Peat,AT,2024,0.0,fossil,False
+Nuclear,AT,2024,0.0,nuclear,False
+Other,AT,2024,879.0,other,False
+Waste,AT,2024,80.0,other,False
+Biomass,AT,2024,549.0,renewable,True
+Geothermal,AT,2024,0.25,renewable,True
+Hydro Pumped Storage,AT,2024,3485.0,renewable,True
+Hydro Run-of-river and poundage,AT,2024,5817.0,renewable,True
+Hydro Water Reservoir,AT,2024,2519.0,renewable,True
+Marine,AT,2024,0.0,renewable,True
+Other renewable,AT,2024,0.0,renewable,True
+Solar,AT,2024,7294.0,renewable,True
+Wind Offshore,AT,2024,0.0,renewable,True
+Wind Onshore,AT,2024,4021.0,renewable,True
+Fossil_Brown_coal_Lignite,BA,2014,1578.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BA,2014,440.0,other,False
+Hydro_Pure_storage,BA,2014,1620.0,other,False
+Fossil_Brown_coal_Lignite,BA,2015,1613.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,BA,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BA,2015,440.0,other,False
+Hydro_Pure_storage,BA,2015,1649.0,other,False
+Non_identified_net_gen,BA,2015,0.0,other,False
+Wind_onshore,BA,2015,0.0,other,False
+Fossil_Brown_coal_Lignite,BA,2016,1876.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,BA,2016,440.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BA,2016,0.0,other,False
+Hydro_Pure_storage,BA,2016,1656.0,other,False
+Non_identified_net_gen,BA,2016,0.0,other,False
+Fossil_Brown_coal_Lignite,BA,2017,1888.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,BA,2017,440.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BA,2017,0.0,other,False
+Hydro_Pure_storage,BA,2017,1656.0,other,False
+Non_identified_net_gen,BA,2017,0.0,other,False
+Fossil_Brown_coal_Lignite,BA,2018,1888.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,BA,2018,105.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BA,2018,335.0,other,False
+Hydro_Pure_storage,BA,2018,1665.0,other,False
+Non_identified_net_gen,BA,2018,0.0,other,False
+Wind_onshore,BA,2018,50.6,other,False
+Fossil Brown coal/Lignite,BA,2019,988.5,fossil,False
+Fossil Hard coal,BA,2019,887.0,fossil,False
+Hydro Water Reservoir,BA,2019,2169.8,renewable,True
+Wind Onshore,BA,2019,86.6,renewable,True
+Fossil Brown coal/Lignite,BA,2020,988.0,fossil,False
+Fossil Hard coal,BA,2020,887.0,fossil,False
+Hydro Pumped Storage,BA,2020,440.0,renewable,True
+Hydro Run-of-river and poundage,BA,2020,1083.4,renewable,True
+Hydro Water Reservoir,BA,2020,707.0,renewable,True
+Wind Onshore,BA,2020,86.6,renewable,True
+Fossil Brown coal/Lignite,BA,2021,988.0,fossil,False
+Fossil Hard coal,BA,2021,887.0,fossil,False
+Hydro Pumped Storage,BA,2021,440.0,renewable,True
+Hydro Run-of-river and poundage,BA,2021,1083.4,renewable,True
+Hydro Water Reservoir,BA,2021,707.0,renewable,True
+Wind Onshore,BA,2021,145.0,renewable,True
+Fossil Brown coal/Lignite,BA,2022,1888.0,fossil,False
+Hydro Pumped Storage,BA,2022,440.0,renewable,True
+Hydro Run-of-river and poundage,BA,2022,290.7,renewable,True
+Hydro Water Reservoir,BA,2022,1456.0,renewable,True
+Wind Onshore,BA,2022,134.6,renewable,True
+Fossil Brown coal/Lignite,BA,2023,1883.0,fossil,False
+Hydro Pumped Storage,BA,2023,440.0,renewable,True
+Hydro Run-of-river and poundage,BA,2023,252.0,renewable,True
+Hydro Water Reservoir,BA,2023,1456.0,renewable,True
+Wind Onshore,BA,2023,134.6,renewable,True
+Fossil Brown coal/Lignite,BA,2024,1883.0,fossil,False
+Hydro Pumped Storage,BA,2024,440.0,renewable,True
+Hydro Run-of-river and poundage,BA,2024,252.0,renewable,True
+Hydro Water Reservoir,BA,2024,1456.0,renewable,True
+Solar,BA,2024,29.9,renewable,True
+Wind Onshore,BA,2024,134.6,renewable,True
+Fossil Gas,BE,2014,6019.0,fossil,False
+Fossil Oil,BE,2014,219.0,fossil,False
+Nuclear,BE,2014,5926.0,nuclear,False
+Fossil_Hard_coal,BE,2014,470.0,other,False
+Hydro_Pure_pumped_Storage,BE,2014,1308.0,other,False
+Hydro_RunOfRiver_and_poundage,BE,2014,117.0,other,False
+Solar_PV,BE,2014,2986.0,other,False
+Waste_non_renewable,BE,2014,292.0,other,False
+Wind_offshore,BE,2014,706.0,other,False
+Wind_onshore,BE,2014,1233.0,other,False
+Biomass,BE,2014,838.0,renewable,True
+Fossil Gas,BE,2015,6064.0,fossil,False
+Fossil Oil,BE,2015,179.0,fossil,False
+Nuclear,BE,2015,5926.0,nuclear,False
+Biogas,BE,2015,0.0,other,False
+Fossil_Hard_coal,BE,2015,470.0,other,False
+Hydro_Pure_pumped_Storage,BE,2015,1308.0,other,False
+Hydro_RunOfRiver_and_poundage,BE,2015,116.0,other,False
+Other_non_renewable,BE,2015,46.0,other,False
+Other_renewable,BE,2015,0.0,other,False
+Solar_PV,BE,2015,3068.0,other,False
+Waste_non_renewable,BE,2015,292.0,other,False
+Waste_renewable,BE,2015,0.0,other,False
+Wind_offshore,BE,2015,712.0,other,False
+Wind_onshore,BE,2015,1460.0,other,False
+Biomass,BE,2015,918.0,renewable,True
+Fossil Gas,BE,2016,6546.0,fossil,False
+Fossil Oil,BE,2016,160.0,fossil,False
+Nuclear,BE,2016,5926.0,nuclear,False
+Biogas,BE,2016,0.0,other,False
+Fossil_Hard_coal,BE,2016,0.0,other,False
+Hydro_Pure_pumped_Storage,BE,2016,1308.0,other,False
+Hydro_RunOfRiver_and_poundage,BE,2016,122.0,other,False
+Other_non_renewable,BE,2016,59.0,other,False
+Other_renewable,BE,2016,0.0,other,False
+Solar_PV,BE,2016,3087.0,other,False
+Waste_non_renewable,BE,2016,313.0,other,False
+Waste_renewable,BE,2016,0.0,other,False
+Wind_offshore,BE,2016,712.0,other,False
+Wind_onshore,BE,2016,1580.0,other,False
+Biomass,BE,2016,823.0,renewable,True
+Fossil Gas,BE,2017,6688.0,fossil,False
+Fossil Oil,BE,2017,158.0,fossil,False
+Nuclear,BE,2017,5919.0,nuclear,False
+Biogas,BE,2017,0.0,other,False
+Fossil_Hard_coal,BE,2017,0.0,other,False
+Hydro_Pure_pumped_Storage,BE,2017,1308.0,other,False
+Hydro_RunOfRiver_and_poundage,BE,2017,122.0,other,False
+Other_non_renewable,BE,2017,77.0,other,False
+Other_renewable,BE,2017,0.0,other,False
+Solar_PV,BE,2017,3380.0,other,False
+Waste_non_renewable,BE,2017,314.0,other,False
+Waste_renewable,BE,2017,0.0,other,False
+Wind_offshore,BE,2017,878.0,other,False
+Wind_onshore,BE,2017,1929.0,other,False
+Biomass,BE,2017,806.0,renewable,True
+Fossil Gas,BE,2018,6974.0,fossil,False
+Fossil Oil,BE,2018,404.0,fossil,False
+Nuclear,BE,2018,5919.0,nuclear,False
+Biogas,BE,2018,0.0,other,False
+Fossil_Coal_derived_gas,BE,2018,0.0,other,False
+Fossil_Hard_coal,BE,2018,0.0,other,False
+Hydro_Pure_pumped_Storage,BE,2018,1308.0,other,False
+Hydro_RunOfRiver_and_poundage,BE,2018,125.0,other,False
+Other_non_renewable,BE,2018,0.0,other,False
+Other_renewable,BE,2018,0.0,other,False
+Solar_PV,BE,2018,3581.0,other,False
+Waste_non_renewable,BE,2018,302.0,other,False
+Waste_renewable,BE,2018,0.0,other,False
+Wind_offshore,BE,2018,1179.0,other,False
+Wind_onshore,BE,2018,2068.0,other,False
+Biomass,BE,2018,811.0,renewable,True
+Fossil Gas,BE,2019,6641.97,fossil,False
+Fossil Oil,BE,2019,242.13,fossil,False
+Nuclear,BE,2019,5943.0,nuclear,False
+Other,BE,2019,18.5,other,False
+Waste,BE,2019,362.14,other,False
+Biomass,BE,2019,619.25,renewable,True
+Hydro Pumped Storage,BE,2019,1308.0,renewable,True
+Hydro Run-of-river and poundage,BE,2019,172.49,renewable,True
+Solar,BE,2019,3369.05,renewable,True
+Wind Offshore,BE,2019,1548.2,renewable,True
+Wind Onshore,BE,2019,2248.08,renewable,True
+Fossil Gas,BE,2020,6798.85,fossil,False
+Fossil Oil,BE,2020,246.28,fossil,False
+Nuclear,BE,2020,5943.0,nuclear,False
+Other,BE,2020,18.5,other,False
+Waste,BE,2020,362.14,other,False
+Biomass,BE,2020,647.39,renewable,True
+Hydro Pumped Storage,BE,2020,1308.0,renewable,True
+Hydro Run-of-river and poundage,BE,2020,175.34,renewable,True
+Solar,BE,2020,3886.6,renewable,True
+Wind Offshore,BE,2020,2254.4,renewable,True
+Wind Onshore,BE,2020,2416.43,renewable,True
+Fossil Gas,BE,2021,7281.57,fossil,False
+Fossil Oil,BE,2021,275.32,fossil,False
+Nuclear,BE,2021,5943.0,nuclear,False
+Other,BE,2021,18.5,other,False
+Waste,BE,2021,362.14,other,False
+Biomass,BE,2021,672.09,renewable,True
+Hydro Pumped Storage,BE,2021,1308.0,renewable,True
+Hydro Run-of-river and poundage,BE,2021,175.7,renewable,True
+Solar,BE,2021,4787.56,renewable,True
+Wind Offshore,BE,2021,2254.4,renewable,True
+Wind Onshore,BE,2021,2629.0,renewable,True
+Fossil Gas,BE,2022,6818.77,fossil,False
+Fossil Oil,BE,2022,398.47,fossil,False
+Nuclear,BE,2022,5943.0,nuclear,False
+Other,BE,2022,18.5,other,False
+Waste,BE,2022,383.64,other,False
+Biomass,BE,2022,700.47,renewable,True
+Hydro Pumped Storage,BE,2022,1308.0,renewable,True
+Hydro Run-of-river and poundage,BE,2022,184.7,renewable,True
+Solar,BE,2022,4787.56,renewable,True
+Wind Offshore,BE,2022,2254.4,renewable,True
+Wind Onshore,BE,2022,2786.65,renewable,True
+Fossil Gas,BE,2023,6987.62,fossil,False
+Fossil Oil,BE,2023,449.87,fossil,False
+Nuclear,BE,2023,4937.0,nuclear,False
+Other,BE,2023,27.05,other,False
+Waste,BE,2023,383.64,other,False
+Biomass,BE,2023,730.34,renewable,True
+Hydro Pumped Storage,BE,2023,1308.0,renewable,True
+Hydro Run-of-river and poundage,BE,2023,185.51,renewable,True
+Solar,BE,2023,6474.96,renewable,True
+Wind Offshore,BE,2023,2262.1,renewable,True
+Wind Onshore,BE,2023,3053.18,renewable,True
+Fossil Gas,BE,2024,6994.91,fossil,False
+Fossil Oil,BE,2024,451.51,fossil,False
+Nuclear,BE,2024,3929.0,nuclear,False
+Other,BE,2024,27.08,other,False
+Waste,BE,2024,383.64,other,False
+Biomass,BE,2024,730.82,renewable,True
+Hydro Pumped Storage,BE,2024,1308.0,renewable,True
+Hydro Run-of-river and poundage,BE,2024,185.51,renewable,True
+Solar,BE,2024,8788.79,renewable,True
+Wind Offshore,BE,2024,2262.1,renewable,True
+Wind Onshore,BE,2024,3053.18,renewable,True
+Fossil Gas,BG,2014,838.0,fossil,False
+Nuclear,BG,2014,2000.0,nuclear,False
+Fossil_Brown_coal_Lignite,BG,2014,4199.0,other,False
+Fossil_Hard_coal,BG,2014,1548.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BG,2014,190.0,other,False
+Hydro_Pure_pumped_Storage,BG,2014,864.0,other,False
+Hydro_Pure_storage,BG,2014,1537.0,other,False
+Hydro_RunOfRiver_and_poundage,BG,2014,600.0,other,False
+Solar_PV,BG,2014,1039.0,other,False
+Wind_onshore,BG,2014,701.0,other,False
+Biomass,BG,2014,47.0,renewable,True
+Fossil Gas,BG,2015,799.0,fossil,False
+Nuclear,BG,2015,2000.0,nuclear,False
+Fossil_Brown_coal_Lignite,BG,2015,4199.0,other,False
+Fossil_Hard_coal,BG,2015,708.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BG,2015,190.0,other,False
+Hydro_Pure_pumped_Storage,BG,2015,864.0,other,False
+Hydro_Pure_storage,BG,2015,1537.0,other,False
+Hydro_RunOfRiver_and_poundage,BG,2015,607.0,other,False
+Solar_PV,BG,2015,1041.0,other,False
+Wind_onshore,BG,2015,701.0,other,False
+Biomass,BG,2015,64.0,renewable,True
+Fossil Gas,BG,2016,775.25,fossil,False
+Nuclear,BG,2016,2000.0,nuclear,False
+Fossil_Brown_coal_Lignite,BG,2016,4199.4,other,False
+Fossil_Hard_coal,BG,2016,708.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,BG,2016,133.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BG,2016,57.0,other,False
+Hydro_Pure_pumped_Storage,BG,2016,864.0,other,False
+Hydro_Pure_storage,BG,2016,1537.0,other,False
+Hydro_RunOfRiver_and_poundage,BG,2016,613.0,other,False
+Solar_PV,BG,2016,1043.49,other,False
+Wind_onshore,BG,2016,701.35,other,False
+Biomass,BG,2016,69.45,renewable,True
+Fossil Gas,BG,2017,563.0,fossil,False
+Nuclear,BG,2017,2000.0,nuclear,False
+Fossil_Brown_coal_Lignite,BG,2017,4119.0,other,False
+Fossil_Hard_coal,BG,2017,362.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,BG,2017,133.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BG,2017,57.0,other,False
+Hydro_Pure_pumped_Storage,BG,2017,864.0,other,False
+Hydro_Pure_storage,BG,2017,1537.0,other,False
+Hydro_RunOfRiver_and_poundage,BG,2017,613.0,other,False
+Solar_PV,BG,2017,1046.34,other,False
+Wind_onshore,BG,2017,701.35,other,False
+Biomass,BG,2017,76.85,renewable,True
+Fossil Gas,BG,2018,755.0,fossil,False
+Nuclear,BG,2018,1950.0,nuclear,False
+Fossil_Brown_coal_Lignite,BG,2018,3557.6,other,False
+Fossil_Hard_coal,BG,2018,175.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,BG,2018,133.0,other,False
+Hydro_Mixed_pumped_storage_renewable,BG,2018,57.0,other,False
+Hydro_Pure_pumped_Storage,BG,2018,864.0,other,False
+Hydro_Pure_storage,BG,2018,1533.7,other,False
+Hydro_RunOfRiver_and_poundage,BG,2018,600.0,other,False
+Solar_PV,BG,2018,1052.0,other,False
+Wind_onshore,BG,2018,700.0,other,False
+Biomass,BG,2018,77.0,renewable,True
+Fossil Brown coal/Lignite,BG,2019,4119.0,fossil,False
+Fossil Gas,BG,2019,1232.0,fossil,False
+Fossil Hard coal,BG,2019,356.0,fossil,False
+Nuclear,BG,2019,2000.0,nuclear,False
+Waste,BG,2019,6.0,other,False
+Biomass,BG,2019,74.0,renewable,True
+Hydro Pumped Storage,BG,2019,864.0,renewable,True
+Hydro Run-of-river and poundage,BG,2019,537.0,renewable,True
+Hydro Water Reservoir,BG,2019,1810.0,renewable,True
+Solar,BG,2019,1059.0,renewable,True
+Wind Onshore,BG,2019,700.0,renewable,True
+Fossil Brown coal/Lignite,BG,2020,4119.0,fossil,False
+Fossil Gas,BG,2020,1232.0,fossil,False
+Fossil Hard coal,BG,2020,356.0,fossil,False
+Nuclear,BG,2020,2000.0,nuclear,False
+Waste,BG,2020,6.0,other,False
+Biomass,BG,2020,74.0,renewable,True
+Hydro Pumped Storage,BG,2020,864.0,renewable,True
+Hydro Run-of-river and poundage,BG,2020,537.0,renewable,True
+Hydro Water Reservoir,BG,2020,1810.0,renewable,True
+Solar,BG,2020,1084.0,renewable,True
+Wind Onshore,BG,2020,700.0,renewable,True
+Fossil Brown coal/Lignite,BG,2021,4119.0,fossil,False
+Fossil Gas,BG,2021,1266.0,fossil,False
+Fossil Hard coal,BG,2021,356.0,fossil,False
+Nuclear,BG,2021,2000.0,nuclear,False
+Waste,BG,2021,6.0,other,False
+Biomass,BG,2021,75.0,renewable,True
+Hydro Pumped Storage,BG,2021,864.0,renewable,True
+Hydro Run-of-river and poundage,BG,2021,539.0,renewable,True
+Hydro Water Reservoir,BG,2021,1810.0,renewable,True
+Solar,BG,2021,1246.0,renewable,True
+Wind Onshore,BG,2021,705.0,renewable,True
+Fossil Brown coal/Lignite,BG,2022,4119.0,fossil,False
+Fossil Coal-derived gas,BG,2022,0.0,fossil,False
+Fossil Gas,BG,2022,1305.0,fossil,False
+Fossil Hard coal,BG,2022,356.0,fossil,False
+Fossil Oil,BG,2022,0.0,fossil,False
+Fossil Oil shale,BG,2022,0.0,fossil,False
+Fossil Peat,BG,2022,0.0,fossil,False
+Nuclear,BG,2022,2080.0,nuclear,False
+Other,BG,2022,0.0,other,False
+Waste,BG,2022,6.0,other,False
+Biomass,BG,2022,74.0,renewable,True
+Geothermal,BG,2022,0.0,renewable,True
+Hydro Pumped Storage,BG,2022,864.0,renewable,True
+Hydro Run-of-river and poundage,BG,2022,540.0,renewable,True
+Hydro Water Reservoir,BG,2022,1810.0,renewable,True
+Marine,BG,2022,0.0,renewable,True
+Other renewable,BG,2022,0.0,renewable,True
+Solar,BG,2022,1726.0,renewable,True
+Wind Offshore,BG,2022,0.0,renewable,True
+Wind Onshore,BG,2022,705.0,renewable,True
+Fossil Brown coal/Lignite,BG,2023,4119.0,fossil,False
+Fossil Coal-derived gas,BG,2023,0.0,fossil,False
+Fossil Gas,BG,2023,1322.0,fossil,False
+Fossil Hard coal,BG,2023,350.0,fossil,False
+Fossil Oil,BG,2023,0.0,fossil,False
+Fossil Oil shale,BG,2023,0.0,fossil,False
+Fossil Peat,BG,2023,0.0,fossil,False
+Nuclear,BG,2023,2080.0,nuclear,False
+Other,BG,2023,0.0,other,False
+Waste,BG,2023,6.0,other,False
+Biomass,BG,2023,74.0,renewable,True
+Geothermal,BG,2023,0.0,renewable,True
+Hydro Pumped Storage,BG,2023,864.0,renewable,True
+Hydro Run-of-river and poundage,BG,2023,540.0,renewable,True
+Hydro Water Reservoir,BG,2023,1810.0,renewable,True
+Marine,BG,2023,0.0,renewable,True
+Other renewable,BG,2023,0.0,renewable,True
+Solar,BG,2023,2879.0,renewable,True
+Wind Offshore,BG,2023,0.0,renewable,True
+Wind Onshore,BG,2023,705.0,renewable,True
+Fossil Brown coal/Lignite,BG,2024,4119.0,fossil,False
+Fossil Coal-derived gas,BG,2024,0.0,fossil,False
+Fossil Gas,BG,2024,699.0,fossil,False
+Fossil Hard coal,BG,2024,356.0,fossil,False
+Fossil Oil,BG,2024,0.0,fossil,False
+Fossil Oil shale,BG,2024,0.0,fossil,False
+Fossil Peat,BG,2024,0.0,fossil,False
+Nuclear,BG,2024,2080.0,nuclear,False
+Other,BG,2024,0.0,other,False
+Waste,BG,2024,6.0,other,False
+Biomass,BG,2024,74.0,renewable,True
+Geothermal,BG,2024,0.0,renewable,True
+Hydro Pumped Storage,BG,2024,864.0,renewable,True
+Hydro Run-of-river and poundage,BG,2024,542.0,renewable,True
+Hydro Water Reservoir,BG,2024,1807.0,renewable,True
+Marine,BG,2024,0.0,renewable,True
+Other renewable,BG,2024,0.0,renewable,True
+Solar,BG,2024,4055.0,renewable,True
+Wind Offshore,BG,2024,0.0,renewable,True
+Wind Onshore,BG,2024,705.0,renewable,True
+Nuclear,CH,2014,3333.0,nuclear,False
+Fossil_Other,CH,2014,502.0,other,False
+Hydro_Mixed_pumped_storage_renewable,CH,2014,595.0,other,False
+Hydro_Pure_pumped_Storage,CH,2014,1383.0,other,False
+Hydro_Pure_storage,CH,2014,7956.0,other,False
+Hydro_RunOfRiver_and_poundage,CH,2014,3894.0,other,False
+Non_identified_net_gen,CH,2014,244.5,other,False
+Solar_PV,CH,2014,756.0,other,False
+Wind_onshore,CH,2014,60.0,other,False
+Biomass,CH,2014,275.0,renewable,True
+Nuclear,CH,2015,3333.0,nuclear,False
+Biogas,CH,2015,1.0,other,False
+Hydro_Pure_storage,CH,2015,7966.0,other,False
+Hydro_RunOfRiver_and_poundage,CH,2015,3941.0,other,False
+Solar_PV,CH,2015,1061.0,other,False
+Waste_non_renewable,CH,2015,199.0,other,False
+Waste_renewable,CH,2015,199.0,other,False
+Wind_onshore,CH,2015,60.0,other,False
+Biomass,CH,2015,247.0,renewable,True
+Nuclear,CH,2016,3333.0,nuclear,False
+Biogas,CH,2016,1.0,other,False
+Hydro_Pure_storage,CH,2016,8156.15,other,False
+Hydro_RunOfRiver_and_poundage,CH,2016,4004.07,other,False
+Solar_PV,CH,2016,1394.0,other,False
+Waste_non_renewable,CH,2016,211.0,other,False
+Waste_renewable,CH,2016,211.0,other,False
+Wind_onshore,CH,2016,60.0,other,False
+Biomass,CH,2016,246.0,renewable,True
+Fossil Gas,CH,2017,0.0,fossil,False
+Fossil Oil,CH,2017,0.0,fossil,False
+Nuclear,CH,2017,3333.0,nuclear,False
+Biogas,CH,2017,0.0,other,False
+Hydro_Pure_storage,CH,2017,8151.75,other,False
+Hydro_RunOfRiver_and_poundage,CH,2017,4053.2,other,False
+Solar_PV,CH,2017,1664.0,other,False
+Waste_non_renewable,CH,2017,211.0,other,False
+Waste_renewable,CH,2017,211.0,other,False
+Wind_onshore,CH,2017,75.0,other,False
+Biomass,CH,2017,196.0,renewable,True
+Nuclear,CH,2019,3373.0,nuclear,False
+Hydro Pumped Storage,CH,2019,6640.7,renewable,True
+Hydro Run-of-river and poundage,CH,2019,634.5,renewable,True
+Hydro Water Reservoir,CH,2019,5418.8,renewable,True
+Nuclear,CH,2020,2970.0,nuclear,False
+Hydro Pumped Storage,CH,2020,6671.7,renewable,True
+Hydro Run-of-river and poundage,CH,2020,634.5,renewable,True
+Hydro Water Reservoir,CH,2020,5415.0,renewable,True
+Nuclear,CH,2021,2970.0,nuclear,False
+Hydro Pumped Storage,CH,2021,6680.7,renewable,True
+Hydro Run-of-river and poundage,CH,2021,604.5,renewable,True
+Hydro Water Reservoir,CH,2021,5588.0,renewable,True
+Nuclear,CH,2022,2970.0,nuclear,False
+Hydro Pumped Storage,CH,2022,6680.7,renewable,True
+Hydro Run-of-river and poundage,CH,2022,604.5,renewable,True
+Hydro Water Reservoir,CH,2022,5588.0,renewable,True
+Nuclear,CH,2023,2970.0,nuclear,False
+Hydro Pumped Storage,CH,2023,6696.7,renewable,True
+Hydro Run-of-river and poundage,CH,2023,604.5,renewable,True
+Hydro Water Reservoir,CH,2023,5588.0,renewable,True
+Nuclear,CH,2024,2970.0,nuclear,False
+Hydro Pumped Storage,CH,2024,6696.7,renewable,True
+Hydro Run-of-river and poundage,CH,2024,634.5,renewable,True
+Hydro Water Reservoir,CH,2024,5772.0,renewable,True
+Fossil Oil,CY,2014,1478.0,fossil,False
+Other_renewable,CY,2014,73.3,other,False
+Wind_onshore,CY,2014,144.3,other,False
+Fossil Oil,CY,2015,1478.0,fossil,False
+Non_identified_net_gen,CY,2015,0.0,other,False
+Other_renewable,CY,2015,88.6,other,False
+Wind_onshore,CY,2015,155.0,other,False
+Fossil Oil,CY,2016,1478.0,fossil,False
+Other_renewable,CY,2016,97.8,other,False
+Wind_onshore,CY,2016,155.0,other,False
+Fossil Oil,CY,2017,1478.0,fossil,False
+Other_renewable,CY,2017,124.2,other,False
+Wind_onshore,CY,2017,155.0,other,False
+Fossil Oil,CY,2018,1478.0,fossil,False
+Other_renewable,CY,2018,134.8,other,False
+Wind_onshore,CY,2018,155.0,other,False
+Fossil Oil,CY,2019,1478.0,fossil,False
+Biomass,CY,2019,12.0,renewable,True
+Solar,CY,2019,150.0,renewable,True
+Wind Onshore,CY,2019,158.0,renewable,True
+Fossil Oil,CY,2020,1478.0,fossil,False
+Biomass,CY,2020,12.0,renewable,True
+Solar,CY,2020,205.0,renewable,True
+Wind Onshore,CY,2020,158.0,renewable,True
+Fossil Oil,CY,2021,1478.0,fossil,False
+Biomass,CY,2021,12.0,renewable,True
+Solar,CY,2021,252.0,renewable,True
+Wind Onshore,CY,2021,158.0,renewable,True
+Fossil Gas,CZ,2014,1570.0,fossil,False
+Nuclear,CZ,2014,4040.0,nuclear,False
+Biogas,CZ,2014,450.0,other,False
+Fossil_Brown_coal_Lignite,CZ,2014,8480.0,other,False
+Fossil_Coal_derived_gas,CZ,2014,380.0,other,False
+Fossil_Hard_coal,CZ,2014,1200.0,other,False
+Hydro_Pure_pumped_Storage,CZ,2014,1171.0,other,False
+Hydro_Pure_storage,CZ,2014,650.0,other,False
+Hydro_RunOfRiver_and_poundage,CZ,2014,440.0,other,False
+Solar_PV,CZ,2014,2061.0,other,False
+Wind_onshore,CZ,2014,278.0,other,False
+Biomass,CZ,2014,350.0,renewable,True
+Fossil Gas,CZ,2015,1986.0,fossil,False
+Fossil Oil,CZ,2015,0.0,fossil,False
+Nuclear,CZ,2015,4040.0,nuclear,False
+Biogas,CZ,2015,500.0,other,False
+Fossil_Brown_coal_Lignite,CZ,2015,8334.0,other,False
+Fossil_Hard_coal,CZ,2015,1200.0,other,False
+Fossil_Other,CZ,2015,0.0,other,False
+Hydro_Pure_pumped_Storage,CZ,2015,1172.0,other,False
+Hydro_RunOfRiver_and_poundage,CZ,2015,1081.0,other,False
+Solar_PV,CZ,2015,2070.0,other,False
+Wind_onshore,CZ,2015,280.0,other,False
+Biomass,CZ,2015,350.0,renewable,True
+Fossil Gas,CZ,2016,1226.0,fossil,False
+Fossil Oil,CZ,2016,0.0,fossil,False
+Nuclear,CZ,2016,4040.0,nuclear,False
+Biogas,CZ,2016,500.0,other,False
+Fossil_Brown_coal_Lignite,CZ,2016,7929.0,other,False
+Fossil_Coal_derived_gas,CZ,2016,380.0,other,False
+Fossil_Hard_coal,CZ,2016,1200.0,other,False
+Hydro_Pure_pumped_Storage,CZ,2016,1172.0,other,False
+Hydro_Pure_storage,CZ,2016,753.0,other,False
+Hydro_RunOfRiver_and_poundage,CZ,2016,334.0,other,False
+Solar_PV,CZ,2016,2027.0,other,False
+Wind_onshore,CZ,2016,277.0,other,False
+Biomass,CZ,2016,350.0,renewable,True
+Fossil Gas,CZ,2017,1226.0,fossil,False
+Fossil Oil,CZ,2017,0.0,fossil,False
+Nuclear,CZ,2017,4040.0,nuclear,False
+Biogas,CZ,2017,450.0,other,False
+Fossil_Brown_coal_Lignite,CZ,2017,8492.0,other,False
+Fossil_Coal_derived_gas,CZ,2017,380.0,other,False
+Fossil_Hard_coal,CZ,2017,1200.0,other,False
+Fossil_Other,CZ,2017,0.0,other,False
+Hydro_Pure_pumped_Storage,CZ,2017,1172.0,other,False
+Hydro_Pure_storage,CZ,2017,753.0,other,False
+Hydro_RunOfRiver_and_poundage,CZ,2017,334.0,other,False
+Solar_PV,CZ,2017,2040.0,other,False
+Waste_non_renewable,CZ,2017,100.0,other,False
+Wind_onshore,CZ,2017,308.0,other,False
+Biomass,CZ,2017,350.0,renewable,True
+Fossil Gas,CZ,2018,1226.0,fossil,False
+Fossil Oil,CZ,2018,0.0,fossil,False
+Nuclear,CZ,2018,4040.0,nuclear,False
+Biogas,CZ,2018,400.0,other,False
+Fossil_Brown_coal_Lignite,CZ,2018,8450.0,other,False
+Fossil_Coal_derived_gas,CZ,2018,380.0,other,False
+Fossil_Hard_coal,CZ,2018,1200.0,other,False
+Fossil_Other,CZ,2018,0.0,other,False
+Hydro_Pure_pumped_Storage,CZ,2018,1172.0,other,False
+Hydro_Pure_storage,CZ,2018,753.0,other,False
+Hydro_RunOfRiver_and_poundage,CZ,2018,334.0,other,False
+Solar_PV,CZ,2018,2049.0,other,False
+Waste_non_renewable,CZ,2018,100.0,other,False
+Wind_onshore,CZ,2018,316.0,other,False
+Biomass,CZ,2018,400.0,renewable,True
+Fossil Brown coal/Lignite,CZ,2019,8450.0,fossil,False
+Fossil Coal-derived gas,CZ,2019,380.0,fossil,False
+Fossil Gas,CZ,2019,1226.0,fossil,False
+Fossil Hard coal,CZ,2019,1200.0,fossil,False
+Fossil Oil,CZ,2019,0.0,fossil,False
+Nuclear,CZ,2019,4040.0,nuclear,False
+Other,CZ,2019,0.0,other,False
+Waste,CZ,2019,100.0,other,False
+Biomass,CZ,2019,400.0,renewable,True
+Hydro Pumped Storage,CZ,2019,1172.0,renewable,True
+Hydro Run-of-river and poundage,CZ,2019,334.0,renewable,True
+Hydro Water Reservoir,CZ,2019,753.0,renewable,True
+Other renewable,CZ,2019,400.0,renewable,True
+Solar,CZ,2019,2049.0,renewable,True
+Wind Onshore,CZ,2019,316.0,renewable,True
+Fossil Brown coal/Lignite,CZ,2020,8150.0,fossil,False
+Fossil Coal-derived gas,CZ,2020,380.0,fossil,False
+Fossil Gas,CZ,2020,1226.0,fossil,False
+Fossil Hard coal,CZ,2020,1200.0,fossil,False
+Fossil Oil,CZ,2020,0.0,fossil,False
+Nuclear,CZ,2020,4040.0,nuclear,False
+Other,CZ,2020,0.0,other,False
+Waste,CZ,2020,100.0,other,False
+Biomass,CZ,2020,410.0,renewable,True
+Hydro Pumped Storage,CZ,2020,1172.0,renewable,True
+Hydro Run-of-river and poundage,CZ,2020,334.0,renewable,True
+Hydro Water Reservoir,CZ,2020,754.0,renewable,True
+Other renewable,CZ,2020,410.0,renewable,True
+Solar,CZ,2020,2061.0,renewable,True
+Wind Onshore,CZ,2020,339.0,renewable,True
+Fossil Brown coal/Lignite,CZ,2021,7700.0,fossil,False
+Fossil Coal-derived gas,CZ,2021,380.0,fossil,False
+Fossil Gas,CZ,2021,1226.0,fossil,False
+Fossil Hard coal,CZ,2021,1200.0,fossil,False
+Fossil Oil,CZ,2021,0.0,fossil,False
+Nuclear,CZ,2021,4040.0,nuclear,False
+Other,CZ,2021,0.0,other,False
+Waste,CZ,2021,100.0,other,False
+Biomass,CZ,2021,410.0,renewable,True
+Hydro Pumped Storage,CZ,2021,1172.0,renewable,True
+Hydro Run-of-river and poundage,CZ,2021,338.0,renewable,True
+Hydro Water Reservoir,CZ,2021,753.0,renewable,True
+Other renewable,CZ,2021,410.0,renewable,True
+Solar,CZ,2021,2054.0,renewable,True
+Wind Onshore,CZ,2021,339.0,renewable,True
+Fossil Brown coal/Lignite,CZ,2022,7250.0,fossil,False
+Fossil Coal-derived gas,CZ,2022,380.0,fossil,False
+Fossil Gas,CZ,2022,1240.0,fossil,False
+Fossil Hard coal,CZ,2022,1200.0,fossil,False
+Fossil Oil,CZ,2022,0.0,fossil,False
+Nuclear,CZ,2022,4040.0,nuclear,False
+Other,CZ,2022,0.0,other,False
+Waste,CZ,2022,100.0,other,False
+Biomass,CZ,2022,410.0,renewable,True
+Hydro Pumped Storage,CZ,2022,1172.0,renewable,True
+Hydro Run-of-river and poundage,CZ,2022,356.0,renewable,True
+Hydro Water Reservoir,CZ,2022,753.0,renewable,True
+Other renewable,CZ,2022,410.0,renewable,True
+Solar,CZ,2022,2053.0,renewable,True
+Wind Onshore,CZ,2022,339.0,renewable,True
+Fossil Brown coal/Lignite,CZ,2023,7160.0,fossil,False
+Fossil Coal-derived gas,CZ,2023,380.0,fossil,False
+Fossil Gas,CZ,2023,1240.0,fossil,False
+Fossil Hard coal,CZ,2023,1200.0,fossil,False
+Fossil Oil,CZ,2023,0.0,fossil,False
+Nuclear,CZ,2023,4040.0,nuclear,False
+Other,CZ,2023,0.0,other,False
+Waste,CZ,2023,100.0,other,False
+Biomass,CZ,2023,410.0,renewable,True
+Hydro Pumped Storage,CZ,2023,1172.0,renewable,True
+Hydro Run-of-river and poundage,CZ,2023,340.0,renewable,True
+Hydro Water Reservoir,CZ,2023,772.0,renewable,True
+Other renewable,CZ,2023,410.0,renewable,True
+Solar,CZ,2023,2083.0,renewable,True
+Wind Onshore,CZ,2023,339.0,renewable,True
+Fossil Brown coal/Lignite,CZ,2024,7200.0,fossil,False
+Fossil Coal-derived gas,CZ,2024,380.0,fossil,False
+Fossil Gas,CZ,2024,1240.0,fossil,False
+Fossil Hard coal,CZ,2024,1200.0,fossil,False
+Fossil Oil,CZ,2024,0.0,fossil,False
+Nuclear,CZ,2024,4040.0,nuclear,False
+Other,CZ,2024,0.0,other,False
+Waste,CZ,2024,100.0,other,False
+Biomass,CZ,2024,410.0,renewable,True
+Hydro Pumped Storage,CZ,2024,1172.0,renewable,True
+Hydro Run-of-river and poundage,CZ,2024,340.0,renewable,True
+Hydro Water Reservoir,CZ,2024,766.0,renewable,True
+Other renewable,CZ,2024,460.0,renewable,True
+Solar,CZ,2024,3548.0,renewable,True
+Wind Onshore,CZ,2024,342.0,renewable,True
+Fossil Gas,DE,2014,27712.0,fossil,False
+Fossil Oil,DE,2014,4143.0,fossil,False
+Nuclear,DE,2014,12068.0,nuclear,False
+Fossil_Brown_coal_Lignite,DE,2014,21245.0,other,False
+Fossil_Hard_coal,DE,2014,28005.0,other,False
+Fossil_Mixed_fuels,DE,2014,3100.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,DE,2014,1069.0,other,False
+Hydro_Pure_pumped_Storage,DE,2014,5282.0,other,False
+Hydro_Pure_storage,DE,2014,287.3,other,False
+Hydro_RunOfRiver_and_poundage,DE,2014,4071.0,other,False
+Other_renewable,DE,2014,556.16,other,False
+Solar_PV,DE,2014,37981.0,other,False
+Waste_non_renewable,DE,2014,798.0,other,False
+Waste_renewable,DE,2014,798.0,other,False
+Wind_offshore,DE,2014,747.7,other,False
+Wind_onshore,DE,2014,35813.0,other,False
+Biomass,DE,2014,6359.0,renewable,True
+Geothermal,DE,2014,30.27,renewable,True
+Fossil Gas,DE,2015,28325.8,fossil,False
+Fossil Oil,DE,2015,4280.6,fossil,False
+Nuclear,DE,2015,10793.0,nuclear,False
+Fossil_Brown_coal_Lignite,DE,2015,20929.0,other,False
+Fossil_Hard_coal,DE,2015,26479.6,other,False
+Fossil_Mixed_fuels,DE,2015,3149.5,other,False
+Hydro_Mixed_pumped_storage_non_renewable,DE,2015,1068.5,other,False
+Hydro_Pure_pumped_Storage,DE,2015,5281.5,other,False
+Hydro_Pure_storage,DE,2015,204.5,other,False
+Hydro_RunOfRiver_and_poundage,DE,2015,3811.25,other,False
+Other_renewable,DE,2015,511.69,other,False
+Solar_PV,DE,2015,38523.46,other,False
+Waste_non_renewable,DE,2015,810.75,other,False
+Waste_renewable,DE,2015,810.75,other,False
+Wind_offshore,DE,2015,3283.35,other,False
+Wind_onshore,DE,2015,41032.58,other,False
+Biomass,DE,2015,6804.36,renewable,True
+Geothermal,DE,2015,33.44,renewable,True
+Fossil Gas,DE,2016,28540.75,fossil,False
+Fossil Oil,DE,2016,4888.89,fossil,False
+Nuclear,DE,2016,10793.0,nuclear,False
+Fossil_Brown_coal_Lignite,DE,2016,20862.7,other,False
+Fossil_Hard_coal,DE,2016,26818.04,other,False
+Fossil_Mixed_fuels,DE,2016,3008.3,other,False
+Hydro_Mixed_pumped_storage_non_renewable,DE,2016,1061.6,other,False
+Hydro_Pure_pumped_Storage,DE,2016,5271.64,other,False
+Hydro_Pure_storage,DE,2016,247.5,other,False
+Hydro_RunOfRiver_and_poundage,DE,2016,3591.32,other,False
+Other_renewable,DE,2016,454.73,other,False
+Solar_PV,DE,2016,40020.68,other,False
+Waste_non_renewable,DE,2016,648.74,other,False
+Waste_renewable,DE,2016,648.74,other,False
+Wind_offshore,DE,2016,4125.82,other,False
+Wind_onshore,DE,2016,45403.72,other,False
+Biomass,DE,2016,7244.97,renewable,True
+Geothermal,DE,2016,37.53,renewable,True
+Fossil Gas,DE,2017,31614.29,fossil,False
+Fossil Oil,DE,2017,4440.16,fossil,False
+Nuclear,DE,2017,9516.0,nuclear,False
+Fossil_Brown_coal_Lignite,DE,2017,21109.56,other,False
+Fossil_Hard_coal,DE,2017,24645.11,other,False
+Fossil_Mixed_fuels,DE,2017,1360.71,other,False
+Hydro_Mixed_pumped_storage_non_renewable,DE,2017,1061.6,other,False
+Hydro_Pure_pumped_Storage,DE,2017,5293.64,other,False
+Hydro_Pure_storage,DE,2017,204.5,other,False
+Hydro_RunOfRiver_and_poundage,DE,2017,3652.75,other,False
+Other_renewable,DE,2017,497.63,other,False
+Solar_PV,DE,2017,42090.79,other,False
+Waste_non_renewable,DE,2017,892.3,other,False
+Waste_renewable,DE,2017,892.3,other,False
+Wind_offshore,DE,2017,5404.92,other,False
+Wind_onshore,DE,2017,50255.61,other,False
+Biomass,DE,2017,7246.39,renewable,True
+Geothermal,DE,2017,37.75,renewable,True
+Fossil Gas,DE,2018,28300.46,fossil,False
+Fossil Oil,DE,2018,3762.64,fossil,False
+Nuclear,DE,2018,9509.0,nuclear,False
+Fossil_Brown_coal_Lignite,DE,2018,20344.56,other,False
+Fossil_Hard_coal,DE,2018,21987.71,other,False
+Fossil_Mixed_fuels,DE,2018,1200.11,other,False
+Hydro_Mixed_pumped_storage_non_renewable,DE,2018,1061.6,other,False
+Hydro_Pure_pumped_Storage,DE,2018,5116.64,other,False
+Hydro_Pure_storage,DE,2018,204.5,other,False
+Hydro_RunOfRiver_and_poundage,DE,2018,3864.33,other,False
+Other_renewable,DE,2018,457.6,other,False
+Solar_PV,DE,2018,44360.83,other,False
+Waste_non_renewable,DE,2018,552.25,other,False
+Waste_renewable,DE,2018,552.25,other,False
+Wind_offshore,DE,2018,6392.81,other,False
+Wind_onshore,DE,2018,52321.17,other,False
+Biomass,DE,2018,7560.55,renewable,True
+Geothermal,DE,2018,41.56,renewable,True
+Fossil Brown coal/Lignite,DE,2019,21205.0,fossil,False
+Fossil Coal-derived gas,DE,2019,0.0,fossil,False
+Fossil Gas,DE,2019,31664.0,fossil,False
+Fossil Hard coal,DE,2019,25293.0,fossil,False
+Fossil Oil,DE,2019,4356.0,fossil,False
+Nuclear,DE,2019,9516.0,nuclear,False
+Other,DE,2019,1235.0,other,False
+Waste,DE,2019,1686.0,other,False
+Biomass,DE,2019,7752.13,renewable,True
+Geothermal,DE,2019,41.75,renewable,True
+Hydro Pumped Storage,DE,2019,9422.0,renewable,True
+Hydro Run-of-river and poundage,DE,2019,3982.92,renewable,True
+Hydro Water Reservoir,DE,2019,1298.0,renewable,True
+Other renewable,DE,2019,444.59,renewable,True
+Solar,DE,2019,45298.98,renewable,True
+Wind Offshore,DE,2019,6393.0,renewable,True
+Wind Onshore,DE,2019,52791.63,renewable,True
+Fossil Brown coal/Lignite,DE,2020,21067.0,fossil,False
+Fossil Coal-derived gas,DE,2020,0.0,fossil,False
+Fossil Gas,DE,2020,31712.06,fossil,False
+Fossil Hard coal,DE,2020,22458.4,fossil,False
+Fossil Oil,DE,2020,4372.53,fossil,False
+Nuclear,DE,2020,8114.0,nuclear,False
+Other,DE,2020,1557.77,other,False
+Waste,DE,2020,1660.6,other,False
+Biomass,DE,2020,7986.63,renewable,True
+Geothermal,DE,2020,47.46,renewable,True
+Hydro Pumped Storage,DE,2020,9421.5,renewable,True
+Hydro Run-of-river and poundage,DE,2020,3969.71,renewable,True
+Hydro Water Reservoir,DE,2020,1297.5,renewable,True
+Other renewable,DE,2020,407.46,renewable,True
+Solar,DE,2020,48206.4,renewable,True
+Wind Offshore,DE,2020,7503.69,renewable,True
+Wind Onshore,DE,2020,53184.15,renewable,True
+Fossil Brown coal/Lignite,DE,2021,20487.0,fossil,False
+Fossil Coal-derived gas,DE,2021,0.0,fossil,False
+Fossil Gas,DE,2021,31942.23,fossil,False
+Fossil Hard coal,DE,2021,23499.4,fossil,False
+Fossil Oil,DE,2021,4184.36,fossil,False
+Nuclear,DE,2021,8114.0,nuclear,False
+Other,DE,2021,1638.77,other,False
+Waste,DE,2021,1639.6,other,False
+Biomass,DE,2021,8400.08,renewable,True
+Geothermal,DE,2021,43.86,renewable,True
+Hydro Pumped Storage,DE,2021,9421.5,renewable,True
+Hydro Run-of-river and poundage,DE,2021,3813.78,renewable,True
+Hydro Water Reservoir,DE,2021,1297.5,renewable,True
+Other renewable,DE,2021,420.27,renewable,True
+Solar,DE,2021,53301.92,renewable,True
+Wind Offshore,DE,2021,7773.82,renewable,True
+Wind Onshore,DE,2021,54499.17,renewable,True
+Fossil Brown coal/Lignite,DE,2022,18544.29,fossil,False
+Fossil Coal-derived gas,DE,2022,0.0,fossil,False
+Fossil Gas,DE,2022,30552.72,fossil,False
+Fossil Hard coal,DE,2022,18829.51,fossil,False
+Fossil Oil,DE,2022,3966.28,fossil,False
+Nuclear,DE,2022,4056.0,nuclear,False
+Other,DE,2022,1678.83,other,False
+Waste,DE,2022,1598.5,other,False
+Biomass,DE,2022,8331.89,renewable,True
+Geothermal,DE,2022,50.9,renewable,True
+Hydro Pumped Storage,DE,2022,9280.24,renewable,True
+Hydro Run-of-river and poundage,DE,2022,3659.53,renewable,True
+Hydro Water Reservoir,DE,2022,1397.0,renewable,True
+Other renewable,DE,2022,352.43,renewable,True
+Solar,DE,2022,57744.29,renewable,True
+Wind Offshore,DE,2022,7786.82,renewable,True
+Wind Onshore,DE,2022,55289.32,renewable,True
+Fossil Brown coal/Lignite,DE,2023,17692.0,fossil,False
+Fossil Coal-derived gas,DE,2023,1257.0,fossil,False
+Fossil Gas,DE,2023,31808.0,fossil,False
+Fossil Hard coal,DE,2023,18127.0,fossil,False
+Fossil Oil,DE,2023,4083.0,fossil,False
+Nuclear,DE,2023,4056.0,nuclear,False
+Other,DE,2023,1706.0,other,False
+Waste,DE,2023,1912.0,other,False
+Biomass,DE,2023,8466.83,renewable,True
+Geothermal,DE,2023,55.61,renewable,True
+Hydro Pumped Storage,DE,2023,9280.0,renewable,True
+Hydro Run-of-river and poundage,DE,2023,3715.25,renewable,True
+Hydro Water Reservoir,DE,2023,1433.0,renewable,True
+Other renewable,DE,2023,383.98,renewable,True
+Solar,DE,2023,63065.55,renewable,True
+Wind Offshore,DE,2023,8128.82,renewable,True
+Wind Onshore,DE,2023,57589.83,renewable,True
+Fossil Brown coal/Lignite,DE,2024,18363.0,fossil,False
+Fossil Coal-derived gas,DE,2024,1257.0,fossil,False
+Fossil Gas,DE,2024,36255.0,fossil,False
+Fossil Hard coal,DE,2024,18411.0,fossil,False
+Fossil Oil,DE,2024,4118.0,fossil,False
+Other,DE,2024,1630.0,other,False
+Waste,DE,2024,1808.0,other,False
+Biomass,DE,2024,8576.54,renewable,True
+Geothermal,DE,2024,54.0,renewable,True
+Hydro Pumped Storage,DE,2024,9449.0,renewable,True
+Hydro Run-of-river and poundage,DE,2024,3730.8,renewable,True
+Hydro Water Reservoir,DE,2024,1381.0,renewable,True
+Other renewable,DE,2024,356.45,renewable,True
+Solar,DE,2024,76600.56,renewable,True
+Wind Offshore,DE,2024,8456.0,renewable,True
+Wind Onshore,DE,2024,59840.62,renewable,True
+Fossil Gas,DK,2014,3121.0,fossil,False
+Fossil Oil,DK,2014,859.0,fossil,False
+Fossil Peat,DK,2014,52.0,fossil,False
+Biogas,DK,2014,123.0,other,False
+Fossil_Hard_coal,DK,2014,4871.0,other,False
+Fossil_Mixed_fuels,DK,2014,44.0,other,False
+Hydro_RunOfRiver_and_poundage,DK,2014,9.0,other,False
+Solar_PV,DK,2014,599.0,other,False
+Waste_renewable,DK,2014,343.0,other,False
+Wind_offshore,DK,2014,1271.0,other,False
+Wind_onshore,DK,2014,3619.0,other,False
+Biomass,DK,2014,154.0,renewable,True
+Fossil Gas,DK,2015,3001.0,fossil,False
+Fossil Oil,DK,2015,839.0,fossil,False
+Fossil Peat,DK,2015,0.0,fossil,False
+Biogas,DK,2015,108.0,other,False
+Fossil_Hard_coal,DK,2015,4835.0,other,False
+Fossil_Mixed_fuels,DK,2015,44.0,other,False
+Hydro_RunOfRiver_and_poundage,DK,2015,7.58,other,False
+Non_identified_net_gen,DK,2015,2.0,other,False
+Solar_PV,DK,2015,781.0,other,False
+Waste_renewable,DK,2015,341.0,other,False
+Wind_offshore,DK,2015,1271.0,other,False
+Wind_onshore,DK,2015,3808.0,other,False
+Biomass,DK,2015,376.0,renewable,True
+Fossil Gas,DK,2016,2431.0,fossil,False
+Fossil Oil,DK,2016,839.0,fossil,False
+Fossil Peat,DK,2016,0.0,fossil,False
+Biogas,DK,2016,110.39,other,False
+Fossil_Hard_coal,DK,2016,4550.0,other,False
+Fossil_Mixed_fuels,DK,2016,44.0,other,False
+Hydro_RunOfRiver_and_poundage,DK,2016,7.58,other,False
+Non_identified_net_gen,DK,2016,0.0,other,False
+Solar_PV,DK,2016,851.0,other,False
+Waste_renewable,DK,2016,375.53,other,False
+Wind_offshore,DK,2016,1271.0,other,False
+Wind_onshore,DK,2016,3978.0,other,False
+Biomass,DK,2016,1067.8,renewable,True
+Fossil Gas,DK,2017,2261.77,fossil,False
+Fossil Oil,DK,2017,1047.77,fossil,False
+Fossil Peat,DK,2017,0.0,fossil,False
+Biogas,DK,2017,114.96,other,False
+Fossil_Hard_coal,DK,2017,4299.9,other,False
+Fossil_Mixed_fuels,DK,2017,0.0,other,False
+Hydro_RunOfRiver_and_poundage,DK,2017,6.28,other,False
+Non_identified_net_gen,DK,2017,44.07,other,False
+Solar_PV,DK,2017,907.64,other,False
+Waste_renewable,DK,2017,370.42,other,False
+Wind_offshore,DK,2017,1263.8,other,False
+Wind_onshore,DK,2017,4233.34,other,False
+Biomass,DK,2017,1569.94,renewable,True
+Fossil Gas,DK,2018,1829.0,fossil,False
+Fossil Oil,DK,2018,1006.9,fossil,False
+Fossil Peat,DK,2018,0.0,fossil,False
+Biogas,DK,2018,112.23,other,False
+Fossil_Hard_coal,DK,2018,3656.4,other,False
+Fossil_Mixed_fuels,DK,2018,44.0,other,False
+Hydro_RunOfRiver_and_poundage,DK,2018,6.6,other,False
+Non_identified_net_gen,DK,2018,0.0,other,False
+Solar_PV,DK,2018,1000.1,other,False
+Waste_renewable,DK,2018,322.9,other,False
+Wind_offshore,DK,2018,1700.8,other,False
+Wind_onshore,DK,2018,4422.6,other,False
+Biomass,DK,2018,1953.8,renewable,True
+Fossil Gas,DK,2019,1814.0,fossil,False
+Fossil Hard coal,DK,2019,3656.0,fossil,False
+Fossil Oil,DK,2019,1007.0,fossil,False
+Waste,DK,2019,384.0,other,False
+Biomass,DK,2019,1722.0,renewable,True
+Hydro Run-of-river and poundage,DK,2019,7.0,renewable,True
+Other renewable,DK,2019,135.0,renewable,True
+Solar,DK,2019,1014.0,renewable,True
+Wind Offshore,DK,2019,1700.0,renewable,True
+Wind Onshore,DK,2019,4426.0,renewable,True
+Fossil Gas,DK,2020,1739.0,fossil,False
+Fossil Hard coal,DK,2020,3656.0,fossil,False
+Fossil Oil,DK,2020,1009.0,fossil,False
+Waste,DK,2020,384.0,other,False
+Biomass,DK,2020,1872.0,renewable,True
+Hydro Run-of-river and poundage,DK,2020,7.0,renewable,True
+Other renewable,DK,2020,137.0,renewable,True
+Solar,DK,2020,1013.0,renewable,True
+Wind Offshore,DK,2020,1700.0,renewable,True
+Wind Onshore,DK,2020,4402.0,renewable,True
+Fossil Gas,DK,2021,1654.0,fossil,False
+Fossil Hard coal,DK,2021,3414.0,fossil,False
+Fossil Oil,DK,2021,1010.0,fossil,False
+Waste,DK,2021,384.0,other,False
+Biomass,DK,2021,1872.0,renewable,True
+Hydro Run-of-river and poundage,DK,2021,7.0,renewable,True
+Other renewable,DK,2021,142.0,renewable,True
+Solar,DK,2021,1300.0,renewable,True
+Wind Offshore,DK,2021,1700.0,renewable,True
+Wind Onshore,DK,2021,4481.0,renewable,True
+Fossil Gas,DK,2022,1621.0,fossil,False
+Fossil Hard coal,DK,2022,3165.0,fossil,False
+Fossil Oil,DK,2022,997.0,fossil,False
+Waste,DK,2022,384.0,other,False
+Biomass,DK,2022,1870.0,renewable,True
+Hydro Run-of-river and poundage,DK,2022,7.0,renewable,True
+Other renewable,DK,2022,137.0,renewable,True
+Solar,DK,2022,1536.0,renewable,True
+Wind Offshore,DK,2022,2305.0,renewable,True
+Wind Onshore,DK,2022,4644.0,renewable,True
+Fossil Gas,DK,2023,1568.1,fossil,False
+Fossil Hard coal,DK,2023,3021.5,fossil,False
+Fossil Oil,DK,2023,959.1,fossil,False
+Waste,DK,2023,384.9,other,False
+Biomass,DK,2023,1754.2,renewable,True
+Hydro Run-of-river and poundage,DK,2023,5.3,renewable,True
+Other renewable,DK,2023,135.6,renewable,True
+Solar,DK,2023,2321.5,renewable,True
+Wind Offshore,DK,2023,2305.7,renewable,True
+Wind Onshore,DK,2023,4710.5,renewable,True
+Solar,DK,2024,3730.0,renewable,True
+Wind Offshore,DK,2024,2646.0,renewable,True
+Wind Onshore,DK,2024,4860.0,renewable,True
+Fossil Gas,EE,2014,241.0,fossil,False
+Fossil Oil,EE,2014,9.0,fossil,False
+Fossil Oil,EE,2014,1897.0,fossil,False
+Biogas,EE,2014,12.0,other,False
+Fossil_Mixed_fuels,EE,2014,250.0,other,False
+Hydro_RunOfRiver_and_poundage,EE,2014,8.0,other,False
+Other_non_renewable,EE,2014,10.0,other,False
+Other_renewable,EE,2014,1.0,other,False
+Waste_non_renewable,EE,2014,17.0,other,False
+Waste_renewable,EE,2014,2.0,other,False
+Wind_onshore,EE,2014,301.0,other,False
+Biomass,EE,2014,115.0,renewable,True
+Fossil Gas,EE,2015,259.85,fossil,False
+Fossil Oil,EE,2015,8.59,fossil,False
+Fossil Oil,EE,2015,1704.0,fossil,False
+Biogas,EE,2015,6.22,other,False
+Fossil_Mixed_fuels,EE,2015,250.0,other,False
+Hydro_RunOfRiver_and_poundage,EE,2015,7.84,other,False
+Other_non_renewable,EE,2015,10.0,other,False
+Solar_PV,EE,2015,0.7,other,False
+Waste_non_renewable,EE,2015,17.0,other,False
+Waste_renewable,EE,2015,3.58,other,False
+Wind_onshore,EE,2015,306.6,other,False
+Biomass,EE,2015,76.12,renewable,True
+Fossil Gas,EE,2016,203.85,fossil,False
+Fossil Oil,EE,2016,8.59,fossil,False
+Fossil Oil,EE,2016,1710.95,fossil,False
+Biogas,EE,2016,6.18,other,False
+Fossil_Mixed_fuels,EE,2016,520.0,other,False
+Hydro_RunOfRiver_and_poundage,EE,2016,7.85,other,False
+Other_non_renewable,EE,2016,10.0,other,False
+Solar_PV,EE,2016,0.64,other,False
+Waste_non_renewable,EE,2016,17.0,other,False
+Waste_renewable,EE,2016,3.58,other,False
+Wind_onshore,EE,2016,375.2,other,False
+Biomass,EE,2016,76.12,renewable,True
+Fossil Gas,EE,2017,200.02,fossil,False
+Fossil Oil,EE,2017,8.59,fossil,False
+Fossil Oil,EE,2017,1902.7,fossil,False
+Biogas,EE,2017,6.18,other,False
+Fossil_Mixed_fuels,EE,2017,240.0,other,False
+Hydro_RunOfRiver_and_poundage,EE,2017,7.79,other,False
+Other_non_renewable,EE,2017,10.0,other,False
+Other_renewable,EE,2017,0.0,other,False
+Solar_PV,EE,2017,8.9,other,False
+Waste_non_renewable,EE,2017,17.0,other,False
+Waste_renewable,EE,2017,2.74,other,False
+Wind_onshore,EE,2017,340.7,other,False
+Biomass,EE,2017,86.12,renewable,True
+Fossil Gas,EE,2018,200.02,fossil,False
+Fossil Oil,EE,2018,8.59,fossil,False
+Fossil Oil,EE,2018,1902.7,fossil,False
+Biogas,EE,2018,6.18,other,False
+Fossil_Mixed_fuels,EE,2018,240.0,other,False
+Hydro_RunOfRiver_and_poundage,EE,2018,9.3,other,False
+Other_non_renewable,EE,2018,10.0,other,False
+Other_renewable,EE,2018,0.0,other,False
+Solar_PV,EE,2018,8.9,other,False
+Waste_non_renewable,EE,2018,17.0,other,False
+Waste_renewable,EE,2018,2.74,other,False
+Wind_onshore,EE,2018,340.7,other,False
+Biomass,EE,2018,86.12,renewable,True
+Fossil Brown coal/Lignite,EE,2019,0.0,fossil,False
+Fossil Coal-derived gas,EE,2019,51.3,fossil,False
+Fossil Gas,EE,2019,125.26,fossil,False
+Fossil Hard coal,EE,2019,0.0,fossil,False
+Fossil Oil,EE,2019,7.87,fossil,False
+Fossil Oil shale,EE,2019,1970.3,fossil,False
+Fossil Peat,EE,2019,0.0,fossil,False
+Nuclear,EE,2019,0.0,nuclear,False
+Other,EE,2019,0.0,other,False
+Waste,EE,2019,18.54,other,False
+Biomass,EE,2019,157.2,renewable,True
+Geothermal,EE,2019,0.0,renewable,True
+Hydro Pumped Storage,EE,2019,0.0,renewable,True
+Hydro Run-of-river and poundage,EE,2019,7.13,renewable,True
+Hydro Water Reservoir,EE,2019,0.0,renewable,True
+Marine,EE,2019,0.0,renewable,True
+Other renewable,EE,2019,11.83,renewable,True
+Solar,EE,2019,33.0,renewable,True
+Wind Offshore,EE,2019,0.0,renewable,True
+Wind Onshore,EE,2019,462.4,renewable,True
+Fossil Brown coal/Lignite,EE,2020,0.0,fossil,False
+Fossil Coal-derived gas,EE,2020,79.3,fossil,False
+Fossil Gas,EE,2020,132.9,fossil,False
+Fossil Hard coal,EE,2020,0.0,fossil,False
+Fossil Oil,EE,2020,7.9,fossil,False
+Fossil Oil shale,EE,2020,1970.0,fossil,False
+Fossil Peat,EE,2020,0.0,fossil,False
+Nuclear,EE,2020,0.0,nuclear,False
+Other,EE,2020,0.0,other,False
+Waste,EE,2020,18.8,other,False
+Biomass,EE,2020,156.7,renewable,True
+Geothermal,EE,2020,0.0,renewable,True
+Hydro Pumped Storage,EE,2020,0.0,renewable,True
+Hydro Run-of-river and poundage,EE,2020,8.4,renewable,True
+Hydro Water Reservoir,EE,2020,0.0,renewable,True
+Marine,EE,2020,0.0,renewable,True
+Other renewable,EE,2020,11.8,renewable,True
+Solar,EE,2020,122.7,renewable,True
+Wind Offshore,EE,2020,0.0,renewable,True
+Wind Onshore,EE,2020,328.8,renewable,True
+Fossil Brown coal/Lignite,EE,2021,0.0,fossil,False
+Fossil Coal-derived gas,EE,2021,74.0,fossil,False
+Fossil Gas,EE,2021,98.0,fossil,False
+Fossil Hard coal,EE,2021,0.0,fossil,False
+Fossil Oil,EE,2021,0.0,fossil,False
+Fossil Oil shale,EE,2021,1462.0,fossil,False
+Fossil Peat,EE,2021,0.0,fossil,False
+Nuclear,EE,2021,0.0,nuclear,False
+Other,EE,2021,0.0,other,False
+Waste,EE,2021,17.0,other,False
+Biomass,EE,2021,175.0,renewable,True
+Geothermal,EE,2021,0.0,renewable,True
+Hydro Pumped Storage,EE,2021,0.0,renewable,True
+Hydro Run-of-river and poundage,EE,2021,8.0,renewable,True
+Hydro Water Reservoir,EE,2021,0.0,renewable,True
+Marine,EE,2021,0.0,renewable,True
+Other renewable,EE,2021,10.0,renewable,True
+Solar,EE,2021,164.0,renewable,True
+Wind Offshore,EE,2021,0.0,renewable,True
+Wind Onshore,EE,2021,329.0,renewable,True
+Fossil Coal-derived gas,EE,2022,25.0,fossil,False
+Fossil Gas,EE,2022,94.0,fossil,False
+Fossil Oil,EE,2022,52.0,fossil,False
+Fossil Oil shale,EE,2022,1371.0,fossil,False
+Other,EE,2022,13.0,other,False
+Waste,EE,2022,17.0,other,False
+Biomass,EE,2022,130.0,renewable,True
+Hydro Run-of-river and poundage,EE,2022,4.0,renewable,True
+Solar,EE,2022,370.0,renewable,True
+Wind Onshore,EE,2022,326.0,renewable,True
+Fossil Coal-derived gas,EE,2023,78.0,fossil,False
+Fossil Gas,EE,2023,110.0,fossil,False
+Fossil Oil shale,EE,2023,1330.0,fossil,False
+Other,EE,2023,20.0,other,False
+Waste,EE,2023,17.0,other,False
+Biomass,EE,2023,152.0,renewable,True
+Hydro Run-of-river and poundage,EE,2023,8.0,renewable,True
+Solar,EE,2023,510.0,renewable,True
+Wind Onshore,EE,2023,317.0,renewable,True
+Fossil Brown coal/Lignite,EE,2024,0.0,fossil,False
+Fossil Coal-derived gas,EE,2024,78.4,fossil,False
+Fossil Gas,EE,2024,15.3,fossil,False
+Fossil Hard coal,EE,2024,0.0,fossil,False
+Fossil Oil,EE,2024,0.0,fossil,False
+Fossil Oil shale,EE,2024,1330.0,fossil,False
+Fossil Peat,EE,2024,0.0,fossil,False
+Nuclear,EE,2024,0.0,nuclear,False
+Other,EE,2024,20.0,other,False
+Waste,EE,2024,17.0,other,False
+Biomass,EE,2024,150.3,renewable,True
+Geothermal,EE,2024,0.0,renewable,True
+Hydro Pumped Storage,EE,2024,0.0,renewable,True
+Hydro Run-of-river and poundage,EE,2024,8.0,renewable,True
+Hydro Water Reservoir,EE,2024,0.0,renewable,True
+Marine,EE,2024,0.0,renewable,True
+Other renewable,EE,2024,0.0,renewable,True
+Solar,EE,2024,812.0,renewable,True
+Wind Offshore,EE,2024,0.0,renewable,True
+Wind Onshore,EE,2024,447.0,renewable,True
+Fossil Gas,ES,2014,32333.0,fossil,False
+Fossil Oil,ES,2014,3950.0,fossil,False
+Nuclear,ES,2014,7573.0,nuclear,False
+Biogas,ES,2014,222.0,other,False
+Fossil_Brown_coal_Lignite,ES,2014,1056.0,other,False
+Fossil_Hard_coal,ES,2014,9881.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,ES,2014,990.0,other,False
+Hydro_Mixed_pumped_storage_renewable,ES,2014,2083.0,other,False
+Hydro_Pure_pumped_Storage,ES,2014,2451.0,other,False
+Hydro_Pure_storage,ES,2014,11213.0,other,False
+Hydro_RunOfRiver_and_poundage,ES,2014,2704.0,other,False
+Non_identified_net_gen,ES,2014,0.0,other,False
+Other_non_renewable,ES,2014,56.0,other,False
+Other_renewable,ES,2014,5.0,other,False
+Solar_PV,ES,2014,4639.0,other,False
+Solar_Thermal,ES,2014,2300.0,other,False
+Waste_non_renewable,ES,2014,754.0,other,False
+Wind_onshore,ES,2014,23020.0,other,False
+Biomass,ES,2014,517.0,renewable,True
+Fossil Gas,ES,2015,32329.05,fossil,False
+Fossil Oil,ES,2015,3426.37,fossil,False
+Nuclear,ES,2015,7572.58,nuclear,False
+Biogas,ES,2015,231.56,other,False
+Fossil_Brown_coal_Lignite,ES,2015,1055.77,other,False
+Fossil_Hard_coal,ES,2015,9880.65,other,False
+Hydro_Mixed_pumped_storage_non_renewable,ES,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,ES,2015,3073.15,other,False
+Hydro_Pure_pumped_Storage,ES,2015,3328.89,other,False
+Hydro_Pure_storage,ES,2015,11230.76,other,False
+Hydro_RunOfRiver_and_poundage,ES,2015,2714.99,other,False
+Other_non_renewable,ES,2015,56.5,other,False
+Other_renewable,ES,2015,16.19,other,False
+Solar_PV,ES,2015,4661.7,other,False
+Solar_Thermal,ES,2015,2299.43,other,False
+Waste_non_renewable,ES,2015,647.85,other,False
+Waste_renewable,ES,2015,106.53,other,False
+Wind_onshore,ES,2015,23029.51,other,False
+Biomass,ES,2015,511.3,renewable,True
+Fossil Gas,ES,2016,32200.86,fossil,False
+Fossil Oil,ES,2016,3365.49,fossil,False
+Nuclear,ES,2016,7572.58,nuclear,False
+Biogas,ES,2016,231.86,other,False
+Fossil_Brown_coal_Lignite,ES,2016,1055.77,other,False
+Fossil_Hard_coal,ES,2016,8948.5,other,False
+Hydro_Mixed_pumped_storage_non_renewable,ES,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,ES,2016,3073.15,other,False
+Hydro_Pure_pumped_Storage,ES,2016,3328.89,other,False
+Hydro_Pure_storage,ES,2016,11230.54,other,False
+Hydro_RunOfRiver_and_poundage,ES,2016,2723.69,other,False
+Other_non_renewable,ES,2016,53.2,other,False
+Other_renewable,ES,2016,16.19,other,False
+Solar_PV,ES,2016,4671.42,other,False
+Solar_Thermal,ES,2016,2299.43,other,False
+Waste_non_renewable,ES,2016,651.85,other,False
+Waste_renewable,ES,2016,110.53,other,False
+Wind_onshore,ES,2016,23066.41,other,False
+Biomass,ES,2016,511.75,renewable,True
+Fossil Gas,ES,2017,31643.1,fossil,False
+Fossil Oil,ES,2017,3235.17,fossil,False
+Nuclear,ES,2017,7117.29,nuclear,False
+Biogas,ES,2017,227.56,other,False
+Fossil_Brown_coal_Lignite,ES,2017,1055.77,other,False
+Fossil_Hard_coal,ES,2017,8948.5,other,False
+Hydro_Mixed_pumped_storage_non_renewable,ES,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,ES,2017,3073.15,other,False
+Hydro_Pure_pumped_Storage,ES,2017,3328.89,other,False
+Hydro_Pure_storage,ES,2017,12033.8,other,False
+Hydro_RunOfRiver_and_poundage,ES,2017,1922.96,other,False
+Other_non_renewable,ES,2017,68.46,other,False
+Other_renewable,ES,2017,16.19,other,False
+Solar_PV,ES,2017,4688.1,other,False
+Solar_Thermal,ES,2017,2304.11,other,False
+Waste_non_renewable,ES,2017,524.76,other,False
+Waste_renewable,ES,2017,161.53,other,False
+Wind_onshore,ES,2017,23130.43,other,False
+Biomass,ES,2017,627.86,renewable,True
+Fossil Gas,ES,2018,31183.92,fossil,False
+Fossil Oil,ES,2018,3235.17,fossil,False
+Nuclear,ES,2018,7117.29,nuclear,False
+Biogas,ES,2018,232.06,other,False
+Fossil_Brown_coal_Lignite,ES,2018,1055.77,other,False
+Fossil_Hard_coal,ES,2018,8974.52,other,False
+Hydro_Mixed_pumped_storage_non_renewable,ES,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,ES,2018,3073.15,other,False
+Hydro_Pure_pumped_Storage,ES,2018,3328.89,other,False
+Hydro_Pure_storage,ES,2018,12033.8,other,False
+Hydro_RunOfRiver_and_poundage,ES,2018,1941.73,other,False
+Other_non_renewable,ES,2018,68.46,other,False
+Other_renewable,ES,2018,16.19,other,False
+Solar_PV,ES,2018,4713.82,other,False
+Solar_Thermal,ES,2018,2304.11,other,False
+Waste_non_renewable,ES,2018,518.23,other,False
+Waste_renewable,ES,2018,161.53,other,False
+Wind_onshore,ES,2018,23507.39,other,False
+Biomass,ES,2018,628.46,renewable,True
+Fossil Brown coal/Lignite,ES,2019,0.0,fossil,False
+Fossil Coal-derived gas,ES,2019,0.0,fossil,False
+Fossil Gas,ES,2019,30266.3,fossil,False
+Fossil Hard coal,ES,2019,9560.7,fossil,False
+Fossil Oil,ES,2019,713.8,fossil,False
+Fossil Oil shale,ES,2019,0.0,fossil,False
+Fossil Peat,ES,2019,0.0,fossil,False
+Nuclear,ES,2019,7117.2,nuclear,False
+Other,ES,2019,117.4,other,False
+Waste,ES,2019,537.6,other,False
+Biomass,ES,2019,507.0,renewable,True
+Geothermal,ES,2019,0.0,renewable,True
+Hydro Pumped Storage,ES,2019,5645.4,renewable,True
+Hydro Run-of-river and poundage,ES,2019,1156.2,renewable,True
+Hydro Water Reservoir,ES,2019,19145.8,renewable,True
+Marine,ES,2019,0.0,renewable,True
+Other renewable,ES,2019,260.9,renewable,True
+Solar,ES,2019,6751.1,renewable,True
+Wind Offshore,ES,2019,0.0,renewable,True
+Wind Onshore,ES,2019,22960.6,renewable,True
+Fossil Brown coal/Lignite,ES,2020,0.0,fossil,False
+Fossil Coal-derived gas,ES,2020,0.0,fossil,False
+Fossil Gas,ES,2020,30012.3,fossil,False
+Fossil Hard coal,ES,2020,9213.9,fossil,False
+Fossil Oil,ES,2020,706.5,fossil,False
+Fossil Oil shale,ES,2020,0.0,fossil,False
+Fossil Peat,ES,2020,0.0,fossil,False
+Nuclear,ES,2020,7117.2,nuclear,False
+Other,ES,2020,117.4,other,False
+Waste,ES,2020,543.1,other,False
+Biomass,ES,2020,554.6,renewable,True
+Geothermal,ES,2020,0.0,renewable,True
+Hydro Pumped Storage,ES,2020,5645.4,renewable,True
+Hydro Run-of-river and poundage,ES,2020,1154.8,renewable,True
+Hydro Water Reservoir,ES,2020,19139.4,renewable,True
+Marine,ES,2020,0.0,renewable,True
+Other renewable,ES,2020,274.8,renewable,True
+Solar,ES,2020,8465.8,renewable,True
+Wind Offshore,ES,2020,0.0,renewable,True
+Wind Onshore,ES,2020,24446.6,renewable,True
+Fossil Brown coal/Lignite,ES,2021,0.0,fossil,False
+Fossil Coal-derived gas,ES,2021,0.0,fossil,False
+Fossil Gas,ES,2021,29969.5,fossil,False
+Fossil Hard coal,ES,2021,5977.0,fossil,False
+Fossil Oil,ES,2021,678.4,fossil,False
+Fossil Oil shale,ES,2021,0.0,fossil,False
+Fossil Peat,ES,2021,0.0,fossil,False
+Nuclear,ES,2021,7117.2,nuclear,False
+Other,ES,2021,117.4,other,False
+Waste,ES,2021,537.1,other,False
+Biomass,ES,2021,704.0,renewable,True
+Geothermal,ES,2021,0.0,renewable,True
+Hydro Pumped Storage,ES,2021,5645.4,renewable,True
+Hydro Run-of-river and poundage,ES,2021,1154.8,renewable,True
+Hydro Water Reservoir,ES,2021,19185.7,renewable,True
+Marine,ES,2021,0.0,renewable,True
+Other renewable,ES,2021,268.8,renewable,True
+Solar,ES,2021,11389.5,renewable,True
+Wind Offshore,ES,2021,0.0,renewable,True
+Wind Onshore,ES,2021,26663.6,renewable,True
+Fossil Brown coal/Lignite,ES,2022,0.0,fossil,False
+Fossil Coal-derived gas,ES,2022,0.0,fossil,False
+Fossil Gas,ES,2022,29926.9,fossil,False
+Fossil Hard coal,ES,2022,4641.8,fossil,False
+Fossil Oil,ES,2022,669.0,fossil,False
+Fossil Oil shale,ES,2022,0.0,fossil,False
+Fossil Peat,ES,2022,0.0,fossil,False
+Nuclear,ES,2022,7117.2,nuclear,False
+Other,ES,2022,118.4,other,False
+Waste,ES,2022,565.3,other,False
+Biomass,ES,2022,702.3,renewable,True
+Geothermal,ES,2022,0.0,renewable,True
+Hydro Pumped Storage,ES,2022,5695.4,renewable,True
+Hydro Run-of-river and poundage,ES,2022,1154.8,renewable,True
+Hydro Water Reservoir,ES,2022,19186.7,renewable,True
+Marine,ES,2022,0.0,renewable,True
+Other renewable,ES,2022,271.7,renewable,True
+Solar,ES,2022,14639.9,renewable,True
+Wind Offshore,ES,2022,0.0,renewable,True
+Wind Onshore,ES,2022,27734.8,renewable,True
+Fossil Brown coal/Lignite,ES,2023,0.0,fossil,False
+Fossil Coal-derived gas,ES,2023,0.0,fossil,False
+Fossil Gas,ES,2023,29902.6,fossil,False
+Fossil Hard coal,ES,2023,3222.6,fossil,False
+Fossil Oil,ES,2023,669.7,fossil,False
+Fossil Oil shale,ES,2023,0.0,fossil,False
+Fossil Peat,ES,2023,0.0,fossil,False
+Nuclear,ES,2023,7117.2,nuclear,False
+Other,ES,2023,118.4,other,False
+Waste,ES,2023,545.9,other,False
+Biomass,ES,2023,707.1,renewable,True
+Geothermal,ES,2023,0.0,renewable,True
+Hydro Pumped Storage,ES,2023,3417.5,renewable,True
+Hydro Run-of-river and poundage,ES,2023,1154.8,renewable,True
+Hydro Water Reservoir,ES,2023,15772.7,renewable,True
+Marine,ES,2023,0.0,renewable,True
+Other renewable,ES,2023,284.9,renewable,True
+Solar,ES,2023,18522.5,renewable,True
+Wind Offshore,ES,2023,0.0,renewable,True
+Wind Onshore,ES,2023,29320.4,renewable,True
+Fossil Brown coal/Lignite,ES,2024,0.0,fossil,False
+Fossil Coal-derived gas,ES,2024,0.0,fossil,False
+Fossil Gas,ES,2024,29872.8,fossil,False
+Fossil Hard coal,ES,2024,3222.6,fossil,False
+Fossil Oil,ES,2024,703.7,fossil,False
+Fossil Oil shale,ES,2024,0.0,fossil,False
+Fossil Peat,ES,2024,0.0,fossil,False
+Nuclear,ES,2024,7117.2,nuclear,False
+Other,ES,2024,122.2,other,False
+Waste,ES,2024,545.9,other,False
+Biomass,ES,2024,707.5,renewable,True
+Geothermal,ES,2024,0.0,renewable,True
+Hydro Pumped Storage,ES,2024,3417.5,renewable,True
+Hydro Run-of-river and poundage,ES,2024,1154.8,renewable,True
+Hydro Water Reservoir,ES,2024,15771.4,renewable,True
+Marine,ES,2024,0.0,renewable,True
+Other renewable,ES,2024,286.9,renewable,True
+Solar,ES,2024,23867.3,renewable,True
+Wind Offshore,ES,2024,0.0,renewable,True
+Wind Onshore,ES,2024,30159.3,renewable,True
+Fossil Gas,FI,2014,1824.0,fossil,False
+Fossil Oil,FI,2014,1738.0,fossil,False
+Fossil Peat,FI,2014,1031.0,fossil,False
+Nuclear,FI,2014,2752.0,nuclear,False
+Fossil_Hard_coal,FI,2014,3445.0,other,False
+Fossil_Mixed_fuels,FI,2014,663.0,other,False
+Hydro_Pure_storage,FI,2014,3234.0,other,False
+Other_non_renewable,FI,2014,40.0,other,False
+Wind_onshore,FI,2014,504.0,other,False
+Biomass,FI,2014,2085.0,renewable,True
+Fossil Gas,FI,2015,1743.0,fossil,False
+Fossil Oil,FI,2015,1695.0,fossil,False
+Fossil Peat,FI,2015,1024.0,fossil,False
+Nuclear,FI,2015,2782.0,nuclear,False
+Fossil_Hard_coal,FI,2015,3295.0,other,False
+Fossil_Mixed_fuels,FI,2015,663.0,other,False
+Hydro_Pure_storage,FI,2015,3263.0,other,False
+Other_non_renewable,FI,2015,245.0,other,False
+Wind_onshore,FI,2015,1082.0,other,False
+Biomass,FI,2015,1919.0,renewable,True
+Fossil Gas,FI,2016,1795.0,fossil,False
+Fossil Oil,FI,2016,1427.0,fossil,False
+Fossil Peat,FI,2016,1077.0,fossil,False
+Nuclear,FI,2016,2782.0,nuclear,False
+Fossil_Hard_coal,FI,2016,2854.0,other,False
+Hydro_RunOfRiver_and_poundage,FI,2016,3107.0,other,False
+Other_non_renewable,FI,2016,563.2,other,False
+Wind_onshore,FI,2016,1432.0,other,False
+Biomass,FI,2016,1693.0,renewable,True
+Fossil Gas,FI,2017,1865.0,fossil,False
+Fossil Oil,FI,2017,1386.0,fossil,False
+Fossil Peat,FI,2017,1135.0,fossil,False
+Nuclear,FI,2017,2782.0,nuclear,False
+Fossil_Hard_coal,FI,2017,2278.0,other,False
+Hydro_RunOfRiver_and_poundage,FI,2017,3149.0,other,False
+Other_non_renewable,FI,2017,361.7,other,False
+Wind_onshore,FI,2017,1908.0,other,False
+Biomass,FI,2017,1813.0,renewable,True
+Fossil Gas,FI,2018,1912.0,fossil,False
+Fossil Oil,FI,2018,1434.0,fossil,False
+Fossil Peat,FI,2018,1135.0,fossil,False
+Nuclear,FI,2018,2785.0,nuclear,False
+Fossil_Hard_coal,FI,2018,2278.0,other,False
+Hydro_RunOfRiver_and_poundage,FI,2018,3148.0,other,False
+Other_non_renewable,FI,2018,334.0,other,False
+Other_renewable,FI,2018,257.0,other,False
+Solar_PV,FI,2018,113.0,other,False
+Waste_non_renewable,FI,2018,157.5,other,False
+Wind_onshore,FI,2018,2013.0,other,False
+Biomass,FI,2018,1804.0,renewable,True
+Fossil Gas,FI,2019,1912.0,fossil,False
+Fossil Hard coal,FI,2019,2278.0,fossil,False
+Fossil Oil,FI,2019,1434.0,fossil,False
+Fossil Peat,FI,2019,1135.0,fossil,False
+Nuclear,FI,2019,2785.0,nuclear,False
+Other,FI,2019,334.0,other,False
+Waste,FI,2019,157.0,other,False
+Biomass,FI,2019,1804.0,renewable,True
+Hydro Run-of-river and poundage,FI,2019,3148.0,renewable,True
+Other renewable,FI,2019,257.0,renewable,True
+Solar,FI,2019,3.0,renewable,True
+Wind Onshore,FI,2019,2013.0,renewable,True
+Fossil Gas,FI,2020,1849.0,fossil,False
+Fossil Hard coal,FI,2020,2163.0,fossil,False
+Fossil Oil,FI,2020,1300.0,fossil,False
+Fossil Peat,FI,2020,1135.0,fossil,False
+Nuclear,FI,2020,2794.0,nuclear,False
+Other,FI,2020,436.0,other,False
+Waste,FI,2020,163.0,other,False
+Biomass,FI,2020,1860.0,renewable,True
+Hydro Run-of-river and poundage,FI,2020,3148.0,renewable,True
+Other renewable,FI,2020,274.0,renewable,True
+Solar,FI,2020,7.0,renewable,True
+Wind Onshore,FI,2020,2145.0,renewable,True
+Fossil Gas,FI,2021,1849.0,fossil,False
+Fossil Hard coal,FI,2021,1682.0,fossil,False
+Fossil Oil,FI,2021,1089.0,fossil,False
+Fossil Peat,FI,2021,1135.0,fossil,False
+Nuclear,FI,2021,2794.0,nuclear,False
+Other,FI,2021,436.0,other,False
+Waste,FI,2021,163.0,other,False
+Biomass,FI,2021,1860.0,renewable,True
+Hydro Run-of-river and poundage,FI,2021,3153.0,renewable,True
+Other renewable,FI,2021,273.0,renewable,True
+Solar,FI,2021,7.0,renewable,True
+Wind Onshore,FI,2021,2422.0,renewable,True
+Fossil Gas,FI,2022,1935.0,fossil,False
+Fossil Hard coal,FI,2022,1682.0,fossil,False
+Fossil Oil,FI,2022,1051.0,fossil,False
+Fossil Peat,FI,2022,1116.0,fossil,False
+Nuclear,FI,2022,2794.0,nuclear,False
+Other,FI,2022,462.0,other,False
+Waste,FI,2022,114.0,other,False
+Biomass,FI,2022,1895.0,renewable,True
+Hydro Run-of-river and poundage,FI,2022,3167.0,renewable,True
+Other renewable,FI,2022,322.0,renewable,True
+Solar,FI,2022,7.0,renewable,True
+Wind Onshore,FI,2022,3184.0,renewable,True
+Fossil Gas,FI,2023,1780.0,fossil,False
+Fossil Hard coal,FI,2023,1557.0,fossil,False
+Fossil Oil,FI,2023,1051.0,fossil,False
+Fossil Peat,FI,2023,1051.0,fossil,False
+Nuclear,FI,2023,2794.0,nuclear,False
+Other,FI,2023,436.0,other,False
+Waste,FI,2023,114.0,other,False
+Biomass,FI,2023,1833.0,renewable,True
+Hydro Run-of-river and poundage,FI,2023,3167.0,renewable,True
+Other renewable,FI,2023,392.0,renewable,True
+Solar,FI,2023,18.0,renewable,True
+Wind Onshore,FI,2023,5121.0,renewable,True
+Fossil Gas,FI,2024,1742.0,fossil,False
+Fossil Hard coal,FI,2024,1410.0,fossil,False
+Fossil Oil,FI,2024,1051.0,fossil,False
+Fossil Peat,FI,2024,1044.0,fossil,False
+Nuclear,FI,2024,4364.0,nuclear,False
+Other,FI,2024,448.0,other,False
+Waste,FI,2024,87.0,other,False
+Biomass,FI,2024,1695.0,renewable,True
+Hydro Run-of-river and poundage,FI,2024,3173.0,renewable,True
+Other renewable,FI,2024,392.0,renewable,True
+Solar,FI,2024,27.0,renewable,True
+Wind Onshore,FI,2024,6618.0,renewable,True
+Fossil Gas,FR,2014,10892.0,fossil,False
+Fossil Oil,FR,2014,8671.0,fossil,False
+Nuclear,FR,2014,63130.0,nuclear,False
+Biogas,FR,2014,328.54,other,False
+Fossil_Hard_coal,FR,2014,6405.0,other,False
+Hydro_Marine,FR,2014,240.0,other,False
+Hydro_Mixed_pumped_storage_renewable,FR,2014,2455.0,other,False
+Hydro_Pure_storage,FR,2014,1728.0,other,False
+Hydro_RunOfRiver_and_poundage,FR,2014,20999.0,other,False
+Solar_PV,FR,2014,5297.0,other,False
+Waste_renewable,FR,2014,875.8,other,False
+Wind_onshore,FR,2014,9313.0,other,False
+Biomass,FR,2014,393.72,renewable,True
+Fossil Gas,FR,2015,10831.0,fossil,False
+Fossil Oil,FR,2015,8494.7,fossil,False
+Nuclear,FR,2015,63130.0,nuclear,False
+Biogas,FR,2015,363.02,other,False
+Fossil_Hard_coal,FR,2015,3007.0,other,False
+Hydro_Marine,FR,2015,240.0,other,False
+Hydro_Mixed_pumped_storage_renewable,FR,2015,2455.0,other,False
+Hydro_RunOfRiver_and_poundage,FR,2015,21008.0,other,False
+Other_renewable,FR,2015,1727.66,other,False
+Solar_PV,FR,2015,6196.0,other,False
+Waste_renewable,FR,2015,871.21,other,False
+Wind_onshore,FR,2015,10324.0,other,False
+Biomass,FR,2015,470.44,renewable,True
+Fossil Gas,FR,2016,11678.92,fossil,False
+Fossil Oil,FR,2016,7129.6,fossil,False
+Nuclear,FR,2016,63130.0,nuclear,False
+Biogas,FR,2016,389.53,other,False
+Fossil_Hard_coal,FR,2016,2997.0,other,False
+Hydro_Marine,FR,2016,240.0,other,False
+Hydro_Mixed_pumped_storage_renewable,FR,2016,2455.0,other,False
+Hydro_RunOfRiver_and_poundage,FR,2016,21056.0,other,False
+Other_renewable,FR,2016,1727.66,other,False
+Solar_PV,FR,2016,6772.09,other,False
+Waste_renewable,FR,2016,880.52,other,False
+Wind_onshore,FR,2016,11761.5,other,False
+Biomass,FR,2016,655.95,renewable,True
+Fossil Gas,FR,2017,11932.47,fossil,False
+Fossil Oil,FR,2017,4098.21,fossil,False
+Nuclear,FR,2017,63130.0,nuclear,False
+Biogas,FR,2017,432.03,other,False
+Fossil_Hard_coal,FR,2017,2997.0,other,False
+Hydro_Marine,FR,2017,240.0,other,False
+Hydro_Mixed_pumped_storage_renewable,FR,2017,2455.0,other,False
+Hydro_RunOfRiver_and_poundage,FR,2017,21098.48,other,False
+Non_identified_net_gen,FR,2017,0.0,other,False
+Other_renewable,FR,2017,1727.66,other,False
+Solar_PV,FR,2017,7653.86,other,False
+Solar_Thermal,FR,2017,0.0,other,False
+Waste_non_renewable,FR,2017,0.0,other,False
+Waste_renewable,FR,2017,867.63,other,False
+Wind_offshore,FR,2017,0.0,other,False
+Wind_onshore,FR,2017,13549.62,other,False
+Biomass,FR,2017,653.14,renewable,True
+Fossil Gas,FR,2018,12150.62,fossil,False
+Fossil Oil,FR,2018,3440.6,fossil,False
+Nuclear,FR,2018,63130.0,nuclear,False
+Biogas,FR,2018,452.1,other,False
+Fossil_Hard_coal,FR,2018,2997.0,other,False
+Hydro_Marine,FR,2018,240.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,FR,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,FR,2018,2455.0,other,False
+Hydro_RunOfRiver_and_poundage,FR,2018,21092.19,other,False
+Non_identified_net_gen,FR,2018,0.0,other,False
+Other_renewable,FR,2018,1727.66,other,False
+Solar_PV,FR,2018,8526.18,other,False
+Solar_Thermal,FR,2018,0.0,other,False
+Waste_non_renewable,FR,2018,0.0,other,False
+Waste_renewable,FR,2018,882.78,other,False
+Wind_offshore,FR,2018,0.0,other,False
+Wind_onshore,FR,2018,15083.81,other,False
+Biomass,FR,2018,691.49,renewable,True
+Fossil Gas,FR,2019,11952.0,fossil,False
+Fossil Hard coal,FR,2019,3966.0,fossil,False
+Fossil Oil,FR,2019,3271.0,fossil,False
+Nuclear,FR,2019,63130.0,nuclear,False
+Other,FR,2019,108.0,other,False
+Biomass,FR,2019,1931.0,renewable,True
+Hydro Pumped Storage,FR,2019,5023.0,renewable,True
+Hydro Run-of-river and poundage,FR,2019,10955.0,renewable,True
+Hydro Water Reservoir,FR,2019,8279.0,renewable,True
+Marine,FR,2019,240.0,renewable,True
+Solar,FR,2019,8188.0,renewable,True
+Wind Onshore,FR,2019,13610.0,renewable,True
+Fossil Gas,FR,2020,12237.6,fossil,False
+Fossil Hard coal,FR,2020,1812.0,fossil,False
+Fossil Oil,FR,2020,2874.21,fossil,False
+Nuclear,FR,2020,63130.0,nuclear,False
+Other,FR,2020,1069.85,other,False
+Waste,FR,2020,460.15,other,False
+Biomass,FR,2020,1578.18,renewable,True
+Hydro Pumped Storage,FR,2020,5064.0,renewable,True
+Hydro Run-of-river and poundage,FR,2020,11475.0,renewable,True
+Hydro Water Reservoir,FR,2020,8785.09,renewable,True
+Marine,FR,2020,246.0,renewable,True
+Solar,FR,2020,9437.84,renewable,True
+Wind Offshore,FR,2020,14.0,renewable,True
+Wind Onshore,FR,2020,16577.88,renewable,True
+Fossil Gas,FR,2021,12217.68,fossil,False
+Fossil Hard coal,FR,2021,2976.67,fossil,False
+Fossil Oil,FR,2021,2745.99,fossil,False
+Nuclear,FR,2021,61370.0,nuclear,False
+Other,FR,2021,1120.04,other,False
+Biomass,FR,2021,1579.25,renewable,True
+Hydro Pumped Storage,FR,2021,4655.26,renewable,True
+Hydro Run-of-river and poundage,FR,2021,9554.38,renewable,True
+Hydro Water Reservoir,FR,2021,6655.25,renewable,True
+Marine,FR,2021,245.52,renewable,True
+Solar,FR,2021,10212.96,renewable,True
+Wind Offshore,FR,2021,10.0,renewable,True
+Wind Onshore,FR,2021,17216.65,renewable,True
+Fossil Gas,FR,2022,13074.11,fossil,False
+Fossil Hard coal,FR,2022,1815.81,fossil,False
+Fossil Oil,FR,2022,2761.79,fossil,False
+Nuclear,FR,2022,61370.0,nuclear,False
+Other,FR,2022,1156.69,other,False
+Waste,FR,2022,947.21,other,False
+Biomass,FR,2022,1300.89,renewable,True
+Geothermal,FR,2022,1.85,renewable,True
+Hydro Pumped Storage,FR,2022,5049.96,renewable,True
+Hydro Run-of-river and poundage,FR,2022,11834.14,renewable,True
+Hydro Water Reservoir,FR,2022,8785.22,renewable,True
+Marine,FR,2022,242.81,renewable,True
+Solar,FR,2022,13153.79,renewable,True
+Wind Offshore,FR,2022,20.0,renewable,True
+Wind Onshore,FR,2022,19515.54,renewable,True
+Fossil Gas,FR,2023,12892.82,fossil,False
+Fossil Hard coal,FR,2023,1815.81,fossil,False
+Fossil Oil,FR,2023,2565.78,fossil,False
+Nuclear,FR,2023,61370.0,nuclear,False
+Other,FR,2023,1145.23,other,False
+Waste,FR,2023,928.77,other,False
+Biomass,FR,2023,1342.69,renewable,True
+Geothermal,FR,2023,1.85,renewable,True
+Hydro Pumped Storage,FR,2023,5051.05,renewable,True
+Hydro Run-of-river and poundage,FR,2023,11695.29,renewable,True
+Hydro Water Reservoir,FR,2023,8787.34,renewable,True
+Marine,FR,2023,242.81,renewable,True
+Solar,FR,2023,14638.79,renewable,True
+Wind Offshore,FR,2023,493.5,renewable,True
+Wind Onshore,FR,2023,20841.9,renewable,True
+Fossil Gas,FR,2024,13133.29,fossil,False
+Fossil Hard coal,FR,2024,1812.46,fossil,False
+Fossil Oil,FR,2024,3042.47,fossil,False
+Nuclear,FR,2024,61370.0,nuclear,False
+Other,FR,2024,1031.9,other,False
+Waste,FR,2024,967.67,other,False
+Biomass,FR,2024,1402.71,renewable,True
+Geothermal,FR,2024,1.85,renewable,True
+Hydro Pumped Storage,FR,2024,5064.73,renewable,True
+Hydro Run-of-river and poundage,FR,2024,11598.12,renewable,True
+Hydro Water Reservoir,FR,2024,8787.34,renewable,True
+Marine,FR,2024,243.09,renewable,True
+Solar,FR,2024,17419.3,renewable,True
+Wind Offshore,FR,2024,1483.0,renewable,True
+Wind Onshore,FR,2024,22134.06,renewable,True
+Fossil Gas,GB,2014,28688.0,fossil,False
+Fossil Oil,GB,2014,2119.0,fossil,False
+Nuclear,GB,2014,9779.0,nuclear,False
+Fossil_Hard_coal,GB,2014,19429.0,other,False
+Hydro_Pure_storage,GB,2014,2897.0,other,False
+Hydro_RunOfRiver_and_poundage,GB,2014,1074.0,other,False
+Solar_PV,GB,2014,5991.0,other,False
+Wind_offshore,GB,2014,3889.0,other,False
+Wind_onshore,GB,2014,3889.0,other,False
+Biomass,GB,2014,1137.0,renewable,True
+Fossil Gas,GB,2015,29050.0,fossil,False
+Fossil Oil,GB,2015,938.0,fossil,False
+Nuclear,GB,2015,8981.0,nuclear,False
+Fossil_Hard_coal,GB,2015,17926.0,other,False
+Hydro_Pure_storage,GB,2015,2744.0,other,False
+Hydro_RunOfRiver_and_poundage,GB,2015,1122.0,other,False
+Solar_PV,GB,2015,9063.0,other,False
+Wind_offshore,GB,2015,4251.0,other,False
+Wind_onshore,GB,2015,4251.0,other,False
+Biomass,GB,2015,1377.0,renewable,True
+Fossil Gas,GB,2016,30600.0,fossil,False
+Fossil Oil,GB,2016,880.0,fossil,False
+Nuclear,GB,2016,9230.0,nuclear,False
+Fossil_Hard_coal,GB,2016,15450.0,other,False
+Hydro_Mixed_pumped_storage_renewable,GB,2016,1090.0,other,False
+Hydro_Pure_storage,GB,2016,2830.0,other,False
+Solar_PV,GB,2016,11500.0,other,False
+Waste_renewable,GB,2016,0.0,other,False
+Wind_offshore,GB,2016,5000.0,other,False
+Wind_onshore,GB,2016,10000.0,other,False
+Biomass,GB,2016,1377.0,renewable,True
+Fossil Gas,GB,2017,31124.0,fossil,False
+Fossil Oil,GB,2017,875.0,fossil,False
+Nuclear,GB,2017,9248.0,nuclear,False
+Biogas,GB,2017,1.0,other,False
+Fossil_Hard_coal,GB,2017,14145.0,other,False
+Hydro_Mixed_pumped_storage_renewable,GB,2017,1.0,other,False
+Hydro_Pure_storage,GB,2017,2828.0,other,False
+Hydro_RunOfRiver_and_poundage,GB,2017,992.0,other,False
+Solar_PV,GB,2017,12900.0,other,False
+Waste_renewable,GB,2017,1.0,other,False
+Wind_offshore,GB,2017,5400.0,other,False
+Wind_onshore,GB,2017,12950.0,other,False
+Biomass,GB,2017,2097.0,renewable,True
+Fossil Gas,GB,2018,30176.0,fossil,False
+Fossil Oil,GB,2018,882.0,fossil,False
+Nuclear,GB,2018,9160.0,nuclear,False
+Biogas,GB,2018,1.0,other,False
+Fossil_Hard_coal,GB,2018,10860.0,other,False
+Hydro_Mixed_pumped_storage_renewable,GB,2018,0.0,other,False
+Hydro_Pure_storage,GB,2018,2830.0,other,False
+Hydro_RunOfRiver_and_poundage,GB,2018,963.0,other,False
+Solar_PV,GB,2018,0.0,other,False
+Waste_renewable,GB,2018,5.0,other,False
+Wind_offshore,GB,2018,6610.0,other,False
+Wind_onshore,GB,2018,7404.0,other,False
+Biomass,GB,2018,2016.0,renewable,True
+Fossil Gas,GB,2019,37698.0,fossil,False
+Fossil Hard coal,GB,2019,8794.0,fossil,False
+Fossil Oil,GB,2019,316.0,fossil,False
+Nuclear,GB,2019,9229.0,nuclear,False
+Other,GB,2019,4506.13,other,False
+Biomass,GB,2019,4061.0,renewable,True
+Hydro Pumped Storage,GB,2019,2744.0,renewable,True
+Hydro Run-of-river and poundage,GB,2019,1885.0,renewable,True
+Other renewable,GB,2019,1873.0,renewable,True
+Solar,GB,2019,13438.42,renewable,True
+Wind Offshore,GB,2019,9379.0,renewable,True
+Wind Onshore,GB,2019,13633.25,renewable,True
+Fossil Gas,GB,2020,39823.0,fossil,False
+Fossil Hard coal,GB,2020,7294.0,fossil,False
+Fossil Oil,GB,2020,316.0,fossil,False
+Nuclear,GB,2020,8209.0,nuclear,False
+Other,GB,2020,4074.13,other,False
+Biomass,GB,2020,4237.0,renewable,True
+Hydro Pumped Storage,GB,2020,4052.0,renewable,True
+Hydro Run-of-river and poundage,GB,2020,1882.0,renewable,True
+Other renewable,GB,2020,2249.0,renewable,True
+Solar,GB,2020,13368.42,renewable,True
+Wind Offshore,GB,2020,10365.0,renewable,True
+Wind Onshore,GB,2020,13830.25,renewable,True
+Fossil Gas,GB,2021,41371.0,fossil,False
+Fossil Hard coal,GB,2021,5755.0,fossil,False
+Fossil Oil,GB,2021,316.0,fossil,False
+Nuclear,GB,2021,8256.0,nuclear,False
+Other,GB,2021,3004.13,other,False
+Biomass,GB,2021,4528.0,renewable,True
+Hydro Pumped Storage,GB,2021,4309.0,renewable,True
+Hydro Run-of-river and poundage,GB,2021,1919.0,renewable,True
+Other renewable,GB,2021,1900.0,renewable,True
+Solar,GB,2021,13470.42,renewable,True
+Wind Offshore,GB,2021,12160.0,renewable,True
+Wind Onshore,GB,2021,13932.25,renewable,True
+Fossil Gas,GE,2019,912.0,fossil,False
+Fossil Hard coal,GE,2019,13.0,fossil,False
+Hydro Run-of-river and poundage,GE,2019,1160.0,renewable,True
+Hydro Water Reservoir,GE,2019,1992.0,renewable,True
+Wind Onshore,GE,2019,20.0,renewable,True
+Fossil Gas,GE,2020,912.0,fossil,False
+Fossil Hard coal,GE,2020,13.0,fossil,False
+Hydro Run-of-river and poundage,GE,2020,1058.0,renewable,True
+Hydro Water Reservoir,GE,2020,2381.0,renewable,True
+Wind Onshore,GE,2020,20.0,renewable,True
+Fossil Gas,GE,2021,1189.0,fossil,False
+Fossil Hard coal,GE,2021,0.0,fossil,False
+Hydro Run-of-river and poundage,GE,2021,942.0,renewable,True
+Hydro Water Reservoir,GE,2021,2381.0,renewable,True
+Wind Onshore,GE,2021,21.0,renewable,True
+Fossil Gas,GE,2022,1189.0,fossil,False
+Hydro Run-of-river and poundage,GE,2022,1058.0,renewable,True
+Hydro Water Reservoir,GE,2022,2381.0,renewable,True
+Wind Onshore,GE,2022,21.0,renewable,True
+Fossil Gas,GE,2023,1189.0,fossil,False
+Hydro Run-of-river and poundage,GE,2023,1023.0,renewable,True
+Hydro Water Reservoir,GE,2023,2381.0,renewable,True
+Wind Onshore,GE,2023,21.0,renewable,True
+Fossil Gas,GE,2024,1190.0,fossil,False
+Hydro Run-of-river and poundage,GE,2024,1146.0,renewable,True
+Hydro Water Reservoir,GE,2024,2387.0,renewable,True
+Wind Onshore,GE,2024,29.0,renewable,True
+Fossil Gas,GR,2014,4768.0,fossil,False
+Fossil Oil,GR,2014,2449.0,fossil,False
+Fossil_Brown_coal_Lignite,GR,2014,4456.0,other,False
+Hydro_Mixed_pumped_storage_renewable,GR,2014,699.0,other,False
+Hydro_Pure_storage,GR,2014,2470.0,other,False
+Hydro_RunOfRiver_and_poundage,GR,2014,220.0,other,False
+Other_renewable,GR,2014,234.0,other,False
+Solar_PV,GR,2014,2595.0,other,False
+Wind_onshore,GR,2014,1978.0,other,False
+Biomass,GR,2014,47.0,renewable,True
+Fossil Gas,GR,2015,5613.0,fossil,False
+Fossil Oil,GR,2015,2451.0,fossil,False
+Fossil_Brown_coal_Lignite,GR,2015,4456.0,other,False
+Hydro_Mixed_pumped_storage_renewable,GR,2015,699.0,other,False
+Hydro_Pure_storage,GR,2015,2470.0,other,False
+Hydro_RunOfRiver_and_poundage,GR,2015,224.0,other,False
+Other_renewable,GR,2015,235.0,other,False
+Solar_PV,GR,2015,2605.0,other,False
+Wind_onshore,GR,2015,2092.0,other,False
+Biomass,GR,2015,52.0,renewable,True
+Fossil Gas,GR,2016,5613.0,fossil,False
+Fossil Oil,GR,2016,2451.0,fossil,False
+Fossil_Brown_coal_Lignite,GR,2016,4456.0,other,False
+Hydro_Mixed_pumped_storage_renewable,GR,2016,699.0,other,False
+Hydro_Pure_storage,GR,2016,2470.0,other,False
+Hydro_RunOfRiver_and_poundage,GR,2016,224.0,other,False
+Other_renewable,GR,2016,235.0,other,False
+Solar_PV,GR,2016,2605.0,other,False
+Wind_onshore,GR,2016,2092.0,other,False
+Biomass,GR,2016,52.0,renewable,True
+Fossil Gas,GR,2017,4268.51,fossil,False
+Fossil Oil,GR,2017,0.0,fossil,False
+Fossil_Brown_coal_Lignite,GR,2017,3903.9,other,False
+Hydro_Mixed_pumped_storage_non_renewable,GR,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,GR,2017,699.0,other,False
+Hydro_Pure_storage,GR,2017,2470.0,other,False
+Hydro_RunOfRiver_and_poundage,GR,2017,230.25,other,False
+Other_renewable,GR,2017,230.25,other,False
+Solar_PV,GR,2017,2448.25,other,False
+Wind_onshore,GR,2017,2081.81,other,False
+Biomass,GR,2017,60.46,renewable,True
+Fossil Brown coal/Lignite,GR,2019,3912.0,fossil,False
+Fossil Gas,GR,2019,4902.0,fossil,False
+Fossil Oil,GR,2019,0.0,fossil,False
+Biomass,GR,2019,51.0,renewable,True
+Geothermal,GR,2019,0.0,renewable,True
+Hydro Pumped Storage,GR,2019,699.0,renewable,True
+Hydro Run-of-river and poundage,GR,2019,299.0,renewable,True
+Hydro Water Reservoir,GR,2019,2403.0,renewable,True
+Other renewable,GR,2019,69.0,renewable,True
+Solar,GR,2019,2441.0,renewable,True
+Wind Onshore,GR,2019,2355.0,renewable,True
+Fossil Brown coal/Lignite,GR,2020,3362.0,fossil,False
+Fossil Gas,GR,2020,4902.0,fossil,False
+Fossil Oil,GR,2020,0.0,fossil,False
+Biomass,GR,2020,86.0,renewable,True
+Geothermal,GR,2020,0.0,renewable,True
+Hydro Pumped Storage,GR,2020,699.0,renewable,True
+Hydro Run-of-river and poundage,GR,2020,299.0,renewable,True
+Hydro Water Reservoir,GR,2020,2403.0,renewable,True
+Other renewable,GR,2020,105.0,renewable,True
+Solar,GR,2020,2606.0,renewable,True
+Wind Onshore,GR,2020,3153.0,renewable,True
+Fossil Brown coal/Lignite,GR,2021,2561.0,fossil,False
+Fossil Gas,GR,2021,4902.0,fossil,False
+Fossil Oil,GR,2021,0.0,fossil,False
+Biomass,GR,2021,95.0,renewable,True
+Geothermal,GR,2021,0.0,renewable,True
+Hydro Pumped Storage,GR,2021,699.0,renewable,True
+Hydro Run-of-river and poundage,GR,2021,312.0,renewable,True
+Hydro Water Reservoir,GR,2021,2403.0,renewable,True
+Other renewable,GR,2021,106.0,renewable,True
+Solar,GR,2021,3055.0,renewable,True
+Wind Onshore,GR,2021,3755.0,renewable,True
+Fossil Brown coal/Lignite,GR,2022,2001.0,fossil,False
+Fossil Gas,GR,2022,5213.0,fossil,False
+Fossil Oil,GR,2022,0.0,fossil,False
+Biomass,GR,2022,106.0,renewable,True
+Geothermal,GR,2022,0.0,renewable,True
+Hydro Pumped Storage,GR,2022,699.0,renewable,True
+Hydro Run-of-river and poundage,GR,2022,319.0,renewable,True
+Hydro Water Reservoir,GR,2022,2403.0,renewable,True
+Other renewable,GR,2022,109.0,renewable,True
+Solar,GR,2022,3820.0,renewable,True
+Wind Onshore,GR,2022,4150.0,renewable,True
+Fossil Brown coal/Lignite,GR,2023,2650.0,fossil,False
+Fossil Gas,GR,2023,6030.0,fossil,False
+Fossil Oil,GR,2023,0.0,fossil,False
+Biomass,GR,2023,127.0,renewable,True
+Geothermal,GR,2023,0.0,renewable,True
+Hydro Pumped Storage,GR,2023,699.0,renewable,True
+Hydro Run-of-river and poundage,GR,2023,321.0,renewable,True
+Hydro Water Reservoir,GR,2023,2403.0,renewable,True
+Other renewable,GR,2023,120.0,renewable,True
+Solar,GR,2023,5100.0,renewable,True
+Wind Onshore,GR,2023,4547.0,renewable,True
+Fossil Brown coal/Lignite,GR,2024,2650.0,fossil,False
+Fossil Gas,GR,2024,6030.0,fossil,False
+Fossil Oil,GR,2024,0.0,fossil,False
+Biomass,GR,2024,120.0,renewable,True
+Geothermal,GR,2024,0.0,renewable,True
+Hydro Pumped Storage,GR,2024,699.0,renewable,True
+Hydro Run-of-river and poundage,GR,2024,327.0,renewable,True
+Hydro Water Reservoir,GR,2024,2403.0,renewable,True
+Other renewable,GR,2024,128.0,renewable,True
+Solar,GR,2024,6700.0,renewable,True
+Wind Onshore,GR,2024,5065.0,renewable,True
+Fossil Gas,HR,2014,496.0,fossil,False
+Fossil Oil,HR,2014,320.0,fossil,False
+Biogas,HR,2014,12.0,other,False
+Fossil_Hard_coal,HR,2014,325.0,other,False
+Fossil_Mixed_fuels,HR,2014,629.0,other,False
+Hydro_Mixed_pumped_storage_renewable,HR,2014,276.0,other,False
+Hydro_Pure_storage,HR,2014,1397.0,other,False
+Hydro_RunOfRiver_and_poundage,HR,2014,439.0,other,False
+Other_renewable,HR,2014,19.0,other,False
+Solar_PV,HR,2014,34.0,other,False
+Solar_Thermal,HR,2014,0.0,other,False
+Wind_onshore,HR,2014,340.0,other,False
+Biomass,HR,2014,8.0,renewable,True
+Fossil Gas,HR,2015,731.0,fossil,False
+Fossil Oil,HR,2015,320.0,fossil,False
+Biogas,HR,2015,22.0,other,False
+Fossil_Hard_coal,HR,2015,325.0,other,False
+Fossil_Mixed_fuels,HR,2015,629.0,other,False
+Hydro_Mixed_pumped_storage_renewable,HR,2015,276.0,other,False
+Hydro_Pure_storage,HR,2015,1397.0,other,False
+Hydro_RunOfRiver_and_poundage,HR,2015,439.0,other,False
+Other_renewable,HR,2015,22.0,other,False
+Solar_PV,HR,2015,44.0,other,False
+Solar_Thermal,HR,2015,0.0,other,False
+Wind_onshore,HR,2015,429.0,other,False
+Biomass,HR,2015,26.0,renewable,True
+Fossil Gas,HR,2016,731.0,fossil,False
+Fossil Oil,HR,2016,320.0,fossil,False
+Biogas,HR,2016,28.0,other,False
+Fossil_Hard_coal,HR,2016,325.0,other,False
+Fossil_Mixed_fuels,HR,2016,629.0,other,False
+Hydro_Mixed_pumped_storage_renewable,HR,2016,276.0,other,False
+Hydro_Pure_storage,HR,2016,1397.0,other,False
+Hydro_RunOfRiver_and_poundage,HR,2016,439.0,other,False
+Other_renewable,HR,2016,22.0,other,False
+Solar_PV,HR,2016,48.0,other,False
+Wind_onshore,HR,2016,489.0,other,False
+Biomass,HR,2016,26.0,renewable,True
+Fossil Gas,HR,2017,743.0,fossil,False
+Fossil Oil,HR,2017,320.0,fossil,False
+Biogas,HR,2017,36.0,other,False
+Fossil_Hard_coal,HR,2017,325.0,other,False
+Fossil_Mixed_fuels,HR,2017,630.0,other,False
+Hydro_Mixed_pumped_storage_renewable,HR,2017,281.0,other,False
+Hydro_Pure_storage,HR,2017,1388.0,other,False
+Hydro_RunOfRiver_and_poundage,HR,2017,426.0,other,False
+Other_renewable,HR,2017,4.0,other,False
+Solar_PV,HR,2017,51.0,other,False
+Waste_renewable,HR,2017,6.0,other,False
+Wind_onshore,HR,2017,537.0,other,False
+Biomass,HR,2017,36.0,renewable,True
+Fossil Gas,HR,2018,743.0,fossil,False
+Fossil Oil,HR,2018,320.0,fossil,False
+Biogas,HR,2018,41.0,other,False
+Fossil_Hard_coal,HR,2018,325.0,other,False
+Fossil_Mixed_fuels,HR,2018,630.0,other,False
+Hydro_Mixed_pumped_storage_renewable,HR,2018,281.0,other,False
+Hydro_Pure_storage,HR,2018,1388.0,other,False
+Hydro_RunOfRiver_and_poundage,HR,2018,426.0,other,False
+Other_renewable,HR,2018,6.0,other,False
+Solar_PV,HR,2018,52.0,other,False
+Waste_renewable,HR,2018,6.0,other,False
+Wind_onshore,HR,2018,556.0,other,False
+Biomass,HR,2018,58.0,renewable,True
+Fossil Gas,HR,2019,743.0,fossil,False
+Fossil Hard coal,HR,2019,332.0,fossil,False
+Fossil Oil,HR,2019,937.0,fossil,False
+Waste,HR,2019,6.0,other,False
+Biomass,HR,2019,71.0,renewable,True
+Geothermal,HR,2019,10.0,renewable,True
+Hydro Pumped Storage,HR,2019,283.0,renewable,True
+Hydro Run-of-river and poundage,HR,2019,421.0,renewable,True
+Hydro Water Reservoir,HR,2019,1436.0,renewable,True
+Other renewable,HR,2019,49.0,renewable,True
+Solar,HR,2019,53.0,renewable,True
+Wind Onshore,HR,2019,616.0,renewable,True
+Fossil Gas,HR,2020,743.0,fossil,False
+Fossil Hard coal,HR,2020,332.0,fossil,False
+Fossil Oil,HR,2020,937.0,fossil,False
+Waste,HR,2020,6.0,other,False
+Biomass,HR,2020,91.0,renewable,True
+Geothermal,HR,2020,10.0,renewable,True
+Hydro Pumped Storage,HR,2020,281.0,renewable,True
+Hydro Run-of-river and poundage,HR,2020,421.0,renewable,True
+Hydro Water Reservoir,HR,2020,1444.0,renewable,True
+Other renewable,HR,2020,50.0,renewable,True
+Solar,HR,2020,53.0,renewable,True
+Wind Onshore,HR,2020,739.0,renewable,True
+Fossil Gas,HR,2021,743.0,fossil,False
+Fossil Hard coal,HR,2021,217.0,fossil,False
+Fossil Oil,HR,2021,77.0,fossil,False
+Waste,HR,2021,6.0,other,False
+Biomass,HR,2021,108.0,renewable,True
+Geothermal,HR,2021,10.0,renewable,True
+Hydro Pumped Storage,HR,2021,281.0,renewable,True
+Hydro Run-of-river and poundage,HR,2021,427.0,renewable,True
+Hydro Water Reservoir,HR,2021,1445.0,renewable,True
+Other renewable,HR,2021,54.0,renewable,True
+Solar,HR,2021,85.0,renewable,True
+Wind Onshore,HR,2021,796.0,renewable,True
+Fossil Gas,HR,2022,750.0,fossil,False
+Fossil Hard coal,HR,2022,217.0,fossil,False
+Fossil Oil,HR,2022,75.0,fossil,False
+Waste,HR,2022,6.0,other,False
+Biomass,HR,2022,111.0,renewable,True
+Geothermal,HR,2022,10.0,renewable,True
+Hydro Pumped Storage,HR,2022,281.0,renewable,True
+Hydro Run-of-river and poundage,HR,2022,428.0,renewable,True
+Hydro Water Reservoir,HR,2022,1446.0,renewable,True
+Other renewable,HR,2022,57.0,renewable,True
+Solar,HR,2022,96.0,renewable,True
+Wind Onshore,HR,2022,925.0,renewable,True
+Fossil Gas,HR,2023,766.0,fossil,False
+Fossil Hard coal,HR,2023,217.0,fossil,False
+Fossil Oil,HR,2023,45.0,fossil,False
+Waste,HR,2023,6.0,other,False
+Biomass,HR,2023,114.0,renewable,True
+Geothermal,HR,2023,10.0,renewable,True
+Hydro Pumped Storage,HR,2023,281.0,renewable,True
+Hydro Run-of-river and poundage,HR,2023,428.0,renewable,True
+Hydro Water Reservoir,HR,2023,1446.0,renewable,True
+Other renewable,HR,2023,83.0,renewable,True
+Solar,HR,2023,140.0,renewable,True
+Wind Onshore,HR,2023,981.0,renewable,True
+Fossil Gas,HR,2024,886.0,fossil,False
+Fossil Hard coal,HR,2024,217.0,fossil,False
+Fossil Oil,HR,2024,45.0,fossil,False
+Waste,HR,2024,6.0,other,False
+Biomass,HR,2024,114.0,renewable,True
+Geothermal,HR,2024,10.0,renewable,True
+Hydro Pumped Storage,HR,2024,281.0,renewable,True
+Hydro Run-of-river and poundage,HR,2024,428.0,renewable,True
+Hydro Water Reservoir,HR,2024,1446.0,renewable,True
+Other renewable,HR,2024,95.0,renewable,True
+Solar,HR,2024,292.0,renewable,True
+Wind Onshore,HR,2024,1209.0,renewable,True
+Fossil Gas,HU,2014,4786.0,fossil,False
+Fossil Oil,HU,2014,410.0,fossil,False
+Nuclear,HU,2014,1890.0,nuclear,False
+Biogas,HU,2014,61.0,other,False
+Fossil_Brown_coal_Lignite,HU,2014,731.0,other,False
+Fossil_Hard_coal,HU,2014,168.0,other,False
+Hydro_Pure_storage,HU,2014,29.0,other,False
+Hydro_RunOfRiver_and_poundage,HU,2014,28.0,other,False
+Solar_PV,HU,2014,6.0,other,False
+Waste_renewable,HU,2014,25.0,other,False
+Wind_onshore,HU,2014,329.0,other,False
+Biomass,HU,2014,197.0,renewable,True
+Fossil Gas,HU,2015,4124.0,fossil,False
+Fossil Oil,HU,2015,410.0,fossil,False
+Nuclear,HU,2015,1887.0,nuclear,False
+Biogas,HU,2015,62.0,other,False
+Fossil_Brown_coal_Lignite,HU,2015,1007.0,other,False
+Hydro_Pure_storage,HU,2015,29.0,other,False
+Hydro_RunOfRiver_and_poundage,HU,2015,28.0,other,False
+Solar_PV,HU,2015,29.0,other,False
+Waste_renewable,HU,2015,26.0,other,False
+Wind_onshore,HU,2015,328.0,other,False
+Biomass,HU,2015,246.0,renewable,True
+Fossil Gas,HU,2016,3860.0,fossil,False
+Fossil Oil,HU,2016,410.0,fossil,False
+Nuclear,HU,2016,1887.0,nuclear,False
+Biogas,HU,2016,60.0,other,False
+Fossil_Brown_coal_Lignite,HU,2016,1049.0,other,False
+Fossil_Hard_coal,HU,2016,292.0,other,False
+Hydro_Pure_storage,HU,2016,29.0,other,False
+Hydro_RunOfRiver_and_poundage,HU,2016,28.0,other,False
+Solar_PV,HU,2016,49.0,other,False
+Waste_renewable,HU,2016,28.0,other,False
+Wind_onshore,HU,2016,328.0,other,False
+Biomass,HU,2016,216.0,renewable,True
+Fossil Gas,HU,2017,4120.0,fossil,False
+Fossil Oil,HU,2017,410.0,fossil,False
+Nuclear,HU,2017,1887.0,nuclear,False
+Biogas,HU,2017,64.0,other,False
+Fossil_Brown_coal_Lignite,HU,2017,1049.0,other,False
+Fossil_Hard_coal,HU,2017,292.0,other,False
+Hydro_Pure_storage,HU,2017,28.0,other,False
+Hydro_RunOfRiver_and_poundage,HU,2017,28.0,other,False
+Solar_PV,HU,2017,94.0,other,False
+Waste_renewable,HU,2017,28.0,other,False
+Wind_onshore,HU,2017,323.0,other,False
+Biomass,HU,2017,246.0,renewable,True
+Fossil Gas,HU,2018,4042.0,fossil,False
+Fossil Oil,HU,2018,412.0,fossil,False
+Nuclear,HU,2018,1899.0,nuclear,False
+Biogas,HU,2018,68.0,other,False
+Fossil_Brown_coal_Lignite,HU,2018,1049.0,other,False
+Fossil_Hard_coal,HU,2018,0.0,other,False
+Hydro_Pure_storage,HU,2018,28.0,other,False
+Hydro_RunOfRiver_and_poundage,HU,2018,28.0,other,False
+Solar_PV,HU,2018,336.0,other,False
+Waste_renewable,HU,2018,36.0,other,False
+Wind_onshore,HU,2018,325.0,other,False
+Biomass,HU,2018,251.0,renewable,True
+Fossil Brown coal/Lignite,HU,2019,1048.87,fossil,False
+Fossil Gas,HU,2019,4028.43,fossil,False
+Fossil Oil,HU,2019,421.06,fossil,False
+Nuclear,HU,2019,1898.87,nuclear,False
+Waste,HU,2019,59.44,other,False
+Biomass,HU,2019,245.95,renewable,True
+Geothermal,HU,2019,2.7,renewable,True
+Hydro Run-of-river and poundage,HU,2019,29.65,renewable,True
+Hydro Water Reservoir,HU,2019,28.16,renewable,True
+Other renewable,HU,2019,74.4,renewable,True
+Solar,HU,2019,936.25,renewable,True
+Wind Onshore,HU,2019,327.48,renewable,True
+Fossil Brown coal/Lignite,HU,2020,1006.53,fossil,False
+Fossil Gas,HU,2020,4030.29,fossil,False
+Fossil Hard coal,HU,2020,42.34,fossil,False
+Fossil Oil,HU,2020,420.0,fossil,False
+Nuclear,HU,2020,1898.87,nuclear,False
+Waste,HU,2020,59.44,other,False
+Biomass,HU,2020,240.65,renewable,True
+Geothermal,HU,2020,2.7,renewable,True
+Hydro Run-of-river and poundage,HU,2020,30.13,renewable,True
+Hydro Water Reservoir,HU,2020,28.16,renewable,True
+Other renewable,HU,2020,73.51,renewable,True
+Solar,HU,2020,1406.51,renewable,True
+Wind Onshore,HU,2020,323.28,renewable,True
+Fossil Brown coal/Lignite,HU,2021,1006.53,fossil,False
+Fossil Gas,HU,2021,4011.36,fossil,False
+Fossil Hard coal,HU,2021,42.34,fossil,False
+Fossil Oil,HU,2021,420.0,fossil,False
+Nuclear,HU,2021,1909.93,nuclear,False
+Waste,HU,2021,49.44,other,False
+Biomass,HU,2021,212.65,renewable,True
+Geothermal,HU,2021,2.7,renewable,True
+Hydro Run-of-river and poundage,HU,2021,30.13,renewable,True
+Hydro Water Reservoir,HU,2021,28.16,renewable,True
+Other renewable,HU,2021,69.46,renewable,True
+Solar,HU,2021,1828.66,renewable,True
+Wind Onshore,HU,2021,323.28,renewable,True
+Fossil Brown coal/Lignite,HU,2022,1006.53,fossil,False
+Fossil Gas,HU,2022,3974.48,fossil,False
+Fossil Hard coal,HU,2022,42.34,fossil,False
+Fossil Oil,HU,2022,424.8,fossil,False
+Nuclear,HU,2022,1915.6,nuclear,False
+Waste,HU,2022,49.44,other,False
+Biomass,HU,2022,212.65,renewable,True
+Geothermal,HU,2022,2.7,renewable,True
+Hydro Run-of-river and poundage,HU,2022,33.03,renewable,True
+Hydro Water Reservoir,HU,2022,28.16,renewable,True
+Other renewable,HU,2022,69.6,renewable,True
+Solar,HU,2022,2523.57,renewable,True
+Wind Onshore,HU,2022,323.28,renewable,True
+Fossil Brown coal/Lignite,HU,2023,786.56,fossil,False
+Fossil Gas,HU,2023,3151.14,fossil,False
+Fossil Hard coal,HU,2023,42.34,fossil,False
+Fossil Oil,HU,2023,424.8,fossil,False
+Nuclear,HU,2023,1915.6,nuclear,False
+Other,HU,2023,21.84,other,False
+Waste,HU,2023,49.44,other,False
+Biomass,HU,2023,212.65,renewable,True
+Geothermal,HU,2023,2.7,renewable,True
+Hydro Run-of-river and poundage,HU,2023,33.03,renewable,True
+Hydro Water Reservoir,HU,2023,28.16,renewable,True
+Other renewable,HU,2023,70.32,renewable,True
+Solar,HU,2023,3300.37,renewable,True
+Wind Onshore,HU,2023,323.28,renewable,True
+Fossil Brown coal/Lignite,HU,2024,786.56,fossil,False
+Fossil Gas,HU,2024,3160.86,fossil,False
+Fossil Hard coal,HU,2024,42.34,fossil,False
+Fossil Oil,HU,2024,424.8,fossil,False
+Nuclear,HU,2024,1915.6,nuclear,False
+Other,HU,2024,35.29,other,False
+Waste,HU,2024,49.44,other,False
+Biomass,HU,2024,213.85,renewable,True
+Geothermal,HU,2024,2.7,renewable,True
+Hydro Run-of-river and poundage,HU,2024,33.0,renewable,True
+Hydro Water Reservoir,HU,2024,28.16,renewable,True
+Other renewable,HU,2024,70.82,renewable,True
+Solar,HU,2024,3888.0,renewable,True
+Wind Onshore,HU,2024,325.08,renewable,True
+Fossil Gas,IE,2014,3805.0,fossil,False
+Fossil Oil,IE,2014,1138.0,fossil,False
+Fossil Peat,IE,2014,228.0,fossil,False
+Fossil_Brown_coal_Lignite,IE,2014,346.0,other,False
+Fossil_Hard_coal,IE,2014,855.0,other,False
+Fossil_Mixed_fuels,IE,2014,12.0,other,False
+Hydro_Pure_pumped_Storage,IE,2014,292.0,other,False
+Hydro_Pure_storage,IE,2014,238.0,other,False
+Other_non_renewable,IE,2014,230.0,other,False
+Waste_renewable,IE,2014,9.0,other,False
+Wind_onshore,IE,2014,2265.0,other,False
+Biomass,IE,2014,24.0,renewable,True
+Fossil Gas,IE,2015,4270.0,fossil,False
+Fossil Oil,IE,2015,926.0,fossil,False
+Fossil Peat,IE,2015,228.0,fossil,False
+Fossil_Brown_coal_Lignite,IE,2015,346.0,other,False
+Fossil_Hard_coal,IE,2015,855.0,other,False
+Fossil_Mixed_fuels,IE,2015,12.0,other,False
+Hydro_Pure_pumped_Storage,IE,2015,292.0,other,False
+Hydro_Pure_storage,IE,2015,242.0,other,False
+Other_non_renewable,IE,2015,251.0,other,False
+Other_renewable,IE,2015,67.0,other,False
+Waste_renewable,IE,2015,9.0,other,False
+Wind_onshore,IE,2015,2400.0,other,False
+Biomass,IE,2015,7.0,renewable,True
+Fossil Gas,IE,2016,4215.0,fossil,False
+Fossil Oil,IE,2016,916.0,fossil,False
+Fossil Peat,IE,2016,228.0,fossil,False
+Fossil_Hard_coal,IE,2016,855.0,other,False
+Hydro_Pure_pumped_Storage,IE,2016,292.0,other,False
+Hydro_RunOfRiver_and_poundage,IE,2016,238.0,other,False
+Non_identified_net_gen,IE,2016,269.0,other,False
+Other_renewable,IE,2016,338.0,other,False
+Waste_non_renewable,IE,2016,8.0,other,False
+Waste_renewable,IE,2016,9.0,other,False
+Wind_onshore,IE,2016,2740.0,other,False
+Fossil Gas,IE,2017,4215.0,fossil,False
+Fossil Oil,IE,2017,916.0,fossil,False
+Fossil Peat,IE,2017,228.0,fossil,False
+Fossil_Hard_coal,IE,2017,855.0,other,False
+Hydro_Pure_pumped_Storage,IE,2017,292.0,other,False
+Hydro_RunOfRiver_and_poundage,IE,2017,238.0,other,False
+Non_identified_net_gen,IE,2017,269.0,other,False
+Other_renewable,IE,2017,338.0,other,False
+Waste_non_renewable,IE,2017,39.5,other,False
+Waste_renewable,IE,2017,39.5,other,False
+Wind_onshore,IE,2017,3080.0,other,False
+Fossil Gas,IE,2018,4215.0,fossil,False
+Fossil Oil,IE,2018,916.0,fossil,False
+Fossil Peat,IE,2018,228.0,fossil,False
+Fossil_Hard_coal,IE,2018,855.0,other,False
+Hydro_Pure_pumped_Storage,IE,2018,292.0,other,False
+Hydro_RunOfRiver_and_poundage,IE,2018,238.0,other,False
+Non_identified_net_gen,IE,2018,269.0,other,False
+Other_renewable,IE,2018,338.0,other,False
+Waste_non_renewable,IE,2018,39.5,other,False
+Waste_renewable,IE,2018,39.5,other,False
+Wind_onshore,IE,2018,3080.0,other,False
+Fossil Gas,IE,2019,4265.0,fossil,False
+Fossil Hard coal,IE,2019,855.0,fossil,False
+Fossil Oil,IE,2019,1272.0,fossil,False
+Fossil Peat,IE,2019,343.6,fossil,False
+Other,IE,2019,647.0,other,False
+Geothermal,IE,2019,17.0,renewable,True
+Hydro Pumped Storage,IE,2019,292.0,renewable,True
+Hydro Run-of-river and poundage,IE,2019,216.0,renewable,True
+Wind Onshore,IE,2019,1918.73,renewable,True
+Fossil Gas,IE,2020,4265.0,fossil,False
+Fossil Hard coal,IE,2020,855.0,fossil,False
+Fossil Oil,IE,2020,1272.0,fossil,False
+Fossil Peat,IE,2020,343.6,fossil,False
+Other,IE,2020,647.0,other,False
+Geothermal,IE,2020,17.0,renewable,True
+Hydro Pumped Storage,IE,2020,292.0,renewable,True
+Hydro Run-of-river and poundage,IE,2020,216.0,renewable,True
+Wind Onshore,IE,2020,1918.73,renewable,True
+Fossil Gas,IE,2021,4265.0,fossil,False
+Fossil Hard coal,IE,2021,855.0,fossil,False
+Fossil Oil,IE,2021,1272.0,fossil,False
+Fossil Peat,IE,2021,343.6,fossil,False
+Other,IE,2021,647.0,other,False
+Geothermal,IE,2021,17.0,renewable,True
+Hydro Pumped Storage,IE,2021,292.0,renewable,True
+Hydro Run-of-river and poundage,IE,2021,216.0,renewable,True
+Wind Onshore,IE,2021,1918.73,renewable,True
+Fossil Gas,IE,2022,4265.0,fossil,False
+Fossil Hard coal,IE,2022,855.0,fossil,False
+Fossil Oil,IE,2022,1272.0,fossil,False
+Fossil Peat,IE,2022,343.6,fossil,False
+Other,IE,2022,647.0,other,False
+Geothermal,IE,2022,17.0,renewable,True
+Hydro Pumped Storage,IE,2022,292.0,renewable,True
+Hydro Run-of-river and poundage,IE,2022,216.0,renewable,True
+Wind Onshore,IE,2022,1918.73,renewable,True
+Fossil Gas,IE,2023,4265.0,fossil,False
+Fossil Hard coal,IE,2023,855.0,fossil,False
+Fossil Oil,IE,2023,1272.0,fossil,False
+Fossil Peat,IE,2023,343.6,fossil,False
+Other,IE,2023,647.0,other,False
+Geothermal,IE,2023,17.0,renewable,True
+Hydro Pumped Storage,IE,2023,292.0,renewable,True
+Hydro Run-of-river and poundage,IE,2023,216.0,renewable,True
+Wind Onshore,IE,2023,1918.73,renewable,True
+Fossil Gas,IE,2024,4265.0,fossil,False
+Fossil Hard coal,IE,2024,855.0,fossil,False
+Fossil Oil,IE,2024,1272.0,fossil,False
+Fossil Peat,IE,2024,343.6,fossil,False
+Other,IE,2024,647.0,other,False
+Geothermal,IE,2024,17.0,renewable,True
+Hydro Pumped Storage,IE,2024,292.0,renewable,True
+Hydro Run-of-river and poundage,IE,2024,216.0,renewable,True
+Wind Onshore,IE,2024,1918.73,renewable,True
+Fossil Oil,IS,2014,52.0,fossil,False
+Hydro_Pure_storage,IS,2014,1860.0,other,False
+Hydro_RunOfRiver_and_poundage,IS,2014,25.0,other,False
+Other_renewable,IS,2014,663.0,other,False
+Wind_onshore,IS,2014,1.8,other,False
+Geothermal,IS,2014,663.0,renewable,True
+Fossil Oil,IS,2015,10.8,fossil,False
+Hydro_Pure_storage,IS,2015,1948.0,other,False
+Hydro_RunOfRiver_and_poundage,IS,2015,24.6,other,False
+Wind_onshore,IS,2015,1.8,other,False
+Geothermal,IS,2015,661.0,renewable,True
+Fossil Oil,IS,2016,10.8,fossil,False
+Hydro_Pure_storage,IS,2016,1948.0,other,False
+Hydro_RunOfRiver_and_poundage,IS,2016,24.6,other,False
+Wind_onshore,IS,2016,1.8,other,False
+Geothermal,IS,2016,661.0,renewable,True
+Fossil Oil,IS,2017,10.8,fossil,False
+Hydro_Pure_storage,IS,2017,1948.0,other,False
+Hydro_RunOfRiver_and_poundage,IS,2017,24.6,other,False
+Wind_onshore,IS,2017,1.8,other,False
+Geothermal,IS,2017,706.0,renewable,True
+Fossil Oil,IS,2018,10.8,fossil,False
+Hydro_Pure_storage,IS,2018,1948.0,other,False
+Hydro_RunOfRiver_and_poundage,IS,2018,24.6,other,False
+Wind_onshore,IS,2018,1.8,other,False
+Geothermal,IS,2018,748.0,renewable,True
+Fossil Gas,IT,2014,39042.0,fossil,False
+Fossil Oil,IT,2014,22258.0,fossil,False
+Biogas,IT,2014,1683.0,other,False
+Fossil_Coal_derived_gas,IT,2014,777.2,other,False
+Fossil_Hard_coal,IT,2014,6357.0,other,False
+Hydro_Mixed_pumped_storage_renewable,IT,2014,3409.0,other,False
+Hydro_Pure_pumped_Storage,IT,2014,4753.0,other,False
+Hydro_Pure_storage,IT,2014,4690.0,other,False
+Hydro_RunOfRiver_and_poundage,IT,2014,12175.0,other,False
+Other_non_renewable,IT,2014,3540.0,other,False
+Other_renewable,IT,2014,336.75,other,False
+Solar_PV,IT,2014,18613.0,other,False
+Waste_non_renewable,IT,2014,159.57,other,False
+Waste_renewable,IT,2014,159.57,other,False
+Wind_onshore,IT,2014,8655.0,other,False
+Biomass,IT,2014,2140.0,renewable,True
+Geothermal,IT,2014,961.89,renewable,True
+Fossil Gas,IT,2015,39292.0,fossil,False
+Fossil Oil,IT,2015,22264.0,fossil,False
+Fossil Oil,IT,2015,0.0,fossil,False
+Fossil Peat,IT,2015,0.0,fossil,False
+Nuclear,IT,2015,0.0,nuclear,False
+Biogas,IT,2015,1703.0,other,False
+Fossil_Brown_coal_Lignite,IT,2015,0.0,other,False
+Fossil_Coal_derived_gas,IT,2015,779.0,other,False
+Fossil_Hard_coal,IT,2015,6357.0,other,False
+Fossil_Mixed_fuels,IT,2015,0.0,other,False
+Fossil_Other,IT,2015,0.0,other,False
+Hydro_Marine,IT,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,IT,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,IT,2015,3409.0,other,False
+Hydro_Pure_pumped_Storage,IT,2015,4753.0,other,False
+Hydro_Pure_storage,IT,2015,4690.0,other,False
+Hydro_RunOfRiver_and_poundage,IT,2015,12332.0,other,False
+Non_identified_net_gen,IT,2015,0.0,other,False
+Other_non_renewable,IT,2015,3556.0,other,False
+Other_renewable,IT,2015,337.0,other,False
+Solar_PV,IT,2015,18920.0,other,False
+Solar_Thermal,IT,2015,0.0,other,False
+Waste_non_renewable,IT,2015,163.0,other,False
+Waste_renewable,IT,2015,163.0,other,False
+Wind_offshore,IT,2015,0.0,other,False
+Wind_onshore,IT,2015,9129.0,other,False
+Biomass,IT,2015,2156.0,renewable,True
+Geothermal,IT,2015,962.0,renewable,True
+Fossil Gas,IT,2016,39510.0,fossil,False
+Fossil Oil,IT,2016,22221.0,fossil,False
+Fossil Oil,IT,2016,0.0,fossil,False
+Fossil Peat,IT,2016,0.0,fossil,False
+Nuclear,IT,2016,0.0,nuclear,False
+Biogas,IT,2016,1724.0,other,False
+Fossil_Brown_coal_Lignite,IT,2016,0.0,other,False
+Fossil_Coal_derived_gas,IT,2016,779.0,other,False
+Fossil_Hard_coal,IT,2016,6357.0,other,False
+Fossil_Mixed_fuels,IT,2016,0.0,other,False
+Fossil_Other,IT,2016,0.0,other,False
+Hydro_Marine,IT,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,IT,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,IT,2016,4179.0,other,False
+Hydro_Pure_pumped_Storage,IT,2016,4753.0,other,False
+Hydro_Pure_storage,IT,2016,5148.0,other,False
+Hydro_RunOfRiver_and_poundage,IT,2016,12447.0,other,False
+Non_identified_net_gen,IT,2016,0.0,other,False
+Other_non_renewable,IT,2016,3561.0,other,False
+Other_renewable,IT,2016,337.0,other,False
+Solar_PV,IT,2016,19288.0,other,False
+Solar_Thermal,IT,2016,0.0,other,False
+Waste_non_renewable,IT,2016,163.0,other,False
+Waste_renewable,IT,2016,163.0,other,False
+Wind_offshore,IT,2016,0.0,other,False
+Wind_onshore,IT,2016,9416.0,other,False
+Biomass,IT,2016,2247.0,renewable,True
+Geothermal,IT,2016,962.0,renewable,True
+Fossil Gas,IT,2017,44283.0,fossil,False
+Fossil Oil,IT,2017,15545.0,fossil,False
+Fossil Oil,IT,2017,0.0,fossil,False
+Fossil Peat,IT,2017,0.0,fossil,False
+Nuclear,IT,2017,0.0,nuclear,False
+Biogas,IT,2017,1336.0,other,False
+Fossil_Brown_coal_Lignite,IT,2017,0.0,other,False
+Fossil_Coal_derived_gas,IT,2017,2057.0,other,False
+Fossil_Hard_coal,IT,2017,7354.0,other,False
+Fossil_Mixed_fuels,IT,2017,0.0,other,False
+Fossil_Other,IT,2017,0.0,other,False
+Hydro_Marine,IT,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,IT,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,IT,2017,4179.0,other,False
+Hydro_Pure_pumped_Storage,IT,2017,4753.0,other,False
+Hydro_Pure_storage,IT,2017,5102.0,other,False
+Hydro_RunOfRiver_and_poundage,IT,2017,12591.0,other,False
+Non_identified_net_gen,IT,2017,0.0,other,False
+Other_non_renewable,IT,2017,3256.0,other,False
+Other_renewable,IT,2017,316.0,other,False
+Solar_PV,IT,2017,19662.0,other,False
+Solar_Thermal,IT,2017,0.0,other,False
+Waste_non_renewable,IT,2017,166.0,other,False
+Waste_renewable,IT,2017,166.0,other,False
+Wind_offshore,IT,2017,0.0,other,False
+Wind_onshore,IT,2017,9778.0,other,False
+Biomass,IT,2017,1626.0,renewable,True
+Geothermal,IT,2017,962.0,renewable,True
+Fossil Gas,IT,2018,44737.0,fossil,False
+Fossil Oil,IT,2018,2485.0,fossil,False
+Fossil Oil,IT,2018,0.0,fossil,False
+Fossil Peat,IT,2018,0.0,fossil,False
+Nuclear,IT,2018,0.0,nuclear,False
+Biogas,IT,2018,1268.0,other,False
+Fossil_Brown_coal_Lignite,IT,2018,0.0,other,False
+Fossil_Coal_derived_gas,IT,2018,1204.0,other,False
+Fossil_Hard_coal,IT,2018,7962.0,other,False
+Fossil_Mixed_fuels,IT,2018,0.0,other,False
+Fossil_Other,IT,2018,0.0,other,False
+Hydro_Marine,IT,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,IT,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,IT,2018,3377.0,other,False
+Hydro_Pure_pumped_Storage,IT,2018,3940.0,other,False
+Hydro_Pure_storage,IT,2018,4651.0,other,False
+Hydro_RunOfRiver_and_poundage,IT,2018,10530.0,other,False
+Non_identified_net_gen,IT,2018,0.0,other,False
+Other_non_renewable,IT,2018,1547.0,other,False
+Other_renewable,IT,2018,0.0,other,False
+Solar_PV,IT,2018,20108.0,other,False
+Solar_Thermal,IT,2018,0.0,other,False
+Waste_non_renewable,IT,2018,408.0,other,False
+Waste_renewable,IT,2018,408.0,other,False
+Wind_offshore,IT,2018,0.0,other,False
+Wind_onshore,IT,2018,10230.0,other,False
+Biomass,IT,2018,1600.0,renewable,True
+Geothermal,IT,2018,767.0,renewable,True
+Fossil Brown coal/Lignite,IT,2019,0.0,fossil,False
+Fossil Coal-derived gas,IT,2019,1812.0,fossil,False
+Fossil Gas,IT,2019,46322.0,fossil,False
+Fossil Hard coal,IT,2019,4851.0,fossil,False
+Fossil Oil,IT,2019,1443.0,fossil,False
+Fossil Peat,IT,2019,0.0,fossil,False
+Other,IT,2019,991.0,other,False
+Waste,IT,2019,132.0,other,False
+Biomass,IT,2019,1538.0,renewable,True
+Geothermal,IT,2019,869.0,renewable,True
+Hydro Pumped Storage,IT,2019,7574.0,renewable,True
+Hydro Run-of-river and poundage,IT,2019,10650.0,renewable,True
+Hydro Water Reservoir,IT,2019,3857.0,renewable,True
+Marine,IT,2019,0.0,renewable,True
+Other renewable,IT,2019,0.0,renewable,True
+Solar,IT,2019,4717.0,renewable,True
+Wind Offshore,IT,2019,0.0,renewable,True
+Wind Onshore,IT,2019,9617.0,renewable,True
+Fossil Brown coal/Lignite,IT,2020,0.0,fossil,False
+Fossil Coal-derived gas,IT,2020,1764.0,fossil,False
+Fossil Gas,IT,2020,42523.0,fossil,False
+Fossil Hard coal,IT,2020,7617.0,fossil,False
+Fossil Oil,IT,2020,1493.0,fossil,False
+Fossil Peat,IT,2020,0.0,fossil,False
+Other,IT,2020,1394.0,other,False
+Waste,IT,2020,125.0,other,False
+Biomass,IT,2020,1549.0,renewable,True
+Geothermal,IT,2020,869.0,renewable,True
+Hydro Pumped Storage,IT,2020,7276.0,renewable,True
+Hydro Run-of-river and poundage,IT,2020,10441.0,renewable,True
+Hydro Water Reservoir,IT,2020,4459.0,renewable,True
+Marine,IT,2020,0.0,renewable,True
+Other renewable,IT,2020,0.0,renewable,True
+Solar,IT,2020,4874.0,renewable,True
+Wind Offshore,IT,2020,0.0,renewable,True
+Wind Onshore,IT,2020,10224.0,renewable,True
+Fossil Brown coal/Lignite,IT,2021,0.0,fossil,False
+Fossil Coal-derived gas,IT,2021,2064.0,fossil,False
+Fossil Gas,IT,2021,41925.0,fossil,False
+Fossil Hard coal,IT,2021,6987.0,fossil,False
+Fossil Oil,IT,2021,1480.0,fossil,False
+Fossil Peat,IT,2021,0.0,fossil,False
+Other,IT,2021,837.0,other,False
+Waste,IT,2021,125.0,other,False
+Biomass,IT,2021,1587.0,renewable,True
+Geothermal,IT,2021,869.0,renewable,True
+Hydro Pumped Storage,IT,2021,7276.0,renewable,True
+Hydro Run-of-river and poundage,IT,2021,10472.0,renewable,True
+Hydro Water Reservoir,IT,2021,4454.0,renewable,True
+Marine,IT,2021,0.0,renewable,True
+Other renewable,IT,2021,0.0,renewable,True
+Solar,IT,2021,4979.0,renewable,True
+Wind Offshore,IT,2021,0.0,renewable,True
+Wind Onshore,IT,2021,10302.0,renewable,True
+Fossil Brown coal/Lignite,IT,2022,0.0,fossil,False
+Fossil Coal-derived gas,IT,2022,2041.0,fossil,False
+Fossil Gas,IT,2022,41961.0,fossil,False
+Fossil Hard coal,IT,2022,6376.0,fossil,False
+Fossil Oil,IT,2022,1490.0,fossil,False
+Fossil Peat,IT,2022,0.0,fossil,False
+Other,IT,2022,825.0,other,False
+Waste,IT,2022,122.0,other,False
+Biomass,IT,2022,1548.0,renewable,True
+Geothermal,IT,2022,869.0,renewable,True
+Hydro Pumped Storage,IT,2022,7256.0,renewable,True
+Hydro Run-of-river and poundage,IT,2022,10507.0,renewable,True
+Hydro Water Reservoir,IT,2022,4441.0,renewable,True
+Marine,IT,2022,0.0,renewable,True
+Other renewable,IT,2022,0.0,renewable,True
+Solar,IT,2022,5137.0,renewable,True
+Wind Offshore,IT,2022,0.0,renewable,True
+Wind Onshore,IT,2022,10658.0,renewable,True
+Fossil Brown coal/Lignite,IT,2023,0.0,fossil,False
+Fossil Coal-derived gas,IT,2023,2072.0,fossil,False
+Fossil Gas,IT,2023,44215.0,fossil,False
+Fossil Hard coal,IT,2023,5576.0,fossil,False
+Fossil Oil,IT,2023,1543.0,fossil,False
+Fossil Peat,IT,2023,0.0,fossil,False
+Other,IT,2023,853.0,other,False
+Waste,IT,2023,120.0,other,False
+Biomass,IT,2023,1534.0,renewable,True
+Geothermal,IT,2023,869.0,renewable,True
+Hydro Pumped Storage,IT,2023,7256.0,renewable,True
+Hydro Run-of-river and poundage,IT,2023,10553.0,renewable,True
+Hydro Water Reservoir,IT,2023,4440.0,renewable,True
+Marine,IT,2023,0.0,renewable,True
+Other renewable,IT,2023,0.0,renewable,True
+Solar,IT,2023,5431.0,renewable,True
+Wind Offshore,IT,2023,30.0,renewable,True
+Wind Onshore,IT,2023,11204.0,renewable,True
+Fossil Brown coal/Lignite,IT,2024,0.0,fossil,False
+Fossil Coal-derived gas,IT,2024,2071.0,fossil,False
+Fossil Gas,IT,2024,45157.0,fossil,False
+Fossil Hard coal,IT,2024,5583.0,fossil,False
+Fossil Oil,IT,2024,1564.0,fossil,False
+Fossil Peat,IT,2024,0.0,fossil,False
+Other,IT,2024,334.0,other,False
+Waste,IT,2024,670.0,other,False
+Biomass,IT,2024,1543.0,renewable,True
+Geothermal,IT,2024,868.0,renewable,True
+Hydro Pumped Storage,IT,2024,7256.0,renewable,True
+Hydro Run-of-river and poundage,IT,2024,10291.0,renewable,True
+Hydro Water Reservoir,IT,2024,4542.0,renewable,True
+Marine,IT,2024,0.0,renewable,True
+Other renewable,IT,2024,1.0,renewable,True
+Solar,IT,2024,5927.0,renewable,True
+Wind Offshore,IT,2024,30.0,renewable,True
+Wind Onshore,IT,2024,11651.0,renewable,True
+Fossil Gas,LT,2014,578.0,fossil,False
+Biogas,LT,2014,18.0,other,False
+Fossil_Mixed_fuels,LT,2014,1975.0,other,False
+Hydro_Pure_pumped_Storage,LT,2014,900.0,other,False
+Hydro_RunOfRiver_and_poundage,LT,2014,125.0,other,False
+Other_non_renewable,LT,2014,7.0,other,False
+Solar_PV,LT,2014,69.0,other,False
+Waste_renewable,LT,2014,18.0,other,False
+Wind_onshore,LT,2014,288.0,other,False
+Biomass,LT,2014,42.0,renewable,True
+Fossil Gas,LT,2015,553.0,fossil,False
+Biogas,LT,2015,23.0,other,False
+Fossil_Mixed_fuels,LT,2015,1780.0,other,False
+Hydro_Pure_pumped_Storage,LT,2015,900.0,other,False
+Hydro_RunOfRiver_and_poundage,LT,2015,126.0,other,False
+Other_non_renewable,LT,2015,6.0,other,False
+Solar_PV,LT,2015,69.0,other,False
+Waste_non_renewable,LT,2015,0.0,other,False
+Waste_renewable,LT,2015,18.0,other,False
+Wind_onshore,LT,2015,290.0,other,False
+Biomass,LT,2015,30.0,renewable,True
+Fossil Gas,LT,2016,560.24,fossil,False
+Biogas,LT,2016,39.32,other,False
+Fossil_Mixed_fuels,LT,2016,1138.0,other,False
+Hydro_Pure_pumped_Storage,LT,2016,900.0,other,False
+Hydro_RunOfRiver_and_poundage,LT,2016,126.56,other,False
+Other_non_renewable,LT,2016,12.11,other,False
+Solar_PV,LT,2016,80.25,other,False
+Waste_non_renewable,LT,2016,20.34,other,False
+Waste_renewable,LT,2016,0.0,other,False
+Wind_onshore,LT,2016,509.45,other,False
+Biomass,LT,2016,53.77,renewable,True
+Fossil Gas,LT,2017,560.13,fossil,False
+Biogas,LT,2017,39.92,other,False
+Fossil_Mixed_fuels,LT,2017,1192.0,other,False
+Hydro_Pure_pumped_Storage,LT,2017,900.0,other,False
+Hydro_RunOfRiver_and_poundage,LT,2017,126.61,other,False
+Other_non_renewable,LT,2017,15.11,other,False
+Solar_PV,LT,2017,82.32,other,False
+Waste_non_renewable,LT,2017,20.34,other,False
+Waste_renewable,LT,2017,0.0,other,False
+Wind_onshore,LT,2017,520.85,other,False
+Biomass,LT,2017,51.47,renewable,True
+Fossil Gas,LT,2018,568.08,fossil,False
+Biogas,LT,2018,41.1,other,False
+Fossil_Mixed_fuels,LT,2018,1192.0,other,False
+Hydro_Pure_pumped_Storage,LT,2018,900.0,other,False
+Hydro_RunOfRiver_and_poundage,LT,2018,126.61,other,False
+Other_non_renewable,LT,2018,37.11,other,False
+Solar_PV,LT,2018,82.92,other,False
+Waste_non_renewable,LT,2018,20.34,other,False
+Waste_renewable,LT,2018,0.0,other,False
+Wind_onshore,LT,2018,532.64,other,False
+Biomass,LT,2018,51.97,renewable,True
+Fossil Gas,LT,2019,1710.0,fossil,False
+Fossil Oil,LT,2019,0.0,fossil,False
+Other,LT,2019,140.0,other,False
+Waste,LT,2019,21.0,other,False
+Biomass,LT,2019,96.0,renewable,True
+Hydro Pumped Storage,LT,2019,900.0,renewable,True
+Hydro Run-of-river and poundage,LT,2019,128.0,renewable,True
+Other renewable,LT,2019,0.0,renewable,True
+Solar,LT,2019,82.0,renewable,True
+Wind Onshore,LT,2019,525.0,renewable,True
+Fossil Gas,LT,2020,1770.0,fossil,False
+Fossil Oil,LT,2020,0.0,fossil,False
+Other,LT,2020,144.0,other,False
+Waste,LT,2020,22.0,other,False
+Biomass,LT,2020,98.0,renewable,True
+Hydro Pumped Storage,LT,2020,900.0,renewable,True
+Hydro Run-of-river and poundage,LT,2020,128.0,renewable,True
+Other renewable,LT,2020,0.0,renewable,True
+Solar,LT,2020,103.0,renewable,True
+Wind Onshore,LT,2020,534.0,renewable,True
+Fossil Gas,LT,2021,1887.0,fossil,False
+Fossil Oil,LT,2021,0.0,fossil,False
+Other,LT,2021,37.0,other,False
+Waste,LT,2021,48.0,other,False
+Biomass,LT,2021,99.0,renewable,True
+Hydro Pumped Storage,LT,2021,900.0,renewable,True
+Hydro Run-of-river and poundage,LT,2021,128.0,renewable,True
+Other renewable,LT,2021,0.0,renewable,True
+Solar,LT,2021,169.0,renewable,True
+Wind Onshore,LT,2021,540.0,renewable,True
+Fossil Gas,LT,2022,1527.0,fossil,False
+Fossil Oil,LT,2022,0.0,fossil,False
+Other,LT,2022,37.0,other,False
+Waste,LT,2022,70.0,other,False
+Biomass,LT,2022,95.0,renewable,True
+Hydro Pumped Storage,LT,2022,900.0,renewable,True
+Hydro Run-of-river and poundage,LT,2022,128.0,renewable,True
+Other renewable,LT,2022,0.0,renewable,True
+Solar,LT,2022,259.0,renewable,True
+Wind Onshore,LT,2022,671.0,renewable,True
+Fossil Gas,LT,2023,1518.0,fossil,False
+Fossil Oil,LT,2023,0.0,fossil,False
+Other,LT,2023,37.0,other,False
+Waste,LT,2023,70.0,other,False
+Biomass,LT,2023,99.0,renewable,True
+Hydro Pumped Storage,LT,2023,900.0,renewable,True
+Hydro Run-of-river and poundage,LT,2023,128.0,renewable,True
+Other renewable,LT,2023,0.0,renewable,True
+Solar,LT,2023,578.0,renewable,True
+Wind Onshore,LT,2023,814.0,renewable,True
+Fossil Gas,LT,2024,1503.0,fossil,False
+Fossil Oil,LT,2024,0.0,fossil,False
+Other,LT,2024,37.0,other,False
+Waste,LT,2024,70.0,other,False
+Biomass,LT,2024,196.0,renewable,True
+Hydro Pumped Storage,LT,2024,900.0,renewable,True
+Hydro Run-of-river and poundage,LT,2024,129.0,renewable,True
+Other renewable,LT,2024,0.0,renewable,True
+Solar,LT,2024,1165.0,renewable,True
+Wind Onshore,LT,2024,1288.0,renewable,True
+Fossil Gas,LU,2014,495.0,fossil,False
+Hydro_Pure_pumped_Storage,LU,2014,1296.0,other,False
+Hydro_Pure_storage,LU,2014,17.0,other,False
+Hydro_RunOfRiver_and_poundage,LU,2014,15.0,other,False
+Solar_PV,LU,2014,109.0,other,False
+Waste_non_renewable,LU,2014,14.0,other,False
+Wind_onshore,LU,2014,57.0,other,False
+Biomass,LU,2014,11.0,renewable,True
+Fossil Gas,LU,2015,495.0,fossil,False
+Biogas,LU,2015,11.0,other,False
+Hydro_Pure_pumped_Storage,LU,2015,1290.0,other,False
+Hydro_Pure_storage,LU,2015,17.0,other,False
+Hydro_RunOfRiver_and_poundage,LU,2015,15.0,other,False
+Solar_PV,LU,2015,116.0,other,False
+Waste_non_renewable,LU,2015,21.0,other,False
+Wind_onshore,LU,2015,60.0,other,False
+Fossil Gas,LU,2016,495.0,fossil,False
+Biogas,LU,2016,11.0,other,False
+Hydro_Pure_pumped_Storage,LU,2016,1290.0,other,False
+Hydro_Pure_storage,LU,2016,17.0,other,False
+Hydro_RunOfRiver_and_poundage,LU,2016,15.0,other,False
+Solar_PV,LU,2016,121.0,other,False
+Waste_non_renewable,LU,2016,21.0,other,False
+Wind_onshore,LU,2016,120.0,other,False
+Fossil Gas,LU,2017,136.0,fossil,False
+Biogas,LU,2017,11.0,other,False
+Hydro_Pure_pumped_Storage,LU,2017,1296.0,other,False
+Hydro_Pure_storage,LU,2017,17.0,other,False
+Hydro_RunOfRiver_and_poundage,LU,2017,15.0,other,False
+Solar_PV,LU,2017,128.0,other,False
+Waste_non_renewable,LU,2017,21.0,other,False
+Wind_onshore,LU,2017,120.0,other,False
+Fossil Gas,LU,2018,136.0,fossil,False
+Biogas,LU,2018,11.0,other,False
+Hydro_Pure_pumped_Storage,LU,2018,1296.0,other,False
+Hydro_Pure_storage,LU,2018,17.0,other,False
+Hydro_RunOfRiver_and_poundage,LU,2018,15.0,other,False
+Solar_PV,LU,2018,128.0,other,False
+Waste_non_renewable,LU,2018,21.0,other,False
+Wind_onshore,LU,2018,120.0,other,False
+Fossil Brown coal/Lignite,LU,2019,0.0,fossil,False
+Fossil Coal-derived gas,LU,2019,0.0,fossil,False
+Fossil Gas,LU,2019,81.0,fossil,False
+Fossil Hard coal,LU,2019,0.0,fossil,False
+Fossil Oil,LU,2019,0.0,fossil,False
+Fossil Oil shale,LU,2019,0.0,fossil,False
+Fossil Peat,LU,2019,0.0,fossil,False
+Nuclear,LU,2019,0.0,nuclear,False
+Other,LU,2019,0.0,other,False
+Waste,LU,2019,21.0,other,False
+Biomass,LU,2019,30.0,renewable,True
+Geothermal,LU,2019,0.0,renewable,True
+Hydro Pumped Storage,LU,2019,0.0,renewable,True
+Hydro Run-of-river and poundage,LU,2019,25.0,renewable,True
+Hydro Water Reservoir,LU,2019,11.0,renewable,True
+Marine,LU,2019,0.0,renewable,True
+Other renewable,LU,2019,0.0,renewable,True
+Solar,LU,2019,136.0,renewable,True
+Wind Offshore,LU,2019,0.0,renewable,True
+Wind Onshore,LU,2019,154.0,renewable,True
+Fossil Brown coal/Lignite,LU,2020,0.0,fossil,False
+Fossil Coal-derived gas,LU,2020,0.0,fossil,False
+Fossil Gas,LU,2020,81.0,fossil,False
+Fossil Hard coal,LU,2020,0.0,fossil,False
+Fossil Oil,LU,2020,0.0,fossil,False
+Fossil Oil shale,LU,2020,0.0,fossil,False
+Fossil Peat,LU,2020,0.0,fossil,False
+Nuclear,LU,2020,0.0,nuclear,False
+Other,LU,2020,0.0,other,False
+Waste,LU,2020,21.0,other,False
+Biomass,LU,2020,47.0,renewable,True
+Geothermal,LU,2020,0.0,renewable,True
+Hydro Pumped Storage,LU,2020,0.0,renewable,True
+Hydro Run-of-river and poundage,LU,2020,25.0,renewable,True
+Hydro Water Reservoir,LU,2020,11.0,renewable,True
+Marine,LU,2020,0.0,renewable,True
+Other renewable,LU,2020,0.0,renewable,True
+Solar,LU,2020,170.0,renewable,True
+Wind Offshore,LU,2020,0.0,renewable,True
+Wind Onshore,LU,2020,154.0,renewable,True
+Fossil Brown coal/Lignite,LU,2021,0.0,fossil,False
+Fossil Coal-derived gas,LU,2021,0.0,fossil,False
+Fossil Gas,LU,2021,96.0,fossil,False
+Fossil Hard coal,LU,2021,0.0,fossil,False
+Fossil Oil,LU,2021,0.0,fossil,False
+Fossil Oil shale,LU,2021,0.0,fossil,False
+Fossil Peat,LU,2021,0.0,fossil,False
+Nuclear,LU,2021,0.0,nuclear,False
+Other,LU,2021,0.0,other,False
+Waste,LU,2021,21.0,other,False
+Biomass,LU,2021,47.0,renewable,True
+Geothermal,LU,2021,0.0,renewable,True
+Hydro Pumped Storage,LU,2021,0.0,renewable,True
+Hydro Run-of-river and poundage,LU,2021,25.0,renewable,True
+Hydro Water Reservoir,LU,2021,11.0,renewable,True
+Marine,LU,2021,0.0,renewable,True
+Other renewable,LU,2021,0.0,renewable,True
+Solar,LU,2021,236.0,renewable,True
+Wind Offshore,LU,2021,0.0,renewable,True
+Wind Onshore,LU,2021,167.0,renewable,True
+Fossil Brown coal/Lignite,LU,2022,0.0,fossil,False
+Fossil Coal-derived gas,LU,2022,0.0,fossil,False
+Fossil Gas,LU,2022,96.0,fossil,False
+Fossil Hard coal,LU,2022,0.0,fossil,False
+Fossil Oil,LU,2022,0.0,fossil,False
+Fossil Oil shale,LU,2022,0.0,fossil,False
+Fossil Peat,LU,2022,0.0,fossil,False
+Nuclear,LU,2022,0.0,nuclear,False
+Other,LU,2022,0.0,other,False
+Waste,LU,2022,21.0,other,False
+Biomass,LU,2022,47.0,renewable,True
+Geothermal,LU,2022,0.0,renewable,True
+Hydro Pumped Storage,LU,2022,0.0,renewable,True
+Hydro Run-of-river and poundage,LU,2022,25.0,renewable,True
+Hydro Water Reservoir,LU,2022,11.0,renewable,True
+Marine,LU,2022,0.0,renewable,True
+Other renewable,LU,2022,0.0,renewable,True
+Solar,LU,2022,258.0,renewable,True
+Wind Offshore,LU,2022,0.0,renewable,True
+Wind Onshore,LU,2022,167.0,renewable,True
+Fossil Brown coal/Lignite,LU,2023,0.0,fossil,False
+Fossil Coal-derived gas,LU,2023,0.0,fossil,False
+Fossil Gas,LU,2023,70.0,fossil,False
+Fossil Hard coal,LU,2023,0.0,fossil,False
+Fossil Oil,LU,2023,0.0,fossil,False
+Fossil Oil shale,LU,2023,0.0,fossil,False
+Fossil Peat,LU,2023,0.0,fossil,False
+Nuclear,LU,2023,0.0,nuclear,False
+Other,LU,2023,0.0,other,False
+Waste,LU,2023,21.0,other,False
+Biomass,LU,2023,47.0,renewable,True
+Geothermal,LU,2023,0.0,renewable,True
+Hydro Pumped Storage,LU,2023,0.0,renewable,True
+Hydro Run-of-river and poundage,LU,2023,22.0,renewable,True
+Hydro Water Reservoir,LU,2023,11.0,renewable,True
+Marine,LU,2023,0.0,renewable,True
+Other renewable,LU,2023,0.0,renewable,True
+Solar,LU,2023,300.0,renewable,True
+Wind Offshore,LU,2023,0.0,renewable,True
+Wind Onshore,LU,2023,152.0,renewable,True
+Fossil Brown coal/Lignite,LU,2024,0.0,fossil,False
+Fossil Coal-derived gas,LU,2024,0.0,fossil,False
+Fossil Gas,LU,2024,72.0,fossil,False
+Fossil Hard coal,LU,2024,0.0,fossil,False
+Fossil Oil,LU,2024,0.0,fossil,False
+Fossil Oil shale,LU,2024,0.0,fossil,False
+Fossil Peat,LU,2024,0.0,fossil,False
+Nuclear,LU,2024,0.0,nuclear,False
+Other,LU,2024,0.0,other,False
+Waste,LU,2024,24.0,other,False
+Biomass,LU,2024,83.0,renewable,True
+Geothermal,LU,2024,0.0,renewable,True
+Hydro Pumped Storage,LU,2024,0.0,renewable,True
+Hydro Run-of-river and poundage,LU,2024,22.0,renewable,True
+Hydro Water Reservoir,LU,2024,11.0,renewable,True
+Marine,LU,2024,0.0,renewable,True
+Other renewable,LU,2024,0.0,renewable,True
+Solar,LU,2024,415.0,renewable,True
+Wind Offshore,LU,2024,0.0,renewable,True
+Wind Onshore,LU,2024,208.0,renewable,True
+Fossil Gas,LV,2014,1031.0,fossil,False
+Biogas,LV,2014,55.0,other,False
+Fossil_Mixed_fuels,LV,2014,107.0,other,False
+Hydro_RunOfRiver_and_poundage,LV,2014,1556.0,other,False
+Wind_onshore,LV,2014,74.0,other,False
+Biomass,LV,2014,37.0,renewable,True
+Fossil Gas,LV,2015,1031.0,fossil,False
+Biogas,LV,2015,68.0,other,False
+Fossil_Mixed_fuels,LV,2015,118.0,other,False
+Hydro_RunOfRiver_and_poundage,LV,2015,1578.0,other,False
+Wind_onshore,LV,2015,71.0,other,False
+Biomass,LV,2015,68.0,renewable,True
+Fossil Gas,LV,2016,1031.0,fossil,False
+Biogas,LV,2016,57.0,other,False
+Fossil_Mixed_fuels,LV,2016,107.0,other,False
+Hydro_RunOfRiver_and_poundage,LV,2016,1556.0,other,False
+Wind_onshore,LV,2016,74.0,other,False
+Biomass,LV,2016,76.0,renewable,True
+Fossil Gas,LV,2017,1031.0,fossil,False
+Biogas,LV,2017,63.0,other,False
+Fossil_Mixed_fuels,LV,2017,109.0,other,False
+Hydro_RunOfRiver_and_poundage,LV,2017,1572.0,other,False
+Wind_onshore,LV,2017,74.0,other,False
+Biomass,LV,2017,80.0,renewable,True
+Fossil Gas,LV,2018,1031.0,fossil,False
+Biogas,LV,2018,65.0,other,False
+Fossil_Mixed_fuels,LV,2018,90.0,other,False
+Hydro_RunOfRiver_and_poundage,LV,2018,1557.0,other,False
+Wind_onshore,LV,2018,77.0,other,False
+Biomass,LV,2018,9.0,renewable,True
+Fossil Gas,LV,2019,1110.0,fossil,False
+Biomass,LV,2019,126.0,renewable,True
+Hydro Run-of-river and poundage,LV,2019,1539.0,renewable,True
+Solar,LV,2019,7.0,renewable,True
+Wind Onshore,LV,2019,59.0,renewable,True
+Fossil Gas,LV,2020,1026.0,fossil,False
+Biomass,LV,2020,145.0,renewable,True
+Hydro Run-of-river and poundage,LV,2020,1578.0,renewable,True
+Solar,LV,2020,9.0,renewable,True
+Wind Onshore,LV,2020,74.0,renewable,True
+Fossil Gas,LV,2021,1021.0,fossil,False
+Biomass,LV,2021,149.0,renewable,True
+Hydro Run-of-river and poundage,LV,2021,1578.0,renewable,True
+Solar,LV,2021,11.0,renewable,True
+Wind Onshore,LV,2021,84.0,renewable,True
+Fossil Gas,LV,2022,1162.0,fossil,False
+Biomass,LV,2022,164.0,renewable,True
+Hydro Run-of-river and poundage,LV,2022,1588.0,renewable,True
+Solar,LV,2022,14.0,renewable,True
+Wind Onshore,LV,2022,87.0,renewable,True
+Fossil Gas,LV,2023,1157.0,fossil,False
+Biomass,LV,2023,177.0,renewable,True
+Hydro Run-of-river and poundage,LV,2023,1609.0,renewable,True
+Solar,LV,2023,63.0,renewable,True
+Wind Onshore,LV,2023,165.0,renewable,True
+Fossil Gas,LV,2024,1112.0,fossil,False
+Biomass,LV,2024,166.0,renewable,True
+Hydro Run-of-river and poundage,LV,2024,1588.0,renewable,True
+Solar,LV,2024,303.0,renewable,True
+Wind Onshore,LV,2024,136.0,renewable,True
+Fossil_Brown_coal_Lignite,ME,2014,220.0,other,False
+Hydro_Pure_storage,ME,2014,660.0,other,False
+Fossil_Brown_coal_Lignite,ME,2015,220.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,ME,2015,649.0,other,False
+Fossil_Brown_coal_Lignite,ME,2016,220.0,other,False
+Hydro_Pure_storage,ME,2016,660.0,other,False
+Fossil_Brown_coal_Lignite,ME,2017,220.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,ME,2017,660.0,other,False
+Wind_onshore,ME,2017,72.0,other,False
+Fossil Brown coal/Lignite,ME,2019,210.0,fossil,False
+Hydro Run-of-river and poundage,ME,2019,307.0,renewable,True
+Hydro Water Reservoir,ME,2019,342.0,renewable,True
+Wind Onshore,ME,2019,118.0,renewable,True
+Fossil Brown coal/Lignite,ME,2020,210.0,fossil,False
+Hydro Run-of-river and poundage,ME,2020,307.0,renewable,True
+Hydro Water Reservoir,ME,2020,342.0,renewable,True
+Wind Onshore,ME,2020,118.0,renewable,True
+Fossil Brown coal/Lignite,ME,2021,210.0,fossil,False
+Hydro Run-of-river and poundage,ME,2021,307.0,renewable,True
+Hydro Water Reservoir,ME,2021,342.0,renewable,True
+Wind Onshore,ME,2021,118.0,renewable,True
+Fossil Brown coal/Lignite,ME,2022,210.0,fossil,False
+Hydro Run-of-river and poundage,ME,2022,307.0,renewable,True
+Hydro Water Reservoir,ME,2022,342.0,renewable,True
+Wind Onshore,ME,2022,118.0,renewable,True
+Fossil Brown coal/Lignite,ME,2023,210.0,fossil,False
+Hydro Run-of-river and poundage,ME,2023,307.0,renewable,True
+Hydro Water Reservoir,ME,2023,342.0,renewable,True
+Wind Onshore,ME,2023,118.0,renewable,True
+Fossil Brown coal/Lignite,ME,2024,210.0,fossil,False
+Hydro Run-of-river and poundage,ME,2024,307.0,renewable,True
+Hydro Water Reservoir,ME,2024,342.0,renewable,True
+Wind Onshore,ME,2024,118.0,renewable,True
+Fossil Gas,MK,2014,250.0,fossil,False
+Fossil Oil,MK,2014,189.0,fossil,False
+Fossil_Brown_coal_Lignite,MK,2014,718.0,other,False
+Hydro_Pure_storage,MK,2014,539.0,other,False
+Solar_PV,MK,2014,13.0,other,False
+Wind_onshore,MK,2014,36.0,other,False
+Fossil Gas,MK,2015,250.0,fossil,False
+Fossil Oil,MK,2015,189.0,fossil,False
+Fossil_Brown_coal_Lignite,MK,2015,718.0,other,False
+Hydro_Pure_storage,MK,2015,539.0,other,False
+Solar_PV,MK,2015,17.0,other,False
+Wind_onshore,MK,2015,36.0,other,False
+Biomass,MK,2015,4.0,renewable,True
+Fossil Gas,MK,2016,250.0,fossil,False
+Fossil Oil,MK,2016,189.0,fossil,False
+Biogas,MK,2016,4.0,other,False
+Fossil_Brown_coal_Lignite,MK,2016,718.0,other,False
+Hydro_Pure_storage,MK,2016,567.0,other,False
+Hydro_RunOfRiver_and_poundage,MK,2016,109.0,other,False
+Solar_PV,MK,2016,17.0,other,False
+Wind_onshore,MK,2016,36.0,other,False
+Fossil Gas,MK,2017,250.0,fossil,False
+Fossil Oil,MK,2017,189.0,fossil,False
+Biogas,MK,2017,4.0,other,False
+Fossil_Brown_coal_Lignite,MK,2017,718.0,other,False
+Hydro_Pure_storage,MK,2017,567.0,other,False
+Hydro_RunOfRiver_and_poundage,MK,2017,109.0,other,False
+Solar_PV,MK,2017,17.0,other,False
+Wind_onshore,MK,2017,36.0,other,False
+Fossil Gas,MK,2018,250.0,fossil,False
+Fossil Oil,MK,2018,189.0,fossil,False
+Biogas,MK,2018,7.0,other,False
+Fossil_Brown_coal_Lignite,MK,2018,718.0,other,False
+Hydro_Pure_storage,MK,2018,567.0,other,False
+Hydro_RunOfRiver_and_poundage,MK,2018,109.0,other,False
+Solar_PV,MK,2018,17.0,other,False
+Wind_onshore,MK,2018,36.8,other,False
+Fossil Brown coal/Lignite,MK,2019,824.0,fossil,False
+Fossil Gas,MK,2019,251.0,fossil,False
+Fossil Oil,MK,2019,165.0,fossil,False
+Hydro Water Reservoir,MK,2019,506.0,renewable,True
+Wind Onshore,MK,2019,35.0,renewable,True
+Fossil Brown coal/Lignite,MK,2020,824.0,fossil,False
+Fossil Gas,MK,2020,251.0,fossil,False
+Fossil Oil,MK,2020,165.0,fossil,False
+Hydro Water Reservoir,MK,2020,506.0,renewable,True
+Wind Onshore,MK,2020,35.0,renewable,True
+Fossil Brown coal/Lignite,MK,2021,824.0,fossil,False
+Fossil Gas,MK,2021,251.0,fossil,False
+Hydro Water Reservoir,MK,2021,506.0,renewable,True
+Wind Onshore,MK,2021,35.0,renewable,True
+Fossil Brown coal/Lignite,MK,2022,824.0,fossil,False
+Fossil Gas,MK,2022,251.0,fossil,False
+Biomass,MK,2022,7.0,renewable,True
+Hydro Water Reservoir,MK,2022,644.0,renewable,True
+Solar,MK,2022,22.0,renewable,True
+Wind Onshore,MK,2022,37.0,renewable,True
+Fossil Brown coal/Lignite,MK,2023,824.0,fossil,False
+Fossil Gas,MK,2023,251.0,fossil,False
+Fossil Oil,MK,2023,165.0,fossil,False
+Biomass,MK,2023,7.0,renewable,True
+Hydro Water Reservoir,MK,2023,644.0,renewable,True
+Solar,MK,2023,22.0,renewable,True
+Wind Onshore,MK,2023,37.0,renewable,True
+Fossil Brown coal/Lignite,MK,2024,824.0,fossil,False
+Fossil Gas,MK,2024,251.0,fossil,False
+Fossil Oil,MK,2024,165.0,fossil,False
+Biomass,MK,2024,7.0,renewable,True
+Hydro Water Reservoir,MK,2024,644.0,renewable,True
+Wind Onshore,MK,2024,37.0,renewable,True
+Fossil Gas,NL,2014,19590.0,fossil,False
+Nuclear,NL,2014,486.0,nuclear,False
+Fossil_Hard_coal,NL,2014,7270.0,other,False
+Hydro_RunOfRiver_and_poundage,NL,2014,38.0,other,False
+Non_identified_net_gen,NL,2014,680.0,other,False
+Solar_PV,NL,2014,1000.0,other,False
+Waste_renewable,NL,2014,869.0,other,False
+Wind_offshore,NL,2014,228.0,other,False
+Wind_onshore,NL,2014,2646.0,other,False
+Biomass,NL,2014,400.0,renewable,True
+Fossil Gas,NL,2015,19914.0,fossil,False
+Nuclear,NL,2015,486.0,nuclear,False
+Fossil_Hard_coal,NL,2015,5658.0,other,False
+Hydro_RunOfRiver_and_poundage,NL,2015,38.0,other,False
+Solar_PV,NL,2015,1429.0,other,False
+Waste_renewable,NL,2015,674.0,other,False
+Wind_offshore,NL,2015,357.0,other,False
+Wind_onshore,NL,2015,3284.0,other,False
+Biomass,NL,2015,398.0,renewable,True
+Fossil Gas,NL,2016,19297.0,fossil,False
+Nuclear,NL,2016,486.0,nuclear,False
+Fossil_Hard_coal,NL,2016,4608.0,other,False
+Hydro_RunOfRiver_and_poundage,NL,2016,38.0,other,False
+Solar_PV,NL,2016,2039.0,other,False
+Waste_renewable,NL,2016,678.0,other,False
+Wind_offshore,NL,2016,638.0,other,False
+Wind_onshore,NL,2016,3479.0,other,False
+Biomass,NL,2016,486.0,renewable,True
+Fossil Gas,NL,2017,18433.0,fossil,False
+Nuclear,NL,2017,486.0,nuclear,False
+Fossil_Hard_coal,NL,2017,4631.0,other,False
+Hydro_RunOfRiver_and_poundage,NL,2017,38.0,other,False
+Solar_PV,NL,2017,2584.0,other,False
+Waste_renewable,NL,2017,683.0,other,False
+Wind_offshore,NL,2017,957.0,other,False
+Wind_onshore,NL,2017,3675.0,other,False
+Biomass,NL,2017,489.0,renewable,True
+Fossil Gas,NL,2018,15570.0,fossil,False
+Nuclear,NL,2018,486.0,nuclear,False
+Fossil_Hard_coal,NL,2018,4631.0,other,False
+Hydro_RunOfRiver_and_poundage,NL,2018,38.0,other,False
+Solar_PV,NL,2018,3937.0,other,False
+Waste_renewable,NL,2018,758.0,other,False
+Wind_offshore,NL,2018,957.0,other,False
+Wind_onshore,NL,2018,3669.0,other,False
+Biomass,NL,2018,485.0,renewable,True
+Fossil Brown coal/Lignite,NL,2019,0.0,fossil,False
+Fossil Coal-derived gas,NL,2019,0.0,fossil,False
+Fossil Gas,NL,2019,15570.0,fossil,False
+Fossil Hard coal,NL,2019,4631.0,fossil,False
+Fossil Oil,NL,2019,0.0,fossil,False
+Fossil Oil shale,NL,2019,0.0,fossil,False
+Fossil Peat,NL,2019,0.0,fossil,False
+Nuclear,NL,2019,486.0,nuclear,False
+Other,NL,2019,1.0,other,False
+Waste,NL,2019,758.0,other,False
+Biomass,NL,2019,485.0,renewable,True
+Geothermal,NL,2019,0.0,renewable,True
+Hydro Pumped Storage,NL,2019,0.0,renewable,True
+Hydro Run-of-river and poundage,NL,2019,38.0,renewable,True
+Hydro Water Reservoir,NL,2019,0.0,renewable,True
+Marine,NL,2019,0.0,renewable,True
+Other renewable,NL,2019,0.0,renewable,True
+Solar,NL,2019,4608.0,renewable,True
+Wind Offshore,NL,2019,957.0,renewable,True
+Wind Onshore,NL,2019,3436.0,renewable,True
+Fossil Brown coal/Lignite,NL,2020,0.0,fossil,False
+Fossil Coal-derived gas,NL,2020,0.0,fossil,False
+Fossil Gas,NL,2020,15496.0,fossil,False
+Fossil Hard coal,NL,2020,4662.0,fossil,False
+Fossil Oil,NL,2020,0.0,fossil,False
+Fossil Oil shale,NL,2020,0.0,fossil,False
+Fossil Peat,NL,2020,0.0,fossil,False
+Nuclear,NL,2020,485.0,nuclear,False
+Other,NL,2020,1.0,other,False
+Waste,NL,2020,790.0,other,False
+Biomass,NL,2020,490.0,renewable,True
+Geothermal,NL,2020,0.0,renewable,True
+Hydro Pumped Storage,NL,2020,0.0,renewable,True
+Hydro Run-of-river and poundage,NL,2020,38.0,renewable,True
+Hydro Water Reservoir,NL,2020,0.0,renewable,True
+Marine,NL,2020,0.0,renewable,True
+Other renewable,NL,2020,0.0,renewable,True
+Solar,NL,2020,7226.0,renewable,True
+Wind Offshore,NL,2020,957.0,renewable,True
+Wind Onshore,NL,2020,3527.0,renewable,True
+Fossil Brown coal/Lignite,NL,2021,0.0,fossil,False
+Fossil Coal-derived gas,NL,2021,0.0,fossil,False
+Fossil Gas,NL,2021,18500.0,fossil,False
+Fossil Hard coal,NL,2021,4012.0,fossil,False
+Fossil Oil,NL,2021,0.0,fossil,False
+Fossil Oil shale,NL,2021,0.0,fossil,False
+Fossil Peat,NL,2021,0.0,fossil,False
+Nuclear,NL,2021,485.0,nuclear,False
+Other,NL,2021,1.0,other,False
+Waste,NL,2021,780.0,other,False
+Biomass,NL,2021,560.0,renewable,True
+Geothermal,NL,2021,0.0,renewable,True
+Hydro Pumped Storage,NL,2021,0.0,renewable,True
+Hydro Run-of-river and poundage,NL,2021,38.0,renewable,True
+Hydro Water Reservoir,NL,2021,0.0,renewable,True
+Marine,NL,2021,0.0,renewable,True
+Other renewable,NL,2021,0.0,renewable,True
+Solar,NL,2021,11108.0,renewable,True
+Wind Offshore,NL,2021,2460.0,renewable,True
+Wind Onshore,NL,2021,4188.0,renewable,True
+Fossil Brown coal/Lignite,NL,2022,0.0,fossil,False
+Fossil Coal-derived gas,NL,2022,0.0,fossil,False
+Fossil Gas,NL,2022,18530.0,fossil,False
+Fossil Hard coal,NL,2022,4006.0,fossil,False
+Fossil Oil,NL,2022,0.0,fossil,False
+Fossil Oil shale,NL,2022,0.0,fossil,False
+Fossil Peat,NL,2022,0.0,fossil,False
+Nuclear,NL,2022,486.0,nuclear,False
+Other,NL,2022,1.0,other,False
+Waste,NL,2022,763.0,other,False
+Biomass,NL,2022,572.0,renewable,True
+Geothermal,NL,2022,0.0,renewable,True
+Hydro Pumped Storage,NL,2022,0.0,renewable,True
+Hydro Run-of-river and poundage,NL,2022,38.0,renewable,True
+Hydro Water Reservoir,NL,2022,0.0,renewable,True
+Marine,NL,2022,0.0,renewable,True
+Other renewable,NL,2022,0.0,renewable,True
+Solar,NL,2022,14911.0,renewable,True
+Wind Offshore,NL,2022,2460.0,renewable,True
+Wind Onshore,NL,2022,5310.0,renewable,True
+Fossil Brown coal/Lignite,NL,2023,0.0,fossil,False
+Fossil Coal-derived gas,NL,2023,0.0,fossil,False
+Fossil Gas,NL,2023,18351.0,fossil,False
+Fossil Hard coal,NL,2023,4006.0,fossil,False
+Fossil Oil,NL,2023,0.0,fossil,False
+Fossil Oil shale,NL,2023,0.0,fossil,False
+Fossil Peat,NL,2023,0.0,fossil,False
+Nuclear,NL,2023,486.0,nuclear,False
+Other,NL,2023,1.0,other,False
+Waste,NL,2023,786.0,other,False
+Biomass,NL,2023,415.0,renewable,True
+Geothermal,NL,2023,0.0,renewable,True
+Hydro Pumped Storage,NL,2023,0.0,renewable,True
+Hydro Run-of-river and poundage,NL,2023,37.0,renewable,True
+Hydro Water Reservoir,NL,2023,0.0,renewable,True
+Marine,NL,2023,0.0,renewable,True
+Other renewable,NL,2023,0.0,renewable,True
+Solar,NL,2023,22590.0,renewable,True
+Wind Offshore,NL,2023,3220.0,renewable,True
+Wind Onshore,NL,2023,6190.0,renewable,True
+Fossil Brown coal/Lignite,NL,2024,0.0,fossil,False
+Fossil Coal-derived gas,NL,2024,0.0,fossil,False
+Fossil Gas,NL,2024,18351.0,fossil,False
+Fossil Hard coal,NL,2024,4006.0,fossil,False
+Fossil Oil,NL,2024,0.0,fossil,False
+Fossil Oil shale,NL,2024,0.0,fossil,False
+Fossil Peat,NL,2024,0.0,fossil,False
+Nuclear,NL,2024,486.0,nuclear,False
+Other,NL,2024,1.0,other,False
+Waste,NL,2024,786.0,other,False
+Biomass,NL,2024,415.0,renewable,True
+Geothermal,NL,2024,0.0,renewable,True
+Hydro Pumped Storage,NL,2024,0.0,renewable,True
+Hydro Run-of-river and poundage,NL,2024,38.0,renewable,True
+Hydro Water Reservoir,NL,2024,0.0,renewable,True
+Marine,NL,2024,0.0,renewable,True
+Other renewable,NL,2024,0.0,renewable,True
+Solar,NL,2024,24261.0,renewable,True
+Wind Offshore,NL,2024,3978.0,renewable,True
+Wind Onshore,NL,2024,6812.0,renewable,True
+Fossil Gas,NO,2014,930.0,fossil,False
+Fossil_Mixed_fuels,NO,2014,148.0,other,False
+Hydro_Pure_storage,NO,2014,31080.0,other,False
+Wind_onshore,NO,2014,856.0,other,False
+Biomass,NO,2014,31.5,renewable,True
+Fossil Gas,NO,2015,749.5,fossil,False
+Hydro_Pure_storage,NO,2015,31200.0,other,False
+Wind_onshore,NO,2015,867.0,other,False
+Fossil Gas,NO,2016,445.3,fossil,False
+Hydro_Pure_storage,NO,2016,30767.0,other,False
+Non_identified_net_gen,NO,2016,0.3,other,False
+Wind_onshore,NO,2016,868.8,other,False
+Biomass,NO,2016,1.5,renewable,True
+Fossil Gas,NO,2017,447.6,fossil,False
+Biogas,NO,2017,7.0,other,False
+Hydro_Marine,NO,2017,0.3,other,False
+Hydro_Pure_storage,NO,2017,31660.0,other,False
+Non_identified_net_gen,NO,2017,71.7,other,False
+Other_renewable,NO,2017,36.0,other,False
+Solar_PV,NO,2017,5.9,other,False
+Waste_renewable,NO,2017,17.0,other,False
+Wind_onshore,NO,2017,1083.2,other,False
+Fossil Gas,NO,2018,541.9,fossil,False
+Biogas,NO,2018,7.0,other,False
+Hydro_Marine,NO,2018,0.3,other,False
+Hydro_Mixed_pumped_storage_renewable,NO,2018,1388.22,other,False
+Hydro_Pure_storage,NO,2018,25385.0,other,False
+Hydro_RunOfRiver_and_poundage,NO,2018,5801.18,other,False
+Non_identified_net_gen,NO,2018,0.0,other,False
+Other_renewable,NO,2018,53.46,other,False
+Solar_PV,NO,2018,45.0,other,False
+Waste_renewable,NO,2018,51.45,other,False
+Wind_onshore,NO,2018,1748.63,other,False
+Fossil Gas,NO,2019,634.6,fossil,False
+Other,NO,2019,0.0,other,False
+Hydro Pumped Storage,NO,2019,1031.3,renewable,True
+Hydro Run-of-river and poundage,NO,2019,5937.13,renewable,True
+Hydro Water Reservoir,NO,2019,26472.27,renewable,True
+Wind Onshore,NO,2019,2261.8,renewable,True
+Fossil Gas,NO,2020,641.7,fossil,False
+Other,NO,2020,0.0,other,False
+Hydro Pumped Storage,NO,2020,1031.3,renewable,True
+Hydro Run-of-river and poundage,NO,2020,6248.06,renewable,True
+Hydro Water Reservoir,NO,2020,26532.8,renewable,True
+Wind Onshore,NO,2020,3865.5,renewable,True
+Fossil Gas,NO,2021,638.94,fossil,False
+Other,NO,2021,31.24,other,False
+Waste,NO,2021,89.82,other,False
+Hydro Pumped Storage,NO,2021,1064.7,renewable,True
+Hydro Run-of-river and poundage,NO,2021,6676.7,renewable,True
+Hydro Water Reservoir,NO,2021,26683.46,renewable,True
+Other renewable,NO,2021,99.5,renewable,True
+Wind Onshore,NO,2021,5105.2,renewable,True
+Fossil Gas,NO,2022,638.94,fossil,False
+Other,NO,2022,31.24,other,False
+Waste,NO,2022,89.82,other,False
+Hydro Pumped Storage,NO,2022,1064.7,renewable,True
+Hydro Run-of-river and poundage,NO,2022,6676.7,renewable,True
+Hydro Water Reservoir,NO,2022,26683.46,renewable,True
+Other renewable,NO,2022,99.5,renewable,True
+Wind Onshore,NO,2022,5105.2,renewable,True
+Fossil Gas,NO,2023,458.94,fossil,False
+Other,NO,2023,31.24,other,False
+Waste,NO,2023,89.82,other,False
+Hydro Pumped Storage,NO,2023,1064.7,renewable,True
+Hydro Run-of-river and poundage,NO,2023,6701.93,renewable,True
+Hydro Water Reservoir,NO,2023,26701.43,renewable,True
+Other renewable,NO,2023,99.5,renewable,True
+Wind Onshore,NO,2023,5129.8,renewable,True
+Fossil Gas,NO,2024,472.94,fossil,False
+Other,NO,2024,31.24,other,False
+Waste,NO,2024,91.96,other,False
+Biomass,NO,2024,14.38,renewable,True
+Hydro Pumped Storage,NO,2024,1064.7,renewable,True
+Hydro Run-of-river and poundage,NO,2024,6875.49,renewable,True
+Hydro Water Reservoir,NO,2024,26660.16,renewable,True
+Other renewable,NO,2024,99.5,renewable,True
+Solar,NO,2024,9.07,renewable,True
+Wind Onshore,NO,2024,5133.0,renewable,True
+Fossil Gas,PL,2014,1145.0,fossil,False
+Biogas,PL,2014,170.0,other,False
+Fossil_Brown_coal_Lignite,PL,2014,8474.0,other,False
+Fossil_Hard_coal,PL,2014,19011.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PL,2014,378.0,other,False
+Hydro_Pure_pumped_Storage,PL,2014,1392.0,other,False
+Hydro_Pure_storage,PL,2014,174.0,other,False
+Hydro_RunOfRiver_and_poundage,PL,2014,399.0,other,False
+Other_non_renewable,PL,2014,465.0,other,False
+Solar_PV,PL,2014,27.0,other,False
+Wind_onshore,PL,2014,3788.0,other,False
+Biomass,PL,2014,647.0,renewable,True
+Fossil Gas,PL,2015,1159.0,fossil,False
+Fossil Oil,PL,2015,332.0,fossil,False
+Biogas,PL,2015,197.0,other,False
+Fossil_Brown_coal_Lignite,PL,2015,8503.0,other,False
+Fossil_Coal_derived_gas,PL,2015,144.0,other,False
+Fossil_Hard_coal,PL,2015,18838.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,PL,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PL,2015,378.0,other,False
+Hydro_Pure_pumped_Storage,PL,2015,1394.0,other,False
+Hydro_Pure_storage,PL,2015,175.0,other,False
+Hydro_RunOfRiver_and_poundage,PL,2015,401.0,other,False
+Other_non_renewable,PL,2015,85.0,other,False
+Solar_PV,PL,2015,108.0,other,False
+Wind_onshore,PL,2015,4828.0,other,False
+Biomass,PL,2015,737.0,renewable,True
+Fossil Gas,PL,2016,1240.0,fossil,False
+Fossil Oil,PL,2016,332.0,fossil,False
+Biogas,PL,2016,203.0,other,False
+Fossil_Brown_coal_Lignite,PL,2016,8576.0,other,False
+Fossil_Coal_derived_gas,PL,2016,144.0,other,False
+Fossil_Hard_coal,PL,2016,17906.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,PL,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PL,2016,378.0,other,False
+Hydro_Pure_pumped_Storage,PL,2016,1394.0,other,False
+Hydro_Pure_storage,PL,2016,175.0,other,False
+Hydro_RunOfRiver_and_poundage,PL,2016,414.0,other,False
+Other_non_renewable,PL,2016,903.0,other,False
+Solar_PV,PL,2016,186.0,other,False
+Wind_onshore,PL,2016,5697.0,other,False
+Biomass,PL,2016,730.0,renewable,True
+Fossil Gas,PL,2017,2377.0,fossil,False
+Fossil Oil,PL,2017,310.0,fossil,False
+Biogas,PL,2017,325.0,other,False
+Fossil_Brown_coal_Lignite,PL,2017,8590.0,other,False
+Fossil_Coal_derived_gas,PL,2017,144.0,other,False
+Fossil_Hard_coal,PL,2017,18161.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,PL,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PL,2017,378.0,other,False
+Hydro_Pure_pumped_Storage,PL,2017,1398.0,other,False
+Hydro_Pure_storage,PL,2017,177.0,other,False
+Hydro_RunOfRiver_and_poundage,PL,2017,416.0,other,False
+Other_non_renewable,PL,2017,286.0,other,False
+Solar_PV,PL,2017,285.0,other,False
+Waste_non_renewable,PL,2017,40.0,other,False
+Wind_onshore,PL,2017,5652.0,other,False
+Biomass,PL,2017,850.0,renewable,True
+Fossil Gas,PL,2018,2585.0,fossil,False
+Fossil Oil,PL,2018,379.0,fossil,False
+Biogas,PL,2018,145.0,other,False
+Fossil_Brown_coal_Lignite,PL,2018,8049.0,other,False
+Fossil_Coal_derived_gas,PL,2018,387.0,other,False
+Fossil_Hard_coal,PL,2018,19195.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,PL,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PL,2018,378.0,other,False
+Hydro_Pure_pumped_Storage,PL,2018,1398.0,other,False
+Hydro_Pure_storage,PL,2018,177.0,other,False
+Hydro_RunOfRiver_and_poundage,PL,2018,402.0,other,False
+Solar_PV,PL,2018,399.0,other,False
+Waste_non_renewable,PL,2018,57.0,other,False
+Wind_onshore,PL,2018,5608.0,other,False
+Biomass,PL,2018,719.0,renewable,True
+Fossil Brown coal/Lignite,PL,2019,8013.46,fossil,False
+Fossil Coal-derived gas,PL,2019,271.6,fossil,False
+Fossil Gas,PL,2019,2106.33,fossil,False
+Fossil Hard coal,PL,2019,22261.06,fossil,False
+Fossil Oil,PL,2019,415.0,fossil,False
+Biomass,PL,2019,849.38,renewable,True
+Hydro Pumped Storage,PL,2019,1780.02,renewable,True
+Hydro Run-of-river and poundage,PL,2019,435.43,renewable,True
+Hydro Water Reservoir,PL,2019,156.51,renewable,True
+Solar,PL,2019,430.13,renewable,True
+Wind Onshore,PL,2019,5807.67,renewable,True
+Fossil Brown coal/Lignite,PL,2020,7676.76,fossil,False
+Fossil Coal-derived gas,PL,2020,271.6,fossil,False
+Fossil Gas,PL,2020,2539.92,fossil,False
+Fossil Hard coal,PL,2020,22286.01,fossil,False
+Fossil Oil,PL,2020,358.91,fossil,False
+Biomass,PL,2020,880.15,renewable,True
+Hydro Pumped Storage,PL,2020,1780.02,renewable,True
+Hydro Run-of-river and poundage,PL,2020,448.27,renewable,True
+Hydro Water Reservoir,PL,2020,156.51,renewable,True
+Solar,PL,2020,1309.82,renewable,True
+Wind Onshore,PL,2020,5953.34,renewable,True
+Fossil Brown coal/Lignite,PL,2021,7596.68,fossil,False
+Fossil Coal-derived gas,PL,2021,271.6,fossil,False
+Fossil Gas,PL,2021,2555.33,fossil,False
+Fossil Hard coal,PL,2021,20924.79,fossil,False
+Fossil Oil,PL,2021,358.91,fossil,False
+Biomass,PL,2021,879.91,renewable,True
+Hydro Pumped Storage,PL,2021,1793.88,renewable,True
+Hydro Run-of-river and poundage,PL,2021,447.25,renewable,True
+Hydro Water Reservoir,PL,2021,156.51,renewable,True
+Solar,PL,2021,3472.78,renewable,True
+Wind Onshore,PL,2021,6570.27,renewable,True
+Fossil Brown coal/Lignite,PL,2022,7559.73,fossil,False
+Fossil Coal-derived gas,PL,2022,284.19,fossil,False
+Fossil Gas,PL,2022,3807.4,fossil,False
+Fossil Hard coal,PL,2022,19073.12,fossil,False
+Fossil Oil,PL,2022,392.54,fossil,False
+Other,PL,2022,1524.25,other,False
+Biomass,PL,2022,646.69,renewable,True
+Hydro Pumped Storage,PL,2022,1591.21,renewable,True
+Hydro Run-of-river and poundage,PL,2022,320.84,renewable,True
+Hydro Water Reservoir,PL,2022,464.43,renewable,True
+Solar,PL,2022,6664.08,renewable,True
+Wind Onshore,PL,2022,7950.21,renewable,True
+Fossil Brown coal/Lignite,PL,2023,7559.73,fossil,False
+Fossil Coal-derived gas,PL,2023,281.32,fossil,False
+Fossil Gas,PL,2023,3786.34,fossil,False
+Fossil Hard coal,PL,2023,19008.15,fossil,False
+Fossil Oil,PL,2023,392.54,fossil,False
+Other,PL,2023,1519.67,other,False
+Biomass,PL,2023,663.6,renewable,True
+Hydro Pumped Storage,PL,2023,1591.21,renewable,True
+Hydro Run-of-river and poundage,PL,2023,323.01,renewable,True
+Hydro Water Reservoir,PL,2023,468.57,renewable,True
+Solar,PL,2023,10643.2,renewable,True
+Wind Onshore,PL,2023,8977.73,renewable,True
+Fossil Brown coal/Lignite,PL,2024,7557.0,fossil,False
+Fossil Coal-derived gas,PL,2024,273.61,fossil,False
+Fossil Gas,PL,2024,5162.38,fossil,False
+Fossil Hard coal,PL,2024,18830.51,fossil,False
+Fossil Oil,PL,2024,392.54,fossil,False
+Other,PL,2024,1642.76,other,False
+Biomass,PL,2024,662.3,renewable,True
+Hydro Pumped Storage,PL,2024,1588.81,renewable,True
+Hydro Run-of-river and poundage,PL,2024,320.69,renewable,True
+Hydro Water Reservoir,PL,2024,467.8,renewable,True
+Solar,PL,2024,14608.7,renewable,True
+Wind Onshore,PL,2024,9582.93,renewable,True
+Fossil Gas,PT,2014,4699.0,fossil,False
+Fossil Oil,PT,2014,71.0,fossil,False
+Fossil_Hard_coal,PT,2014,1756.0,other,False
+Fossil_Other,PT,2014,18.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PT,2014,1401.0,other,False
+Hydro_Pure_storage,PT,2014,1436.0,other,False
+Hydro_RunOfRiver_and_poundage,PT,2014,2870.0,other,False
+Solar_PV,PT,2014,396.0,other,False
+Wind_onshore,PT,2014,4540.0,other,False
+Biomass,PT,2014,600.0,renewable,True
+Fossil Gas,PT,2015,4698.0,fossil,False
+Fossil Oil,PT,2015,47.0,fossil,False
+Fossil_Hard_coal,PT,2015,1756.0,other,False
+Fossil_Other,PT,2015,18.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PT,2015,1779.0,other,False
+Hydro_Pure_storage,PT,2015,1511.0,other,False
+Hydro_RunOfRiver_and_poundage,PT,2015,2866.0,other,False
+Solar_PV,PT,2015,429.0,other,False
+Wind_onshore,PT,2015,4846.0,other,False
+Biomass,PT,2015,614.0,renewable,True
+Fossil Gas,PT,2016,4656.75,fossil,False
+Fossil Oil,PT,2016,42.22,fossil,False
+Fossil_Hard_coal,PT,2016,1756.0,other,False
+Fossil_Other,PT,2016,17.8,other,False
+Hydro_Mixed_pumped_storage_non_renewable,PT,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PT,2016,2559.0,other,False
+Hydro_Pure_storage,PT,2016,1515.3,other,False
+Hydro_RunOfRiver_and_poundage,PT,2016,2871.08,other,False
+Solar_PV,PT,2016,439.19,other,False
+Wind_onshore,PT,2016,5045.91,other,False
+Biomass,PT,2016,614.77,renewable,True
+Fossil Gas,PT,2017,4606.66,fossil,False
+Fossil Oil,PT,2017,22.22,fossil,False
+Fossil_Hard_coal,PT,2017,1756.0,other,False
+Fossil_Other,PT,2017,17.8,other,False
+Hydro_Mixed_pumped_storage_non_renewable,PT,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PT,2017,2820.0,other,False
+Hydro_Pure_storage,PT,2017,1515.3,other,False
+Hydro_RunOfRiver_and_poundage,PT,2017,2857.59,other,False
+Solar_PV,PT,2017,489.74,other,False
+Wind_onshore,PT,2017,5090.14,other,False
+Biomass,PT,2017,623.83,renewable,True
+Fossil Gas,PT,2018,4608.57,fossil,False
+Fossil Oil,PT,2018,14.24,fossil,False
+Fossil_Hard_coal,PT,2018,1756.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,PT,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,PT,2018,2820.0,other,False
+Hydro_Pure_storage,PT,2018,1515.3,other,False
+Hydro_RunOfRiver_and_poundage,PT,2018,2879.74,other,False
+Other_non_renewable,PT,2018,17.8,other,False
+Solar_PV,PT,2018,558.2,other,False
+Wind_onshore,PT,2018,5149.64,other,False
+Biomass,PT,2018,658.22,renewable,True
+Fossil Brown coal/Lignite,PT,2019,0.0,fossil,False
+Fossil Coal-derived gas,PT,2019,0.0,fossil,False
+Fossil Gas,PT,2019,4606.0,fossil,False
+Fossil Hard coal,PT,2019,1756.0,fossil,False
+Fossil Oil,PT,2019,0.0,fossil,False
+Fossil Oil shale,PT,2019,0.0,fossil,False
+Fossil Peat,PT,2019,0.0,fossil,False
+Nuclear,PT,2019,0.0,nuclear,False
+Other,PT,2019,36.2,other,False
+Waste,PT,2019,0.0,other,False
+Biomass,PT,2019,604.8,renewable,True
+Geothermal,PT,2019,0.0,renewable,True
+Hydro Pumped Storage,PT,2019,2820.0,renewable,True
+Hydro Run-of-river and poundage,PT,2019,2857.6,renewable,True
+Hydro Water Reservoir,PT,2019,1515.3,renewable,True
+Marine,PT,2019,0.0,renewable,True
+Other renewable,PT,2019,0.0,renewable,True
+Solar,PT,2019,323.5,renewable,True
+Wind Offshore,PT,2019,0.0,renewable,True
+Wind Onshore,PT,2019,5126.6,renewable,True
+Fossil Brown coal/Lignite,PT,2020,0.0,fossil,False
+Fossil Coal-derived gas,PT,2020,0.0,fossil,False
+Fossil Gas,PT,2020,4606.2,fossil,False
+Fossil Hard coal,PT,2020,1756.0,fossil,False
+Fossil Oil,PT,2020,0.0,fossil,False
+Fossil Oil shale,PT,2020,0.0,fossil,False
+Fossil Peat,PT,2020,0.0,fossil,False
+Nuclear,PT,2020,0.0,nuclear,False
+Other,PT,2020,8.0,other,False
+Waste,PT,2020,0.0,other,False
+Biomass,PT,2020,678.8,renewable,True
+Geothermal,PT,2020,0.0,renewable,True
+Hydro Pumped Storage,PT,2020,2820.0,renewable,True
+Hydro Run-of-river and poundage,PT,2020,2857.6,renewable,True
+Hydro Water Reservoir,PT,2020,1515.3,renewable,True
+Marine,PT,2020,0.0,renewable,True
+Other renewable,PT,2020,0.0,renewable,True
+Solar,PT,2020,413.4,renewable,True
+Wind Offshore,PT,2020,0.0,renewable,True
+Wind Onshore,PT,2020,5180.8,renewable,True
+Fossil Brown coal/Lignite,PT,2021,0.0,fossil,False
+Fossil Coal-derived gas,PT,2021,0.0,fossil,False
+Fossil Gas,PT,2021,4584.9,fossil,False
+Fossil Hard coal,PT,2021,1756.0,fossil,False
+Fossil Oil,PT,2021,0.0,fossil,False
+Fossil Oil shale,PT,2021,0.0,fossil,False
+Fossil Peat,PT,2021,0.0,fossil,False
+Nuclear,PT,2021,0.0,nuclear,False
+Other,PT,2021,28.0,other,False
+Waste,PT,2021,0.0,other,False
+Biomass,PT,2021,684.1,renewable,True
+Geothermal,PT,2021,0.0,renewable,True
+Hydro Pumped Storage,PT,2021,2820.0,renewable,True
+Hydro Run-of-river and poundage,PT,2021,2856.8,renewable,True
+Hydro Water Reservoir,PT,2021,1515.3,renewable,True
+Marine,PT,2021,0.0,renewable,True
+Other renewable,PT,2021,0.0,renewable,True
+Solar,PT,2021,569.2,renewable,True
+Wind Offshore,PT,2021,25.0,renewable,True
+Wind Onshore,PT,2021,5183.4,renewable,True
+Fossil Brown coal/Lignite,PT,2022,0.0,fossil,False
+Fossil Coal-derived gas,PT,2022,0.0,fossil,False
+Fossil Gas,PT,2022,4519.5,fossil,False
+Fossil Hard coal,PT,2022,0.0,fossil,False
+Fossil Oil,PT,2022,0.0,fossil,False
+Fossil Oil shale,PT,2022,0.0,fossil,False
+Fossil Peat,PT,2022,0.0,fossil,False
+Nuclear,PT,2022,0.0,nuclear,False
+Other,PT,2022,28.0,other,False
+Waste,PT,2022,0.0,other,False
+Biomass,PT,2022,681.0,renewable,True
+Geothermal,PT,2022,0.0,renewable,True
+Hydro Pumped Storage,PT,2022,2827.4,renewable,True
+Hydro Run-of-river and poundage,PT,2022,2856.4,renewable,True
+Hydro Water Reservoir,PT,2022,1515.3,renewable,True
+Marine,PT,2022,0.0,renewable,True
+Other renewable,PT,2022,0.0,renewable,True
+Solar,PT,2022,1031.9,renewable,True
+Wind Offshore,PT,2022,25.0,renewable,True
+Wind Onshore,PT,2022,5328.0,renewable,True
+Fossil Brown coal/Lignite,PT,2023,0.0,fossil,False
+Fossil Coal-derived gas,PT,2023,0.0,fossil,False
+Fossil Gas,PT,2023,4584.6,fossil,False
+Fossil Hard coal,PT,2023,0.0,fossil,False
+Fossil Oil,PT,2023,0.0,fossil,False
+Fossil Oil shale,PT,2023,0.0,fossil,False
+Fossil Peat,PT,2023,0.0,fossil,False
+Nuclear,PT,2023,0.0,nuclear,False
+Other,PT,2023,28.0,other,False
+Waste,PT,2023,0.0,other,False
+Biomass,PT,2023,647.0,renewable,True
+Geothermal,PT,2023,0.0,renewable,True
+Hydro Pumped Storage,PT,2023,3707.4,renewable,True
+Hydro Run-of-river and poundage,PT,2023,2856.4,renewable,True
+Hydro Water Reservoir,PT,2023,1633.4,renewable,True
+Marine,PT,2023,0.0,renewable,True
+Other renewable,PT,2023,0.0,renewable,True
+Solar,PT,2023,1332.3,renewable,True
+Wind Offshore,PT,2023,25.0,renewable,True
+Wind Onshore,PT,2023,5328.4,renewable,True
+Fossil Brown coal/Lignite,PT,2024,0.0,fossil,False
+Fossil Coal-derived gas,PT,2024,0.0,fossil,False
+Fossil Gas,PT,2024,4432.7,fossil,False
+Fossil Hard coal,PT,2024,0.0,fossil,False
+Fossil Oil,PT,2024,0.0,fossil,False
+Fossil Oil shale,PT,2024,0.0,fossil,False
+Fossil Peat,PT,2024,0.0,fossil,False
+Nuclear,PT,2024,0.0,nuclear,False
+Other,PT,2024,28.0,other,False
+Waste,PT,2024,0.0,other,False
+Biomass,PT,2024,681.0,renewable,True
+Geothermal,PT,2024,0.0,renewable,True
+Hydro Pumped Storage,PT,2024,3707.4,renewable,True
+Hydro Run-of-river and poundage,PT,2024,2855.5,renewable,True
+Hydro Water Reservoir,PT,2024,1629.0,renewable,True
+Marine,PT,2024,0.0,renewable,True
+Other renewable,PT,2024,0.0,renewable,True
+Solar,PT,2024,1810.8,renewable,True
+Wind Offshore,PT,2024,25.0,renewable,True
+Wind Onshore,PT,2024,5332.8,renewable,True
+Fossil Gas,RO,2014,1999.0,fossil,False
+Nuclear,RO,2014,1300.0,nuclear,False
+Fossil_Brown_coal_Lignite,RO,2014,4097.0,other,False
+Fossil_Hard_coal,RO,2014,1083.0,other,False
+Fossil_Mixed_fuels,RO,2014,2145.0,other,False
+Hydro_Pure_storage,RO,2014,3680.0,other,False
+Hydro_RunOfRiver_and_poundage,RO,2014,2629.0,other,False
+Non_identified_net_gen,RO,2014,0.05,other,False
+Solar_PV,RO,2014,1143.0,other,False
+Wind_onshore,RO,2014,2944.0,other,False
+Biomass,RO,2014,94.0,renewable,True
+Fossil Gas,RO,2015,2025.0,fossil,False
+Nuclear,RO,2015,1300.0,nuclear,False
+Fossil_Brown_coal_Lignite,RO,2015,3778.0,other,False
+Fossil_Hard_coal,RO,2015,1148.0,other,False
+Fossil_Mixed_fuels,RO,2015,2187.0,other,False
+Hydro_Pure_storage,RO,2015,3709.0,other,False
+Hydro_RunOfRiver_and_poundage,RO,2015,2643.0,other,False
+Solar_PV,RO,2015,1225.0,other,False
+Wind_onshore,RO,2015,2917.0,other,False
+Biomass,RO,2015,98.0,renewable,True
+Fossil Gas,RO,2016,1881.0,fossil,False
+Nuclear,RO,2016,1300.0,nuclear,False
+Fossil_Brown_coal_Lignite,RO,2016,3448.0,other,False
+Fossil_Hard_coal,RO,2016,1148.0,other,False
+Fossil_Mixed_fuels,RO,2016,1708.0,other,False
+Hydro_Pure_storage,RO,2016,3761.0,other,False
+Hydro_RunOfRiver_and_poundage,RO,2016,2644.0,other,False
+Non_identified_net_gen,RO,2016,0.0,other,False
+Solar_PV,RO,2016,1301.0,other,False
+Wind_onshore,RO,2016,2965.0,other,False
+Biomass,RO,2016,118.0,renewable,True
+Fossil Gas,RO,2017,1829.0,fossil,False
+Nuclear,RO,2017,1300.0,nuclear,False
+Fossil_Brown_coal_Lignite,RO,2017,3312.0,other,False
+Fossil_Hard_coal,RO,2017,1155.0,other,False
+Fossil_Mixed_fuels,RO,2017,1605.0,other,False
+Hydro_Pure_storage,RO,2017,3730.0,other,False
+Hydro_RunOfRiver_and_poundage,RO,2017,2645.0,other,False
+Non_identified_net_gen,RO,2017,0.0,other,False
+Solar_PV,RO,2017,1285.0,other,False
+Wind_onshore,RO,2017,2975.0,other,False
+Biomass,RO,2017,121.0,renewable,True
+Fossil Gas,RO,2018,1826.0,fossil,False
+Nuclear,RO,2018,1300.0,nuclear,False
+Fossil_Brown_coal_Lignite,RO,2018,3341.0,other,False
+Fossil_Hard_coal,RO,2018,1032.0,other,False
+Fossil_Mixed_fuels,RO,2018,1578.0,other,False
+Hydro_Pure_storage,RO,2018,3566.0,other,False
+Hydro_RunOfRiver_and_poundage,RO,2018,2763.0,other,False
+Non_identified_net_gen,RO,2018,0.0,other,False
+Solar_PV,RO,2018,1262.0,other,False
+Wind_onshore,RO,2018,2977.0,other,False
+Biomass,RO,2018,121.0,renewable,True
+Fossil Brown coal/Lignite,RO,2019,3096.0,fossil,False
+Fossil Gas,RO,2019,3033.0,fossil,False
+Fossil Hard coal,RO,2019,1032.0,fossil,False
+Nuclear,RO,2019,1300.0,nuclear,False
+Biomass,RO,2019,115.0,renewable,True
+Hydro Run-of-river and poundage,RO,2019,2770.0,renewable,True
+Hydro Water Reservoir,RO,2019,3373.0,renewable,True
+Solar,RO,2019,1150.0,renewable,True
+Wind Onshore,RO,2019,2968.0,renewable,True
+Fossil Brown coal/Lignite,RO,2020,3071.0,fossil,False
+Fossil Gas,RO,2020,2666.0,fossil,False
+Fossil Hard coal,RO,2020,1032.0,fossil,False
+Nuclear,RO,2020,1300.0,nuclear,False
+Biomass,RO,2020,117.0,renewable,True
+Hydro Run-of-river and poundage,RO,2020,2750.0,renewable,True
+Hydro Water Reservoir,RO,2020,3390.0,renewable,True
+Solar,RO,2020,1163.0,renewable,True
+Wind Onshore,RO,2020,2972.0,renewable,True
+Fossil Brown coal/Lignite,RO,2021,2483.0,fossil,False
+Fossil Gas,RO,2021,2184.0,fossil,False
+Fossil Hard coal,RO,2021,986.0,fossil,False
+Nuclear,RO,2021,1300.0,nuclear,False
+Biomass,RO,2021,117.0,renewable,True
+Hydro Run-of-river and poundage,RO,2021,2746.0,renewable,True
+Hydro Water Reservoir,RO,2021,3388.0,renewable,True
+Solar,RO,2021,1145.0,renewable,True
+Wind Onshore,RO,2021,2957.0,renewable,True
+Fossil Brown coal/Lignite,RO,2022,2497.0,fossil,False
+Fossil Gas,RO,2022,2218.0,fossil,False
+Fossil Hard coal,RO,2022,176.0,fossil,False
+Nuclear,RO,2022,1300.0,nuclear,False
+Biomass,RO,2022,116.0,renewable,True
+Hydro Run-of-river and poundage,RO,2022,2780.0,renewable,True
+Hydro Water Reservoir,RO,2022,3357.0,renewable,True
+Solar,RO,2022,1160.0,renewable,True
+Wind Onshore,RO,2022,2957.0,renewable,True
+Fossil Brown coal/Lignite,RO,2023,2497.0,fossil,False
+Fossil Gas,RO,2023,1988.0,fossil,False
+Fossil Hard coal,RO,2023,176.0,fossil,False
+Nuclear,RO,2023,1300.0,nuclear,False
+Biomass,RO,2023,118.0,renewable,True
+Hydro Run-of-river and poundage,RO,2023,2780.0,renewable,True
+Hydro Water Reservoir,RO,2023,3356.0,renewable,True
+Solar,RO,2023,1185.0,renewable,True
+Wind Onshore,RO,2023,2957.0,renewable,True
+Fossil Brown coal/Lignite,RO,2024,1733.0,fossil,False
+Fossil Gas,RO,2024,2238.0,fossil,False
+Fossil Hard coal,RO,2024,176.0,fossil,False
+Nuclear,RO,2024,1300.0,nuclear,False
+Biomass,RO,2024,118.0,renewable,True
+Hydro Run-of-river and poundage,RO,2024,2780.0,renewable,True
+Hydro Water Reservoir,RO,2024,3359.0,renewable,True
+Solar,RO,2024,1293.0,renewable,True
+Wind Onshore,RO,2024,2958.0,renewable,True
+Fossil Gas,RS,2014,311.0,fossil,False
+Fossil_Brown_coal_Lignite,RS,2014,5238.0,other,False
+Hydro_Pure_pumped_Storage,RS,2014,620.0,other,False
+Hydro_Pure_storage,RS,2014,404.0,other,False
+Hydro_RunOfRiver_and_poundage,RS,2014,1966.0,other,False
+Fossil Gas,RS,2015,311.0,fossil,False
+Fossil_Brown_coal_Lignite,RS,2015,5263.0,other,False
+Hydro_Pure_pumped_Storage,RS,2015,620.0,other,False
+Hydro_Pure_storage,RS,2015,404.0,other,False
+Hydro_RunOfRiver_and_poundage,RS,2015,1985.0,other,False
+Fossil Gas,RS,2016,311.0,fossil,False
+Fossil_Brown_coal_Lignite,RS,2016,5283.0,other,False
+Hydro_Pure_pumped_Storage,RS,2016,620.0,other,False
+Hydro_Pure_storage,RS,2016,404.07,other,False
+Hydro_RunOfRiver_and_poundage,RS,2016,1991.4,other,False
+Fossil Gas,RS,2017,208.0,fossil,False
+Fossil_Brown_coal_Lignite,RS,2017,5289.0,other,False
+Hydro_Pure_pumped_Storage,RS,2017,614.0,other,False
+Hydro_Pure_storage,RS,2017,400.97,other,False
+Hydro_RunOfRiver_and_poundage,RS,2017,1982.22,other,False
+Fossil Gas,RS,2018,208.0,fossil,False
+Fossil_Brown_coal_Lignite,RS,2018,5314.0,other,False
+Hydro_Pure_pumped_Storage,RS,2018,614.0,other,False
+Hydro_Pure_storage,RS,2018,400.97,other,False
+Hydro_RunOfRiver_and_poundage,RS,2018,1989.62,other,False
+Wind_onshore,RS,2018,238.96,other,False
+Fossil Brown coal/Lignite,RS,2019,5600.5,fossil,False
+Fossil Gas,RS,2019,286.41,fossil,False
+Other,RS,2019,22.63,other,False
+Biomass,RS,2019,8.31,renewable,True
+Hydro Pumped Storage,RS,2019,639.0,renewable,True
+Hydro Run-of-river and poundage,RS,2019,1981.98,renewable,True
+Hydro Water Reservoir,RS,2019,344.7,renewable,True
+Wind Onshore,RS,2019,398.32,renewable,True
+Fossil Brown coal/Lignite,RS,2020,5282.5,fossil,False
+Fossil Gas,RS,2020,286.41,fossil,False
+Other,RS,2020,25.03,other,False
+Biomass,RS,2020,8.31,renewable,True
+Hydro Pumped Storage,RS,2020,639.0,renewable,True
+Hydro Run-of-river and poundage,RS,2020,2004.61,renewable,True
+Hydro Water Reservoir,RS,2020,472.27,renewable,True
+Solar,RS,2020,3.9,renewable,True
+Wind Onshore,RS,2020,397.32,renewable,True
+Fossil Brown coal/Lignite,RS,2021,5660.5,fossil,False
+Fossil Gas,RS,2021,296.53,fossil,False
+Other,RS,2021,24.66,other,False
+Biomass,RS,2021,2.38,renewable,True
+Hydro Pumped Storage,RS,2021,642.0,renewable,True
+Hydro Run-of-river and poundage,RS,2021,2037.25,renewable,True
+Hydro Water Reservoir,RS,2021,472.47,renewable,True
+Solar,RS,2021,2.9,renewable,True
+Wind Onshore,RS,2021,429.32,renewable,True
+Fossil Brown coal/Lignite,RS,2022,5660.5,fossil,False
+Fossil Gas,RS,2022,485.71,fossil,False
+Other,RS,2022,34.64,other,False
+Biomass,RS,2022,2.38,renewable,True
+Hydro Pumped Storage,RS,2022,642.0,renewable,True
+Hydro Run-of-river and poundage,RS,2022,2051.2,renewable,True
+Hydro Water Reservoir,RS,2022,473.47,renewable,True
+Solar,RS,2022,2.9,renewable,True
+Wind Onshore,RS,2022,533.32,renewable,True
+Fossil Brown coal/Lignite,RS,2023,6010.5,fossil,False
+Fossil Gas,RS,2023,608.11,fossil,False
+Other,RS,2023,34.64,other,False
+Waste,RS,2023,32.4,other,False
+Biomass,RS,2023,2.38,renewable,True
+Hydro Pumped Storage,RS,2023,642.0,renewable,True
+Hydro Run-of-river and poundage,RS,2023,2048.76,renewable,True
+Hydro Water Reservoir,RS,2023,487.15,renewable,True
+Solar,RS,2023,2.9,renewable,True
+Wind Onshore,RS,2023,533.32,renewable,True
+Fossil Brown coal/Lignite,RS,2024,6010.5,fossil,False
+Fossil Gas,RS,2024,606.71,fossil,False
+Other,RS,2024,34.64,other,False
+Waste,RS,2024,32.4,other,False
+Biomass,RS,2024,2.38,renewable,True
+Hydro Pumped Storage,RS,2024,642.0,renewable,True
+Hydro Run-of-river and poundage,RS,2024,2053.11,renewable,True
+Hydro Water Reservoir,RS,2024,484.18,renewable,True
+Solar,RS,2024,29.13,renewable,True
+Wind Onshore,RS,2024,645.62,renewable,True
+Fossil Gas,SE,2014,879.0,fossil,False
+Fossil Oil,SE,2014,3622.0,fossil,False
+Nuclear,SE,2014,9528.0,nuclear,False
+Fossil_Hard_coal,SE,2014,225.0,other,False
+Fossil_Mixed_fuels,SE,2014,559.0,other,False
+Hydro_Pure_storage,SE,2014,16155.0,other,False
+Solar_PV,SE,2014,79.0,other,False
+Wind_onshore,SE,2014,5420.0,other,False
+Biomass,SE,2014,3082.0,renewable,True
+Fossil Gas,SE,2015,879.0,fossil,False
+Fossil Oil,SE,2015,3277.0,fossil,False
+Nuclear,SE,2015,9714.0,nuclear,False
+Fossil_Hard_coal,SE,2015,225.0,other,False
+Fossil_Mixed_fuels,SE,2015,120.0,other,False
+Hydro_Pure_storage,SE,2015,16184.0,other,False
+Other_renewable,SE,2015,441.0,other,False
+Solar_PV,SE,2015,104.0,other,False
+Wind_onshore,SE,2015,6029.0,other,False
+Biomass,SE,2015,2978.0,renewable,True
+Fossil Gas,SE,2016,879.0,fossil,False
+Fossil Oil,SE,2016,3224.0,fossil,False
+Nuclear,SE,2016,9076.0,nuclear,False
+Fossil_Hard_coal,SE,2016,205.0,other,False
+Fossil_Mixed_fuels,SE,2016,120.0,other,False
+Hydro_Pure_storage,SE,2016,16181.0,other,False
+Waste_non_renewable,SE,2016,453.0,other,False
+Wind_onshore,SE,2016,6520.0,other,False
+Biomass,SE,2016,3146.0,renewable,True
+Fossil Gas,SE,2017,849.0,fossil,False
+Fossil Oil,SE,2017,2695.0,fossil,False
+Nuclear,SE,2017,8586.0,nuclear,False
+Fossil_Hard_coal,SE,2017,205.0,other,False
+Fossil_Mixed_fuels,SE,2017,120.0,other,False
+Hydro_Pure_storage,SE,2017,16301.0,other,False
+Waste_non_renewable,SE,2017,445.0,other,False
+Wind_onshore,SE,2017,6691.0,other,False
+Biomass,SE,2017,3145.0,renewable,True
+Fossil Gas,SE,2018,849.0,fossil,False
+Fossil Oil,SE,2018,2695.0,fossil,False
+Nuclear,SE,2018,8614.0,nuclear,False
+Fossil_Hard_coal,SE,2018,205.0,other,False
+Fossil_Mixed_fuels,SE,2018,120.0,other,False
+Fossil_Other,SE,2018,0.0,other,False
+Hydro_Pure_storage,SE,2018,16630.0,other,False
+Waste_non_renewable,SE,2018,445.0,other,False
+Waste_renewable,SE,2018,0.0,other,False
+Wind_onshore,SE,2018,7205.0,other,False
+Biomass,SE,2018,3145.0,renewable,True
+Nuclear,SE,2019,8586.0,nuclear,False
+Other,SE,2019,8439.0,other,False
+Hydro Water Reservoir,SE,2019,16301.0,renewable,True
+Wind Onshore,SE,2019,7506.0,renewable,True
+Nuclear,SE,2020,7710.0,nuclear,False
+Other,SE,2020,8827.0,other,False
+Hydro Water Reservoir,SE,2020,16318.0,renewable,True
+Wind Onshore,SE,2020,9648.0,renewable,True
+Nuclear,SE,2021,6871.0,nuclear,False
+Other,SE,2021,7977.0,other,False
+Hydro Water Reservoir,SE,2021,16334.0,renewable,True
+Wind Onshore,SE,2021,10017.0,renewable,True
+Nuclear,SE,2022,6900.0,nuclear,False
+Other,SE,2022,8400.0,other,False
+Hydro Water Reservoir,SE,2022,16300.0,renewable,True
+Wind Onshore,SE,2022,12100.0,renewable,True
+Nuclear,SE,2023,6900.0,nuclear,False
+Other,SE,2023,9000.0,other,False
+Hydro Water Reservoir,SE,2023,16300.0,renewable,True
+Wind Onshore,SE,2023,14700.0,renewable,True
+Nuclear,SE,2024,6900.0,nuclear,False
+Other,SE,2024,6600.0,other,False
+Hydro Water Reservoir,SE,2024,16300.0,renewable,True
+Solar,SE,2024,3200.0,renewable,True
+Wind Onshore,SE,2024,16700.0,renewable,True
+Fossil Gas,SI,2014,439.0,fossil,False
+Nuclear,SI,2014,696.0,nuclear,False
+Biogas,SI,2014,28.0,other,False
+Fossil_Brown_coal_Lignite,SI,2014,775.0,other,False
+Fossil_Other,SI,2014,28.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SI,2014,180.0,other,False
+Hydro_RunOfRiver_and_poundage,SI,2014,1065.0,other,False
+Other_non_renewable,SI,2014,109.0,other,False
+Solar_PV,SI,2014,259.5,other,False
+Waste_non_renewable,SI,2014,35.0,other,False
+Wind_onshore,SI,2014,2.1,other,False
+Biomass,SI,2014,12.0,renewable,True
+Fossil Gas,SI,2015,439.0,fossil,False
+Nuclear,SI,2015,696.0,nuclear,False
+Biogas,SI,2015,29.0,other,False
+Fossil_Brown_coal_Lignite,SI,2015,921.0,other,False
+Fossil_Other,SI,2015,30.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SI,2015,180.0,other,False
+Hydro_RunOfRiver_and_poundage,SI,2015,1053.0,other,False
+Other_non_renewable,SI,2015,107.0,other,False
+Solar_PV,SI,2015,263.42,other,False
+Waste_non_renewable,SI,2015,40.0,other,False
+Wind_onshore,SI,2015,3.35,other,False
+Biomass,SI,2015,12.0,renewable,True
+Fossil Gas,SI,2016,455.4,fossil,False
+Nuclear,SI,2016,696.0,nuclear,False
+Biogas,SI,2016,28.51,other,False
+Fossil_Brown_coal_Lignite,SI,2016,924.0,other,False
+Fossil_Other,SI,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SI,2016,180.0,other,False
+Hydro_RunOfRiver_and_poundage,SI,2016,1116.68,other,False
+Other_non_renewable,SI,2016,106.97,other,False
+Other_renewable,SI,2016,14.18,other,False
+Solar_PV,SI,2016,270.54,other,False
+Waste_non_renewable,SI,2016,8.19,other,False
+Wind_onshore,SI,2016,3.3,other,False
+Biomass,SI,2016,12.45,renewable,True
+Fossil Gas,SI,2017,455.4,fossil,False
+Nuclear,SI,2017,696.0,nuclear,False
+Biogas,SI,2017,28.51,other,False
+Fossil_Brown_coal_Lignite,SI,2017,924.0,other,False
+Fossil_Other,SI,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SI,2017,180.0,other,False
+Hydro_RunOfRiver_and_poundage,SI,2017,1116.68,other,False
+Other_non_renewable,SI,2017,106.97,other,False
+Other_renewable,SI,2017,14.18,other,False
+Solar_PV,SI,2017,270.54,other,False
+Waste_non_renewable,SI,2017,8.19,other,False
+Wind_onshore,SI,2017,3.3,other,False
+Biomass,SI,2017,12.45,renewable,True
+Fossil Gas,SI,2018,518.7,fossil,False
+Nuclear,SI,2018,696.0,nuclear,False
+Biogas,SI,2018,31.4,other,False
+Fossil_Brown_coal_Lignite,SI,2018,981.0,other,False
+Fossil_Other,SI,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SI,2018,180.0,other,False
+Hydro_RunOfRiver_and_poundage,SI,2018,1121.7,other,False
+Other_non_renewable,SI,2018,111.0,other,False
+Other_renewable,SI,2018,0.0,other,False
+Solar_PV,SI,2018,290.2,other,False
+Waste_non_renewable,SI,2018,8.2,other,False
+Wind_onshore,SI,2018,3.3,other,False
+Biomass,SI,2018,16.6,renewable,True
+Fossil Brown coal/Lignite,SI,2019,924.0,fossil,False
+Fossil Coal-derived gas,SI,2019,0.0,fossil,False
+Fossil Gas,SI,2019,491.0,fossil,False
+Fossil Hard coal,SI,2019,0.0,fossil,False
+Fossil Oil,SI,2019,58.0,fossil,False
+Fossil Oil shale,SI,2019,0.0,fossil,False
+Fossil Peat,SI,2019,0.0,fossil,False
+Nuclear,SI,2019,696.0,nuclear,False
+Other,SI,2019,0.0,other,False
+Waste,SI,2019,40.0,other,False
+Biomass,SI,2019,17.0,renewable,True
+Geothermal,SI,2019,0.0,renewable,True
+Hydro Pumped Storage,SI,2019,180.0,renewable,True
+Hydro Run-of-river and poundage,SI,2019,1053.0,renewable,True
+Hydro Water Reservoir,SI,2019,0.0,renewable,True
+Marine,SI,2019,0.0,renewable,True
+Other renewable,SI,2019,1.0,renewable,True
+Solar,SI,2019,275.34,renewable,True
+Wind Offshore,SI,2019,0.0,renewable,True
+Wind Onshore,SI,2019,3.0,renewable,True
+Fossil Brown coal/Lignite,SI,2020,967.0,fossil,False
+Fossil Gas,SI,2020,545.76,fossil,False
+Fossil Oil,SI,2020,58.0,fossil,False
+Nuclear,SI,2020,696.0,nuclear,False
+Waste,SI,2020,38.44,other,False
+Biomass,SI,2020,22.86,renewable,True
+Hydro Pumped Storage,SI,2020,180.0,renewable,True
+Hydro Run-of-river and poundage,SI,2020,1110.58,renewable,True
+Solar,SI,2020,277.62,renewable,True
+Wind Onshore,SI,2020,3.31,renewable,True
+Fossil Brown coal/Lignite,SI,2021,981.0,fossil,False
+Fossil Coal-derived gas,SI,2021,0.0,fossil,False
+Fossil Gas,SI,2021,548.37,fossil,False
+Fossil Hard coal,SI,2021,0.0,fossil,False
+Fossil Oil,SI,2021,0.0,fossil,False
+Fossil Oil shale,SI,2021,0.0,fossil,False
+Fossil Peat,SI,2021,0.0,fossil,False
+Nuclear,SI,2021,696.0,nuclear,False
+Other,SI,2021,0.0,other,False
+Waste,SI,2021,4.4,other,False
+Biomass,SI,2021,15.8,renewable,True
+Geothermal,SI,2021,0.0,renewable,True
+Hydro Pumped Storage,SI,2021,180.0,renewable,True
+Hydro Run-of-river and poundage,SI,2021,1125.0,renewable,True
+Hydro Water Reservoir,SI,2021,0.0,renewable,True
+Marine,SI,2021,0.0,renewable,True
+Other renewable,SI,2021,0.0,renewable,True
+Solar,SI,2021,459.0,renewable,True
+Wind Offshore,SI,2021,0.0,renewable,True
+Wind Onshore,SI,2021,3.29,renewable,True
+Fossil Brown coal/Lignite,SI,2022,981.0,fossil,False
+Fossil Coal-derived gas,SI,2022,0.0,fossil,False
+Fossil Gas,SI,2022,548.0,fossil,False
+Fossil Hard coal,SI,2022,0.0,fossil,False
+Fossil Oil,SI,2022,0.0,fossil,False
+Fossil Oil shale,SI,2022,0.0,fossil,False
+Fossil Peat,SI,2022,0.0,fossil,False
+Nuclear,SI,2022,696.0,nuclear,False
+Other,SI,2022,0.0,other,False
+Waste,SI,2022,4.4,other,False
+Biomass,SI,2022,15.8,renewable,True
+Geothermal,SI,2022,0.0,renewable,True
+Hydro Pumped Storage,SI,2022,180.0,renewable,True
+Hydro Run-of-river and poundage,SI,2022,1125.0,renewable,True
+Hydro Water Reservoir,SI,2022,0.0,renewable,True
+Marine,SI,2022,0.0,renewable,True
+Other renewable,SI,2022,0.0,renewable,True
+Solar,SI,2022,459.0,renewable,True
+Wind Offshore,SI,2022,0.0,renewable,True
+Wind Onshore,SI,2022,3.3,renewable,True
+Fossil Brown coal/Lignite,SI,2023,1190.5,fossil,False
+Fossil Gas,SI,2023,618.02,fossil,False
+Fossil Oil,SI,2023,58.0,fossil,False
+Nuclear,SI,2023,696.0,nuclear,False
+Waste,SI,2023,33.14,other,False
+Biomass,SI,2023,14.29,renewable,True
+Hydro Pumped Storage,SI,2023,180.0,renewable,True
+Hydro Run-of-river and poundage,SI,2023,1128.94,renewable,True
+Solar,SI,2023,702.4,renewable,True
+Wind Onshore,SI,2023,2.39,renewable,True
+Fossil Brown coal/Lignite,SI,2024,1190.5,fossil,False
+Fossil Gas,SI,2024,756.04,fossil,False
+Fossil Oil,SI,2024,58.0,fossil,False
+Nuclear,SI,2024,696.0,nuclear,False
+Waste,SI,2024,6.31,other,False
+Biomass,SI,2024,43.39,renewable,True
+Hydro Pumped Storage,SI,2024,180.0,renewable,True
+Hydro Run-of-river and poundage,SI,2024,1125.24,renewable,True
+Solar,SI,2024,1109.53,renewable,True
+Wind Onshore,SI,2024,3.25,renewable,True
+Fossil Gas,SK,2014,1076.0,fossil,False
+Fossil Oil,SK,2014,195.0,fossil,False
+Nuclear,SK,2014,1940.0,nuclear,False
+Biogas,SK,2014,103.0,other,False
+Fossil_Brown_coal_Lignite,SK,2014,568.0,other,False
+Fossil_Coal_derived_gas,SK,2014,0.0,other,False
+Fossil_Hard_coal,SK,2014,440.0,other,False
+Fossil_Mixed_fuels,SK,2014,413.0,other,False
+Fossil_Other,SK,2014,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SK,2014,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,SK,2014,282.0,other,False
+Hydro_Pure_pumped_Storage,SK,2014,734.0,other,False
+Hydro_Pure_storage,SK,2014,318.0,other,False
+Hydro_RunOfRiver_and_poundage,SK,2014,1202.0,other,False
+Other_non_renewable,SK,2014,0.0,other,False
+Other_renewable,SK,2014,17.0,other,False
+Solar_PV,SK,2014,531.0,other,False
+Solar_Thermal,SK,2014,0.0,other,False
+Waste_non_renewable,SK,2014,0.0,other,False
+Wind_onshore,SK,2014,3.0,other,False
+Biomass,SK,2014,254.0,renewable,True
+Fossil Gas,SK,2015,1093.0,fossil,False
+Fossil Oil,SK,2015,195.0,fossil,False
+Nuclear,SK,2015,1940.0,nuclear,False
+Biogas,SK,2015,104.0,other,False
+Fossil_Brown_coal_Lignite,SK,2015,568.0,other,False
+Fossil_Coal_derived_gas,SK,2015,0.0,other,False
+Fossil_Hard_coal,SK,2015,440.0,other,False
+Fossil_Mixed_fuels,SK,2015,422.0,other,False
+Fossil_Other,SK,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SK,2015,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,SK,2015,282.0,other,False
+Hydro_Pure_pumped_Storage,SK,2015,734.0,other,False
+Hydro_Pure_storage,SK,2015,318.16,other,False
+Hydro_RunOfRiver_and_poundage,SK,2015,1199.0,other,False
+Other_non_renewable,SK,2015,0.0,other,False
+Other_renewable,SK,2015,6.0,other,False
+Solar_PV,SK,2015,532.0,other,False
+Solar_Thermal,SK,2015,0.0,other,False
+Waste_non_renewable,SK,2015,0.0,other,False
+Wind_onshore,SK,2015,3.0,other,False
+Biomass,SK,2015,259.0,renewable,True
+Fossil Gas,SK,2016,1121.0,fossil,False
+Fossil Oil,SK,2016,255.0,fossil,False
+Nuclear,SK,2016,1940.0,nuclear,False
+Biogas,SK,2016,105.0,other,False
+Fossil_Brown_coal_Lignite,SK,2016,458.0,other,False
+Fossil_Coal_derived_gas,SK,2016,0.0,other,False
+Fossil_Hard_coal,SK,2016,220.0,other,False
+Fossil_Mixed_fuels,SK,2016,422.0,other,False
+Fossil_Other,SK,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SK,2016,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,SK,2016,282.0,other,False
+Hydro_Pure_pumped_Storage,SK,2016,734.0,other,False
+Hydro_Pure_storage,SK,2016,318.0,other,False
+Hydro_RunOfRiver_and_poundage,SK,2016,1203.0,other,False
+Other_non_renewable,SK,2016,0.0,other,False
+Other_renewable,SK,2016,14.0,other,False
+Solar_PV,SK,2016,530.0,other,False
+Solar_Thermal,SK,2016,0.0,other,False
+Waste_non_renewable,SK,2016,19.0,other,False
+Wind_onshore,SK,2016,3.0,other,False
+Biomass,SK,2016,224.0,renewable,True
+Fossil Gas,SK,2017,1106.0,fossil,False
+Fossil Oil,SK,2017,257.0,fossil,False
+Nuclear,SK,2017,1940.0,nuclear,False
+Biogas,SK,2017,105.0,other,False
+Fossil_Brown_coal_Lignite,SK,2017,333.0,other,False
+Fossil_Coal_derived_gas,SK,2017,0.0,other,False
+Fossil_Hard_coal,SK,2017,221.0,other,False
+Fossil_Mixed_fuels,SK,2017,431.0,other,False
+Fossil_Other,SK,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SK,2017,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,SK,2017,282.0,other,False
+Hydro_Pure_pumped_Storage,SK,2017,734.0,other,False
+Hydro_Pure_storage,SK,2017,318.0,other,False
+Hydro_RunOfRiver_and_poundage,SK,2017,1205.0,other,False
+Other_non_renewable,SK,2017,0.0,other,False
+Other_renewable,SK,2017,12.0,other,False
+Solar_PV,SK,2017,530.0,other,False
+Solar_Thermal,SK,2017,0.0,other,False
+Waste_non_renewable,SK,2017,19.0,other,False
+Wind_onshore,SK,2017,3.0,other,False
+Biomass,SK,2017,225.0,renewable,True
+Fossil Gas,SK,2018,1111.0,fossil,False
+Fossil Oil,SK,2018,257.0,fossil,False
+Nuclear,SK,2018,1940.0,nuclear,False
+Biogas,SK,2018,104.0,other,False
+Fossil_Brown_coal_Lignite,SK,2018,345.0,other,False
+Fossil_Coal_derived_gas,SK,2018,0.0,other,False
+Fossil_Hard_coal,SK,2018,221.0,other,False
+Fossil_Mixed_fuels,SK,2018,419.0,other,False
+Fossil_Other,SK,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_non_renewable,SK,2018,0.0,other,False
+Hydro_Mixed_pumped_storage_renewable,SK,2018,282.0,other,False
+Hydro_Pure_pumped_Storage,SK,2018,734.0,other,False
+Hydro_Pure_storage,SK,2018,318.0,other,False
+Hydro_RunOfRiver_and_poundage,SK,2018,1208.0,other,False
+Other_non_renewable,SK,2018,0.0,other,False
+Other_renewable,SK,2018,12.0,other,False
+Solar_PV,SK,2018,531.0,other,False
+Solar_Thermal,SK,2018,0.0,other,False
+Waste_non_renewable,SK,2018,19.0,other,False
+Wind_onshore,SK,2018,3.0,other,False
+Biomass,SK,2018,224.0,renewable,True
+Fossil Brown coal/Lignite,SK,2019,320.0,fossil,False
+Fossil Gas,SK,2019,1153.0,fossil,False
+Fossil Hard coal,SK,2019,221.0,fossil,False
+Fossil Oil,SK,2019,257.0,fossil,False
+Nuclear,SK,2019,1940.0,nuclear,False
+Other,SK,2019,418.0,other,False
+Biomass,SK,2019,214.0,renewable,True
+Hydro Pumped Storage,SK,2019,916.0,renewable,True
+Hydro Run-of-river and poundage,SK,2019,1208.0,renewable,True
+Hydro Water Reservoir,SK,2019,418.0,renewable,True
+Other renewable,SK,2019,116.0,renewable,True
+Solar,SK,2019,531.0,renewable,True
+Wind Onshore,SK,2019,3.0,renewable,True
+Fossil Brown coal/Lignite,SK,2020,308.0,fossil,False
+Fossil Gas,SK,2020,1152.0,fossil,False
+Fossil Hard coal,SK,2020,1.0,fossil,False
+Fossil Oil,SK,2020,257.0,fossil,False
+Nuclear,SK,2020,1940.0,nuclear,False
+Other,SK,2020,640.0,other,False
+Biomass,SK,2020,224.0,renewable,True
+Hydro Pumped Storage,SK,2020,916.0,renewable,True
+Hydro Run-of-river and poundage,SK,2020,1210.0,renewable,True
+Hydro Water Reservoir,SK,2020,418.0,renewable,True
+Other renewable,SK,2020,116.0,renewable,True
+Solar,SK,2020,531.0,renewable,True
+Wind Onshore,SK,2020,3.0,renewable,True
+Fossil Brown coal/Lignite,SK,2021,276.0,fossil,False
+Fossil Gas,SK,2021,1183.0,fossil,False
+Fossil Hard coal,SK,2021,1.0,fossil,False
+Fossil Oil,SK,2021,259.0,fossil,False
+Nuclear,SK,2021,2003.0,nuclear,False
+Other,SK,2021,627.0,other,False
+Biomass,SK,2021,234.0,renewable,True
+Hydro Pumped Storage,SK,2021,916.0,renewable,True
+Hydro Run-of-river and poundage,SK,2021,1212.0,renewable,True
+Hydro Water Reservoir,SK,2021,418.0,renewable,True
+Other renewable,SK,2021,115.0,renewable,True
+Solar,SK,2021,532.0,renewable,True
+Wind Onshore,SK,2021,3.0,renewable,True
+Fossil Gas,TR,2016,25569.0,fossil,False
+Fossil Oil,TR,2016,362.9,fossil,False
+Fossil_Brown_coal_Lignite,TR,2016,9754.5,other,False
+Fossil_Hard_coal,TR,2016,8228.9,other,False
+Fossil_Mixed_fuels,TR,2016,5.8,other,False
+Fossil_Other,TR,2016,2.0,other,False
+Hydro_Pure_storage,TR,2016,19558.6,other,False
+Hydro_RunOfRiver_and_poundage,TR,2016,7122.5,other,False
+Other_non_renewable,TR,2016,0.0,other,False
+Solar_PV,TR,2016,832.5,other,False
+Wind_onshore,TR,2016,5751.3,other,False
+Biomass,TR,2016,488.7,renewable,True
+Geothermal,TR,2016,820.9,renewable,True
+Fossil Gas,TR,2017,26637.3,fossil,False
+Fossil Oil,TR,2017,297.8,fossil,False
+Fossil_Brown_coal_Lignite,TR,2017,9772.9,other,False
+Fossil_Hard_coal,TR,2017,9576.4,other,False
+Fossil_Mixed_fuels,TR,2017,5.8,other,False
+Fossil_Other,TR,2017,2.0,other,False
+Hydro_Pure_storage,TR,2017,19776.0,other,False
+Hydro_RunOfRiver_and_poundage,TR,2017,7497.1,other,False
+Solar_PV,TR,2017,3420.7,other,False
+Wind_onshore,TR,2017,6516.2,other,False
+Biomass,TR,2017,634.2,renewable,True
+Geothermal,TR,2017,1063.7,renewable,True
+Fossil Gas,TR,2018,26107.12,fossil,False
+Fossil Oil,TR,2018,288.18,fossil,False
+Fossil_Brown_coal_Lignite,TR,2018,10118.1,other,False
+Fossil_Hard_coal,TR,2018,9576.35,other,False
+Fossil_Mixed_fuels,TR,2018,5.78,other,False
+Fossil_Other,TR,2018,1.95,other,False
+Hydro_Pure_storage,TR,2018,20536.1,other,False
+Hydro_RunOfRiver_and_poundage,TR,2018,7755.29,other,False
+Other_non_renewable,TR,2018,0.0,other,False
+Solar_PV,TR,2018,5062.84,other,False
+Wind_onshore,TR,2018,7005.39,other,False
+Biomass,TR,2018,811.17,renewable,True
+Geothermal,TR,2018,1282.52,renewable,True
+Fossil Gas,UA,2020,9359.51,fossil,False
+Fossil Hard coal,UA,2020,18587.0,fossil,False
+Nuclear,UA,2020,13835.0,nuclear,False
+Biomass,UA,2020,199.48,renewable,True
+Hydro Pumped Storage,UA,2020,1487.8,renewable,True
+Hydro Run-of-river and poundage,UA,2020,192.05,renewable,True
+Hydro Water Reservoir,UA,2020,4636.7,renewable,True
+Solar,UA,2020,5362.56,renewable,True
+Wind Onshore,UA,2020,1111.15,renewable,True
+Fossil Gas,UA,2021,9359.51,fossil,False
+Fossil Hard coal,UA,2021,18587.0,fossil,False
+Nuclear,UA,2021,13835.0,nuclear,False
+Biomass,UA,2021,199.48,renewable,True
+Hydro Pumped Storage,UA,2021,1487.8,renewable,True
+Hydro Run-of-river and poundage,UA,2021,192.05,renewable,True
+Hydro Water Reservoir,UA,2021,4636.7,renewable,True
+Solar,UA,2021,5362.57,renewable,True
+Wind Onshore,UA,2021,1111.15,renewable,True
+Fossil Gas,UA,2022,9359.51,fossil,False
+Fossil Hard coal,UA,2022,18587.0,fossil,False
+Nuclear,UA,2022,13835.0,nuclear,False
+Biomass,UA,2022,199.48,renewable,True
+Hydro Pumped Storage,UA,2022,1487.8,renewable,True
+Hydro Run-of-river and poundage,UA,2022,192.05,renewable,True
+Hydro Water Reservoir,UA,2022,4636.7,renewable,True
+Solar,UA,2022,5362.56,renewable,True
+Wind Onshore,UA,2022,1111.15,renewable,True
+Nuclear,UA,2023,13835.0,nuclear,False
+Hydro Pumped Storage,UA,2023,1962.8,renewable,True
+Hydro Water Reservoir,UA,2023,4636.7,renewable,True
+Fossil Brown coal/Lignite,XK,2021,1288.0,fossil,False
+Hydro Run-of-river and poundage,XK,2021,33.0,renewable,True
+Hydro Water Reservoir,XK,2021,35.0,renewable,True
+Wind Onshore,XK,2021,32.0,renewable,True
+Fossil Brown coal/Lignite,XK,2022,1288.0,fossil,False
+Hydro Run-of-river and poundage,XK,2022,33.0,renewable,True
+Hydro Water Reservoir,XK,2022,35.0,renewable,True
+Wind Onshore,XK,2022,136.0,renewable,True
+Fossil Brown coal/Lignite,XK,2023,1288.0,fossil,False
+Hydro Run-of-river and poundage,XK,2023,33.0,renewable,True
+Hydro Water Reservoir,XK,2023,35.0,renewable,True
+Wind Onshore,XK,2023,136.0,renewable,True
