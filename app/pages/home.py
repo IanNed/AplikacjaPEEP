@@ -16,11 +16,14 @@ layout = html.Div(
             [
                 html.Li(dcc.Link("Country overview", href="/country-overview")),
                 html.Li(dcc.Link("Load patterns", href="/load-patterns")),
+                html.Li(dcc.Link("Seasonality decomposition", href="/seasonality")),    
                 html.Li(dcc.Link("Interconnectors", href="/interconnectors")),
                 html.Li(dcc.Link("Compare countries", href="/compare-countries")),
                 html.Li(dcc.Link("Renewables capacity", href="/renewables-capacity")),
                 html.Li(dcc.Link("Renewables vs load", href="/renewables-vs-load")),
                 html.Li(dcc.Link("Compare renewables", href="/compare-renewables")),
+                html.Li(dcc.Link("Energy transition pace", href="/energy-transition-pace")),
+                html.Li(dcc.Link("Self-sufficiency", href="/self-sufficiency")),
             ]
         ),
     ]

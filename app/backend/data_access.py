@@ -383,6 +383,98 @@ def get_generation_year_bounds():
     df = df.dropna(subset=["renewable_generation_gwh", "total_generation_gwh"])
     return int(df["year"].min()), int(df["year"].max())
 
+# --------------------------------------------------------------------
+# Seasonality decomposition
+# --------------------------------------------------------------------
+
+def get_seasonal_decomposition(country: str, start_month=None, end_month=None):
+    """
+    Perform STL (Seasonal-Trend using LOESS) decomposition on monthly load data.
+
+    Returns a DataFrame with columns:
+        year_month, load_sum, trend, seasonal, residual, seasonal_strength
+    """
+    from statsmodels.tsa.seasonal import STL
+
+    df = load_monthly()
+    df_c = df.loc[df["country"] == country].copy().sort_values("year_month")
+
+    if start_month is not None:
+        df_c = df_c[df_c["year_month"] >= pd.to_datetime(start_month)]
+    if end_month is not None:
+        df_c = df_c[df_c["year_month"] <= pd.to_datetime(end_month)]
+
+    if len(df_c) < 24:
+        # Need at least 2 full years for meaningful decomposition
+        return pd.DataFrame(
+            columns=["year_month", "load_sum", "trend", "seasonal", "residual"]
+        )
+
+    # Set datetime index for STL
+    series = df_c.set_index("year_month")["load_sum"]
+    series.index = pd.DatetimeIndex(series.index, freq="MS")
+
+    # STL decomposition with period=12 (monthly data, annual cycle)
+    stl = STL(series, period=12, robust=True)
+    result = stl.fit()
+
+    out = pd.DataFrame(
+        {
+            "year_month": series.index,
+            "load_sum": series.values,
+            "trend": result.trend,
+            "seasonal": result.seasonal,
+            "residual": result.resid,
+        }
+    )
+
+    return out.reset_index(drop=True)
+
+
+def get_seasonal_strength(country: str, start_month=None, end_month=None):
+    """
+    Compute seasonal strength metric: 1 - Var(residual) / Var(seasonal + residual)
+    Values close to 1 mean strong seasonality; close to 0 mean weak.
+    """
+    df = get_seasonal_decomposition(country, start_month, end_month)
+
+    if df.empty:
+        return None
+
+    var_resid = df["residual"].var()
+    var_seasonal_resid = (df["seasonal"] + df["residual"]).var()
+
+    if var_seasonal_resid == 0:
+        return 0.0
+
+    strength = max(0, 1 - var_resid / var_seasonal_resid)
+    return round(strength, 3)
+
+
+def get_anomaly_months(country: str, start_month=None, end_month=None, threshold: float = 2.0):
+    """
+    Identify months where the residual exceeds `threshold` standard deviations.
+    These are anomalies — unexpected deviations from trend + season.
+
+    Returns DataFrame with: year_month, load_sum, residual, residual_zscore
+    """
+    df = get_seasonal_decomposition(country, start_month, end_month)
+
+    if df.empty:
+        return pd.DataFrame(columns=["year_month", "load_sum", "residual", "residual_zscore"])
+
+    mean_r = df["residual"].mean()
+    std_r = df["residual"].std()
+
+    if std_r == 0:
+        df["residual_zscore"] = 0.0
+    else:
+        df["residual_zscore"] = (df["residual"] - mean_r) / std_r
+
+    anomalies = df[df["residual_zscore"].abs() > threshold].copy()
+    return anomalies[["year_month", "load_sum", "residual", "residual_zscore"]].reset_index(drop=True)
+
+
 
 FUEL_LABELS = {
     "RA000": "Renewables & biofuels (aggregate)",
@@ -421,3 +513,324 @@ def get_generation_by_fuel(country: str):
     return df_long[["country", "year", "fuel", "generation_gwh"]].sort_values(
         ["year", "fuel"]
     )
+
+# --------------------------------------------------------------------
+# Energy transition pace
+# --------------------------------------------------------------------
+
+def compute_yoy_growth(country: str, start_year=None, end_year=None):
+    """
+    Compute year-over-year growth rate (%) of renewable generation for a country.
+
+    Returns DataFrame with: year, renewable_generation_gwh, total_generation_gwh,
+    renewable_share, yoy_growth_pct
+    """
+    df = get_generation_share(country)
+
+    if df.empty:
+        return pd.DataFrame(
+            columns=["year", "renewable_generation_gwh", "total_generation_gwh",
+                     "renewable_share", "yoy_growth_pct"]
+        )
+
+    df = df.dropna(subset=["renewable_generation_gwh"]).copy()
+
+    if start_year is not None:
+        df = df[df["year"] >= start_year]
+    if end_year is not None:
+        df = df[df["year"] <= end_year]
+
+    df = df.sort_values("year").reset_index(drop=True)
+
+    df["prev_gen"] = df["renewable_generation_gwh"].shift(1)
+    df["yoy_growth_pct"] = ((df["renewable_generation_gwh"] - df["prev_gen"]) / df["prev_gen"]) * 100
+
+    return df.drop(columns=["prev_gen"])
+
+def compute_cagr(start_value, end_value, n_years):
+    """
+    Compound Annual Growth Rate (%).
+    Returns None if inputs are invalid (zero/negative values or zero years).
+    """
+    if start_value <= 0 or end_value <= 0 or n_years <= 0:
+        return None
+    return ((end_value / start_value) ** (1 / n_years) - 1) * 100
+
+def get_transition_scorecard(countries: list, start_year: int, end_year: int):
+    """
+    Build a scorecard ranking countries by their renewable transition metrics.
+
+    Returns DataFrame with: rank, country, start_year, end_year, start_share_pct,
+    end_share_pct, share_change_pp, cagr_pct, avg_yoy_growth_pct
+    """
+    rows = []
+
+    for country in countries:
+        df = get_generation_share(country)
+        if df.empty:
+            continue
+
+        df = df[(df["year"] >= start_year) & (df["year"] <= end_year)].copy()
+        df = df.dropna(subset=["renewable_share", "renewable_generation_gwh"])
+
+        if len(df) < 2:
+            continue
+
+        first = df.iloc[0]
+        last = df.iloc[-1]
+
+        n_years = last["year"] - first["year"]
+        if n_years == 0:
+            continue
+
+        start_share = first["renewable_share"]
+        end_share = last["renewable_share"]
+        share_change_pp = (end_share - start_share) * 100
+
+        cagr = compute_cagr(
+            first["renewable_generation_gwh"],
+            last["renewable_generation_gwh"],
+            n_years,
+        )
+
+        df_yoy = compute_yoy_growth(country, start_year, end_year)
+        avg_yoy = df_yoy["yoy_growth_pct"].mean()
+
+        rows.append({
+            "country": country,
+            "start_year": int(first["year"]),
+            "end_year": int(last["year"]),
+            "start_share_pct": round(start_share * 100, 1),
+            "end_share_pct": round(end_share * 100, 1),
+            "share_change_pp": round(share_change_pp, 1),
+            "cagr_pct": round(cagr, 1) if cagr is not None else None,
+            "avg_yoy_growth_pct": round(avg_yoy, 1) if not pd.isna(avg_yoy) else None,
+        })
+
+    if not rows:
+        return pd.DataFrame()
+
+    scorecard = pd.DataFrame(rows)
+    scorecard = scorecard.sort_values("share_change_pp", ascending=False).reset_index(drop=True)
+    scorecard["rank"] = scorecard.index + 1
+
+    return scorecard
+
+def get_tech_growth(countries: list, start_year: int, end_year: int):
+    """
+    Compute CAGR (%) by technology (hydro, wind, solar, geothermal, other)
+    for each country over the given period.
+
+    Returns DataFrame with: country, technology, start_gwh, end_gwh, cagr_pct
+    """
+    tech_cols = {
+        "RA100": "Hydro",
+        "RA300": "Wind",
+        "RA400": "Solar",
+        "RA200": "Geothermal",
+        "RA500_5160": "Other renewables",
+    }
+
+    df = load_eurostat_generation_by_fuel_annual()
+    df = df[df["country"].isin(countries)]
+    df = df[(df["year"] >= start_year) & (df["year"] <= end_year)]
+
+    rows = []
+    for country in countries:
+        df_c = df[df["country"] == country].sort_values("year")
+        if len(df_c) < 2:
+            continue
+
+        first_row = df_c.iloc[0]
+        last_row = df_c.iloc[-1]
+        n_years = last_row["year"] - first_row["year"]
+
+        if n_years == 0:
+            continue
+
+        for code, label in tech_cols.items():
+            if code not in df_c.columns:
+                continue
+
+            start_val = first_row.get(code)
+            end_val = last_row.get(code)
+
+            if pd.isna(start_val) or pd.isna(end_val):
+                continue
+
+            cagr = compute_cagr(start_val, end_val, n_years)
+
+            rows.append({
+                "country": country,
+                "technology": label,
+                "start_gwh": round(start_val, 1),
+                "end_gwh": round(end_val, 1),
+                "cagr_pct": round(cagr, 1) if cagr is not None else None,
+            })
+
+    return pd.DataFrame(rows) if rows else pd.DataFrame(
+        columns=["country", "technology", "start_gwh", "end_gwh", "cagr_pct"]
+    )
+
+def get_transition_acceleration(countries: list, start_year: int, end_year: int):
+    """
+    Compare average YoY growth in the first half vs second half of the period.
+    Positive acceleration = transition is speeding up.
+
+    Returns DataFrame with: country, first_half_avg_yoy, second_half_avg_yoy, acceleration
+    """
+    rows = []
+
+    for country in countries:
+        df_yoy = compute_yoy_growth(country, start_year, end_year)
+        df_yoy = df_yoy.dropna(subset=["yoy_growth_pct"])
+
+        if len(df_yoy) < 4:
+            continue
+
+        mid_idx = len(df_yoy) // 2
+        first_half_avg = df_yoy.iloc[:mid_idx]["yoy_growth_pct"].mean()
+        second_half_avg = df_yoy.iloc[mid_idx:]["yoy_growth_pct"].mean()
+
+        rows.append({
+            "country": country,
+            "first_half_avg_yoy": round(first_half_avg, 1),
+            "second_half_avg_yoy": round(second_half_avg, 1),
+            "acceleration": round(second_half_avg - first_half_avg, 1),
+        })
+
+    return pd.DataFrame(rows) if rows else pd.DataFrame(
+        columns=["country", "first_half_avg_yoy", "second_half_avg_yoy", "acceleration"]
+    )
+
+# --------------------------------------------------------------------
+# Self-sufficiency & import dependency
+# --------------------------------------------------------------------
+
+def get_annual_net_flows(country: str):
+    """
+    Aggregate monthly energy flows into annual net imports (imports - exports).
+
+    Returns DataFrame with: year, annual_import, annual_export, net_import
+    """
+    df = load_energy_flows()
+    df_c = df[df["country"] == country].copy()
+
+    if df_c.empty:
+        return pd.DataFrame(columns=["year", "annual_import", "annual_export", "net_import"])
+
+    df_c["year"] = df_c["date"].dt.year
+
+    # Separate imports and exports using Direction column
+    imports = (
+        df_c[df_c["Direction"] == "Import"]
+        .groupby("year", observed=True)["flow"]
+        .sum()
+        .reset_index()
+        .rename(columns={"flow": "annual_import"})
+    )
+
+    exports = (
+        df_c[df_c["Direction"] == "Export"]
+        .groupby("year", observed=True)["flow"]
+        .sum()
+        .reset_index()
+        .rename(columns={"flow": "annual_export"})
+    )
+
+    merged = imports.merge(exports, on="year", how="outer").fillna(0)
+    merged["net_import"] = merged["annual_import"] - merged["annual_export"]
+
+    return merged.sort_values("year").reset_index(drop=True)
+
+def get_self_sufficiency(country: str):
+    """
+    Combine generation (Eurostat), load (ENTSO-E), and cross-border flows (ENTSO-E)
+    to compute annual self-sufficiency and import dependency metrics.
+
+    Returns DataFrame with:
+        year, total_generation_gwh, renewable_generation_gwh, renewable_share,
+        annual_load_gwh, annual_import_gwh, annual_export_gwh, net_import_gwh,
+        self_sufficiency_ratio, import_dependency, renewable_self_sufficiency,
+        export_surplus
+    """
+    # Annual generation from Eurostat
+    df_gen = get_generation_share(country)
+
+    # Annual load from ENTSO-E (aggregated monthly -> yearly)
+    df_load = get_annual_load(country)
+
+    # Annual flows from ENTSO-E
+    df_flows = get_annual_net_flows(country)
+
+    if df_gen.empty or df_load.empty:
+        return pd.DataFrame()
+
+    # Merge generation + load
+    df = df_gen.merge(df_load, on="year", how="inner")
+
+    # Convert load from MWh to GWh
+    df["annual_load_gwh"] = df["annual_load_mwh"] / 1000.0
+
+    # Merge with flows if available
+    if not df_flows.empty:
+        # Convert flows to GWh (they appear to be in MWh based on magnitude)
+        df_flows["annual_import_gwh"] = df_flows["annual_import"] / 1000.0
+        df_flows["annual_export_gwh"] = df_flows["annual_export"] / 1000.0
+        df_flows["net_import_gwh"] = df_flows["net_import"] / 1000.0
+
+        df = df.merge(
+            df_flows[["year", "annual_import_gwh", "annual_export_gwh", "net_import_gwh"]],
+            on="year",
+            how="left",
+        )
+    else:
+        df["annual_import_gwh"] = 0.0
+        df["annual_export_gwh"] = 0.0
+        df["net_import_gwh"] = 0.0
+
+    df = df.fillna({"annual_import_gwh": 0, "annual_export_gwh": 0, "net_import_gwh": 0})
+
+    # Compute metrics
+    df["self_sufficiency_ratio"] = df["total_generation_gwh"] / df["annual_load_gwh"]
+
+    df["import_dependency"] = df["net_import_gwh"].clip(lower=0) / df["annual_load_gwh"]
+
+    df["renewable_self_sufficiency"] = df["renewable_generation_gwh"] / df["annual_load_gwh"]
+
+    # Export surplus: fraction of generation that's exported (only if generation > load)
+    df["export_surplus"] = (
+        (df["total_generation_gwh"] - df["annual_load_gwh"]) / df["total_generation_gwh"]
+    ).clip(lower=0)
+
+    return df.sort_values("year").reset_index(drop=True)
+
+def get_self_sufficiency_comparison(countries: list, start_year: int, end_year: int):
+    """
+    Get the latest-year self-sufficiency metrics for multiple countries for comparison.
+
+    Returns DataFrame with: country, year, self_sufficiency_ratio, import_dependency,
+    renewable_self_sufficiency, export_surplus
+    """
+    rows = []
+
+    for country in countries:
+        df = get_self_sufficiency(country)
+        if df.empty:
+            continue
+
+        df = df[(df["year"] >= start_year) & (df["year"] <= end_year)]
+        if df.empty:
+            continue
+
+        latest = df.iloc[-1]
+        rows.append({
+            "country": country,
+            "year": int(latest["year"]),
+            "self_sufficiency_ratio": round(latest["self_sufficiency_ratio"], 3),
+            "import_dependency": round(latest["import_dependency"], 3),
+            "renewable_self_sufficiency": round(latest["renewable_self_sufficiency"], 3),
+            "export_surplus": round(latest["export_surplus"], 3),
+        })
+
+    return pd.DataFrame(rows) if rows else pd.DataFrame()
