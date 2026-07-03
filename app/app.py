@@ -17,6 +17,7 @@ app.layout = html.Div(
                 dcc.Link("Country overview", href="/country-overview", style={"marginLeft": "1rem"}),
                 dcc.Link("Interconnectors", href="/interconnectors", style={"marginLeft": "1rem"}),
                 dcc.Link("Load patterns", href="/load-patterns", style={"marginLeft": "1rem"}),
+                dcc.Link("Seasonality", href="/seasonality", style={"marginLeft": "1rem"}),
                 dcc.Link("Compare countries", href="/compare-countries", style={"marginLeft": "1rem"}),
                 dcc.Link("Renewables capacity", href="/renewables-capacity", style={"marginLeft": "1rem"}),
                 dcc.Link("Renewables vs load", href="/renewables-vs-load", style={"marginLeft": "1rem"}),

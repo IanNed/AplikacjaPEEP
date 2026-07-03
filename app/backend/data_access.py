@@ -384,6 +384,98 @@ def get_generation_year_bounds():
     return int(df["year"].min()), int(df["year"].max())
 
 
+# --------------------------------------------------------------------
+# Seasonality decomposition
+# --------------------------------------------------------------------
+
+def get_seasonal_decomposition(country: str, start_month=None, end_month=None):
+    """
+    Perform STL (Seasonal-Trend using LOESS) decomposition on monthly load data.
+
+    Returns a DataFrame with columns:
+        year_month, load_sum, trend, seasonal, residual, seasonal_strength
+    """
+    from statsmodels.tsa.seasonal import STL
+
+    df = load_monthly()
+    df_c = df.loc[df["country"] == country].copy().sort_values("year_month")
+
+    if start_month is not None:
+        df_c = df_c[df_c["year_month"] >= pd.to_datetime(start_month)]
+    if end_month is not None:
+        df_c = df_c[df_c["year_month"] <= pd.to_datetime(end_month)]
+
+    if len(df_c) < 24:
+        # Need at least 2 full years for meaningful decomposition
+        return pd.DataFrame(
+            columns=["year_month", "load_sum", "trend", "seasonal", "residual"]
+        )
+
+    # Set datetime index for STL
+    series = df_c.set_index("year_month")["load_sum"]
+    series.index = pd.DatetimeIndex(series.index, freq="MS")
+
+    # STL decomposition with period=12 (monthly data, annual cycle)
+    stl = STL(series, period=12, robust=True)
+    result = stl.fit()
+
+    out = pd.DataFrame(
+        {
+            "year_month": series.index,
+            "load_sum": series.values,
+            "trend": result.trend,
+            "seasonal": result.seasonal,
+            "residual": result.resid,
+        }
+    )
+
+    return out.reset_index(drop=True)
+
+
+def get_seasonal_strength(country: str, start_month=None, end_month=None):
+    """
+    Compute seasonal strength metric: 1 - Var(residual) / Var(seasonal + residual)
+    Values close to 1 mean strong seasonality; close to 0 mean weak.
+    """
+    df = get_seasonal_decomposition(country, start_month, end_month)
+
+    if df.empty:
+        return None
+
+    var_resid = df["residual"].var()
+    var_seasonal_resid = (df["seasonal"] + df["residual"]).var()
+
+    if var_seasonal_resid == 0:
+        return 0.0
+
+    strength = max(0, 1 - var_resid / var_seasonal_resid)
+    return round(strength, 3)
+
+
+def get_anomaly_months(country: str, start_month=None, end_month=None, threshold: float = 2.0):
+    """
+    Identify months where the residual exceeds `threshold` standard deviations.
+    These are anomalies — unexpected deviations from trend + season.
+
+    Returns DataFrame with: year_month, load_sum, residual, residual_zscore
+    """
+    df = get_seasonal_decomposition(country, start_month, end_month)
+
+    if df.empty:
+        return pd.DataFrame(columns=["year_month", "load_sum", "residual", "residual_zscore"])
+
+    mean_r = df["residual"].mean()
+    std_r = df["residual"].std()
+
+    if std_r == 0:
+        df["residual_zscore"] = 0.0
+    else:
+        df["residual_zscore"] = (df["residual"] - mean_r) / std_r
+
+    anomalies = df[df["residual_zscore"].abs() > threshold].copy()
+    return anomalies[["year_month", "load_sum", "residual", "residual_zscore"]].reset_index(drop=True)
+
+
 FUEL_LABELS = {
     "RA000": "Renewables & biofuels (aggregate)",
     "RA100": "Hydro total",
