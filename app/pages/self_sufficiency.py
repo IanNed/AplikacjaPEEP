@@ -3,21 +3,27 @@ from dash import html, dcc, callback, Input, Output
 from dash import dash_table
 import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 import pandas as pd
+import dash_bootstrap_components as dbc
 
 from app.backend.data_access import (
     load_eurostat_share_annual,
     get_generation_year_bounds,
     get_self_sufficiency,
     get_self_sufficiency_comparison,
+    COUNTRY_NAMES_PL,
+)
+
+from app.components import (
+    page_header, control_panel, chart_card,
+    section_header, DARK_TABLE_STYLE,
 )
 
 dash.register_page(
     __name__,
     path="/self-sufficiency",
-    name="Self-sufficiency",
-    title="Self-sufficiency & import dependency",
+    name="Samowystarczalność",
+    title="Samowystarczalność i zależność importowa",
 )
 
 # -----------------------------------------------------------------------
@@ -25,167 +31,115 @@ dash.register_page(
 # -----------------------------------------------------------------------
 
 _eu_df = load_eurostat_share_annual()
-
 COUNTRIES = sorted(_eu_df["country"].unique())
-COUNTRY_OPTIONS = [{"label": c, "value": c} for c in COUNTRIES]
-
+COUNTRY_OPTIONS = [
+    {"label": COUNTRY_NAMES_PL.get(c, c), "value": c}
+    for c in COUNTRIES
+]
 MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 
 # -----------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------
 
-layout = html.Div(
-    [
-        html.H2("Self-Sufficiency & Import Dependency"),
-        html.P(
-            "Combines domestic generation (Eurostat), electricity load (ENTSO-E), and "
-            "cross-border flows (ENTSO-E) to assess how well a country can meet its own "
-            "demand — and whether renewables growth is reducing import reliance.",
-            style={"color": "#555", "marginBottom": "1.5rem"},
-        ),
+layout = html.Div([
 
-        # Controls
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.Label("Countries"),
-                        dcc.Dropdown(
-                            id="ss-countries",
-                            options=COUNTRY_OPTIONS,
-                            value=["DE", "PL", "FR", "IT", "ES"],
-                            multi=True,
-                            clearable=False,
-                        ),
-                    ],
-                    style={"width": "55%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.Label("Year range"),
-                        dcc.RangeSlider(
-                            id="ss-year-range",
-                            min=MIN_YEAR,
-                            max=MAX_YEAR,
-                            value=[MIN_YEAR, MAX_YEAR],
-                            marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
-                            allowCross=False,
-                        ),
-                    ],
-                    style={"width": "40%", "display": "inline-block", "paddingLeft": "2rem"},
-                ),
-            ],
-            style={"marginBottom": "2rem"},
-        ),
+    page_header(
+        "Samowystarczalność i zależność importowa",
+        "Łączy generację krajową (Eurostat), obciążenie (ENTSO-E) i przepływy "
+        "transgraniczne (ENTSO-E), aby ocenić, na ile kraj jest w stanie pokryć własne "
+        "zapotrzebowanie — i czy wzrost OZE zmniejsza zależność od importu."
+    ),
 
-        # Section 1: KPI comparison (latest year)
-        html.H3("Latest-Year Comparison", style={"marginTop": "1rem"}),
-        html.P(
-            "Self-sufficiency > 1 = net producer. Import dependency shows what fraction of "
-            "load is covered by net imports. Renewable self-sufficiency shows how much of "
-            "demand is met by domestic renewables alone.",
-            style={"color": "#666", "fontSize": "0.9rem"},
-        ),
-        dash_table.DataTable(
-            id="ss-comparison-table",
-            columns=[],
-            data=[],
-            page_size=15,
-            sort_action="native",
-            style_table={"overflowX": "auto"},
-            style_cell={"textAlign": "center", "padding": "8px"},
-            style_header={"fontWeight": "bold", "backgroundColor": "#f0f0f0"},
-            style_data_conditional=[
-                {
-                    "if": {"filter_query": "{self_sufficiency_ratio} >= 1"},
-                    "backgroundColor": "#e8f5e9",
-                },
-                {
-                    "if": {"filter_query": "{self_sufficiency_ratio} < 1"},
-                    "backgroundColor": "#fff3e0",
-                },
-                {
-                    "if": {"filter_query": "{import_dependency} > 0.2"},
-                    "color": "#d32f2f",
-                },
-            ],
-        ),
-
-        # Section 2: Time series — self-sufficiency ratio
-        html.H3("Self-Sufficiency Over Time", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Self-sufficiency ratio (generation / load)"),
-                        dcc.Graph(id="ss-ratio-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Import dependency (net imports / load)"),
-                        dcc.Graph(id="ss-import-dep-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
-
-        # Section 3: Renewable coverage
-        html.H3("Renewable Self-Sufficiency", style={"marginTop": "2rem"}),
-        html.P(
-            "What fraction of total demand can be met by domestic renewable generation? "
-            "Rising values indicate renewables are displacing both fossil and imports.",
-            style={"color": "#666", "fontSize": "0.9rem"},
-        ),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Renewable generation vs load coverage"),
-                        dcc.Graph(id="ss-renewable-coverage-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Energy balance breakdown"),
-                        dcc.Graph(id="ss-balance-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
-
-        # Section 4: Detailed country view
-        html.H3("Detailed Annual Data", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Label("Select single country for detail"),
+    # Controls
+    control_panel(
+        dbc.Row([
+            dbc.Col([
+                dbc.Label("Kraje", style={"color": "#ccc"}),
                 dcc.Dropdown(
-                    id="ss-detail-country",
+                    id="ss-countries",
                     options=COUNTRY_OPTIONS,
-                    value="DE",
+                    value=["DE", "PL", "FR", "IT", "ES"],
+                    multi=True,
                     clearable=False,
-                    style={"width": "200px"},
                 ),
-            ],
-            style={"marginBottom": "1rem"},
-        ),
-        dash_table.DataTable(
-            id="ss-detail-table",
-            columns=[],
-            data=[],
-            page_size=12,
-            sort_action="native",
-            style_table={"overflowX": "auto"},
-            style_cell={"textAlign": "center", "padding": "6px", "fontSize": "0.85rem"},
-            style_header={"fontWeight": "bold", "backgroundColor": "#f0f0f0"},
-        ),
-    ]
-)
+            ], md=7),
+            dbc.Col([
+                dbc.Label("Zakres lat", style={"color": "#ccc"}),
+                dcc.RangeSlider(
+                    id="ss-year-range",
+                    min=MIN_YEAR,
+                    max=MAX_YEAR,
+                    value=[MIN_YEAR, MAX_YEAR],
+                    marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
+                    allowCross=False,
+                ),
+            ], md=5),
+        ]),
+    ),
+
+    # Section 1: Comparison table
+    section_header(
+        "Porównanie (ostatni rok)",
+        "Samowystarczalność > 1 = producent netto. Zależność importowa = udział importu netto w obciążeniu."
+    ),
+    dash_table.DataTable(
+        id="ss-comparison-table",
+        columns=[],
+        data=[],
+        page_size=15,
+        sort_action="native",
+        style_table=DARK_TABLE_STYLE["style_table"],
+        style_cell=DARK_TABLE_STYLE["style_cell"],
+        style_header=DARK_TABLE_STYLE["style_header"],
+        style_data_conditional=[
+            *DARK_TABLE_STYLE["style_data_conditional"],
+            {"if": {"filter_query": "{self_sufficiency_ratio} >= 1"}, "backgroundColor": "#1a3a2a", "color": "#6bcf7f"},
+            {"if": {"filter_query": "{self_sufficiency_ratio} < 1"}, "backgroundColor": "#3a2a1a", "color": "#ffd93d"},
+            {"if": {"filter_query": "{import_dependency} > 0.2"}, "color": "#ff6b6b"},
+        ],
+    ),
+
+    # Section 2: Time series
+    section_header("Samowystarczalność w czasie"),
+    dbc.Row([
+        dbc.Col(chart_card("Wskaźnik samowystarczalności (generacja / obciążenie)", "ss-ratio-graph"), md=6),
+        dbc.Col(chart_card("Zależność importowa (import netto / obciążenie)", "ss-import-dep-graph"), md=6),
+    ]),
+
+    # Section 3: Renewable coverage
+    section_header(
+        "Samowystarczalność OZE",
+        "Jaka część zapotrzebowania może być pokryta przez krajowe OZE? Wzrost = wypieranie fossil + importu."
+    ),
+    dbc.Row([
+        dbc.Col(chart_card("Pokrycie zapotrzebowania przez OZE", "ss-renewable-coverage-graph"), md=6),
+        dbc.Col(chart_card("Bilans energetyczny", "ss-balance-graph"), md=6),
+    ]),
+
+    # Section 4: Detail table
+    section_header("Szczegółowe dane roczne"),
+    dbc.Row([
+        dbc.Col([
+            dbc.Label("Wybierz kraj do szczegółów", style={"color": "#ccc"}),
+            dcc.Dropdown(
+                id="ss-detail-country",
+                options=COUNTRY_OPTIONS,
+                value="PL",
+                clearable=False,
+                style={"width": "200px"},
+            ),
+        ], md=3, className="mb-3"),
+    ]),
+    dash_table.DataTable(
+        id="ss-detail-table",
+        columns=[],
+        data=[],
+        page_size=12,
+        sort_action="native",
+        **DARK_TABLE_STYLE,
+    ),
+])
 
 # -----------------------------------------------------------------------
 # Callbacks
@@ -218,13 +172,16 @@ def update_self_sufficiency(countries, year_range):
     if df_comp.empty:
         return [], [], empty_fig, empty_fig, empty_fig, empty_fig
 
+    df_comp = df_comp.copy()
+    df_comp["kraj"] = df_comp["country"].map(COUNTRY_NAMES_PL)
+
     comp_columns = [
-        {"name": "Country", "id": "country"},
-        {"name": "Year", "id": "year"},
-        {"name": "Self-sufficiency", "id": "self_sufficiency_ratio"},
-        {"name": "Import dependency", "id": "import_dependency"},
-        {"name": "Renewable self-suff.", "id": "renewable_self_sufficiency"},
-        {"name": "Export surplus", "id": "export_surplus"},
+        {"name": "Kraj", "id": "kraj"},
+        {"name": "Rok", "id": "year"},
+        {"name": "Samowystarczalność", "id": "self_sufficiency_ratio"},
+        {"name": "Zależność import.", "id": "import_dependency"},
+        {"name": "Samowystarczalność OZE", "id": "renewable_self_sufficiency"},
+        {"name": "Nadwyżka eksportowa", "id": "export_surplus"},
     ]
     comp_data = df_comp.to_dict("records")
 
@@ -235,7 +192,7 @@ def update_self_sufficiency(countries, year_range):
         if df.empty:
             continue
         df = df[(df["year"] >= start_year) & (df["year"] <= end_year)].copy()
-        df["country"] = country
+        df["country_name"] = COUNTRY_NAMES_PL.get(country, country)
         all_frames.append(df)
 
     if not all_frames:
@@ -248,19 +205,20 @@ def update_self_sufficiency(countries, year_range):
         df_all,
         x="year",
         y="self_sufficiency_ratio",
-        color="country",
+        color="country_name",
         markers=True,
         labels={
-            "year": "Year",
-            "self_sufficiency_ratio": "Generation / Load",
-            "country": "Country",
+            "year": "Rok",
+            "self_sufficiency_ratio": "Generacja / Obciążenie",
+            "country_name": "Kraj",
         },
-        title="Self-sufficiency ratio over time",
+        title="Wskaźnik samowystarczalności w czasie",
     )
     fig_ratio.add_hline(
-        y=1.0, line_dash="dash", line_color="gray",
-        annotation_text="Self-sufficient (ratio=1)",
+        y=1.0, line_dash="dash", line_color="rgba(255,255,255,0.4)",
+        annotation_text="Samowystarczalny (wskaźnik=1)",
         annotation_position="top left",
+        annotation_font_color="#ccc",
     )
 
     # Import dependency over time
@@ -268,37 +226,38 @@ def update_self_sufficiency(countries, year_range):
         df_all,
         x="year",
         y="import_dependency",
-        color="country",
+        color="country_name",
         markers=True,
         labels={
-            "year": "Year",
-            "import_dependency": "Net imports / Load",
-            "country": "Country",
+            "year": "Rok",
+            "import_dependency": "Import netto / Obciążenie",
+            "country_name": "Kraj",
         },
-        title="Import dependency over time",
+        title="Zależność importowa w czasie",
     )
     fig_import.update_yaxes(tickformat=".0%")
-    fig_import.add_hline(y=0, line_dash="dash", line_color="gray")
+    fig_import.add_hline(y=0, line_dash="dash", line_color="rgba(255,255,255,0.3)")
 
     # Renewable self-sufficiency over time
     fig_renew = px.line(
         df_all,
         x="year",
         y="renewable_self_sufficiency",
-        color="country",
+        color="country_name",
         markers=True,
         labels={
-            "year": "Year",
-            "renewable_self_sufficiency": "Renewable gen / Load",
-            "country": "Country",
+            "year": "Rok",
+            "renewable_self_sufficiency": "Generacja OZE / Obciążenie",
+            "country_name": "Kraj",
         },
-        title="Renewable self-sufficiency (renewables / total demand)",
+        title="Samowystarczalność OZE (OZE / zapotrzebowanie całkowite)",
     )
     fig_renew.update_yaxes(tickformat=".0%", range=[0, None])
 
     # Energy balance stacked bar (first selected country)
     first_country = countries[0]
-    df_first = df_all[df_all["country"] == first_country].copy()
+    first_country_name = COUNTRY_NAMES_PL.get(first_country, first_country)
+    df_first = df_all[df_all["country_name"] == first_country_name].copy()
 
     if not df_first.empty:
         fig_balance = go.Figure()
@@ -306,43 +265,40 @@ def update_self_sufficiency(countries, year_range):
         fig_balance.add_trace(go.Bar(
             x=df_first["year"],
             y=df_first["renewable_generation_gwh"],
-            name="Renewable generation",
-            marker_color="#4CAF50",
+            name="Generacja OZE",
+            marker_color="#00d4aa",
         ))
 
-        # Non-renewable generation
         df_first["non_renewable_gwh"] = (
             df_first["total_generation_gwh"] - df_first["renewable_generation_gwh"]
         )
         fig_balance.add_trace(go.Bar(
             x=df_first["year"],
             y=df_first["non_renewable_gwh"],
-            name="Non-renewable generation",
-            marker_color="#757575",
+            name="Generacja nie-OZE",
+            marker_color="#555",
         ))
 
-        # Net imports (only positive part)
         df_first["net_import_positive"] = df_first["net_import_gwh"].clip(lower=0)
         fig_balance.add_trace(go.Bar(
             x=df_first["year"],
             y=df_first["net_import_positive"],
-            name="Net imports",
-            marker_color="#FF7043",
+            name="Import netto",
+            marker_color="#f97316",
         ))
 
-        # Load line overlay
         fig_balance.add_trace(go.Scatter(
             x=df_first["year"],
             y=df_first["annual_load_gwh"],
             mode="lines+markers",
-            name="Total load",
-            line=dict(color="#1565C0", width=3),
+            name="Obciążenie całkowite",
+            line=dict(color="#3391ff", width=3),
         ))
 
         fig_balance.update_layout(
             barmode="stack",
-            title=f"Energy balance — {first_country}",
-            xaxis_title="Year",
+            title=f"Bilans energetyczny — {first_country_name}",
+            xaxis_title="Rok",
             yaxis_title="GWh",
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
         )
@@ -372,7 +328,6 @@ def update_detail_table(country, year_range):
     if df.empty:
         return [], []
 
-    # Format for display
     df_view = pd.DataFrame({
         "year": df["year"].astype(int),
         "generation_gwh": df["total_generation_gwh"].round(1),
@@ -387,16 +342,16 @@ def update_detail_table(country, year_range):
     })
 
     columns = [
-        {"name": "Year", "id": "year"},
-        {"name": "Generation (GWh)", "id": "generation_gwh"},
-        {"name": "Renewable (GWh)", "id": "renewable_gwh"},
-        {"name": "Load (GWh)", "id": "load_gwh"},
-        {"name": "Imports (GWh)", "id": "imports_gwh"},
-        {"name": "Exports (GWh)", "id": "exports_gwh"},
-        {"name": "Net import (GWh)", "id": "net_import_gwh"},
-        {"name": "Self-suff. ratio", "id": "self_sufficiency"},
-        {"name": "Import dep. (%)", "id": "import_dep_pct"},
-        {"name": "Renew. self-suff. (%)", "id": "renew_self_suff_pct"},
+        {"name": "Rok", "id": "year"},
+        {"name": "Generacja (GWh)", "id": "generation_gwh"},
+        {"name": "OZE (GWh)", "id": "renewable_gwh"},
+        {"name": "Obciążenie (GWh)", "id": "load_gwh"},
+        {"name": "Import (GWh)", "id": "imports_gwh"},
+        {"name": "Eksport (GWh)", "id": "exports_gwh"},
+        {"name": "Import netto (GWh)", "id": "net_import_gwh"},
+        {"name": "Samowystarczalność", "id": "self_sufficiency"},
+        {"name": "Zal. import. (%)", "id": "import_dep_pct"},
+        {"name": "Samow. OZE (%)", "id": "renew_self_suff_pct"},
     ]
 
     return df_view.to_dict("records"), columns

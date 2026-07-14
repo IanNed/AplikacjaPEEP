@@ -4,6 +4,7 @@ from dash import dash_table
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+import dash_bootstrap_components as dbc
 
 from app.backend.data_access import (
     load_eurostat_share_annual,
@@ -12,18 +13,27 @@ from app.backend.data_access import (
     get_technology_mix_comparison,
     get_renewable_growth_comparison,
     get_renewable_gap_to_target,
+    COUNTRY_NAMES_PL,
+)
+
+from app.components import (
+    page_header, control_panel, chart_card,
+    section_header, DARK_TABLE_STYLE,
 )
 
 dash.register_page(
     __name__,
     path="/compare-renewables",
-    name="Compare renewables",
-    title="Compare renewables",
+    name="Porównanie OZE",
+    title="Porównanie OZE",
 )
 
 _eu_df = load_eurostat_share_annual()
 COUNTRIES = sorted(_eu_df["country"].unique())
-COUNTRY_OPTIONS = [{"label": c, "value": c} for c in COUNTRIES]
+COUNTRY_OPTIONS = [
+    {"label": COUNTRY_NAMES_PL.get(c, c), "value": c}
+    for c in COUNTRIES
+]
 
 MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 
@@ -31,151 +41,113 @@ MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 # Layout
 # -----------------------------------------------------------------------
 
-layout = html.Div(
-    [
-        html.H2("Compare Renewable Generation"),
-        html.P(
-            "Multi-country comparison of renewable energy progress — share trajectories, "
-            "technology mixes, growth rates, and distance to targets.",
-            style={"color": "#555", "marginBottom": "1.5rem"},
-        ),
+layout = html.Div([
 
-        # Controls
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.Label("Countries"),
-                        dcc.Dropdown(
-                            id="cr-countries",
-                            options=COUNTRY_OPTIONS,
-                            value=["DE", "PL", "ES", "FR", "SE"],
-                            multi=True,
-                            clearable=False,
-                        ),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.Label("Year range"),
-                        dcc.RangeSlider(
-                            id="cr-year-range",
-                            min=MIN_YEAR,
-                            max=MAX_YEAR,
-                            value=[MIN_YEAR, MAX_YEAR],
-                            marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
-                            allowCross=False,
-                        ),
-                    ],
-                    style={"width": "45%", "display": "inline-block", "paddingLeft": "2rem"},
-                ),
-            ],
-            style={"marginBottom": "2rem"},
-        ),
+    page_header(
+        "Porównanie generacji OZE",
+        "Porównanie wielu krajów pod kątem postępu w energetyce odnawialnej — trajektorie udziałów, "
+        "miks technologiczny, tempo wzrostu i dystans do celów."
+    ),
 
-        # Section 1: Share trajectories
-        html.H3("Renewable Share Trajectories"),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        dcc.Graph(id="cr-share-graph"),
-                    ],
-                    style={"width": "55%", "display": "inline-block"},
+    # Controls
+    control_panel(
+        dbc.Row([
+            dbc.Col([
+                dbc.Label("Kraje", style={"color": "#ccc"}),
+                dcc.Dropdown(
+                    id="cr-countries",
+                    options=COUNTRY_OPTIONS,
+                    value=["DE", "PL", "ES", "FR", "SE"],
+                    multi=True,
+                    clearable=False,
                 ),
-                html.Div(
-                    [
-                        html.H4("Growth Summary"),
-                        dash_table.DataTable(
-                            id="cr-growth-table",
-                            columns=[],
-                            data=[],
-                            sort_action="native",
-                            style_table={"overflowX": "auto"},
-                            style_cell={"textAlign": "center", "padding": "6px", "fontSize": "0.85rem"},
-                            style_header={"fontWeight": "bold", "backgroundColor": "#f0f0f0"},
-                            style_data_conditional=[
-                                {"if": {"filter_query": "{share_gain_pp} > 15"}, "backgroundColor": "#e8f5e9"},
-                                {"if": {"filter_query": "{share_gain_pp} < 0"}, "backgroundColor": "#ffebee"},
-                            ],
-                        ),
-                    ],
-                    style={"width": "45%", "display": "inline-block", "verticalAlign": "top"},
+            ], md=7),
+            dbc.Col([
+                dbc.Label("Zakres lat", style={"color": "#ccc"}),
+                dcc.RangeSlider(
+                    id="cr-year-range",
+                    min=MIN_YEAR,
+                    max=MAX_YEAR,
+                    value=[MIN_YEAR, MAX_YEAR],
+                    marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
+                    allowCross=False,
                 ),
-            ],
-        ),
+            ], md=5),
+        ]),
+    ),
 
-        # Section 2: Technology mix (latest year)
-        html.H3("Technology Mix (latest year)", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Renewable generation by technology (GWh)"),
-                        dcc.Graph(id="cr-tech-abs-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Technology share within renewables (%)"),
-                        dcc.Graph(id="cr-tech-pct-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
+    # Section 1: Share trajectories
+    section_header("Trajektorie udziału OZE"),
+    chart_card("Udział OZE w generacji w czasie", "cr-share-graph"),
 
-        # Section 3: Growth race
-        html.H3("Growth Race", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Absolute renewable generation growth (GWh)"),
-                        dcc.Graph(id="cr-growth-abs-graph"),
+    # Growth summary table (below chart, full width)
+    dbc.Card(
+        [
+            dbc.CardHeader("Podsumowanie wzrostu", style={"fontWeight": "600", "fontSize": "0.95rem"}),
+            dbc.CardBody(
+                dash_table.DataTable(
+                    id="cr-growth-table",
+                    columns=[],
+                    data=[],
+                    sort_action="native",
+                    style_table=DARK_TABLE_STYLE["style_table"],
+                    style_cell=DARK_TABLE_STYLE["style_cell"],
+                    style_header=DARK_TABLE_STYLE["style_header"],
+                    style_data_conditional=[
+                        *DARK_TABLE_STYLE["style_data_conditional"],
+                        {"if": {"filter_query": "{share_gain_pp} > 15"}, "backgroundColor": "#1a3a2a", "color": "#6bcf7f"},
+                        {"if": {"filter_query": "{share_gain_pp} < 0"}, "backgroundColor": "#3a1a1a", "color": "#ff6b6b"},
                     ],
-                    style={"width": "50%", "display": "inline-block"},
                 ),
-                html.Div(
-                    [
-                        html.H4("CAGR comparison (%)"),
-                        dcc.Graph(id="cr-cagr-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
+                style={"padding": "0.5rem"},
+            ),
+        ],
+        className="mb-4",
+        style={"backgroundColor": "#2d2d2d", "border": "1px solid #3d3d3d", "borderRadius": "10px"},
+    ),
 
-        # Section 4: Gap to target
-        html.H3("Gap to Target", style={"marginTop": "2rem"}),
-        html.P(
-            "How far is each country from a 50% renewable share? "
-            "Shows additional generation (GWh) needed to reach the target.",
-            style={"color": "#666", "fontSize": "0.9rem"},
+    # Section 2: Technology mix
+    section_header("Miks technologiczny (ostatni rok)"),
+    dbc.Row([
+        dbc.Col(chart_card("Generacja OZE wg technologii (GWh)", "cr-tech-abs-graph"), md=6),
+        dbc.Col(chart_card("Udział technologii w OZE (%)", "cr-tech-pct-graph"), md=6),
+    ]),
+
+    # Section 3: Growth race
+    section_header("Wyścig wzrostu"),
+    dbc.Row([
+        dbc.Col(chart_card("Bezwzględny wzrost generacji OZE (GWh)", "cr-growth-abs-graph"), md=6),
+        dbc.Col(chart_card("Porównanie CAGR (%)", "cr-cagr-graph"), md=6),
+    ]),
+
+    # Section 4: Gap to target
+    section_header(
+        "Dystans do celu",
+        "Jak daleko każdy kraj jest od docelowego udziału OZE? "
+        "Pokazuje dodatkową generację (GWh) potrzebną do osiągnięcia celu."
+    ),
+    dbc.Row([
+        dbc.Col([
+            dbc.Label("Docelowy udział OZE (%)", style={"color": "#ccc"}),
+            dcc.Slider(
+                id="cr-target-slider",
+                min=30,
+                max=100,
+                value=50,
+                marks={i: f"{i}%" for i in range(30, 101, 10)},
+                step=5,
+            ),
+        ], md=6, className="mb-3"),
+    ]),
+    dbc.Card(
+        dbc.CardBody(
+            dcc.Graph(id="cr-gap-graph", style={"height": "420px"}),
+            style={"padding": "0.5rem"},
         ),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.Label("Target renewable share (%)"),
-                        dcc.Slider(
-                            id="cr-target-slider",
-                            min=30,
-                            max=100,
-                            value=50,
-                            marks={i: f"{i}%" for i in range(30, 101, 10)},
-                            step=5,
-                        ),
-                    ],
-                    style={"width": "50%", "marginBottom": "1rem"},
-                ),
-            ],
-        ),
-        dcc.Graph(id="cr-gap-graph"),
-    ]
-)
+        className="mb-3",
+        style={"backgroundColor": "#2d2d2d", "border": "1px solid #3d3d3d", "borderRadius": "10px"},
+    ),
+])
 
 # -----------------------------------------------------------------------
 # Callback
@@ -211,30 +183,32 @@ def update_compare_renewables(countries, year_range, target_pct):
     if df_share.empty:
         return empty_fig, [], [], empty_fig, empty_fig, empty_fig, empty_fig, empty_fig
 
+    df_share = df_share.copy()
+    df_share["country_name"] = df_share["country"].map(COUNTRY_NAMES_PL)
+
     fig_share = px.line(
         df_share,
         x="year",
         y="renewable_share",
-        color="country",
+        color="country_name",
         markers=True,
         labels={
-            "year": "Year",
-            "renewable_share": "Renewable share",
-            "country": "Country",
+            "year": "Rok",
+            "renewable_share": "Udział OZE",
+            "country_name": "Kraj",
         },
-        title="Renewable share of generation",
+        title="Udział OZE w generacji",
     )
     fig_share.update_yaxes(tickformat=".0%", range=[0, 1])
 
-    # Add EU average reference if enough countries
     if len(countries) >= 3:
         avg_by_year = df_share.groupby("year")["renewable_share"].mean().reset_index()
         fig_share.add_trace(go.Scatter(
             x=avg_by_year["year"],
             y=avg_by_year["renewable_share"],
             mode="lines",
-            name="Selection average",
-            line=dict(color="black", width=2, dash="dot"),
+            name="Średnia wyboru",
+            line=dict(color="#e0e0e0", width=2, dash="dot"),
         ))
 
     # Growth summary table
@@ -244,13 +218,15 @@ def update_compare_renewables(countries, year_range, target_pct):
         growth_data = []
         growth_cols = []
     else:
-        df_growth_sorted = df_growth.sort_values("share_gain_pp", ascending=False)
+        df_growth_sorted = df_growth.sort_values("share_gain_pp", ascending=False).copy()
+        df_growth_sorted["kraj"] = df_growth_sorted["country"].map(COUNTRY_NAMES_PL)
+
         growth_cols = [
-            {"name": "Country", "id": "country"},
-            {"name": f"Share {start_year} (%)", "id": "share_start_pct"},
-            {"name": f"Share {end_year} (%)", "id": "share_end_pct"},
-            {"name": "Gain (pp)", "id": "share_gain_pp"},
-            {"name": "Growth (%)", "id": "growth_pct"},
+            {"name": "Kraj", "id": "kraj"},
+            {"name": f"Udział {start_year} (%)", "id": "share_start_pct"},
+            {"name": f"Udział {end_year} (%)", "id": "share_end_pct"},
+            {"name": "Przyrost (pp)", "id": "share_gain_pp"},
+            {"name": "Wzrost (%)", "id": "growth_pct"},
             {"name": "CAGR (%)", "id": "cagr_pct"},
         ]
         growth_data = df_growth_sorted.to_dict("records")
@@ -262,37 +238,44 @@ def update_compare_renewables(countries, year_range, target_pct):
         fig_tech_abs = empty_fig
         fig_tech_pct = empty_fig
     else:
-        # Absolute generation by technology
+        df_tech = df_tech.copy()
+        df_tech["country_name"] = df_tech["country"].map(COUNTRY_NAMES_PL)
+
+        fuel_map_pl = {
+            "Hydro": "Hydro", "Wind": "Wiatr", "Solar": "Słońce",
+            "Geothermal": "Geotermia", "Other renewables": "Inne OZE",
+        }
+        df_tech["fuel_pl"] = df_tech["fuel"].map(fuel_map_pl).fillna(df_tech["fuel"])
+
         fig_tech_abs = px.bar(
             df_tech,
-            x="country",
+            x="country_name",
             y="generation_gwh",
-            color="fuel",
-            labels={"country": "Country", "generation_gwh": "Generation (GWh)", "fuel": "Technology"},
-            title=f"Renewable generation by technology — {end_year}",
+            color="fuel_pl",
+            labels={"country_name": "Kraj", "generation_gwh": "Generacja (GWh)", "fuel_pl": "Technologia"},
+            title=f"Generacja OZE wg technologii — {end_year}",
             color_discrete_map={
-                "Hydro": "#2196F3",
-                "Wind": "#4CAF50",
-                "Solar": "#FFC107",
-                "Geothermal": "#FF5722",
-                "Other renewables": "#9C27B0",
+                "Hydro": "#06b6d4",
+                "Wiatr": "#6bcf7f",
+                "Słońce": "#ffd93d",
+                "Geotermia": "#f97316",
+                "Inne OZE": "#a78bfa",
             },
         )
 
-        # Percentage within renewables (stacked to 100%)
         fig_tech_pct = px.bar(
             df_tech,
-            x="country",
+            x="country_name",
             y="share_of_renewable",
-            color="fuel",
-            labels={"country": "Country", "share_of_renewable": "% of renewables", "fuel": "Technology"},
-            title=f"Technology mix within renewables — {end_year}",
+            color="fuel_pl",
+            labels={"country_name": "Kraj", "share_of_renewable": "% w OZE", "fuel_pl": "Technologia"},
+            title=f"Miks technologiczny w OZE — {end_year}",
             color_discrete_map={
-                "Hydro": "#2196F3",
-                "Wind": "#4CAF50",
-                "Solar": "#FFC107",
-                "Geothermal": "#FF5722",
-                "Other renewables": "#9C27B0",
+                "Hydro": "#06b6d4",
+                "Wiatr": "#6bcf7f",
+                "Słońce": "#ffd93d",
+                "Geotermia": "#f97316",
+                "Inne OZE": "#a78bfa",
             },
         )
         fig_tech_pct.update_layout(barmode="stack")
@@ -303,42 +286,44 @@ def update_compare_renewables(countries, year_range, target_pct):
         fig_growth_abs = empty_fig
         fig_cagr = empty_fig
     else:
-        # Absolute growth (waterfall-style bar)
-        df_growth_sorted2 = df_growth.sort_values("absolute_growth_gwh", ascending=False)
+        df_growth_sorted2 = df_growth.sort_values("absolute_growth_gwh", ascending=False).copy()
+        df_growth_sorted2["country_name"] = df_growth_sorted2["country"].map(COUNTRY_NAMES_PL)
 
         fig_growth_abs = go.Figure()
         fig_growth_abs.add_trace(go.Bar(
-            x=df_growth_sorted2["country"],
+            x=df_growth_sorted2["country_name"],
             y=df_growth_sorted2["absolute_growth_gwh"],
             marker_color=df_growth_sorted2["absolute_growth_gwh"].apply(
-                lambda v: "#4CAF50" if v > 0 else "#F44336"
+                lambda v: "#00d4aa" if v > 0 else "#ff6b6b"
             ),
             text=df_growth_sorted2["absolute_growth_gwh"].apply(lambda v: f"{v:+,.0f}"),
             textposition="outside",
+            textfont=dict(color="#ccc"),
         ))
         fig_growth_abs.update_layout(
-            title=f"Renewable generation added ({start_year}→{end_year})",
-            xaxis_title="Country",
-            yaxis_title="Growth (GWh)",
+            title=f"Przyrost generacji OZE ({start_year}→{end_year})",
+            xaxis_title="Kraj",
+            yaxis_title="Wzrost (GWh)",
             showlegend=False,
         )
 
-        # CAGR comparison
-        df_cagr = df_growth.dropna(subset=["cagr_pct"]).sort_values("cagr_pct", ascending=False)
+        df_cagr = df_growth.dropna(subset=["cagr_pct"]).sort_values("cagr_pct", ascending=False).copy()
+        df_cagr["country_name"] = df_cagr["country"].map(COUNTRY_NAMES_PL)
 
         fig_cagr = go.Figure()
         fig_cagr.add_trace(go.Bar(
-            x=df_cagr["country"],
+            x=df_cagr["country_name"],
             y=df_cagr["cagr_pct"],
             marker_color=df_cagr["cagr_pct"].apply(
-                lambda v: "#4CAF50" if v > 3 else ("#FFC107" if v > 0 else "#F44336")
+                lambda v: "#00d4aa" if v > 3 else ("#ffd93d" if v > 0 else "#ff6b6b")
             ),
             text=df_cagr["cagr_pct"].apply(lambda v: f"{v:.1f}%"),
             textposition="outside",
+            textfont=dict(color="#ccc"),
         ))
         fig_cagr.update_layout(
-            title=f"Compound Annual Growth Rate ({start_year}→{end_year})",
-            xaxis_title="Country",
+            title=f"Średnioroczne tempo wzrostu ({start_year}→{end_year})",
+            xaxis_title="Kraj",
             yaxis_title="CAGR (%)",
             showlegend=False,
         )
@@ -349,44 +334,43 @@ def update_compare_renewables(countries, year_range, target_pct):
     if df_gap.empty:
         fig_gap = empty_fig
     else:
-        df_gap_sorted = df_gap.sort_values("gap_pp", ascending=True)
+        df_gap_sorted = df_gap.sort_values("gap_pp", ascending=True).copy()
+        df_gap_sorted["country_name"] = df_gap_sorted["country"].map(COUNTRY_NAMES_PL)
 
         fig_gap = go.Figure()
 
-        # Current share as bars
         fig_gap.add_trace(go.Bar(
-            x=df_gap_sorted["country"],
+            x=df_gap_sorted["country_name"],
             y=df_gap_sorted["current_share_pct"],
-            name="Current share (%)",
+            name="Aktualny udział (%)",
             marker_color=df_gap_sorted["status"].apply(
-                lambda s: "#4CAF50" if s == "Above target" else ("#FFC107" if s == "Close" else "#FF7043")
+                lambda s: "#00d4aa" if s == "Above target" else ("#ffd93d" if s == "Close" else "#f97316")
             ),
         ))
 
-        # Target line
         fig_gap.add_hline(
             y=target_pct,
             line_dash="dash",
-            line_color="#F44336",
-            annotation_text=f"Target: {target_pct}%",
+            line_color="#ff6b6b",
+            annotation_text=f"Cel: {target_pct}%",
             annotation_position="top right",
+            annotation_font_color="#ff6b6b",
         )
 
-        # Add gap annotations
         for _, row in df_gap_sorted.iterrows():
             if row["gap_pp"] > 0:
                 fig_gap.add_annotation(
-                    x=row["country"],
+                    x=row["country_name"],
                     y=row["current_share_pct"] + 2,
-                    text=f"−{row['gap_pp']:.0f}pp<br>({row['additional_gwh_needed']:,.0f} GWh needed)",
+                    text=f"−{row['gap_pp']:.0f}pp<br>({row['additional_gwh_needed']:,.0f} GWh potrzeba)",
                     showarrow=False,
-                    font=dict(size=9, color="#D32F2F"),
+                    font=dict(size=9, color="#ff6b6b"),
                 )
 
         fig_gap.update_layout(
-            title=f"Distance to {target_pct}% renewable target — {end_year}",
-            xaxis_title="Country",
-            yaxis_title="Renewable share (%)",
+            title=f"Dystans do celu {target_pct}% OZE — {end_year}",
+            xaxis_title="Kraj",
+            yaxis_title="Udział OZE (%)",
             yaxis=dict(range=[0, max(target_pct + 20, df_gap_sorted["current_share_pct"].max() + 15)]),
             showlegend=False,
         )

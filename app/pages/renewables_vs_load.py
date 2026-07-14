@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
+import dash_bootstrap_components as dbc
 
 from app.backend.data_access import (
     load_eurostat_share_annual,
@@ -12,18 +13,27 @@ from app.backend.data_access import (
     get_renewables_vs_load_detail,
     get_renewables_load_kpis,
     get_generation_by_fuel,
+    COUNTRY_NAMES_PL,
+)
+
+from app.components import (
+    page_header, control_panel, chart_card, kpi_card, kpi_row,
+    section_header, DARK_TABLE_STYLE,
 )
 
 dash.register_page(
     __name__,
     path="/renewables-vs-load",
-    name="Renewables vs load",
-    title="Renewables vs load",
+    name="OZE vs obciążenie",
+    title="OZE vs obciążenie",
 )
 
 # Eurostat annual data drives country list and year bounds
 _eu_df = load_eurostat_share_annual()
-COUNTRY_OPTIONS = [{"label": c, "value": c} for c in sorted(_eu_df["country"].unique())]
+COUNTRY_OPTIONS = [
+    {"label": COUNTRY_NAMES_PL.get(c, c), "value": c}
+    for c in sorted(_eu_df["country"].unique())
+]
 
 MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 
@@ -31,115 +41,86 @@ MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 # Layout
 # -----------------------------------------------------------------------
 
-layout = html.Div(
-    [
-        html.H2("Renewables vs Demand"),
-        html.P(
-            "How much of a country's electricity demand is met by renewables? "
-            "Tracks the gap between renewable generation and total load, showing "
-            "whether the energy transition is actually displacing fossil fuels.",
-            style={"color": "#555", "marginBottom": "1.5rem"},
+layout = html.Div([
+
+    page_header(
+        "OZE vs zapotrzebowanie",
+        "Jaka część zapotrzebowania na energię elektryczną jest pokrywana przez OZE? "
+        "Śledzi lukę między generacją odnawialną a całkowitym obciążeniem, pokazując "
+        "czy transformacja energetyczna rzeczywiście wypiera paliwa kopalne."
+    ),
+
+    # Controls
+    control_panel(
+        dbc.Row([
+            dbc.Col([
+                dbc.Label("Kraj", style={"color": "#ccc"}),
+                dcc.Dropdown(
+                    id="rvl-country",
+                    options=COUNTRY_OPTIONS,
+                    value="PL",
+                    clearable=False,
+                ),
+            ], md=4),
+            dbc.Col([
+                dbc.Label("Zakres lat", style={"color": "#ccc"}),
+                dcc.RangeSlider(
+                    id="rvl-year-range",
+                    min=MIN_YEAR,
+                    max=MAX_YEAR,
+                    value=[MIN_YEAR, MAX_YEAR],
+                    marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
+                    allowCross=False,
+                ),
+            ], md=8),
+        ]),
+    ),
+
+    # KPI cards
+    html.Div(id="rvl-kpis", className="mb-4"),
+
+    # Row 1: Energy balance + Renewable coverage
+    dbc.Row([
+        dbc.Col(chart_card("Jak pokrywane jest zapotrzebowanie?", "rvl-balance-graph"), md=6),
+        dbc.Col(chart_card("Pokrycie zapotrzebowania przez OZE (%)", "rvl-coverage-graph"), md=6),
+    ]),
+
+    # Row 2: Generation vs Load + Fossil displacement
+    dbc.Row([
+        dbc.Col(chart_card("Generacja vs obciążenie", "rvl-genload-graph"), md=6),
+        dbc.Col(chart_card("Zależność od paliw kopalnych (% obciążenia)", "rvl-fossil-graph"), md=6),
+    ]),
+
+    # Row 3: Technology contribution
+    section_header(
+        "Które OZE domykają lukę?",
+        "Wykres warstwowy pokazujący wkład każdej technologii jako % całkowitego zapotrzebowania."
+    ),
+    dbc.Card(
+        dbc.CardBody(
+            dcc.Graph(id="rvl-tech-graph", style={"height": "400px"}),
+            style={"padding": "0.5rem"},
         ),
+        className="mb-4",
+        style={"backgroundColor": "#2d2d2d", "border": "1px solid #3d3d3d", "borderRadius": "10px"},
+    ),
 
-        # Controls
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.Label("Country"),
-                        dcc.Dropdown(
-                            id="rvl-country",
-                            options=COUNTRY_OPTIONS,
-                            value="DE",
-                            clearable=False,
-                        ),
-                    ],
-                    style={"width": "30%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.Label("Year range"),
-                        dcc.RangeSlider(
-                            id="rvl-year-range",
-                            min=MIN_YEAR,
-                            max=MAX_YEAR,
-                            value=[MIN_YEAR, MAX_YEAR],
-                            marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
-                            allowCross=False,
-                        ),
-                    ],
-                    style={"width": "65%", "display": "inline-block", "paddingLeft": "2rem"},
-                ),
-            ],
-            style={"marginBottom": "1.5rem"},
+    # Detail table (collapsible)
+    section_header("Szczegółowe dane roczne"),
+    html.Details([
+        html.Summary("Pokaż tabelę danych", style={
+            "cursor": "pointer", "fontWeight": "bold", "color": "#ccc", "marginBottom": "1rem"
+        }),
+        dash_table.DataTable(
+            id="rvl-table",
+            columns=[],
+            data=[],
+            page_size=12,
+            sort_action="native",
+            **DARK_TABLE_STYLE,
         ),
-
-        # KPI cards
-        html.Div(id="rvl-kpis", style={"marginBottom": "2rem"}),
-
-        # Row 1: Energy balance stacked area + Renewable coverage line
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("How is demand met? (stacked supply)"),
-                        dcc.Graph(id="rvl-balance-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Renewable coverage of demand (%)"),
-                        dcc.Graph(id="rvl-coverage-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
-
-        # Row 2: Generation vs Load dual-axis + Fossil displacement
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Generation vs Load"),
-                        dcc.Graph(id="rvl-genload-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Fossil dependency (% of load)"),
-                        dcc.Graph(id="rvl-fossil-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-            style={"marginTop": "1rem"},
-        ),
-
-        # Row 3: Technology contribution to covering demand
-        html.H4("Which renewables are closing the gap?", style={"marginTop": "2rem"}),
-        dcc.Graph(id="rvl-tech-graph"),
-
-        # Detail table (collapsed, secondary)
-        html.Details(
-            [
-                html.Summary("Show detailed data table", style={"cursor": "pointer", "marginTop": "2rem", "fontWeight": "bold"}),
-                dash_table.DataTable(
-                    id="rvl-table",
-                    columns=[],
-                    data=[],
-                    page_size=12,
-                    sort_action="native",
-                    style_table={"overflowX": "auto", "marginTop": "1rem"},
-                    style_cell={"textAlign": "center", "padding": "6px", "fontSize": "0.85rem"},
-                    style_header={"fontWeight": "bold", "backgroundColor": "#f0f0f0"},
-                ),
-            ],
-        ),
-    ]
-)
+    ]),
+])
 
 # -----------------------------------------------------------------------
 # Callback
@@ -163,54 +144,54 @@ def update_renewables_vs_load(country, year_range):
     if not country or not year_range:
         return html.Div(), empty_fig, empty_fig, empty_fig, empty_fig, empty_fig, [], []
 
+    country_name = COUNTRY_NAMES_PL.get(country, country)
     start_year, end_year = year_range
 
     df = get_renewables_vs_load_detail(country, start_year, end_year)
     kpis = get_renewables_load_kpis(country, start_year, end_year)
 
     if df.empty or not kpis:
-        return html.Div("No data available.", style={"color": "red"}), empty_fig, empty_fig, empty_fig, empty_fig, empty_fig, [], []
+        msg = html.Div("Brak dostępnych danych.", style={"color": "#ff6b6b", "padding": "1rem"})
+        return msg, empty_fig, empty_fig, empty_fig, empty_fig, empty_fig, [], []
 
     # --- KPI cards ---
-    ren_growth_color = "#4CAF50" if kpis["renewable_change_pct"] > 0 else "#F44336"
-    fossil_color = "#4CAF50" if kpis["fossil_displacement_pp"] > 0 else "#F44336"
-    load_color = "#FF9800" if abs(kpis["load_change_pct"]) > 5 else "#666"
+    ren_growth_color = "#00d4aa" if kpis["renewable_change_pct"] > 0 else "#ff6b6b"
+    fossil_color = "#00d4aa" if kpis["fossil_displacement_pp"] > 0 else "#ff6b6b"
+    load_color = "#ffd93d" if abs(kpis["load_change_pct"]) > 5 else "#e0e0e0"
+    surplus_color = "#3391ff" if kpis["latest_surplus_gwh"] > 0 else "#f97316"
 
-    kpi_children = html.Div(
-        style={"display": "flex", "gap": "1rem", "flexWrap": "wrap"},
-        children=[
-            _kpi_card(
-                "Renewable Coverage",
-                f"{kpis['renewable_coverage_pct']:.1f}%",
-                f"{kpis['coverage_change_pp']:+.1f} pp over period",
-                value_color="#4CAF50",
-            ),
-            _kpi_card(
-                "Renewable Growth",
-                f"{kpis['renewable_change_pct']:+.1f}%",
-                f"{kpis['latest_renewable_gwh']:,.0f} GWh ({kpis['latest_year']})",
-                value_color=ren_growth_color,
-            ),
-            _kpi_card(
-                "Load Change",
-                f"{kpis['load_change_pct']:+.1f}%",
-                f"{kpis['latest_load_gwh']:,.0f} GWh ({kpis['latest_year']})",
-                value_color=load_color,
-            ),
-            _kpi_card(
-                "Fossil Displaced",
-                f"{kpis['fossil_displacement_pp']:+.1f} pp",
-                "reduction in fossil share of demand",
-                value_color=fossil_color,
-            ),
-            _kpi_card(
-                "Generation Surplus",
-                f"{kpis['latest_surplus_gwh']:+,.0f} GWh",
-                "+ = generates more than it consumes",
-                value_color="#1565C0" if kpis["latest_surplus_gwh"] > 0 else "#E65100",
-            ),
-        ],
-    )
+    kpi_children = kpi_row([
+        kpi_card(
+            "Pokrycie OZE",
+            f"{kpis['renewable_coverage_pct']:.1f}%",
+            f"{kpis['coverage_change_pp']:+.1f} pp w okresie",
+            value_color="#00d4aa",
+        ),
+        kpi_card(
+            "Wzrost OZE",
+            f"{kpis['renewable_change_pct']:+.1f}%",
+            f"{kpis['latest_renewable_gwh']:,.0f} GWh ({kpis['latest_year']})",
+            value_color=ren_growth_color,
+        ),
+        kpi_card(
+            "Zmiana obciążenia",
+            f"{kpis['load_change_pct']:+.1f}%",
+            f"{kpis['latest_load_gwh']:,.0f} GWh ({kpis['latest_year']})",
+            value_color=load_color,
+        ),
+        kpi_card(
+            "Wyparte paliwa kop.",
+            f"{kpis['fossil_displacement_pp']:+.1f} pp",
+            "redukcja udziału fossil w zapotrzebowaniu",
+            value_color=fossil_color,
+        ),
+        kpi_card(
+            "Nadwyżka generacji",
+            f"{kpis['latest_surplus_gwh']:+,.0f} GWh",
+            "+ = generuje więcej niż zużywa",
+            value_color=surplus_color,
+        ),
+    ])
 
     # --- Chart 1: Stacked supply balance ---
     fig_balance = go.Figure()
@@ -218,36 +199,35 @@ def update_renewables_vs_load(country, year_range):
     fig_balance.add_trace(go.Bar(
         x=df["year"],
         y=df["renewable_generation_gwh"],
-        name="Renewable generation",
-        marker_color="#4CAF50",
+        name="Generacja OZE",
+        marker_color="#00d4aa",
     ))
 
     fig_balance.add_trace(go.Bar(
         x=df["year"],
         y=df["non_renewable_gwh"],
-        name="Non-renewable generation",
-        marker_color="#757575",
+        name="Generacja nie-OZE",
+        marker_color="#555",
     ))
 
-    # Load line overlay
     fig_balance.add_trace(go.Scatter(
         x=df["year"],
         y=df["annual_load_gwh"],
         mode="lines+markers",
-        name="Total demand",
-        line=dict(color="#1565C0", width=3),
+        name="Zapotrzebowanie całkowite",
+        line=dict(color="#3391ff", width=3),
         marker=dict(size=6),
     ))
 
     fig_balance.update_layout(
         barmode="stack",
-        title=f"Supply vs demand — {country}",
-        xaxis_title="Year",
+        title=f"Podaż vs zapotrzebowanie — {country_name}",
+        xaxis_title="Rok",
         yaxis_title="GWh",
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
 
-    # --- Chart 2: Renewable coverage % over time ---
+    # --- Chart 2: Renewable coverage % ---
     fig_coverage = go.Figure()
 
     fig_coverage.add_trace(go.Scatter(
@@ -255,29 +235,28 @@ def update_renewables_vs_load(country, year_range):
         y=df["renewable_coverage_pct"],
         mode="lines+markers",
         fill="tozeroy",
-        name="Renewable coverage",
-        line=dict(color="#4CAF50", width=2.5),
-        fillcolor="rgba(76,175,80,0.15)",
+        name="Pokrycie OZE",
+        line=dict(color="#00d4aa", width=2.5),
+        fillcolor="rgba(0,212,170,0.12)",
     ))
 
-    # Add 100% target line
     fig_coverage.add_hline(
-        y=100, line_dash="dash", line_color="#F44336",
-        annotation_text="100% coverage",
+        y=100, line_dash="dash", line_color="#ff6b6b",
+        annotation_text="100% pokrycia",
         annotation_position="top right",
+        annotation_font_color="#ff6b6b",
     )
-
-    # Add 50% reference
     fig_coverage.add_hline(
-        y=50, line_dash="dot", line_color="#999",
+        y=50, line_dash="dot", line_color="rgba(255,255,255,0.3)",
         annotation_text="50%",
         annotation_position="bottom right",
+        annotation_font_color="#999",
     )
 
     fig_coverage.update_layout(
-        title=f"Renewable coverage of demand — {country}",
-        xaxis_title="Year",
-        yaxis_title="% of demand met by renewables",
+        title=f"Pokrycie zapotrzebowania przez OZE — {country_name}",
+        xaxis_title="Rok",
+        yaxis_title="% zapotrzebowania pokrytego przez OZE",
         yaxis=dict(range=[0, max(df["renewable_coverage_pct"].max() * 1.15, 105)]),
         showlegend=False,
     )
@@ -289,8 +268,8 @@ def update_renewables_vs_load(country, year_range):
         go.Bar(
             x=df["year"],
             y=df["total_generation_gwh"],
-            name="Total generation",
-            marker_color="#42A5F5",
+            name="Generacja całkowita",
+            marker_color="#3391ff",
             opacity=0.7,
         ),
         secondary_y=False,
@@ -301,32 +280,31 @@ def update_renewables_vs_load(country, year_range):
             x=df["year"],
             y=df["annual_load_gwh"],
             mode="lines+markers",
-            name="Total load",
-            line=dict(color="#E65100", width=2.5),
+            name="Obciążenie całkowite",
+            line=dict(color="#f97316", width=2.5),
         ),
         secondary_y=False,
     )
 
-    # Surplus/deficit as secondary
     fig_genload.add_trace(
         go.Bar(
             x=df["year"],
             y=df["generation_surplus_gwh"],
-            name="Surplus (+) / Deficit (−)",
+            name="Nadwyżka (+) / Deficyt (−)",
             marker_color=df["generation_surplus_gwh"].apply(
-                lambda v: "rgba(76,175,80,0.6)" if v >= 0 else "rgba(244,67,54,0.6)"
+                lambda v: "rgba(0,212,170,0.5)" if v >= 0 else "rgba(255,107,107,0.5)"
             ),
         ),
         secondary_y=True,
     )
 
     fig_genload.update_layout(
-        title=f"Generation vs Load — {country}",
+        title=f"Generacja vs obciążenie — {country_name}",
         barmode="overlay",
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
     fig_genload.update_yaxes(title_text="GWh", secondary_y=False)
-    fig_genload.update_yaxes(title_text="Surplus / deficit (GWh)", secondary_y=True)
+    fig_genload.update_yaxes(title_text="Nadwyżka / deficyt (GWh)", secondary_y=True)
 
     # --- Chart 4: Fossil dependency declining ---
     fig_fossil = go.Figure()
@@ -336,17 +314,17 @@ def update_renewables_vs_load(country, year_range):
         y=df["fossil_dependency_pct"],
         mode="lines+markers",
         fill="tozeroy",
-        name="Fossil dependency",
-        line=dict(color="#F44336", width=2.5),
-        fillcolor="rgba(244,67,54,0.1)",
+        name="Zależność od fossil",
+        line=dict(color="#ff6b6b", width=2.5),
+        fillcolor="rgba(255,107,107,0.08)",
     ))
 
-    fig_fossil.add_hline(y=0, line_dash="dash", line_color="gray")
+    fig_fossil.add_hline(y=0, line_dash="dash", line_color="rgba(255,255,255,0.3)")
 
     fig_fossil.update_layout(
-        title=f"Fossil dependency (non-renewable gen / load) — {country}",
-        xaxis_title="Year",
-        yaxis_title="% of demand met by fossil/nuclear",
+        title=f"Zależność od paliw kopalnych — {country_name}",
+        xaxis_title="Rok",
+        yaxis_title="% zapotrzebowania pokrytego przez fossil/atom",
         yaxis=dict(range=[0, None]),
         showlegend=False,
     )
@@ -359,34 +337,43 @@ def update_renewables_vs_load(country, year_range):
     else:
         df_fuel = df_fuel[(df_fuel["year"] >= start_year) & (df_fuel["year"] <= end_year)].copy()
 
-        # Convert to % of load
-        load_by_year = df[["year", "annual_load_gwh"]].set_index("year")["annual_load_gwh"]
         df_fuel = df_fuel.merge(
             df[["year", "annual_load_gwh"]], on="year", how="left"
         )
         df_fuel["pct_of_load"] = (df_fuel["generation_gwh"] / df_fuel["annual_load_gwh"]) * 100
 
+        # Map fuel names to Polish
+        fuel_map_pl = {
+            "Hydro total": "Hydro",
+            "Wind total": "Wiatr",
+            "Solar total": "Słońce",
+            "Geothermal": "Geotermia",
+            "Other renewables": "Inne OZE",
+            "Renewables & biofuels (aggregate)": "OZE i biopaliwa (łącznie)",
+        }
+        df_fuel["fuel_pl"] = df_fuel["fuel"].map(fuel_map_pl).fillna(df_fuel["fuel"])
+
         fig_tech = px.area(
             df_fuel,
             x="year",
             y="pct_of_load",
-            color="fuel",
+            color="fuel_pl",
             labels={
-                "year": "Year",
-                "pct_of_load": "% of demand covered",
-                "fuel": "Technology",
+                "year": "Rok",
+                "pct_of_load": "% pokrytego zapotrzebowania",
+                "fuel_pl": "Technologia",
             },
-            title=f"Renewable contribution to demand by technology — {country}",
+            title=f"Wkład OZE w zapotrzebowanie wg technologii — {country_name}",
             color_discrete_map={
-                "Hydro total": "#2196F3",
-                "Wind total": "#4CAF50",
-                "Solar total": "#FFC107",
-                "Geothermal": "#FF5722",
-                "Other renewables": "#9C27B0",
-                "Renewables & biofuels (aggregate)": "#009688",
+                "Hydro": "#06b6d4",
+                "Wiatr": "#6bcf7f",
+                "Słońce": "#ffd93d",
+                "Geotermia": "#f97316",
+                "Inne OZE": "#a78bfa",
+                "OZE i biopaliwa (łącznie)": "#00d4aa",
             },
         )
-        fig_tech.update_yaxes(title_text="% of total demand")
+        fig_tech.update_yaxes(title_text="% całkowitego zapotrzebowania")
 
     # --- Detail table ---
     df_view = df[[
@@ -400,43 +387,22 @@ def update_renewables_vs_load(country, year_range):
         "load_gwh", "renewable_coverage_pct", "fossil_dep_pct", "surplus_gwh",
     ]
 
-    # Round for display
     for col in df_view.columns:
         if col != "year":
             df_view[col] = df_view[col].round(1)
 
     table_columns = [
-        {"name": "Year", "id": "year"},
-        {"name": "Generation (GWh)", "id": "generation_gwh"},
-        {"name": "Renewable (GWh)", "id": "renewable_gwh"},
-        {"name": "Non-renew. (GWh)", "id": "non_renewable_gwh"},
-        {"name": "Load (GWh)", "id": "load_gwh"},
-        {"name": "Renew. coverage (%)", "id": "renewable_coverage_pct"},
-        {"name": "Fossil dep. (%)", "id": "fossil_dep_pct"},
-        {"name": "Surplus (GWh)", "id": "surplus_gwh"},
+        {"name": "Rok", "id": "year"},
+        {"name": "Generacja (GWh)", "id": "generation_gwh"},
+        {"name": "OZE (GWh)", "id": "renewable_gwh"},
+        {"name": "Nie-OZE (GWh)", "id": "non_renewable_gwh"},
+        {"name": "Obciążenie (GWh)", "id": "load_gwh"},
+        {"name": "Pokrycie OZE (%)", "id": "renewable_coverage_pct"},
+        {"name": "Zależność fossil (%)", "id": "fossil_dep_pct"},
+        {"name": "Nadwyżka (GWh)", "id": "surplus_gwh"},
     ]
 
     return (
         kpi_children, fig_balance, fig_coverage, fig_genload,
         fig_fossil, fig_tech, df_view.to_dict("records"), table_columns
-    )
-
-# --- Helper ---
-
-def _kpi_card(title: str, value: str, subtitle: str, value_color: str = "#212121"):
-    return html.Div(
-        [
-            html.Div(title, style={"fontSize": "0.8rem", "color": "#666", "marginBottom": "4px"}),
-            html.Div(value, style={"fontSize": "1.4rem", "fontWeight": "bold", "color": value_color}),
-            html.Div(subtitle, style={"fontSize": "0.7rem", "color": "#999", "marginTop": "2px"}),
-        ],
-        style={
-            "flex": "1",
-            "minWidth": "140px",
-            "padding": "0.8rem",
-            "border": "1px solid #e0e0e0",
-            "borderRadius": "8px",
-            "textAlign": "center",
-            "backgroundColor": "#fafafa",
-        },
     )

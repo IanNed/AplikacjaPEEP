@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
+import dash_bootstrap_components as dbc
 
 from app.backend.data_access import (
     load_eurostat_share_annual,
@@ -14,13 +15,19 @@ from app.backend.data_access import (
     get_transition_scorecard,
     get_tech_growth,
     get_transition_acceleration,
+    COUNTRY_NAMES_PL,
+)
+
+from app.components import (
+    page_header, control_panel, chart_card,
+    section_header, DARK_TABLE_STYLE,
 )
 
 dash.register_page(
     __name__,
     path="/energy-transition-pace",
-    name="Energy transition pace",
-    title="Energy transition pace",
+    name="Tempo transformacji",
+    title="Tempo transformacji energetycznej",
 )
 
 # -----------------------------------------------------------------------
@@ -30,7 +37,10 @@ dash.register_page(
 _eu_df = load_eurostat_share_annual()
 
 COUNTRIES = sorted(_eu_df["country"].unique())
-COUNTRY_OPTIONS = [{"label": c, "value": c} for c in COUNTRIES]
+COUNTRY_OPTIONS = [
+    {"label": COUNTRY_NAMES_PL.get(c, c), "value": c}
+    for c in COUNTRIES
+]
 
 MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 
@@ -38,127 +48,106 @@ MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 # Layout
 # -----------------------------------------------------------------------
 
-layout = html.Div(
-    [
-        html.H2("Energy Transition Pace"),
-        html.P(
-            "Measures how fast countries are growing their renewable generation. "
-            "Uses Year-over-Year (YoY) growth rates and Compound Annual Growth Rate (CAGR) "
-            "to rank countries and compare technology-level progress.",
-            style={"color": "#555", "marginBottom": "1.5rem"},
-        ),
+layout = html.Div([
 
-        # Controls
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.Label("Countries (select for detailed view)"),
-                        dcc.Dropdown(
-                            id="etp-countries",
-                            options=COUNTRY_OPTIONS,
-                            value=["PL", "DE", "ES", "FR", "IT"],
-                            multi=True,
-                            clearable=False,
-                        ),
-                    ],
-                    style={"width": "55%", "display": "inline-block"},
+    page_header(
+        "Tempo transformacji energetycznej",
+        "Mierzy, jak szybko kraje zwiększają generację odnawialną. "
+        "Wykorzystuje wskaźniki rok-do-roku (r/r) i średnioroczne tempo wzrostu (CAGR) "
+        "do rankingowania krajów i porównywania postępów technologicznych."
+    ),
+
+    # Controls
+    control_panel(
+        dbc.Row([
+            dbc.Col([
+                dbc.Label("Kraje (wybierz dla widoku szczegółowego)", style={"color": "#ccc"}),
+                dcc.Dropdown(
+                    id="etp-countries",
+                    options=COUNTRY_OPTIONS,
+                    value=["PL", "DE", "ES", "FR", "IT"],
+                    multi=True,
+                    clearable=False,
                 ),
-                html.Div(
-                    [
-                        html.Label("Year range"),
-                        dcc.RangeSlider(
-                            id="etp-year-range",
-                            min=MIN_YEAR,
-                            max=MAX_YEAR,
-                            value=[MIN_YEAR, MAX_YEAR],
-                            marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
-                            allowCross=False,
-                        ),
-                    ],
-                    style={"width": "40%", "display": "inline-block", "paddingLeft": "2rem"},
+            ], md=7),
+            dbc.Col([
+                dbc.Label("Zakres lat", style={"color": "#ccc"}),
+                dcc.RangeSlider(
+                    id="etp-year-range",
+                    min=MIN_YEAR,
+                    max=MAX_YEAR,
+                    value=[MIN_YEAR, MAX_YEAR],
+                    marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
+                    allowCross=False,
                 ),
-            ],
-            style={"marginBottom": "2rem"},
-        ),
+            ], md=5),
+        ]),
+    ),
 
-        # Section 1: Transition Scorecard
-        html.H3("Transition Scorecard", style={"marginTop": "1rem"}),
-        html.P(
-            "All countries ranked by their renewable share improvement (percentage points gained). "
-            "CAGR measures the smoothed annual growth rate of renewable generation volume.",
-            style={"color": "#666", "fontSize": "0.9rem"},
-        ),
-        dash_table.DataTable(
-            id="etp-scorecard-table",
-            columns=[],
-            data=[],
-            page_size=15,
-            sort_action="native",
-            filter_action="native",
-            style_table={"overflowX": "auto"},
-            style_cell={"textAlign": "center", "padding": "8px"},
-            style_header={"fontWeight": "bold", "backgroundColor": "#f0f0f0"},
-            style_data_conditional=[
-                {
-                    "if": {"filter_query": "{share_change_pp} > 10"},
-                    "backgroundColor": "#e8f5e9",
-                },
-                {
-                    "if": {"filter_query": "{share_change_pp} < 0"},
-                    "backgroundColor": "#ffebee",
-                },
-                {
-                    "if": {"column_id": "rank", "filter_query": "{rank} <= 3"},
-                    "fontWeight": "bold",
-                    "color": "#1b5e20",
-                },
-            ],
-        ),
+    # Section 1: Transition Scorecard
+    section_header(
+        "Karta wyników transformacji",
+        "Wszystkie kraje uszeregowane wg poprawy udziału OZE (pp przyrostu). "
+        "CAGR mierzy wygładzone roczne tempo wzrostu wolumenu generacji odnawialnej."
+    ),
+    dash_table.DataTable(
+        id="etp-scorecard-table",
+        columns=[],
+        data=[],
+        page_size=15,
+        sort_action="native",
+        filter_action="native",
+        style_table=DARK_TABLE_STYLE["style_table"],
+        style_cell=DARK_TABLE_STYLE["style_cell"],
+        style_header=DARK_TABLE_STYLE["style_header"],
+        style_data_conditional=[
+            *DARK_TABLE_STYLE["style_data_conditional"],
+            {"if": {"filter_query": "{share_change_pp} > 10"}, "backgroundColor": "#1a3a2a", "color": "#6bcf7f"},
+            {"if": {"filter_query": "{share_change_pp} < 0"}, "backgroundColor": "#3a1a1a", "color": "#ff6b6b"},
+            {"if": {"column_id": "rank", "filter_query": "{rank} <= 3"}, "fontWeight": "bold", "color": "#00d4aa"},
+        ],
+    ),
 
-        # Section 2: YoY Growth Chart (selected countries)
-        html.H3("Year-over-Year Renewable Generation Growth", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("YoY growth rate (%)"),
-                        dcc.Graph(id="etp-yoy-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Renewable share trajectory"),
-                        dcc.Graph(id="etp-share-trajectory-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
+    # Section 2: YoY Growth Charts
+    section_header("Wzrost generacji OZE rok do roku"),
+    dbc.Row([
+        dbc.Col(chart_card("Tempo wzrostu r/r (%)", "etp-yoy-graph"), md=6),
+        dbc.Col(chart_card("Trajektoria udziału OZE", "etp-share-trajectory-graph"), md=6),
+    ]),
 
-        # Section 3: Technology breakdown
-        html.H3("Growth by Technology (CAGR %)", style={"marginTop": "2rem"}),
-        html.P(
-            "Which technologies are driving the transition? Compares compound annual growth "
-            "rates of hydro, wind, solar, geothermal, and other renewables.",
-            style={"color": "#666", "fontSize": "0.9rem"},
+    # Section 3: Technology breakdown
+    section_header(
+        "Wzrost wg technologii (CAGR %)",
+        "Które technologie napędzają transformację? Porównanie średniorocznego tempa wzrostu "
+        "hydro, wiatru, słońca, geotermii i innych OZE."
+    ),
+    dbc.Card(
+        dbc.CardBody(
+            dcc.Graph(id="etp-tech-graph", style={"height": "400px"}),
+            style={"padding": "0.5rem"},
         ),
-        dcc.Graph(id="etp-tech-graph"),
+        className="mb-4",
+        style={"backgroundColor": "#2d2d2d", "border": "1px solid #3d3d3d", "borderRadius": "10px"},
+    ),
 
-        # Section 4: Acceleration indicator
-        html.H3("Acceleration vs Deceleration", style={"marginTop": "2rem"}),
-        html.P(
-            "Is the transition speeding up or slowing down? Compares the average YoY growth "
-            "in the first half of the period vs the second half.",
-            style={"color": "#666", "fontSize": "0.9rem"},
+    # Section 4: Acceleration indicator
+    section_header(
+        "Przyspieszenie vs spowolnienie",
+        "Czy transformacja przyspiesza, czy zwalnia? Porównanie średniego wzrostu r/r "
+        "w pierwszej połowie okresu vs drugiej połowie."
+    ),
+    dbc.Card(
+        dbc.CardBody(
+            dcc.Graph(id="etp-acceleration-graph", style={"height": "400px"}),
+            style={"padding": "0.5rem"},
         ),
-        dcc.Graph(id="etp-acceleration-graph"),
-    ]
-)
+        className="mb-3",
+        style={"backgroundColor": "#2d2d2d", "border": "1px solid #3d3d3d", "borderRadius": "10px"},
+    ),
+])
 
 # -----------------------------------------------------------------------
-# Callbacks
+# Callback
 # -----------------------------------------------------------------------
 
 @callback(
@@ -182,31 +171,35 @@ def update_transition_pace(countries, year_range):
 
     start_year, end_year = year_range
 
-    # --- Scorecard (ALL countries, not just selected) ---
+    # --- Scorecard (ALL countries) ---
     scorecard = get_transition_scorecard(COUNTRIES, start_year, end_year)
 
     if scorecard.empty:
         return [], [], empty_fig, empty_fig, empty_fig, empty_fig
 
+    # Map country names
+    scorecard = scorecard.copy()
+    scorecard["kraj"] = scorecard["country"].map(COUNTRY_NAMES_PL)
+
     scorecard_columns = [
         {"name": "#", "id": "rank"},
-        {"name": "Country", "id": "country"},
-        {"name": f"Share {start_year} (%)", "id": "start_share_pct"},
-        {"name": f"Share {end_year} (%)", "id": "end_share_pct"},
-        {"name": "Change (pp)", "id": "share_change_pp"},
+        {"name": "Kraj", "id": "kraj"},
+        {"name": f"Udział {start_year} (%)", "id": "start_share_pct"},
+        {"name": f"Udział {end_year} (%)", "id": "end_share_pct"},
+        {"name": "Zmiana (pp)", "id": "share_change_pp"},
         {"name": "CAGR (%)", "id": "cagr_pct"},
-        {"name": "Avg YoY (%)", "id": "avg_yoy_growth_pct"},
+        {"name": "Śr. r/r (%)", "id": "avg_yoy_growth_pct"},
     ]
     scorecard_data = scorecard.to_dict("records")
 
-    # --- YoY growth chart (selected countries only) ---
+    # --- YoY growth chart (selected countries) ---
     yoy_frames = []
     for country in countries:
         df_yoy = compute_yoy_growth(country, start_year, end_year)
         if df_yoy.empty:
             continue
         df_yoy = df_yoy.dropna(subset=["yoy_growth_pct"])
-        df_yoy["country"] = country
+        df_yoy["country_name"] = COUNTRY_NAMES_PL.get(country, country)
         yoy_frames.append(df_yoy)
 
     if yoy_frames:
@@ -216,16 +209,16 @@ def update_transition_pace(countries, year_range):
             df_yoy_all,
             x="year",
             y="yoy_growth_pct",
-            color="country",
+            color="country_name",
             markers=True,
             labels={
-                "year": "Year",
-                "yoy_growth_pct": "YoY growth (%)",
-                "country": "Country",
+                "year": "Rok",
+                "yoy_growth_pct": "Wzrost r/r (%)",
+                "country_name": "Kraj",
             },
-            title="Renewable generation — year-over-year growth",
+            title="Generacja OZE — wzrost rok do roku",
         )
-        fig_yoy.add_hline(y=0, line_dash="dash", line_color="gray")
+        fig_yoy.add_hline(y=0, line_dash="dash", line_color="rgba(255,255,255,0.3)")
     else:
         fig_yoy = empty_fig
 
@@ -237,7 +230,7 @@ def update_transition_pace(countries, year_range):
             continue
         df_c = df_c[(df_c["year"] >= start_year) & (df_c["year"] <= end_year)].copy()
         df_c = df_c.dropna(subset=["renewable_share"])
-        df_c["country"] = country
+        df_c["country_name"] = COUNTRY_NAMES_PL.get(country, country)
         share_frames.append(df_c)
 
     if share_frames:
@@ -247,92 +240,105 @@ def update_transition_pace(countries, year_range):
             df_share_all,
             x="year",
             y="renewable_share",
-            color="country",
+            color="country_name",
             markers=True,
             labels={
-                "year": "Year",
-                "renewable_share": "Renewable share",
-                "country": "Country",
+                "year": "Rok",
+                "renewable_share": "Udział OZE",
+                "country_name": "Kraj",
             },
-            title="Renewable share of total generation over time",
+            title="Udział OZE w generacji całkowitej w czasie",
         )
         fig_share.update_yaxes(tickformat=".0%", range=[0, 1])
     else:
         fig_share = empty_fig
 
-    # --- Technology growth (CAGR by tech, selected countries) ---
+    # --- Technology growth (CAGR by tech) ---
     df_tech = get_tech_growth(countries, start_year, end_year)
 
     if not df_tech.empty:
-        df_tech_valid = df_tech.dropna(subset=["cagr_pct"])
+        df_tech_valid = df_tech.dropna(subset=["cagr_pct"]).copy()
+        df_tech_valid["country_name"] = df_tech_valid["country"].map(COUNTRY_NAMES_PL)
+
+        tech_map_pl = {
+            "Hydro": "Hydro", "Wind": "Wiatr", "Solar": "Słońce",
+            "Geothermal": "Geotermia", "Other renewables": "Inne OZE",
+        }
+        df_tech_valid["tech_pl"] = df_tech_valid["technology"].map(tech_map_pl).fillna(df_tech_valid["technology"])
+
         fig_tech = px.bar(
             df_tech_valid,
-            x="country",
+            x="country_name",
             y="cagr_pct",
-            color="technology",
+            color="tech_pl",
             barmode="group",
             labels={
-                "country": "Country",
+                "country_name": "Kraj",
                 "cagr_pct": "CAGR (%)",
-                "technology": "Technology",
+                "tech_pl": "Technologia",
             },
-            title="Compound Annual Growth Rate by technology",
+            title="Średnioroczne tempo wzrostu wg technologii",
             color_discrete_map={
-                "Hydro": "#2196F3",
-                "Wind": "#4CAF50",
-                "Solar": "#FFC107",
-                "Geothermal": "#FF5722",
-                "Other renewables": "#9C27B0",
+                "Hydro": "#06b6d4",
+                "Wiatr": "#6bcf7f",
+                "Słońce": "#ffd93d",
+                "Geotermia": "#f97316",
+                "Inne OZE": "#a78bfa",
             },
         )
     else:
         fig_tech = empty_fig
 
-    # --- Acceleration chart (selected countries) ---
+    # --- Acceleration chart ---
     df_accel = get_transition_acceleration(countries, start_year, end_year)
 
     if not df_accel.empty:
+        df_accel = df_accel.copy()
+        df_accel["country_name"] = df_accel["country"].map(COUNTRY_NAMES_PL)
+
         fig_accel = make_subplots(specs=[[{"secondary_y": False}]])
 
         fig_accel.add_trace(
             go.Bar(
-                x=df_accel["country"],
+                x=df_accel["country_name"],
                 y=df_accel["first_half_avg_yoy"],
-                name="1st half avg YoY",
-                marker_color="#90CAF9",
+                name="1. połowa — śr. r/r",
+                marker_color="#3391ff",
+                opacity=0.6,
             )
         )
         fig_accel.add_trace(
             go.Bar(
-                x=df_accel["country"],
+                x=df_accel["country_name"],
                 y=df_accel["second_half_avg_yoy"],
-                name="2nd half avg YoY",
-                marker_color="#1565C0",
+                name="2. połowa — śr. r/r",
+                marker_color="#3391ff",
             )
         )
         fig_accel.add_trace(
             go.Scatter(
-                x=df_accel["country"],
+                x=df_accel["country_name"],
                 y=df_accel["acceleration"],
                 mode="markers+text",
-                name="Acceleration (pp)",
+                name="Przyspieszenie (pp)",
                 marker=dict(
                     size=14,
                     color=df_accel["acceleration"].apply(
-                        lambda v: "#4CAF50" if v > 0 else "#F44336"
+                        lambda v: "#00d4aa" if v > 0 else "#ff6b6b"
                     ),
                     symbol="diamond",
                 ),
                 text=df_accel["acceleration"].apply(lambda v: f"{v:+.1f}"),
                 textposition="top center",
+                textfont=dict(color="#ccc"),
             )
         )
 
         fig_accel.update_layout(
             barmode="group",
-            title="Is the transition accelerating? (2nd half vs 1st half of period)",
-            xaxis_title="Country",
-            yaxis_title="Avg YoY growth (%)",
+            title="Czy transformacja przyspiesza? (2. połowa vs 1. połowa okresu)",
+            xaxis_title="Kraj",
+            yaxis_title="Śr. wzrost r/r (%)",
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
         )
     else:

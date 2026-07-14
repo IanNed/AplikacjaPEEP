@@ -1,83 +1,84 @@
 import dash
 from dash import html, dcc, callback, Input, Output
 import plotly.express as px
+import plotly.graph_objects as go
+import dash_bootstrap_components as dbc
 
 from app.backend.data_access import (
     load_eurostat_share_annual,
     get_generation_share,
     get_generation_by_fuel,
     get_generation_year_bounds,
+    COUNTRY_NAMES_PL,
+)
+
+from app.components import (
+    page_header, control_panel, chart_card, section_header,
 )
 
 dash.register_page(
     __name__,
     path="/renewables-capacity",
-    name="Renewables capacity",
-    title="Renewables capacity",
+    name="Moc i generacja OZE",
+    title="Moc i generacja OZE",
 )
 
-# Eurostat annual generation share dataset:
-# country, year, renewable_generation_gwh, total_generation_gwh, renewable_share
+# Eurostat annual generation share dataset
 _eu_df = load_eurostat_share_annual()
-COUNTRY_OPTIONS = [{"label": c, "value": c} for c in sorted(_eu_df["country"].unique())]
+COUNTRY_OPTIONS = [
+    {"label": COUNTRY_NAMES_PL.get(c, c), "value": c}
+    for c in sorted(_eu_df["country"].unique())
+]
 
 MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 
-layout = html.Div(
-    [
-        html.H2("Renewable generation over time (Eurostat)"),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.Label("Country"),
-                        dcc.Dropdown(
-                            id="rc-country",
-                            options=COUNTRY_OPTIONS,
-                            value="PL",  # pick your favourite default
-                            clearable=False,
-                        ),
-                    ],
-                    style={"width": "30%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.Label("Year range"),
-                        dcc.RangeSlider(
-                            id="rc-year-range",
-                            min=MIN_YEAR,
-                            max=MAX_YEAR,
-                            value=[MIN_YEAR, MAX_YEAR],
-                            marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1, 2)},
-                            allowCross=False,
-                        ),
-                    ],
-                    style={"width": "65%", "display": "inline-block", "paddingLeft": "2rem"},
-                ),
-            ],
-            style={"marginBottom": "2rem"},
-        ),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Renewable vs total generation"),
-                        dcc.Graph(id="rc-share-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Renewables by fuel (generation)"),
-                        dcc.Graph(id="rc-tech-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ]
-        ),
-    ]
-)
+# -----------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------
 
+layout = html.Div([
+
+    page_header(
+        "Generacja OZE w czasie",
+        "Roczny wolumen i udział generacji odnawialnej z danych Eurostat, z podziałem na technologie."
+    ),
+
+    # Controls
+    control_panel(
+        dbc.Row([
+            dbc.Col([
+                dbc.Label("Kraj", style={"color": "#ccc"}),
+                dcc.Dropdown(
+                    id="rc-country",
+                    options=COUNTRY_OPTIONS,
+                    value="PL",
+                    clearable=False,
+                ),
+            ], md=4),
+            dbc.Col([
+                dbc.Label("Zakres lat", style={"color": "#ccc"}),
+                dcc.RangeSlider(
+                    id="rc-year-range",
+                    min=MIN_YEAR,
+                    max=MAX_YEAR,
+                    value=[MIN_YEAR, MAX_YEAR],
+                    marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1, 2)},
+                    allowCross=False,
+                ),
+            ], md=8),
+        ]),
+    ),
+
+    # Charts
+    dbc.Row([
+        dbc.Col(chart_card("OZE vs generacja całkowita", "rc-share-graph"), md=6),
+        dbc.Col(chart_card("Generacja OZE wg technologii", "rc-tech-graph"), md=6),
+    ]),
+])
+
+# -----------------------------------------------------------------------
+# Callback
+# -----------------------------------------------------------------------
 
 @callback(
     Output("rc-share-graph", "figure"),
@@ -86,42 +87,46 @@ layout = html.Div(
     Input("rc-year-range", "value"),
 )
 def update_renewables_generation(country, year_range):
-    if not country or not year_range:
-        return px.Figure(), px.Figure()
+    empty_fig = go.Figure()
 
+    if not country or not year_range:
+        return empty_fig, empty_fig
+
+    country_name = COUNTRY_NAMES_PL.get(country, country)
     start_year, end_year = year_range
 
-    # Annual renewable share and volumes from Eurostat (aggregated)
-    df_share = get_generation_share(country)  # year, renewable_generation_gwh, total_generation_gwh, renewable_share
+    # Annual renewable share and volumes from Eurostat
+    df_share = get_generation_share(country)
     df_share = df_share[(df_share["year"] >= start_year) & (df_share["year"] <= end_year)].copy()
 
     if df_share.empty:
-        return px.Figure(), px.Figure()
+        return empty_fig, empty_fig
 
-    # Chart 1: renewable generation and share over time (bar + line)
+    # Chart 1: renewable generation bar + share line (dual axis)
     fig_share_bar = px.bar(
         df_share,
         x="year",
         y="renewable_generation_gwh",
         labels={
-            "year": "Year",
-            "renewable_generation_gwh": "Renewable generation (GWh)",
+            "year": "Rok",
+            "renewable_generation_gwh": "Generacja OZE (GWh)",
         },
-        title=f"Renewable generation and share in {country}",
+        title=f"Generacja OZE i udział — {country_name}",
     )
+    fig_share_bar.update_traces(marker_color="#00d4aa")
 
     fig_share_line = px.line(
         df_share,
         x="year",
         y="renewable_share",
     )
-    fig_share_line.update_traces(yaxis="y2", name="Renewable share")
+    fig_share_line.update_traces(yaxis="y2", name="Udział OZE", line=dict(color="#ffd93d", width=2.5))
     fig_share_bar.add_traces(fig_share_line.data)
 
     fig_share_bar.update_layout(
-        yaxis=dict(title="Renewable generation (GWh)"),
+        yaxis=dict(title="Generacja OZE (GWh)"),
         yaxis2=dict(
-            title="Share",
+            title="Udział",
             overlaying="y",
             side="right",
             tickformat=".0%",
@@ -130,21 +135,40 @@ def update_renewables_generation(country, year_range):
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
 
-    # Chart 2: renewable generation by fuel/technology (Eurostat fuel aggregation)
-    df_fuel = get_generation_by_fuel(country)  # country, year, fuel, generation_gwh
+    # Chart 2: renewable generation by fuel/technology
+    df_fuel = get_generation_by_fuel(country)
     df_fuel = df_fuel[(df_fuel["year"] >= start_year) & (df_fuel["year"] <= end_year)].copy()
+
+    # Map fuel labels to Polish
+    fuel_map_pl = {
+        "Hydro total": "Hydro",
+        "Wind total": "Wiatr",
+        "Solar total": "Słońce",
+        "Geothermal": "Geotermia",
+        "Other renewables": "Inne OZE",
+        "Renewables & biofuels (aggregate)": "OZE i biopaliwa (łącznie)",
+    }
+    df_fuel["fuel_pl"] = df_fuel["fuel"].map(fuel_map_pl).fillna(df_fuel["fuel"])
 
     fig_fuel = px.bar(
         df_fuel,
         x="year",
         y="generation_gwh",
-        color="fuel",
+        color="fuel_pl",
         labels={
-            "year": "Year",
-            "generation_gwh": "Generation (GWh)",
-            "fuel": "Fuel / technology",
+            "year": "Rok",
+            "generation_gwh": "Generacja (GWh)",
+            "fuel_pl": "Technologia",
         },
-        title=f"Renewable generation by fuel in {country}",
+        title=f"Generacja OZE wg technologii — {country_name}",
+        color_discrete_map={
+            "Hydro": "#06b6d4",
+            "Wiatr": "#6bcf7f",
+            "Słońce": "#ffd93d",
+            "Geotermia": "#f97316",
+            "Inne OZE": "#a78bfa",
+            "OZE i biopaliwa (łącznie)": "#00d4aa",
+        },
     )
 
     return fig_share_bar, fig_fuel

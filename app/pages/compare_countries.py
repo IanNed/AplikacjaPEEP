@@ -5,160 +5,119 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
+import dash_bootstrap_components as dbc
 
 from app.backend.data_access import (
     load_monthly,
-    get_monthly_load,
+    get_monthly_load_clean,
     get_net_country_flows,
     get_indexed_load,
     get_country_comparison_stats,
     get_yoy_load_comparison,
+    COUNTRY_NAMES_PL,
+)
+
+from app.components import (
+    page_header, control_panel, chart_card,
+    section_header, DARK_TABLE_STYLE,
 )
 
 dash.register_page(
     __name__,
     path="/compare-countries",
-    name="Compare countries",
-    title="Compare countries",
+    name="Porównanie krajów",
+    title="Porównanie krajów",
 )
 
 # Preload monthly data to get countries and date range
 _monthly_df = load_monthly()
 COUNTRIES = sorted(_monthly_df["country"].unique())
-COUNTRY_OPTIONS = [{"label": c, "value": c} for c in COUNTRIES]
+
+COUNTRY_OPTIONS = [
+    {"label": COUNTRY_NAMES_PL.get(c, c), "value": c}
+    for c in sorted(_monthly_df["country"].unique())
+]
 
 MIN_DATE = _monthly_df["year_month"].min()
 MAX_DATE = _monthly_df["year_month"].max()
 
-layout = html.Div(
-    [
-        html.H2("Compare Countries"),
-        html.P(
-            "Multi-country comparison with absolute and normalized views. "
-            "Indexed load (base=100) allows fair comparison between countries of different sizes.",
-            style={"color": "#555", "marginBottom": "1.5rem"},
-        ),
+# -----------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------
 
-        # Controls
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.Label("Countries (select 2-6)"),
-                        dcc.Dropdown(
-                            id="cc-countries",
-                            options=COUNTRY_OPTIONS,
-                            value=["DE", "FR", "PL", "ES", "IT"],
-                            multi=True,
-                            clearable=False,
-                        ),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.Label("Date range"),
-                        dcc.DatePickerRange(
-                            id="cc-date-range",
-                            min_date_allowed=MIN_DATE,
-                            max_date_allowed=MAX_DATE,
-                            start_date=MIN_DATE,
-                            end_date=MAX_DATE,
-                            display_format="YYYY-MM",
-                        ),
-                    ],
-                    style={"width": "45%", "display": "inline-block", "paddingLeft": "2rem"},
-                ),
-            ],
-            style={"marginBottom": "2rem"},
-        ),
+layout = html.Div([
 
-        # Section 1: Summary comparison table
-        html.H3("Summary Comparison"),
-        dash_table.DataTable(
-            id="cc-summary-table",
-            columns=[],
-            data=[],
-            sort_action="native",
-            style_table={"overflowX": "auto"},
-            style_cell={"textAlign": "center", "padding": "8px"},
-            style_header={"fontWeight": "bold", "backgroundColor": "#f0f0f0"},
-            style_data_conditional=[
-                {
-                    "if": {"filter_query": "{load_growth_pct} > 5"},
-                    "backgroundColor": "#e8f5e9",
-                },
-                {
-                    "if": {"filter_query": "{load_growth_pct} < -5"},
-                    "backgroundColor": "#ffebee",
-                },
-            ],
-        ),
+    page_header(
+        "Porównanie krajów",
+        "Porównanie wielu krajów w ujęciu bezwzględnym i znormalizowanym. "
+        "Indeksowane obciążenie (baza=100) umożliwia rzetelne porównanie krajów o różnej wielkości."
+    ),
 
-        # Section 2: Monthly load — absolute vs indexed
-        html.H3("Monthly Load", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Absolute load (MWh)"),
-                        dcc.Graph(id="cc-load-abs-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
+    # Controls
+    control_panel(
+        dbc.Row([
+            dbc.Col([
+                dbc.Label("Kraje (wybierz 2-6)", style={"color": "#ccc"}),
+                dcc.Dropdown(
+                    id="cc-countries",
+                    options=COUNTRY_OPTIONS,
+                    value=["DE", "FR", "PL", "ES", "IT"],
+                    multi=True,
+                    clearable=False,
                 ),
-                html.Div(
-                    [
-                        html.H4("Indexed load (first month = 100)"),
-                        dcc.Graph(id="cc-load-indexed-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
+            ], md=7),
+            dbc.Col([
+                dbc.Label("Zakres dat", style={"color": "#ccc"}),
+                dcc.DatePickerRange(
+                    id="cc-date-range",
+                    min_date_allowed=MIN_DATE,
+                    max_date_allowed=MAX_DATE,
+                    start_date=MIN_DATE,
+                    end_date=MAX_DATE,
+                    display_format="YYYY-MM",
                 ),
-            ],
-        ),
+            ], md=5),
+        ]),
+    ),
 
-        # Section 3: Net flows comparison
-        html.H3("Net Cross-Border Flows", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Monthly net flows"),
-                        dcc.Graph(id="cc-netflow-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("YoY load change (%)"),
-                        dcc.Graph(id="cc-yoy-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
+    # Section 1: Summary comparison table
+    section_header("Podsumowanie porównawcze"),
+    dash_table.DataTable(
+        id="cc-summary-table",
+        columns=[],
+        data=[],
+        sort_action="native",
+        style_table=DARK_TABLE_STYLE["style_table"],
+        style_cell=DARK_TABLE_STYLE["style_cell"],
+        style_header=DARK_TABLE_STYLE["style_header"],
+        style_data_conditional=[
+            *DARK_TABLE_STYLE["style_data_conditional"],
+            {"if": {"filter_query": "{load_growth_pct} > 5"}, "backgroundColor": "#1a3a2a", "color": "#6bcf7f"},
+            {"if": {"filter_query": "{load_growth_pct} < -5"}, "backgroundColor": "#3a1a1a", "color": "#ff6b6b"},
+        ],
+    ),
 
-        # Section 4: Structural comparison (radar)
-        html.H3("Structural Comparison", style={"marginTop": "2rem"}),
-        html.Div(
-            [
-                html.Div(
-                    [
-                        html.H4("Load profile comparison (monthly distribution)"),
-                        dcc.Graph(id="cc-seasonal-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-                html.Div(
-                    [
-                        html.H4("Peak demand comparison"),
-                        dcc.Graph(id="cc-peak-graph"),
-                    ],
-                    style={"width": "50%", "display": "inline-block"},
-                ),
-            ],
-        ),
-    ]
-)
+    # Section 2: Monthly load — absolute vs indexed
+    section_header("Obciążenie miesięczne"),
+    dbc.Row([
+        dbc.Col(chart_card("Obciążenie bezwzględne (MWh)", "cc-load-abs-graph"), md=6),
+        dbc.Col(chart_card("Obciążenie indeksowane (pierwszy miesiąc = 100)", "cc-load-indexed-graph"), md=6),
+    ]),
+
+    # Section 3: Net flows + YoY
+    section_header("Przepływy transgraniczne netto"),
+    dbc.Row([
+        dbc.Col(chart_card("Miesięczne przepływy netto", "cc-netflow-graph"), md=6),
+        dbc.Col(chart_card("Zmiana obciążenia r/r (%)", "cc-yoy-graph"), md=6),
+    ]),
+
+    # Section 4: Structural comparison
+    section_header("Porównanie strukturalne"),
+    dbc.Row([
+        dbc.Col(chart_card("Profil sezonowy (rozkład miesięczny)", "cc-seasonal-graph"), md=6),
+        dbc.Col(chart_card("Porównanie szczytowego zapotrzebowania", "cc-peak-graph"), md=6),
+    ]),
+])
 
 # -----------------------------------------------------------------------
 # Callback
@@ -186,7 +145,6 @@ def update_comparison(countries, start_date, end_date):
     if isinstance(countries, str):
         countries = [countries]
 
-    # Limit to 6 countries for readability
     countries = countries[:6]
 
     # --- Summary table ---
@@ -195,26 +153,30 @@ def update_comparison(countries, start_date, end_date):
     if df_stats.empty:
         return [], [], empty_fig, empty_fig, empty_fig, empty_fig, empty_fig, empty_fig
 
+    # Map country codes to names in table
+    df_stats = df_stats.copy()
+    df_stats["kraj"] = df_stats["country"].map(COUNTRY_NAMES_PL)
+
     table_columns = [
-        {"name": "Country", "id": "country"},
-        {"name": "Total load (TWh)", "id": "total_load_twh"},
-        {"name": "Avg monthly (GWh)", "id": "avg_monthly_gwh"},
-        {"name": "Peak (MW)", "id": "peak_mw"},
-        {"name": "Load growth (%)", "id": "load_growth_pct"},
-        {"name": "Volatility (CV)", "id": "volatility_cv"},
-        {"name": "Renew. share (%)", "id": "renewable_share_pct"},
-        {"name": "Trade position", "id": "net_position"},
+        {"name": "Kraj", "id": "kraj"},
+        {"name": "Obciążenie łączne (TWh)", "id": "total_load_twh"},
+        {"name": "Śr. miesięczne (GWh)", "id": "avg_monthly_gwh"},
+        {"name": "Szczyt (MW)", "id": "peak_mw"},
+        {"name": "Wzrost obciążenia (%)", "id": "load_growth_pct"},
+        {"name": "Zmienność (CV)", "id": "volatility_cv"},
+        {"name": "Udział OZE (%)", "id": "renewable_share_pct"},
+        {"name": "Pozycja handlowa", "id": "net_position"},
     ]
     table_data = df_stats.to_dict("records")
 
     # --- Absolute load chart ---
     load_frames = []
     for country in countries:
-        df_c = get_monthly_load(country, start_date, end_date)
+        df_c = get_monthly_load_clean(country, start_date, end_date)
         if df_c.empty:
             continue
         df_c = df_c.copy()
-        df_c["country"] = country
+        df_c["country_name"] = COUNTRY_NAMES_PL.get(country, country)
         load_frames.append(df_c)
 
     if load_frames:
@@ -224,9 +186,9 @@ def update_comparison(countries, start_date, end_date):
             df_load,
             x="year_month",
             y="load_sum",
-            color="country",
-            labels={"year_month": "Month", "load_sum": "Monthly load (MWh)", "country": "Country"},
-            title="Monthly load — absolute",
+            color="country_name",
+            labels={"year_month": "Miesiąc", "load_sum": "Obciążenie miesięczne (MWh)", "country_name": "Kraj"},
+            title="Obciążenie miesięczne — bezwzględne",
         )
     else:
         fig_abs = empty_fig
@@ -237,15 +199,18 @@ def update_comparison(countries, start_date, end_date):
     if df_indexed.empty:
         fig_indexed = empty_fig
     else:
+        df_indexed = df_indexed.copy()
+        df_indexed["country_name"] = df_indexed["country"].map(COUNTRY_NAMES_PL)
+
         fig_indexed = px.line(
             df_indexed,
             x="year_month",
             y="indexed_load",
-            color="country",
-            labels={"year_month": "Month", "indexed_load": "Indexed load (base=100)", "country": "Country"},
-            title="Monthly load — indexed (start = 100)",
+            color="country_name",
+            labels={"year_month": "Miesiąc", "indexed_load": "Obciążenie indeksowane (baza=100)", "country_name": "Kraj"},
+            title="Obciążenie miesięczne — indeksowane (start = 100)",
         )
-        fig_indexed.add_hline(y=100, line_dash="dash", line_color="gray")
+        fig_indexed.add_hline(y=100, line_dash="dash", line_color="rgba(255,255,255,0.3)")
 
     # --- Net flows comparison ---
     flow_frames = []
@@ -254,7 +219,7 @@ def update_comparison(countries, start_date, end_date):
         if df_f.empty:
             continue
         df_f = df_f.copy()
-        df_f["country"] = country
+        df_f["country_name"] = COUNTRY_NAMES_PL.get(country, country)
         flow_frames.append(df_f)
 
     if flow_frames:
@@ -264,11 +229,11 @@ def update_comparison(countries, start_date, end_date):
             df_flows,
             x="date",
             y="net_flow",
-            color="country",
-            labels={"date": "Month", "net_flow": "Net imports (+) / exports (−)", "country": "Country"},
-            title="Net cross-border flows",
+            color="country_name",
+            labels={"date": "Miesiąc", "net_flow": "Import netto (+) / eksport (−)", "country_name": "Kraj"},
+            title="Przepływy transgraniczne netto",
         )
-        fig_flows.add_hline(y=0, line_dash="dash", line_color="gray")
+        fig_flows.add_hline(y=0, line_dash="dash", line_color="rgba(255,255,255,0.3)")
     else:
         fig_flows = empty_fig
 
@@ -278,59 +243,62 @@ def update_comparison(countries, start_date, end_date):
     if df_yoy.empty:
         fig_yoy = empty_fig
     else:
+        df_yoy = df_yoy.copy()
+        df_yoy["country_name"] = df_yoy["country"].map(COUNTRY_NAMES_PL)
+
         fig_yoy = px.bar(
             df_yoy,
             x="year",
             y="yoy_pct",
-            color="country",
+            color="country_name",
             barmode="group",
-            labels={"year": "Year", "yoy_pct": "YoY change (%)", "country": "Country"},
-            title="Year-over-year load change",
+            labels={"year": "Rok", "yoy_pct": "Zmiana r/r (%)", "country_name": "Kraj"},
+            title="Zmiana obciążenia rok do roku",
         )
-        fig_yoy.add_hline(y=0, line_dash="dash", line_color="gray")
+        fig_yoy.add_hline(y=0, line_dash="dash", line_color="rgba(255,255,255,0.3)")
 
-    # --- Seasonal profile (avg load by calendar month, normalized) ---
+    # --- Seasonal profile (normalized) ---
     if load_frames:
         df_all_load = pd.concat(load_frames, ignore_index=True)
         df_all_load["month"] = df_all_load["year_month"].dt.month
 
-        # Normalize each country's monthly avg to its own mean (seasonal shape comparison)
         seasonal_frames = []
         for country in countries:
-            df_c = df_all_load[df_all_load["country"] == country]
+            c_name = COUNTRY_NAMES_PL.get(country, country)
+            df_c = df_all_load[df_all_load["country_name"] == c_name]
             monthly_avg = df_c.groupby("month")["load_sum"].mean().reset_index()
             country_mean = monthly_avg["load_sum"].mean()
             monthly_avg["seasonal_index"] = (monthly_avg["load_sum"] / country_mean) * 100 if country_mean > 0 else 100
-            monthly_avg["country"] = country
+            monthly_avg["country_name"] = c_name
             seasonal_frames.append(monthly_avg)
 
         df_seasonal = pd.concat(seasonal_frames, ignore_index=True)
 
-        month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        month_names = ["Sty", "Lut", "Mar", "Kwi", "Maj", "Cze",
+                       "Lip", "Sie", "Wrz", "Paź", "Lis", "Gru"]
         df_seasonal["month_name"] = df_seasonal["month"].apply(lambda m: month_names[m - 1])
 
         fig_seasonal = px.line(
             df_seasonal,
             x="month_name",
             y="seasonal_index",
-            color="country",
+            color="country_name",
             markers=True,
-            labels={"month_name": "Month", "seasonal_index": "Seasonal index (avg=100)", "country": "Country"},
-            title="Seasonal load shape (each country normalized to own average)",
+            labels={"month_name": "Miesiąc", "seasonal_index": "Indeks sezonowy (śr.=100)", "country_name": "Kraj"},
+            title="Kształt sezonowy (każdy kraj znormalizowany do własnej średniej)",
             category_orders={"month_name": month_names},
         )
-        fig_seasonal.add_hline(y=100, line_dash="dot", line_color="gray")
+        fig_seasonal.add_hline(y=100, line_dash="dot", line_color="rgba(255,255,255,0.3)")
     else:
         fig_seasonal = empty_fig
 
-    # --- Peak demand comparison (annual peaks bar chart) ---
+    # --- Peak demand comparison ---
     if load_frames:
         df_all_load2 = pd.concat(load_frames, ignore_index=True)
         df_all_load2["year"] = df_all_load2["year_month"].dt.year
 
         annual_peaks = (
-            df_all_load2.groupby(["country", "year"])["load_peak"]
+            df_all_load2.groupby(["country_name", "year"])["load_peak"]
             .max()
             .reset_index()
         )
@@ -339,10 +307,10 @@ def update_comparison(countries, start_date, end_date):
             annual_peaks,
             x="year",
             y="load_peak",
-            color="country",
+            color="country_name",
             markers=True,
-            labels={"year": "Year", "load_peak": "Annual peak demand (MW)", "country": "Country"},
-            title="Annual peak demand trend",
+            labels={"year": "Rok", "load_peak": "Roczny szczyt zapotrzebowania (MW)", "country_name": "Kraj"},
+            title="Trend szczytowego zapotrzebowania",
         )
     else:
         fig_peak = empty_fig
