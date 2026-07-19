@@ -50,7 +50,7 @@ layout = html.Div([
     page_header(
         "Wzorce obciążeń",
         "Analiza dziennych i dobowych wzorców zapotrzebowania na energię elektryczną, "
-        "w tym różnice między dniami roboczymi a weekendami, profile tygodniowe i mapy sezonowe."
+        "w tym różnice między dniami roboczymi a weekendami, rozkłady tygodniowe i mapy sezonowe."
     ),
 
     control_panel(
@@ -82,12 +82,12 @@ layout = html.Div([
 
     dbc.Row([
         dbc.Col(chart_card("Obciążenie dzienne (kolor wg typu dnia)", "lp-daily-graph"), md=6),
-        dbc.Col(chart_card("Profil dobowy (średnia godzinowa)", "lp-intraday-graph"), md=6),
+        dbc.Col(chart_card("Średni rozkład dobowy (wg godziny)", "lp-intraday-graph"), md=6),
     ]),
 
     dbc.Row([
         dbc.Col(chart_card("Średnie obciążenie wg dnia tygodnia", "lp-dow-graph"), md=6),
-        dbc.Col(chart_card("Rozkład: dzień roboczy vs weekend", "lp-box-graph"), md=6),
+        dbc.Col(chart_card("Rozkład: dzień roboczy a weekend", "lp-box-graph"), md=6),
     ]),
 
     section_header(
@@ -135,7 +135,7 @@ def update_load_patterns(country, start_date, end_date):
     else:
         stats_children = kpi_row([
             kpi_card("Okres", f"{stats['total_days']} dni", f"{stats['total_load_gwh']} GWh łącznie"),
-            kpi_card("Śr. dzienne obciążenie", f"{stats['avg_daily_load_mwh']:,.0f} MWh", f"CV: {stats['coeff_variation']:.3f}"),
+            kpi_card("Śr. dzienne obciążenie", f"{stats['avg_daily_load_mwh']:,.0f} MWh", f"WZ: {stats['coeff_variation']:.3f}"),
             kpi_card(
                 "Szczyt zapotrzebowania",
                 f"{stats['peak_load_mw']:,.0f} MW",
@@ -148,7 +148,7 @@ def update_load_patterns(country, start_date, end_date):
                 f"{stats['min_date'].strftime('%Y-%m-%d')}",
                 value_color="#3391ff",
             ),
-            kpi_card("Wsp. obciążenia", f"{stats['load_factor']:.3f}", "śr. / szczyt (wyższy = bardziej płaski)"),
+            kpi_card("Wsp. obciążenia", f"{stats['load_factor']:.3f}", "śr. / szczyt (bliżej 1 = równomierniejsze)"),
             kpi_card(
                 "Spadek weekendowy",
                 f"{stats['weekend_drop_pct']:.1f}%",
@@ -182,7 +182,7 @@ def update_load_patterns(country, start_date, end_date):
                 x=df_daily["date"],
                 y=df_daily["load_sum"].rolling(7, center=True, min_periods=1).mean(),
                 mode="lines",
-                name="Śr. 7-dniowa",
+                name="Śr. krocząca 7-dniowa",
                 line=dict(color="#e0e0e0", width=2, dash="solid"),
                 opacity=0.7,
             )
@@ -197,7 +197,7 @@ def update_load_patterns(country, start_date, end_date):
 
     if df_profile.empty:
         fig_intraday = go.Figure()
-        fig_intraday.update_layout(title="Wybierz okno ≤ 30 dni aby zobaczyć profil dobowy")
+        fig_intraday.update_layout(title="Wybierz okno ≤ 30 dni aby zobaczyć rozkład dobowy")
     else:
         fig_intraday = go.Figure()
 
@@ -224,7 +224,7 @@ def update_load_patterns(country, start_date, end_date):
         )
 
         fig_intraday.update_layout(
-            title=f"Profil dobowy — {country_name}",
+            title=f"Rozkład dobowy — {country_name}",
             xaxis_title="Godzina",
             yaxis_title="Obciążenie (MW)",
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),

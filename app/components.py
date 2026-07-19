@@ -1,15 +1,10 @@
-"""
-Reusable UI components for the Energy EU dashboard.
-Import these in any page to get consistent dark-mode styling.
-"""
-
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 import plotly.io as pio
 
 # ====================================================================
-# PLOTLY DARK TEMPLATE (apply to all charts)
+# PLOTLY DARK TEMPLATE 
 # ====================================================================
 
 DARK_TEMPLATE = go.layout.Template(

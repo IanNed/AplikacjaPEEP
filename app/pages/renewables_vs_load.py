@@ -24,8 +24,8 @@ from app.components import (
 dash.register_page(
     __name__,
     path="/renewables-vs-load",
-    name="OZE vs obciążenie",
-    title="OZE vs obciążenie",
+    name="OZE a obciążenie",
+    title="OZE a obciążenie",
 )
 
 # Eurostat annual data drives country list and year bounds
@@ -44,9 +44,9 @@ MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 layout = html.Div([
 
     page_header(
-        "OZE vs zapotrzebowanie",
+        "OZE a zapotrzebowanie",
         "Jaka część zapotrzebowania na energię elektryczną jest pokrywana przez OZE? "
-        "Śledzi lukę między generacją odnawialną a całkowitym obciążeniem, pokazując "
+        "Śledzi lukę między wytwarzaniem odnawialnym a całkowitym obciążeniem, pokazując "
         "czy transformacja energetyczna rzeczywiście wypiera paliwa kopalne."
     ),
 
@@ -87,7 +87,7 @@ layout = html.Div([
 
     # Row 2: Generation vs Load + Fossil displacement
     dbc.Row([
-        dbc.Col(chart_card("Generacja vs obciążenie", "rvl-genload-graph"), md=6),
+        dbc.Col(chart_card("Wytwarzanie a obciążenie", "rvl-genload-graph"), md=6),
         dbc.Col(chart_card("Zależność od paliw kopalnych (% obciążenia)", "rvl-fossil-graph"), md=6),
     ]),
 
@@ -182,13 +182,13 @@ def update_renewables_vs_load(country, year_range):
         kpi_card(
             "Wyparte paliwa kop.",
             f"{kpis['fossil_displacement_pp']:+.1f} pp",
-            "redukcja udziału fossil w zapotrzebowaniu",
+            "redukcja udziału paliw kopalnych",
             value_color=fossil_color,
         ),
         kpi_card(
-            "Nadwyżka generacji",
+            "Nadwyżka wytwarzania",
             f"{kpis['latest_surplus_gwh']:+,.0f} GWh",
-            "+ = generuje więcej niż zużywa",
+            "+ = wytwarza więcej niż zużywa",
             value_color=surplus_color,
         ),
     ])
@@ -199,14 +199,14 @@ def update_renewables_vs_load(country, year_range):
     fig_balance.add_trace(go.Bar(
         x=df["year"],
         y=df["renewable_generation_gwh"],
-        name="Generacja OZE",
+        name="Wytwarzanie OZE",
         marker_color="#00d4aa",
     ))
 
     fig_balance.add_trace(go.Bar(
         x=df["year"],
         y=df["non_renewable_gwh"],
-        name="Generacja nie-OZE",
+        name="Wytwarzanie nie-OZE",
         marker_color="#555",
     ))
 
@@ -221,7 +221,7 @@ def update_renewables_vs_load(country, year_range):
 
     fig_balance.update_layout(
         barmode="stack",
-        title=f"Podaż vs zapotrzebowanie — {country_name}",
+        title=f"Podaż a zapotrzebowanie — {country_name}",
         xaxis_title="Rok",
         yaxis_title="GWh",
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
@@ -268,7 +268,7 @@ def update_renewables_vs_load(country, year_range):
         go.Bar(
             x=df["year"],
             y=df["total_generation_gwh"],
-            name="Generacja całkowita",
+            name="Wytwarzanie całkowite",
             marker_color="#3391ff",
             opacity=0.7,
         ),
@@ -299,7 +299,7 @@ def update_renewables_vs_load(country, year_range):
     )
 
     fig_genload.update_layout(
-        title=f"Generacja vs obciążenie — {country_name}",
+        title=f"Wytwarzanie a obciążenie — {country_name}",
         barmode="overlay",
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
@@ -314,7 +314,7 @@ def update_renewables_vs_load(country, year_range):
         y=df["fossil_dependency_pct"],
         mode="lines+markers",
         fill="tozeroy",
-        name="Zależność od fossil",
+        name="Zależność od paliw kopalnych",
         line=dict(color="#ff6b6b", width=2.5),
         fillcolor="rgba(255,107,107,0.08)",
     ))
@@ -324,7 +324,7 @@ def update_renewables_vs_load(country, year_range):
     fig_fossil.update_layout(
         title=f"Zależność od paliw kopalnych — {country_name}",
         xaxis_title="Rok",
-        yaxis_title="% zapotrzebowania pokrytego przez fossil/atom",
+        yaxis_title="% zapotrzebowania pokrytego przez źródła konwencjonalne",
         yaxis=dict(range=[0, None]),
         showlegend=False,
     )
@@ -393,12 +393,12 @@ def update_renewables_vs_load(country, year_range):
 
     table_columns = [
         {"name": "Rok", "id": "year"},
-        {"name": "Generacja (GWh)", "id": "generation_gwh"},
+        {"name": "Wytwarzanie (GWh)", "id": "generation_gwh"},
         {"name": "OZE (GWh)", "id": "renewable_gwh"},
         {"name": "Nie-OZE (GWh)", "id": "non_renewable_gwh"},
         {"name": "Obciążenie (GWh)", "id": "load_gwh"},
         {"name": "Pokrycie OZE (%)", "id": "renewable_coverage_pct"},
-        {"name": "Zależność fossil (%)", "id": "fossil_dep_pct"},
+        {"name": "Zależność konw. (%)", "id": "fossil_dep_pct"},
         {"name": "Nadwyżka (GWh)", "id": "surplus_gwh"},
     ]
 

@@ -60,18 +60,16 @@ layout = html.Div([
                     value="renewable_share",
                     clearable=False,
                 ),
-            ], md=4),
+            ], md=6),
             dbc.Col([
                 dbc.Label("Rok", style={"color": "#ccc"}),
-                dcc.Slider(
+                dcc.Dropdown(
                     id="map-year",
-                    min=MIN_YEAR,
-                    max=MAX_YEAR,
+                    options=[{"label": str(y), "value": y} for y in range(MIN_YEAR, MAX_YEAR + 1)],
                     value=MAX_YEAR,
-                    marks={y: str(y) for y in range(MIN_YEAR, MAX_YEAR + 1)},
-                    step=1,
+                    clearable=False,
                 ),
-            ], md=8),
+            ], md=4),
         ]),
     ),
 
@@ -136,14 +134,14 @@ def update_map(layer, year):
             color_continuous_scale="YlGn",
             range_color=[0, 100],
             labels={"renewable_share_pct": "Udział OZE (%)"},
-            title=f"Udział OZE w generacji energii elektrycznej — {year}",
+            title=f"Udział OZE w wytwarzaniu energii elektrycznej — {year}",
         )
 
         explanation = html.Div([
             html.Strong("Udział OZE: ", style={"color": "#00d4aa"}),
-            "Procent całkowitej generacji energii elektrycznej ze źródeł odnawialnych "
+            "Procent całkowitego wytwarzania energii elektrycznej ze źródeł odnawialnych "
             "(hydro, wiatr, słońce, geotermia, biomasa). Dane: Eurostat. "
-            "Ciemna zieleń = wysoka penetracja OZE. Jasny = dominacja paliw kopalnych.",
+            "Ciemna zieleń = wysoki udział OZE. Jasny kolor = dominacja paliw kopalnych.",
         ])
 
     elif layer == "load_intensity":
@@ -164,7 +162,7 @@ def update_map(layer, year):
 
         explanation = html.Div([
             html.Strong("Roczne obciążenie: ", style={"color": "#ff6b6b"}),
-            "Całkowite zużycie energii elektrycznej w Terawatogodzinach (TWh). "
+            "Całkowite zużycie energii elektrycznej w terawatogodzinach (TWh). "
             "Dane: ENTSO-E. Odzwierciedla wielkość gospodarki i poziom elektryfikacji. "
             "Dominują zazwyczaj Niemcy, Francja, Turcja i Wielka Brytania.",
         ])
@@ -192,7 +190,7 @@ def update_map(layer, year):
         explanation = html.Div([
             html.Strong("Przepływy netto: ", style={"color": "#3391ff"}),
             "Czerwony = importer netto (zależy od sąsiadów), Niebieski = eksporter netto (produkuje nadwyżkę). "
-            "Dane: ENTSO-E. Pokazuje bilans handlu energią i zależność od połączeń.",
+            "Dane: ENTSO-E. Pokazuje bilans wymiany energii i zależność od połączeń transgranicznych.",
         ])
 
     elif layer == "self_sufficiency":
@@ -209,14 +207,14 @@ def update_map(layer, year):
             color_continuous_scale="RdYlGn",
             range_color=[0.5, 1.5],
             color_continuous_midpoint=1.0,
-            labels={"self_sufficiency_ratio": "Samowystarczalność (gen./obciąż.)"},
-            title=f"Wskaźnik samowystarczalności (generacja / obciążenie) — {year}",
+            labels={"self_sufficiency_ratio": "Samowystarczalność (wytw./obciąż.)"},
+            title=f"Wskaźnik samowystarczalności (wytwarzanie / obciążenie) — {year}",
         )
 
         explanation = html.Div([
             html.Strong("Samowystarczalność: ", style={"color": "#ffd93d"}),
-            "Stosunek generacji krajowej do krajowego obciążenia. "
-            "Wartości > 1 (zieleń) = kraj generuje więcej niż zużywa. "
+            "Stosunek wytwarzania krajowego do krajowego obciążenia. "
+            "Wartości > 1 (zieleń) = kraj wytwarza więcej niż zużywa. "
             "Wartości < 1 (czerwień) = zależy od importu. Łączy dane Eurostat + ENTSO-E.",
         ])
 
@@ -234,14 +232,14 @@ def update_map(layer, year):
             color_continuous_scale="Greens",
             range_color=[0, 100],
             labels={"renewable_self_sufficiency_pct": "Samowystarczalność OZE (%)"},
-            title=f"Samowystarczalność OZE (generacja OZE / obciążenie) — {year}",
+            title=f"Samowystarczalność OZE (wytwarzanie OZE / obciążenie) — {year}",
         )
 
         explanation = html.Div([
             html.Strong("Samowystarczalność OZE: ", style={"color": "#6bcf7f"}),
             "Jaki procent całkowitego zapotrzebowania na energię może być pokryty wyłącznie "
-            "przez krajową generację odnawialną. 100% = całe zapotrzebowanie teoretycznie pokryte przez OZE. "
-            "Ostateczna miara postępu transformacji energetycznej.",
+            "przez krajowe wytwarzanie odnawialne. 100% = całe zapotrzebowanie teoretycznie pokryte przez OZE. "
+            "Syntetyczny wskaźnik postępu transformacji energetycznej.",
         ])
 
     else:

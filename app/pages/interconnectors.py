@@ -47,7 +47,7 @@ layout = html.Div([
     page_header(
         "Połączenia transgraniczne",
         "Analiza transgranicznych przepływów energii elektrycznej z pełnym rozróżnieniem importu i eksportu. "
-        "Sprawdź, od których sąsiadów kraj importuje, a do których eksportuje, oraz jak bilans handlowy "
+        "Sprawdź, od których sąsiadów kraj importuje, a do których eksportuje, oraz jak bilans wymiany "
         "zmienia się w czasie."
     ),
 
@@ -108,10 +108,10 @@ layout = html.Div([
     ),
 
     # Section 2: All partners overview
-    section_header("Wszyscy partnerzy — bilans handlowy"),
+    section_header("Wszyscy partnerzy — bilans wymiany"),
     dbc.Row([
-        dbc.Col(chart_card("Import vs eksport wg partnera", "ic-partners-graph"), md=6),
-        dbc.Col(chart_card("Bilans handlowy netto wg partnera", "ic-balance-graph"), md=6),
+        dbc.Col(chart_card("Import i eksport wg partnera", "ic-partners-graph"), md=6),
+        dbc.Col(chart_card("Bilans wymiany netto wg partnera", "ic-balance-graph"), md=6),
     ]),
 
 ])
@@ -155,7 +155,7 @@ def update_interconnectors(country, partner, start_date, end_date):
     country_name = COUNTRY_NAMES_PL.get(country, country)
     partner_name = COUNTRY_NAMES_PL.get(partner, partner) if partner else ""
 
-    # --- Section 1: All partners overview ---
+    # --- All partners overview ---
     df_partners = get_top_partners_directional(country)
 
     if df_partners.empty:
@@ -187,7 +187,7 @@ def update_interconnectors(country, partner, start_date, end_date):
 
         fig_partners.update_layout(
             barmode="group",
-            title=f"Przepływy bilateralne — {country_name} (cały okres)",
+            title=f"Przepływy w obie strony — {country_name} (cały okres)",
             xaxis_title="Partner",
             yaxis_title="Przepływ całkowity (GWh)",
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
@@ -217,7 +217,7 @@ def update_interconnectors(country, partner, start_date, end_date):
             showlegend=False,
         )
 
-    # --- Section 2: Selected border detail ---
+    # --- Selected border detail ---
     if not partner:
         return fig_partners, fig_balance, html.Div(), empty_fig, empty_fig, empty_fig
 

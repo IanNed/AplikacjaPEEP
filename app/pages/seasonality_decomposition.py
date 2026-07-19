@@ -64,7 +64,7 @@ layout = html.Div([
 
     page_header(
         "Dekompozycja sezonowości i trendu (STL)",
-        "Rozkłada miesięczne obciążenie elektryczne na składowe: trend, sezonowość "
+        "Rozkłada miesięczne obciążenie na składowe: trend, sezonowość "
         "i reszty przy użyciu metody STL (Seasonal-Trend decomposition using LOESS). "
         "Wymaga co najmniej 24 miesięcy danych."
     ),
@@ -119,7 +119,7 @@ layout = html.Div([
     section_header(
         "Wykryte anomalie (|z-score| > 2)",
         "Miesiące, w których rzeczywiste obciążenie znacząco odbiega od oczekiwanego (trend + sezon). "
-        "Szukaj wydarzeń: lockdowny COVID, fale upałów, kryzysy energetyczne."
+        "Szukaj wydarzeń: obostrzenia COVID, fale upałów, kryzysy energetyczne."
     ),
     dash_table.DataTable(
         id="sd-anomaly-table",
@@ -197,7 +197,7 @@ def update_seasonality(country, start_date, end_date):
     kpi_children = kpi_row([
         kpi_card("Siła sezonowości", f"{seasonal_strength:.3f}", _strength_label(seasonal_strength), value_color=strength_color),
         kpi_card("Zmiana trendu", f"{trend_change_pct:+.1f}%", "początek vs koniec okresu", value_color=trend_color),
-        kpi_card("Amplituda sezonowa", f"{seasonal_pct:.1f}%", "szczyt–dół jako % śr. obciążenia", value_color="#3391ff"),
+        kpi_card("Amplituda sezonowa", f"{seasonal_pct:.1f}%", "rozpiętość jako % śr. obciążenia", value_color="#3391ff"),
         kpi_card("Wykryte anomalie", str(n_anomalies), "miesiące z |z| > 2", value_color="#f97316" if n_anomalies > 3 else "#00d4aa"),
     ])
 
@@ -207,13 +207,13 @@ def update_seasonality(country, start_date, end_date):
         cols=1,
         shared_xaxes=True,
         vertical_spacing=0.05,
-        subplot_titles=("Oryginał (obciążenie miesięczne)", "Trend", "Sezonowość", "Reszty"),
+        subplot_titles=("Obserwacje (obciążenie miesięczne)", "Trend", "Sezonowość", "Reszty"),
     )
 
     fig_decomp.add_trace(
         go.Scatter(
             x=df["year_month"], y=df["load_sum"],
-            mode="lines", name="Oryginał",
+            mode="lines", name="Obserwacje",
             line=dict(color="#3391ff"),
         ),
         row=1, col=1,

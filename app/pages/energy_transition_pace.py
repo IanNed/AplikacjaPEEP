@@ -112,7 +112,7 @@ layout = html.Div([
     section_header("Wzrost generacji OZE rok do roku"),
     dbc.Row([
         dbc.Col(chart_card("Tempo wzrostu r/r (%)", "etp-yoy-graph"), md=6),
-        dbc.Col(chart_card("Trajektoria udziału OZE", "etp-share-trajectory-graph"), md=6),
+        dbc.Col(chart_card("Przebieg udziału OZE", "etp-share-trajectory-graph"), md=6),
     ]),
 
     # Section 3: Technology breakdown

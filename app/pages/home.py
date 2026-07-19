@@ -110,7 +110,6 @@ def _finding_item(text, highlight=None, highlight_color="#00d4aa"):
 
 layout = html.Div([
 
-    # Hero section
     html.Div([
         html.H1(
             "Analizator Transformacji Energetycznej Europy",
@@ -132,7 +131,7 @@ layout = html.Div([
             html.Span("01 ", style={"color": "#ffffff"}),
             "Przegląd danych ogólnych"
         ], style={"color": "#ccc", "marginBottom": "1rem"}),
-        html.P("Ocena stanu obecnego: poziomy popytu, penetracja OZE, pozycje handlowe.",
+        html.P("Ocena stanu obecnego: poziomy popytu, udział OZE, saldo wymiany transgranicznej.",
                style={"color": "#666", "fontSize": "0.85rem", "marginBottom": "1rem"}),
     ]),
     dbc.Row([
@@ -145,7 +144,7 @@ layout = html.Div([
     html.Div([
         html.H5([
             html.Span("02 ", style={"color": "#ffffff"}),
-            "Zrozumienie wzorców popytu i generacji"
+            "Zrozumienie wzorców popytu i wytwarzania"
         ], style={"color": "#ccc", "marginTop": "2rem", "marginBottom": "1rem"}),
         html.P("Dekompozycja wzorców popytu — kiedy i jak zużywana jest energia elektryczna.",
                style={"color": "#666", "fontSize": "0.85rem", "marginBottom": "1rem"}),
@@ -166,10 +165,10 @@ layout = html.Div([
                style={"color": "#666", "fontSize": "0.85rem", "marginBottom": "1rem"}),
     ]),
     dbc.Row([
-        dbc.Col(_nav_card("Moc i generacja OZE", "Wolumen i udział generacji wg technologii", "/renewables-capacity"), md=3, className="mb-3"),
-        dbc.Col(_nav_card("OZE vs obciążenie", "Bilans dostaw, spadek zależności od paliw kopalnych", "/renewables-vs-load"), md=3, className="mb-3"),
-        dbc.Col(_nav_card("Tempo transformacji", "Wzrost r/r, CAGR, detekcja przyspieszenia", "/energy-transition-pace"), md=3, className="mb-3"),
-        dbc.Col(_nav_card("Porównanie OZE", "Rankingi, mix technologiczny, dystans do celu", "/compare-renewables"), md=3, className="mb-3"),
+        dbc.Col(_nav_card("Moc i wytwarzanie OZE", "Wielkość i udział wytwarzania wg technologii", "/renewables-capacity"), md=3, className="mb-3"),
+        dbc.Col(_nav_card("OZE vs obciążenie", "Pokrycie zapotrzebowania, spadek zależności od paliw kopalnych", "/renewables-vs-load"), md=3, className="mb-3"),
+        dbc.Col(_nav_card("Tempo transformacji", "Wzrost r/r, CAGR, wykrywanie przyspieszenia", "/energy-transition-pace"), md=3, className="mb-3"),
+        dbc.Col(_nav_card("Porównanie OZE", "Rankingi, struktura technologiczna, dystans do celu", "/compare-renewables"), md=3, className="mb-3"),
     ]),
 
     # --- ANALIZA ---
@@ -183,7 +182,7 @@ layout = html.Div([
     ]),
     dbc.Row([
         dbc.Col(_nav_card("Samowystarczalność", "Niezależność energetyczna i trendy zależności importowej", "/self-sufficiency"), md=4, className="mb-3"),
-        dbc.Col(_nav_card("Grupowanie", "K-Means, mapa korelacji, trajektorie", "/clustering"), md=4, className="mb-3"),
+        dbc.Col(_nav_card("Grupowanie", "K-Means, mapa korelacji, przebiegi", "/clustering"), md=4, className="mb-3"),
         dbc.Col(
             dbc.Card(
                 dbc.CardBody([

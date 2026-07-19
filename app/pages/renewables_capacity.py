@@ -19,8 +19,8 @@ from app.components import (
 dash.register_page(
     __name__,
     path="/renewables-capacity",
-    name="Moc i generacja OZE",
-    title="Moc i generacja OZE",
+    name="Moc i wytwarzanie OZE",
+    title="Moc i wytwarzanie OZE",
 )
 
 # Eurostat annual generation share dataset
@@ -39,8 +39,8 @@ MIN_YEAR, MAX_YEAR = get_generation_year_bounds()
 layout = html.Div([
 
     page_header(
-        "Generacja OZE w czasie",
-        "Roczny wolumen i udział generacji odnawialnej z danych Eurostat, z podziałem na technologie."
+        "Wytwarzanie OZE w czasie",
+        "Roczna wielkość i udział wytwarzania odnawialnego z danych Eurostat, z podziałem na technologie."
     ),
 
     # Controls
@@ -71,8 +71,8 @@ layout = html.Div([
 
     # Charts
     dbc.Row([
-        dbc.Col(chart_card("OZE vs generacja całkowita", "rc-share-graph"), md=6),
-        dbc.Col(chart_card("Generacja OZE wg technologii", "rc-tech-graph"), md=6),
+        dbc.Col(chart_card("OZE a wytwarzanie całkowite", "rc-share-graph"), md=6),
+        dbc.Col(chart_card("Wytwarzanie OZE wg technologii", "rc-tech-graph"), md=6),
     ]),
 ])
 
@@ -109,9 +109,9 @@ def update_renewables_generation(country, year_range):
         y="renewable_generation_gwh",
         labels={
             "year": "Rok",
-            "renewable_generation_gwh": "Generacja OZE (GWh)",
+            "renewable_generation_gwh": "Wytwarzanie OZE (GWh)",
         },
-        title=f"Generacja OZE i udział — {country_name}",
+        title=f"Wytwarzanie OZE i udział — {country_name}",
     )
     fig_share_bar.update_traces(marker_color="#00d4aa")
 
@@ -124,7 +124,7 @@ def update_renewables_generation(country, year_range):
     fig_share_bar.add_traces(fig_share_line.data)
 
     fig_share_bar.update_layout(
-        yaxis=dict(title="Generacja OZE (GWh)"),
+        yaxis=dict(title="Wytwarzanie OZE (GWh)"),
         yaxis2=dict(
             title="Udział",
             overlaying="y",
@@ -157,10 +157,10 @@ def update_renewables_generation(country, year_range):
         color="fuel_pl",
         labels={
             "year": "Rok",
-            "generation_gwh": "Generacja (GWh)",
+            "generation_gwh": "Wytwarzanie (GWh)",
             "fuel_pl": "Technologia",
         },
-        title=f"Generacja OZE wg technologii — {country_name}",
+        title=f"Wytwarzanie OZE wg technologii — {country_name}",
         color_discrete_map={
             "Hydro": "#06b6d4",
             "Wiatr": "#6bcf7f",

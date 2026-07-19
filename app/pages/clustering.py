@@ -52,14 +52,14 @@ layout = html.Div([
 
     page_header(
         "Grupowanie i analiza korelacji",
-        "Grupowanie krajów europejskich na podstawie rodzaju generacji i wzorców zapotrzebowania."
+        "Podział krajów europejskich na grupy na podstawie źródeł wytwarzania i wzorców zapotrzebowania."
     ),
 
     # Controls
     control_panel(
         dbc.Row([
             dbc.Col([
-                dbc.Label("Rok (dla grupowania wg rodzaju generacji)", style={"color": "#ccc"}),
+                dbc.Label("Rok (dla grupowania wg źródeł wytwarzania)", style={"color": "#ccc"}),
                 dcc.Slider(
                     id="cl-year",
                     min=MIN_YEAR,
@@ -83,15 +83,15 @@ layout = html.Div([
         ]),
     ),
 
-    # Section 1: Energy mix clustering
+    # Section 1: Clustering by generation source
     section_header(
-        "Grupowanie wg rodzaju generacji",
-        "Kraje pogrupowane według struktury generacji (hydro, wiatr, słońce, węgiel, gaz, atom). "
-        "PCA redukuje wymiary do wizualizacji 2D."
+        "Grupowanie wg źródeł wytwarzania",
+        "Kraje pogrupowane według udziałów poszczególnych źródeł energii (hydro, wiatr, słońce, węgiel, gaz, atom). "
+        "Analiza głównych składowych redukuje wymiary do wizualizacji 2D."
     ),
     dbc.Row([
-        dbc.Col(chart_card("PCA — grupy krajów", "cl-pca-graph"), md=7),
-        dbc.Col(chart_card("Profile grup (śr. udziały)", "cl-profile-graph"), md=5),
+        dbc.Col(chart_card("Analiza głównych składowych — grupy krajów", "cl-pca-graph"), md=7),
+        dbc.Col(chart_card("Średnia struktura wytwarzania na grupę", "cl-profile-graph"), md=5),
     ]),
 
     # Membership table
@@ -106,10 +106,10 @@ layout = html.Div([
         **DARK_TABLE_STYLE,
     ),
 
-    # Section 2: Load correlation (lazy-loaded via callback)
+    # Section 2: Load correlation
     section_header(
         "Korelacja wzorców obciążeń",
-        "Korelacja Pearsona miesięcznych profili zapotrzebowania. Obliczona jednokrotnie dla całego okresu."
+        "Współczynnik korelacji Pearsona miesięcznych przebiegów zapotrzebowania. Obliczony jednokrotnie dla całego okresu."
     ),
     dcc.Graph(
         id="cl-heatmap-graph",
@@ -118,10 +118,10 @@ layout = html.Div([
 
     # Section 3: Trajectory clustering
     section_header(
-        "Grupowanie wg trajektorii transformacji",
-        "Grupowanie krajów według KSZTAŁTU zmian udziału OZE w czasie."
+        "Grupowanie wg przebiegu transformacji",
+        "Podział krajów według kształtu zmian udziału OZE w kolejnych latach."
     ),
-    chart_card("Trajektorie udziału OZE wg grup", "cl-trajectory-graph", height="450px"),
+    chart_card("Przebieg udziału OZE wg grup", "cl-trajectory-graph", height="450px"),
     dash_table.DataTable(
         id="cl-trajectory-table",
         columns=[],
@@ -133,7 +133,7 @@ layout = html.Div([
 ])
 
 # -----------------------------------------------------------------------
-# Callback 1: Energy mix clustering
+# Callback 1: Clustering by generation source
 # -----------------------------------------------------------------------
 
 @callback(
@@ -171,10 +171,10 @@ def update_mix_clustering(year, n_clusters):
         hover_data={"pca_x": False, "pca_y": False, "cluster_label": False, "country": True},
         text="country",
         color_discrete_sequence=CLUSTER_COLORS,
-        title=f"Kraje pogrupowane wg miksu energetycznego — {year}",
+        title=f"Kraje pogrupowane wg źródeł wytwarzania — {year}",
         labels={
-            "pca_x": f"PC1 ({pca_var_x}% wariancji)",
-            "pca_y": f"PC2 ({pca_var_y}% wariancji)",
+            "pca_x": f"Składowa 1 ({pca_var_x}% wariancji)",
+            "pca_y": f"Składowa 2 ({pca_var_y}% wariancji)",
         },
     )
     fig_pca.update_traces(textposition="top center", textfont_size=9)
@@ -192,7 +192,7 @@ def update_mix_clustering(year, n_clusters):
         color="cluster_label", barmode="group",
         color_discrete_sequence=CLUSTER_COLORS,
         labels={"feature_label": "Źródło", "avg_share": "Śr. udział", "cluster_label": "Grupa"},
-        title="Średni miks energetyczny na grupę",
+        title="Średnia struktura wytwarzania na grupę",
     )
     fig_profile.update_yaxes(tickformat=".0%")
 
@@ -215,7 +215,7 @@ def update_mix_clustering(year, n_clusters):
     return fig_pca, fig_profile, table_df.to_dict("records"), membership_cols
 
 # -----------------------------------------------------------------------
-# Callback 2: Heatmap (lazy-loaded, computes on first page visit, needed for .exe app)
+# Callback 2: Heatmap (lazy-loaded, computes on first page visit)
 # -----------------------------------------------------------------------
 
 @callback(
@@ -238,7 +238,7 @@ def update_heatmap(_):
         zmin=-1,
         zmax=1,
         aspect="equal",
-        title="Korelacja miesięcznych wzorców obciążeń (Pearson)",
+        title="Korelacja miesięcznych przebiegów obciążeń (Pearson)",
         labels={"color": "Korelacja"},
     )
     fig.update_layout(xaxis_title="Kraj", yaxis_title="Kraj")
@@ -276,7 +276,7 @@ def update_trajectory_clustering(n_clusters):
         hover_name="country",
         color_discrete_sequence=CLUSTER_COLORS,
         labels={"year": "Rok", "renewable_share": "Udział OZE", "cluster_label": "Grupa"},
-        title="Trajektorie udziału OZE wg grup",
+        title="Przebieg udziału OZE wg grup",
     )
     fig_trajectory.update_yaxes(tickformat=".0%", range=[0, 1])
     fig_trajectory.update_traces(opacity=0.6)

@@ -45,8 +45,8 @@ layout = html.Div([
 
     page_header(
         "Porównanie generacji OZE",
-        "Porównanie wielu krajów pod kątem postępu w energetyce odnawialnej — trajektorie udziałów, "
-        "miks technologiczny, tempo wzrostu i dystans do celów."
+        "Porównanie wielu krajów pod kątem postępu w energetyce odnawialnej — zmiany udziałów, "
+        "struktura źródeł, tempo wzrostu i dystans do celów."
     ),
 
     # Controls
@@ -77,7 +77,7 @@ layout = html.Div([
     ),
 
     # Section 1: Share trajectories
-    section_header("Trajektorie udziału OZE"),
+    section_header("Zmiany udziału OZE w czasie"),
     chart_card("Udział OZE w generacji w czasie", "cr-share-graph"),
 
     # Growth summary table (below chart, full width)
@@ -107,14 +107,14 @@ layout = html.Div([
     ),
 
     # Section 2: Technology mix
-    section_header("Miks technologiczny (ostatni rok)"),
+    section_header("Struktura źródeł OZE (ostatni rok)"),
     dbc.Row([
-        dbc.Col(chart_card("Generacja OZE wg technologii (GWh)", "cr-tech-abs-graph"), md=6),
-        dbc.Col(chart_card("Udział technologii w OZE (%)", "cr-tech-pct-graph"), md=6),
+        dbc.Col(chart_card("Generacja OZE wg źródła (GWh)", "cr-tech-abs-graph"), md=6),
+        dbc.Col(chart_card("Udział poszczególnych źródeł w OZE (%)", "cr-tech-pct-graph"), md=6),
     ]),
 
     # Section 3: Growth race
-    section_header("Wyścig wzrostu"),
+    section_header("Porównanie tempa wzrostu"),
     dbc.Row([
         dbc.Col(chart_card("Bezwzględny wzrost generacji OZE (GWh)", "cr-growth-abs-graph"), md=6),
         dbc.Col(chart_card("Porównanie CAGR (%)", "cr-cagr-graph"), md=6),
@@ -269,7 +269,7 @@ def update_compare_renewables(countries, year_range, target_pct):
             y="share_of_renewable",
             color="fuel_pl",
             labels={"country_name": "Kraj", "share_of_renewable": "% w OZE", "fuel_pl": "Technologia"},
-            title=f"Miks technologiczny w OZE — {end_year}",
+            title=f"Struktura źródeł w OZE — {end_year}",
             color_discrete_map={
                 "Hydro": "#06b6d4",
                 "Wiatr": "#6bcf7f",

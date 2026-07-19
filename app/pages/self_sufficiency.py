@@ -46,7 +46,7 @@ layout = html.Div([
 
     page_header(
         "Samowystarczalność i zależność importowa",
-        "Łączy generację krajową (Eurostat), obciążenie (ENTSO-E) i przepływy "
+        "Łączy wytwarzanie krajowe (Eurostat), obciążenie (ENTSO-E) i przepływy "
         "transgraniczne (ENTSO-E), aby ocenić, na ile kraj jest w stanie pokryć własne "
         "zapotrzebowanie — i czy wzrost OZE zmniejsza zależność od importu."
     ),
@@ -103,14 +103,14 @@ layout = html.Div([
     # Section 2: Time series
     section_header("Samowystarczalność w czasie"),
     dbc.Row([
-        dbc.Col(chart_card("Wskaźnik samowystarczalności (generacja / obciążenie)", "ss-ratio-graph"), md=6),
+        dbc.Col(chart_card("Wskaźnik samowystarczalności (wytwarzanie / obciążenie)", "ss-ratio-graph"), md=6),
         dbc.Col(chart_card("Zależność importowa (import netto / obciążenie)", "ss-import-dep-graph"), md=6),
     ]),
 
     # Section 3: Renewable coverage
     section_header(
         "Samowystarczalność OZE",
-        "Jaka część zapotrzebowania może być pokryta przez krajowe OZE? Wzrost = wypieranie fossil + importu."
+        "Jaka część zapotrzebowania może być pokryta przez krajowe OZE? Wzrost = wypieranie paliw kopalnych i importu."
     ),
     dbc.Row([
         dbc.Col(chart_card("Pokrycie zapotrzebowania przez OZE", "ss-renewable-coverage-graph"), md=6),
@@ -209,7 +209,7 @@ def update_self_sufficiency(countries, year_range):
         markers=True,
         labels={
             "year": "Rok",
-            "self_sufficiency_ratio": "Generacja / Obciążenie",
+            "self_sufficiency_ratio": "Wytwarzanie / Obciążenie",
             "country_name": "Kraj",
         },
         title="Wskaźnik samowystarczalności w czasie",
@@ -247,10 +247,10 @@ def update_self_sufficiency(countries, year_range):
         markers=True,
         labels={
             "year": "Rok",
-            "renewable_self_sufficiency": "Generacja OZE / Obciążenie",
+            "renewable_self_sufficiency": "Wytwarzanie OZE / Obciążenie",
             "country_name": "Kraj",
         },
-        title="Samowystarczalność OZE (OZE / zapotrzebowanie całkowite)",
+        title="Samowystarczalność OZE w czasie",
     )
     fig_renew.update_yaxes(tickformat=".0%", range=[0, None])
 
@@ -265,7 +265,7 @@ def update_self_sufficiency(countries, year_range):
         fig_balance.add_trace(go.Bar(
             x=df_first["year"],
             y=df_first["renewable_generation_gwh"],
-            name="Generacja OZE",
+            name="Wytwarzanie OZE",
             marker_color="#00d4aa",
         ))
 
@@ -275,7 +275,7 @@ def update_self_sufficiency(countries, year_range):
         fig_balance.add_trace(go.Bar(
             x=df_first["year"],
             y=df_first["non_renewable_gwh"],
-            name="Generacja nie-OZE",
+            name="Wytwarzanie nie-OZE",
             marker_color="#555",
         ))
 
@@ -343,7 +343,7 @@ def update_detail_table(country, year_range):
 
     columns = [
         {"name": "Rok", "id": "year"},
-        {"name": "Generacja (GWh)", "id": "generation_gwh"},
+        {"name": "Wytwarzanie (GWh)", "id": "generation_gwh"},
         {"name": "OZE (GWh)", "id": "renewable_gwh"},
         {"name": "Obciążenie (GWh)", "id": "load_gwh"},
         {"name": "Import (GWh)", "id": "imports_gwh"},

@@ -2,7 +2,7 @@ import sys
 import os
 import dash
 
-#pre-imported libraries for faster data management and clustering within the .exe app
+#pre-imported libs
 import sklearn.cluster
 import sklearn.preprocessing
 import sklearn.decomposition

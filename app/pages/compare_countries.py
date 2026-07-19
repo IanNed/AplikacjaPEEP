@@ -112,9 +112,9 @@ layout = html.Div([
     ]),
 
     # Section 4: Structural comparison
-    section_header("Porównanie strukturalne"),
+    section_header("Porównanie cech strukturalnych"),
     dbc.Row([
-        dbc.Col(chart_card("Profil sezonowy (rozkład miesięczny)", "cc-seasonal-graph"), md=6),
+        dbc.Col(chart_card("Rozkład sezonowy (wg miesiąca)", "cc-seasonal-graph"), md=6),
         dbc.Col(chart_card("Porównanie szczytowego zapotrzebowania", "cc-peak-graph"), md=6),
     ]),
 ])
